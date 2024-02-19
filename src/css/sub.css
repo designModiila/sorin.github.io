@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/* servicenow */
+.servicenow .maintitle {font-size: 48px; font-weight: 800; line-height: 68px; letter-spacing: -0.03em; color: #323232; }
+.servicenow .maintitle-w {font-size: 48px; font-weight: 800; line-height: 68px; letter-spacing: -0.03em; color: #fff; }
+.servicenow .maintitle-color {color: #00BC26;}
+.servicenow .section01 {display: flex; flex-direction: column; justify-content: flex-end; width: 100%; height: calc(100vh - 25vh); background:url(../../images/sub/servicenow_01_visual.png)  no-repeat center; background-size: cover;}
+.servicenow .section01 .servicenow-text {padding: 7.8% 10.42%;}
+.servicenow .section01 .servicenow-title {font-family: 'Paybooc'; font-size: 80px; color: #00BC26; margin-bottom: 10px;}
+.servicenow .section01 .servicenow-desc {font-family: 'NotoSans'; font-weight: 400; font-size: 24px; line-height: auto; color: #fff;}
+
+.servicenow .section02 {display: flex; flex-direction: column; justify-content: center; padding: 180px 0 187px 10.42vw;}
+/* .servicenow .section02 .content-wrap {display: flex;} */
+.servicenow .section02 .slide-list {display: flex; gap: 60px;}
+.servicenow .section02 .slide-list .slide-wrap {width: 562px; height: 516px; padding: 80px 60px; flex-direction: column; align-items: flex-start; gap: 40px; flex-shrink: 0; border-radius: 20px; background: #FFF; box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.08);}
+.servicenow .section02 .slidetext01 {font-weight: 700; font-size: 20px; letter-spacing: -0.6px; margin: 40px 0 20px;}
+.servicenow .section02 .slidetext02 {font-weight: 500; font-size: 16px; word-break: break-all;}
+
+.servicenow .section03 {width: 100%; background-color: #EFF9F1; padding: 120px 0 240px;}
+.servicenow .section03 .main-img {display: block; margin: 104px auto 100px;}
+.servicenow .section03 .subtext {margin-bottom: 100px; text-align: center; font-size: 30px; font-style: normal; font-weight: 800; line-height: 42px; letter-spacing: -0.9px;}
+.servicenow .section03 .subtext-color {color: #00BC26;}
+.servicenow .section03 .item-wrap {display: flex; justify-content: space-between; gap: 60px; width: 100%; padding: 80px 70px; border-radius: 20px; background: #002E45; color: #E1E1E1;}
+.servicenow .section03 .item-wrap img {width: 100px; height: 100px;}
+.servicenow .section03 .item-wrap > li {flex: 1;}
+.servicenow .section03 .item-title {margin-top: 60px; font-size: 24px; font-weight: 700; line-height: 34px; letter-spacing: -0.72px;}
+.servicenow .section03 .item-desc {margin-top: 15px; font-size: 16px; font-weight: 500; line-height: 150%; letter-spacing: -0.48px; word-break: break-all;}
+
+.servicenow .section04 {width: 100%; background: linear-gradient(180deg, #002E45 43.96%, #134453 93.52%); padding: 120px 0 134px;}
+.servicenow .section04 .maintitle-wrap {display: flex; flex-direction: column; height: 333px; background: url(../../images/sub/servicenow_04_bg_img.png) no-repeat center;}
+.servicenow .section04 .maintitle-w { text-align: center; padding-top: 94px;}
+.servicenow .section04 .btn-demo {width: 158px; height: 48px; margin: 0 auto; margin-top: 40px; padding: 15px 50px; border-radius: 999px; background-color: #00DD2C; font-size: 16px; font-weight: 800;}
+.servicenow .section04 .content-wrap {display: flex; margin-top: 85px; gap: 38px;}
+.servicenow .section04 .content-box {padding: 80px 40px; border-radius: 20px; margin-top: 85px;}
+.servicenow .section04 .content-box-01 {background: linear-gradient(180deg, #002E45 0%, #04548E 100%);}
+.servicenow .section04 .content-box-02 {background: linear-gradient(180deg, #002E45 0%, #1B7794 100%); transform: translateY(50px);}
+.servicenow .section04 .content-box-03 {background: linear-gradient(180deg, #002E45 0%, #0D5E63 100%);}
+.servicenow .section04 .content-box img {display: block; margin: 0 auto;}
+.servicenow .section04 .content-title {font-weight: 700; font-size: 24px; line-height: 34px; letter-spacing: -3%; color: #fff; margin-top: 30px;} 
+.servicenow .section04 .content-desc {font-weight: 500; font-size: 18px; line-height: 26px; letter-spacing: -3%; color: #E1E1E1; margin-top: 30px; word-break: break-all;}
+.servicenow .section04 .count-value-wrap {display: flex; justify-content: space-between; margin-top: 210px;}
+.servicenow .section04 .count-value {display: flex; flex: 1; padding: 50px; flex-direction: column; justify-content: center; align-items: center;}
+.servicenow .section04 .count-value-02 {border-left: 2px solid #1E4F67; border-right: 2px solid #1E4F67;}
+.servicenow .section04 .count-value-title {font-size: 24px; font-weight: 700; color: #E1E1E1;}
+.servicenow .section04 .count-wrap {display: flex; gap: 10px; align-items: flex-end; margin-top: 20px;}
+.servicenow .section04 .count-wrap-03 {align-items: center;}
+.servicenow .section04 .count-wrap .count {font-size: 78px; font-weight: 800; letter-spacing: -1.2px; color: #00DD2C; line-height: 78px;}
+.servicenow .section04 .count-wrap .unit {font-size: 40px; font-weight: 800; color: #00DD2C;}
+
+.servicenow .section05 {padding: 167px 130px 240px;}
+.servicenow .section05 .maintitle {text-align: center;}
+.servicenow .section05 .main-desc {text-align: center; margin-top: 40px; font-size: 24px; font-weight: 500; line-height: 150%; letter-spacing: -0.72px;}
+.servicenow .section05 .content-wrap {margin-top: 100px;}
+.servicenow .section05 .content-wrap .content-02 {margin-top: 80px;}
+.servicenow .section05 .content-img-wrap {display: flex; justify-content: space-between; align-items: center; gap: 75px;}
+.servicenow .section05 .content-title-wrap {display: flex; align-items: flex-end;}
+.servicenow .section05 .content-title-wrap .content-num {font-size: 100px; font-weight: 800; line-height: 80px; letter-spacing: -3px; color: #DBF8E9;}
+.servicenow .section05 .content-title-wrap .content-title {font-size: 40px; font-weight: 800; line-height: 42px; letter-spacing: -1.2px; margin-left: -42px;}
+.servicenow .section05 .content-desc-wrap {margin-top: 40px; display: flex; justify-content: space-between; gap: 10px;}
+.servicenow .section05 .content-desc-wrap svg {width: 70px;}
+.servicenow .section05 .content-desc-wrap .content-desc {font-size: 20px; font-weight: 600; line-height: 150%; letter-spacing: -0.6px; word-break: break-all;}
+
+.servicenow .section06 {background:url(../../images/sub/servicenow_06_bg.png) no-repeat center; background-size: cover; padding: 140px 0 70px;}
+.servicenow .section06 .contact-form-wrap {display: flex; justify-content: space-between;}
+.servicenow .section06 .contact-title {font-size: 48px; font-weight: 800; letter-spacing: -1.44px; color: #fff;}
+.servicenow .section06 .contact-desc {margin-top: 35px; font-size: 24px; font-weight: 600; line-height: 141.667%; letter-spacing: 0.72px; color: #fff;}
+.servicenow .section06 .form-wrap {width: 604px; padding: 40px 50px; border-radius: 30px; background: rgba(255, 255, 255, 0.15);}
+.servicenow .section06 .form-wrap .form-group-wrap {display: flex; justify-content: space-between; gap: 24px;}
+.servicenow .section06 .form-wrap .form-group {flex: 1; margin-top: 30px;}
+.servicenow .section06 .form-wrap .form-name {margin-top: 0;}
+.servicenow .section06 .form-wrap .form-group .form-label label {font-size: 16px; font-weight: 700; color: #fff;}
+.servicenow .section06 .form-wrap .form-group input {width: 100%; height: 40px; border-bottom: 1px solid #C8C8C8;}
+.servicenow .section06 .form-wrap .form-group .form-detail {height: 120px;}
+.servicenow .section06 .form-wrap .privacy-wrap {margin-top: 30px;}
+.servicenow .section06 .form-wrap .icheckbox {width: 20px; height: 20px; border-radius: 5px; border: 1px solid #DFE1E6; background-color: none;}
+.servicenow .section06 .form-wrap .chk-box {display: block; font-size: 16px; font-weight: 500; color: #fff; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+.servicenow .section06 .form-wrap .on {display: inline-block; vertical-align: middle; margin-right: 10px; width: 20px; height: 20px; border-radius: 5px; border: 1px solid #DFE1E6;}
+.servicenow .section06 .form-wrap .chk-box input[type="checkbox"] {display: none;}
+
+.servicenow .section06 .form-wrap .chk-box input[type="checkbox"]:checked + .on { background: #fff; }
+.servicenow .section06 .form-wrap .on:after { content: ""; position: absolute; display: none; }
+.servicenow .section06 .form-wrap .chk-box input[type="checkbox"]:checked + .on:after { display: block; }
+.servicenow .section06 .form-wrap .on:after { width: 6px; height: 10px; border: solid #000; border-width: 0 2px 2px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); position: absolute; left: 6px; top: 2px; }
+
+.servicenow .section06 .form-wrap .btn-toggle {font-size: 16px; font-weight: 500; color: #fff;}
+.servicenow .section06 .form-wrap .submit-btn {margin-top: 30px; padding: 15px 50px; border-radius: 999px; border: 1px solid #fff; font-size: 18px; font-weight: 700; color: #fff;}
+
