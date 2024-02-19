@@ -47,7 +47,7 @@
 .servicenow .section04 .count-wrap .count {font-size: 78px; font-weight: 800; letter-spacing: -1.2px; color: #00DD2C; line-height: 78px;}
 .servicenow .section04 .count-wrap .unit {font-size: 40px; font-weight: 800; color: #00DD2C;}
 
-.servicenow .section05 {padding: 167px 130px 240px;}
+.servicenow .section05 {padding: 167px 0 240px; max-width: 1259px;}
 .servicenow .section05 .maintitle {text-align: center;}
 .servicenow .section05 .main-desc {text-align: center; margin-top: 40px; font-size: 24px; font-weight: 500; line-height: 150%; letter-spacing: -0.72px;}
 .servicenow .section05 .content-wrap {margin-top: 100px;}
