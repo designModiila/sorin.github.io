@@ -17,8 +17,8 @@ body.noScroll { overflow: hidden;}
 .inner {max-width: 1920px; padding: 0 10.41%; width: 100%; margin: 0 auto; position: relative;}
 /* .inner { width: 100%; margin: 0 auto; position: relative;} */
 
-.footer {background-color: #fff; }
-.footer .footer-inner {padding: 30px 10.42vw;}
+.footer {background-color: #fff;}
+.footer .footer-inner {padding: 30px 10.42vw; max-width: 1920px; margin: 0 auto;}
 .footer .footer-top {width: 100%; padding-bottom: 30px; border-bottom: 1px solid #C8C8C8;}
 .footer .footer-contact {display: flex; margin-top: 30px; justify-content: space-between;}
 .footer .footer-contact .contact {font-size: 14px; font-weight: 500; line-height: 185.7%; letter-spacing: -0.42px; color: #4B4B4B;}

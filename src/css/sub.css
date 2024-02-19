@@ -9,12 +9,41 @@
 .servicenow .section01 .servicenow-title {font-family: 'Paybooc'; font-size: 80px; color: #00BC26; margin-bottom: 10px;}
 .servicenow .section01 .servicenow-desc {font-family: 'NotoSans'; font-weight: 400; font-size: 24px; line-height: auto; color: #fff;}
 
-.servicenow .section02 {display: flex; flex-direction: column; justify-content: center; padding: 180px 0 187px 10.42vw;}
-/* .servicenow .section02 .content-wrap {display: flex;} */
-.servicenow .section02 .slide-list {display: flex; gap: 60px;}
+
+
+/* .servicenow .section02 {padding: 180px 0 187px 10.42vw;}
+.servicenow .section02 .content-wrap {display: flex; gap: 132px;}
+.servicenow .section02 .content-wrap .title-btn-wrap {flex-shrink: 0;}
+.servicenow .section02 .content-wrap .title-btn-wrap .slide-btn {display: flex; align-items: center; margin-top: 50px; gap: 30px;}
+.servicenow .section02 .content-wrap .title-btn-wrap .pagenation {width: 200px; height: 2px; background-color: #E1E1E1;}
+
+.servicenow .section02 .slide-list {display: flex; gap: 60px; margin-top: 48px; padding: 20px; overflow: hidden;}
 .servicenow .section02 .slide-list .slide-wrap {width: 562px; height: 516px; padding: 80px 60px; flex-direction: column; align-items: flex-start; gap: 40px; flex-shrink: 0; border-radius: 20px; background: #FFF; box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.08);}
 .servicenow .section02 .slidetext01 {font-weight: 700; font-size: 20px; letter-spacing: -0.6px; margin: 40px 0 20px;}
+.servicenow .section02 .slidetext02 {font-weight: 500; font-size: 16px; word-break: break-all;} */
+
+
+
+
+.servicenow .section02 {padding: 180px 0 187px 10.42vw; background: url(../../images/sub/servicenow_02_bg_logo.png)no-repeat 0 75%;}
+.servicenow .section02 .content-wrap {display: flex; gap: 132px;}
+.servicenow .section02 .content-wrap .title-wrap {flex-shrink: 0;}
+.servicenow .section02 .slide-list {display: flex; gap: 60px; margin-top: 48px; padding: 20px; overflow: hidden;}
+.servicenow .section02 .slide-list .slide-wrap {width: 562px !important; height: 516px; padding: 80px 60px; flex-direction: column; align-items: flex-start; gap: 40px; flex-shrink: 0; border-radius: 20px; background: #FFF; box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.08);}
+.servicenow .section02 .slidetext01 {font-weight: 700; font-size: 20px; letter-spacing: -0.6px; margin: 40px 0 20px;}
 .servicenow .section02 .slidetext02 {font-weight: 500; font-size: 16px; word-break: break-all;}
+.swiper-button-next { width: 24px; height: 24px;}
+
+.servicenow .section02 .swiper {position: relative;}
+.servicenow .section02 .swiper .swiper-wrapper {overflow: hidden;}
+.servicenow .section02 .swiper-button-next {position: absolute; width: 24px; height: 24px; top: 260px; left: -564px;}
+.servicenow .section02 .swiper-button-prev {position: absolute; width: 24px; height: 24px; top: 260px; left: -632px;}
+.servicenow .section02 .swiper-pagination {position: absolute; width: 200px; height: 2px; top: 250px; left: -500px;}
+:root {--swiper-theme-color: #00BC26;}
+.servicenow .section02 .swiper-button-prev::after,
+.servicenow .section02 .swiper-button-next::after {font-size:1.5rem;}
+
+
 
 .servicenow .section03 {width: 100%; background-color: #EFF9F1; padding: 120px 0 240px;}
 .servicenow .section03 .main-img {display: block; margin: 104px auto 100px;}
@@ -53,7 +82,9 @@
 .servicenow .section05 .content-wrap {margin-top: 100px;}
 .servicenow .section05 .content-wrap .content-02 {margin-top: 80px;}
 .servicenow .section05 .content-img-wrap {display: flex; justify-content: space-between; align-items: center; gap: 75px;}
+.servicenow .section05 .content-img-wrap:last-child {gap: 170px;}
 .servicenow .section05 .content-title-wrap {display: flex; align-items: flex-end;}
+.servicenow .section05 .content-02 .content-title-wrap {margin-left: -17px;}
 .servicenow .section05 .content-title-wrap .content-num {font-size: 100px; font-weight: 800; line-height: 80px; letter-spacing: -3px; color: #DBF8E9;}
 .servicenow .section05 .content-title-wrap .content-title {font-size: 40px; font-weight: 800; line-height: 42px; letter-spacing: -1.2px; margin-left: -42px;}
 .servicenow .section05 .content-desc-wrap {margin-top: 40px; display: flex; justify-content: space-between; gap: 10px;}
@@ -64,7 +95,7 @@
 .servicenow .section06 .contact-form-wrap {display: flex; justify-content: space-between;}
 .servicenow .section06 .contact-title {font-size: 48px; font-weight: 800; letter-spacing: -1.44px; color: #fff;}
 .servicenow .section06 .contact-desc {margin-top: 35px; font-size: 24px; font-weight: 600; line-height: 141.667%; letter-spacing: 0.72px; color: #fff;}
-.servicenow .section06 .form-wrap {width: 604px; padding: 40px 50px; border-radius: 30px; background: rgba(255, 255, 255, 0.15);}
+.servicenow .section06 .form-wrap {width: 604px; padding: 40px 50px; margin-right: 8.55%; border-radius: 30px; background: rgba(255, 255, 255, 0.15);}
 .servicenow .section06 .form-wrap .form-group-wrap {display: flex; justify-content: space-between; gap: 24px;}
 .servicenow .section06 .form-wrap .form-group {flex: 1; margin-top: 30px;}
 .servicenow .section06 .form-wrap .form-name {margin-top: 0;}
