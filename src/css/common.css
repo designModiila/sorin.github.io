@@ -14,7 +14,7 @@ body.noScroll { overflow: hidden;}
 #header .gnb-wrap .gnb > li .depth1 { display: block; font-size: 18px; font-weight: 700; color: #C8C8C8; position: relative;}
 
 
-.inner {max-width: 1920px; padding: 0 10.41%; width: 100%; margin: 0 auto; position: relative;}
+.inner {max-width: 1920px; padding: 0 10.42vw; width: 100%; margin: 0 auto; position: relative;}
 /* .inner { width: 100%; margin: 0 auto; position: relative;} */
 
 .footer {background-color: #fff;}
@@ -26,3 +26,9 @@ body.noScroll { overflow: hidden;}
 .footer .footer-bottom {display: flex; justify-content: space-between; margin-top: 30px;}
 .footer .footer-bottom .privacy-list {display: flex; gap: 20px; font-size: 13px; font-weight: 500; letter-spacing: -0.39px; color: #4B4B4B;}
 .footer .footer-bottom .copy {font-size: 13px; font-weight: 500; letter-spacing: -0.39px; color: #AFAFAF;}
+
+ 
+
+@media (max-width: 1440px) {
+    .inner {width: 100%; padding: 0 7vw;}
+} 

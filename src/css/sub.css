@@ -5,25 +5,9 @@
 .servicenow .maintitle-w {font-size: 48px; font-weight: 800; line-height: 68px; letter-spacing: -0.03em; color: #fff; }
 .servicenow .maintitle-color {color: #00BC26;}
 .servicenow .section01 {display: flex; flex-direction: column; justify-content: flex-end; width: 100%; height: calc(100vh - 25vh); background:url(../../images/sub/servicenow_01_visual.png)  no-repeat center; background-size: cover;}
-.servicenow .section01 .servicenow-text {padding: 7.8% 10.42%;}
+.servicenow .section01 .servicenow-text {padding: 150px 0;}
 .servicenow .section01 .servicenow-title {font-family: 'Paybooc'; font-size: 80px; color: #00BC26; margin-bottom: 10px;}
 .servicenow .section01 .servicenow-desc {font-family: 'NotoSans'; font-weight: 400; font-size: 24px; line-height: auto; color: #fff;}
-
-
-
-/* .servicenow .section02 {padding: 180px 0 187px 10.42vw;}
-.servicenow .section02 .content-wrap {display: flex; gap: 132px;}
-.servicenow .section02 .content-wrap .title-btn-wrap {flex-shrink: 0;}
-.servicenow .section02 .content-wrap .title-btn-wrap .slide-btn {display: flex; align-items: center; margin-top: 50px; gap: 30px;}
-.servicenow .section02 .content-wrap .title-btn-wrap .pagenation {width: 200px; height: 2px; background-color: #E1E1E1;}
-
-.servicenow .section02 .slide-list {display: flex; gap: 60px; margin-top: 48px; padding: 20px; overflow: hidden;}
-.servicenow .section02 .slide-list .slide-wrap {width: 562px; height: 516px; padding: 80px 60px; flex-direction: column; align-items: flex-start; gap: 40px; flex-shrink: 0; border-radius: 20px; background: #FFF; box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.08);}
-.servicenow .section02 .slidetext01 {font-weight: 700; font-size: 20px; letter-spacing: -0.6px; margin: 40px 0 20px;}
-.servicenow .section02 .slidetext02 {font-weight: 500; font-size: 16px; word-break: break-all;} */
-
-
-
 
 .servicenow .section02 {padding: 180px 0 187px 10.42vw; background: url(../../images/sub/servicenow_02_bg_logo.png)no-repeat 0 75%;}
 .servicenow .section02 .content-wrap {display: flex; gap: 132px;}
@@ -39,10 +23,11 @@
 .servicenow .section02 .swiper-button-next {position: absolute; width: 24px; height: 24px; top: 260px; left: -564px;}
 .servicenow .section02 .swiper-button-prev {position: absolute; width: 24px; height: 24px; top: 260px; left: -632px;}
 .servicenow .section02 .swiper-pagination {position: absolute; width: 200px; height: 2px; top: 250px; left: -500px;}
-:root {--swiper-theme-color: #00BC26;}
 .servicenow .section02 .swiper-button-prev::after,
 .servicenow .section02 .swiper-button-next::after {font-size:1.5rem;}
+.servicenow .section02 {--swiper-theme-color: #00BC26;}
 
+.servicenow .section02 .slide-wrap {overflow: hidden;}
 
 
 .servicenow .section03 {width: 100%; background-color: #EFF9F1; padding: 120px 0 240px;}
@@ -70,13 +55,13 @@
 .servicenow .section04 .count-value-wrap {display: flex; justify-content: space-between; margin-top: 210px;}
 .servicenow .section04 .count-value {display: flex; flex: 1; padding: 50px; flex-direction: column; justify-content: center; align-items: center;}
 .servicenow .section04 .count-value-02 {border-left: 2px solid #1E4F67; border-right: 2px solid #1E4F67;}
-.servicenow .section04 .count-value-title {font-size: 24px; font-weight: 700; color: #E1E1E1;}
+.servicenow .section04 .count-value-title {font-size: 24px; font-weight: 700; text-align: center; color: #E1E1E1;}
 .servicenow .section04 .count-wrap {display: flex; gap: 10px; align-items: flex-end; margin-top: 20px;}
 .servicenow .section04 .count-wrap-03 {align-items: center;}
 .servicenow .section04 .count-wrap .count {font-size: 78px; font-weight: 800; letter-spacing: -1.2px; color: #00DD2C; line-height: 78px;}
 .servicenow .section04 .count-wrap .unit {font-size: 40px; font-weight: 800; color: #00DD2C;}
 
-.servicenow .section05 {padding: 167px 0 240px; max-width: 1259px;}
+.servicenow .section05 {padding: 167px 17.08vw 240px;}
 .servicenow .section05 .maintitle {text-align: center;}
 .servicenow .section05 .main-desc {text-align: center; margin-top: 40px; font-size: 24px; font-weight: 500; line-height: 150%; letter-spacing: -0.72px;}
 .servicenow .section05 .content-wrap {margin-top: 100px;}
@@ -116,3 +101,15 @@
 .servicenow .section06 .form-wrap .btn-toggle {font-size: 16px; font-weight: 500; color: #fff;}
 .servicenow .section06 .form-wrap .submit-btn {margin-top: 30px; padding: 15px 50px; border-radius: 999px; border: 1px solid #fff; font-size: 18px; font-weight: 700; color: #fff;}
 
+@media (max-width: 1440px) {
+    .servicenow .section01 {height: 100vh; background-position: 70% 0;}
+    .servicenow .section02 {padding-left: 7vw;}
+    .servicenow .section05 {padding: 167px 10vw 240px;}
+}
+@media (max-width: 1507px) {
+    .servicenow .section04 .count-wrap {align-items: flex-end;}
+}
+@media (max-width: 1300px) {
+    .servicenow .section03 .item-wrap {padding: 60px 50px; gap: 30px;}
+    .servicenow .section04 .content-box {padding: 50px 30px;}
+}
