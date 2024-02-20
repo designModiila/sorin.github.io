@@ -1,13 +1,14 @@
 @charset "utf-8";
 
 /* servicenow */
+.servicenow .only-mo {display: none;}
 .servicenow .maintitle {font-size: 48px; font-weight: 800; line-height: 68px; letter-spacing: -0.03em; color: #323232; }
 .servicenow .maintitle-w {font-size: 48px; font-weight: 800; line-height: 68px; letter-spacing: -0.03em; color: #fff; }
 .servicenow .maintitle-color {color: #00BC26;}
 .servicenow .section01 {display: flex; flex-direction: column; justify-content: flex-end; width: 100%; height: calc(100vh - 25vh); background:url(../../images/sub/servicenow_01_visual.png)  no-repeat center; background-size: cover;}
 .servicenow .section01 .servicenow-text {padding: 150px 0;}
 .servicenow .section01 .servicenow-title {font-family: 'Paybooc'; font-size: 80px; color: #00BC26; margin-bottom: 10px;}
-.servicenow .section01 .servicenow-desc {font-family: 'NotoSans'; font-weight: 400; font-size: 24px; line-height: auto; color: #fff;}
+.servicenow .section01 .servicenow-desc {font-weight: 400; font-size: 24px; line-height: auto; color: #fff;}
 
 .servicenow .section02 {padding: 180px 0 187px 10.42vw; background: url(../../images/sub/servicenow_02_bg_logo.png)no-repeat 0 75%;}
 .servicenow .section02 .content-wrap {display: flex; gap: 132px;}
@@ -27,7 +28,7 @@
 .servicenow .section02 .swiper-button-next::after {font-size:1.5rem;}
 .servicenow .section02 {--swiper-theme-color: #00BC26;}
 
-.servicenow .section02 .slide-wrap {overflow: hidden;}
+/* .servicenow .section02 .slide-wrap {overflow: hidden;} */
 
 
 .servicenow .section03 {width: 100%; background-color: #EFF9F1; padding: 120px 0 240px;}
@@ -36,7 +37,7 @@
 .servicenow .section03 .subtext-color {color: #00BC26;}
 .servicenow .section03 .item-wrap {display: flex; justify-content: space-between; gap: 60px; width: 100%; padding: 80px 70px; border-radius: 20px; background: #002E45; color: #E1E1E1;}
 .servicenow .section03 .item-wrap img {width: 100px; height: 100px;}
-.servicenow .section03 .item-wrap > li {flex: 1;}
+.servicenow .section03 .item-wrap > li {flex: 1; min-width: 200px;}
 .servicenow .section03 .item-title {margin-top: 60px; font-size: 24px; font-weight: 700; line-height: 34px; letter-spacing: -0.72px;}
 .servicenow .section03 .item-desc {margin-top: 15px; font-size: 16px; font-weight: 500; line-height: 150%; letter-spacing: -0.48px; word-break: break-all;}
 
@@ -53,7 +54,7 @@
 .servicenow .section04 .content-title {font-weight: 700; font-size: 24px; line-height: 34px; letter-spacing: -3%; color: #fff; margin-top: 30px;} 
 .servicenow .section04 .content-desc {font-weight: 500; font-size: 18px; line-height: 26px; letter-spacing: -3%; color: #E1E1E1; margin-top: 30px; word-break: break-all;}
 .servicenow .section04 .count-value-wrap {display: flex; justify-content: space-between; margin-top: 210px;}
-.servicenow .section04 .count-value {display: flex; flex: 1; padding: 50px; flex-direction: column; justify-content: center; align-items: center;}
+.servicenow .section04 .count-value {display: flex; flex: 1; padding: 50px; flex-direction: column; justify-content: space-between; align-items: center;}
 .servicenow .section04 .count-value-02 {border-left: 2px solid #1E4F67; border-right: 2px solid #1E4F67;}
 .servicenow .section04 .count-value-title {font-size: 24px; font-weight: 700; text-align: center; color: #E1E1E1;}
 .servicenow .section04 .count-wrap {display: flex; gap: 10px; align-items: flex-end; margin-top: 20px;}
@@ -65,9 +66,8 @@
 .servicenow .section05 .maintitle {text-align: center;}
 .servicenow .section05 .main-desc {text-align: center; margin-top: 40px; font-size: 24px; font-weight: 500; line-height: 150%; letter-spacing: -0.72px;}
 .servicenow .section05 .content-wrap {margin-top: 100px;}
-.servicenow .section05 .content-wrap .content-02 {margin-top: 80px;}
+.servicenow .section05 .content-wrap .content-02 {margin-top: 80px; gap: 170px;}
 .servicenow .section05 .content-img-wrap {display: flex; justify-content: space-between; align-items: center; gap: 75px;}
-.servicenow .section05 .content-img-wrap:last-child {gap: 170px;}
 .servicenow .section05 .content-title-wrap {display: flex; align-items: flex-end;}
 .servicenow .section05 .content-02 .content-title-wrap {margin-left: -17px;}
 .servicenow .section05 .content-title-wrap .content-num {font-size: 100px; font-weight: 800; line-height: 80px; letter-spacing: -3px; color: #DBF8E9;}
@@ -105,11 +105,45 @@
     .servicenow .section01 {height: 100vh; background-position: 70% 0;}
     .servicenow .section02 {padding-left: 7vw;}
     .servicenow .section05 {padding: 167px 10vw 240px;}
+    .servicenow .section05 .content-img-wrap img {width: 40%;}
 }
 @media (max-width: 1507px) {
     .servicenow .section04 .count-wrap {align-items: flex-end;}
 }
 @media (max-width: 1300px) {
-    .servicenow .section03 .item-wrap {padding: 60px 50px; gap: 30px;}
+    .servicenow .section03 .only-mo {display: block;}
+    .servicenow .section03 .subtext {font-size: 28px;}
+    .servicenow .section03 .item-wrap {flex-wrap: wrap; padding: 60px 50px; gap: 70px;}
+    .servicenow .section03 .item-wrap > li {min-width: 370px;}
     .servicenow .section04 .content-box {padding: 50px 30px;}
+    .servicenow .section06 .form-wrap {margin-right: 0;}
+}
+@media (max-width: 1200px) {
+    .servicenow .section04 .content-wrap {flex-direction: column;}
+    .servicenow .section04 .only-pc {display: none;}
+    .servicenow .section04 .count-value {padding: 50px 20px;}
+    .servicenow .section05 .content-img-wrap {flex-direction: column; gap: 30px;}
+    .servicenow .section05 .content-wrap {margin-top: 180px;}
+    .servicenow .section05 .content-wrap .content-02 {flex-direction: column-reverse; gap: 30px; margin-top: 150px;}
+}
+@media (max-width: 1100px) {
+    .servicenow .section03 .item-wrap > li {min-width: 280px;}
+    .servicenow .section05 .only-mo {display: block;}
+    .servicenow .section05 .main-desc {font-size: 22px;}
+}
+@media (max-width: 1024px) {
+    .servicenow .section04 .count-wrap .count {font-size: 70px;}
+}
+@media (max-width: 767px) {
+    .servicenow .maintitle {font-size: 30px; line-height: 42px;}
+    .servicenow .section01 .servicenow-title {font-size: 42px;}
+    .servicenow .section01 .servicenow-desc {font-size: 16px;}
+
+    .servicenow .section03 {padding: 70px 0 54px;}
+    .servicenow .section03 .main-img {margin: 40px 0; padding: 0;}
+    .servicenow .section03 .subtext {font-size: 18px; line-height: 30px; margin-bottom: 32px;}
+    .servicenow .section03 .item-wrap {padding: 30px 6.37vw;}
+    .servicenow .section03 .item-wrap img {width: 60px; height: 60px;}
+    .servicenow .section03 .item-title {margin-top: 20px; font-size: 20px;}
+    .servicenow .section03 .item-desc {font-size: 14px; line-height: 24px;}
 }
