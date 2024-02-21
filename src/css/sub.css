@@ -14,7 +14,7 @@
 .servicenow .section02 .content-wrap {display: flex; gap: 132px;}
 .servicenow .section02 .content-wrap .title-wrap {flex-shrink: 0;}
 .servicenow .section02 .slide-list {display: flex; gap: 60px; margin-top: 48px; padding: 20px; overflow: hidden;}
-.servicenow .section02 .slide-list .slide-wrap {width: 562px !important; height: 516px; padding: 80px 60px; flex-direction: column; align-items: flex-start; gap: 40px; flex-shrink: 0; border-radius: 20px; background: #FFF; box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.08);}
+.servicenow .section02 .slide-list .slide-wrap {width: 50% !important; height: 516px; padding: 80px 60px; flex-direction: column; align-items: flex-start; gap: 40px; flex-shrink: 0; border-radius: 20px; background: #FFF; box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.08);}
 .servicenow .section02 .slidetext01 {font-weight: 700; font-size: 20px; letter-spacing: -0.6px; margin: 40px 0 20px;}
 .servicenow .section02 .slidetext02 {font-weight: 500; font-size: 16px; word-break: break-all;}
 .swiper-button-next { width: 24px; height: 24px;}
@@ -44,7 +44,7 @@
 .servicenow .section04 {width: 100%; background: linear-gradient(180deg, #002E45 43.96%, #134453 93.52%); padding: 120px 0 134px;}
 .servicenow .section04 .maintitle-wrap {display: flex; flex-direction: column; height: 333px; background: url(../../images/sub/servicenow_04_bg_img.png) no-repeat center;}
 .servicenow .section04 .maintitle-w { text-align: center; padding-top: 94px;}
-.servicenow .section04 .btn-demo {width: 158px; height: 48px; margin: 0 auto; margin-top: 40px; padding: 15px 50px; border-radius: 999px; background-color: #00DD2C; font-size: 16px; font-weight: 800;}
+.servicenow .section04 .btn-demo { margin: 0 auto; margin-top: 40px; padding: 15px 50px; border-radius: 999px; background-color: #00DD2C; font-size: 16px; font-weight: 800; color: #000;}
 .servicenow .section04 .content-wrap {display: flex; margin-top: 85px; gap: 38px;}
 .servicenow .section04 .content-box {padding: 80px 40px; border-radius: 20px; margin-top: 85px;}
 .servicenow .section04 .content-box-01 {background: linear-gradient(180deg, #002E45 0%, #04548E 100%);}
@@ -79,7 +79,7 @@
 .servicenow .section06 {background:url(../../images/sub/servicenow_06_bg.png) no-repeat center; background-size: cover; padding: 140px 0 70px;}
 .servicenow .section06 .contact-form-wrap {display: flex; justify-content: space-between;}
 .servicenow .section06 .contact-title {font-size: 48px; font-weight: 800; letter-spacing: -1.44px; color: #fff;}
-.servicenow .section06 .contact-desc {margin-top: 35px; font-size: 24px; font-weight: 600; line-height: 141.667%; letter-spacing: 0.72px; color: #fff;}
+.servicenow .section06 .contact-desc {margin-top: 35px; padding-right: 30px; font-size: 24px; font-weight: 600; line-height: 141.667%; letter-spacing: 0.72px; color: #fff;}
 .servicenow .section06 .form-wrap {width: 604px; padding: 40px 50px; margin-right: 8.55%; border-radius: 30px; background: rgba(255, 255, 255, 0.15);}
 .servicenow .section06 .form-wrap .form-group-wrap {display: flex; justify-content: space-between; gap: 24px;}
 .servicenow .section06 .form-wrap .form-group {flex: 1; margin-top: 30px;}
@@ -89,14 +89,14 @@
 .servicenow .section06 .form-wrap .form-group .form-detail {height: 120px;}
 .servicenow .section06 .form-wrap .privacy-wrap {margin-top: 30px;}
 .servicenow .section06 .form-wrap .icheckbox {width: 20px; height: 20px; border-radius: 5px; border: 1px solid #DFE1E6; background-color: none;}
-.servicenow .section06 .form-wrap .chk-box {display: block; font-size: 16px; font-weight: 500; color: #fff; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+.servicenow .section06 .form-wrap .chk-box {position: relative; display: block; font-size: 16px; font-weight: 500; color: #fff; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
 .servicenow .section06 .form-wrap .on {display: inline-block; vertical-align: middle; margin-right: 10px; width: 20px; height: 20px; border-radius: 5px; border: 1px solid #DFE1E6;}
 .servicenow .section06 .form-wrap .chk-box input[type="checkbox"] {display: none;}
 
 .servicenow .section06 .form-wrap .chk-box input[type="checkbox"]:checked + .on { background: #fff; }
 .servicenow .section06 .form-wrap .on:after { content: ""; position: absolute; display: none; }
 .servicenow .section06 .form-wrap .chk-box input[type="checkbox"]:checked + .on:after { display: block; }
-.servicenow .section06 .form-wrap .on:after { width: 6px; height: 10px; border: solid #000; border-width: 0 2px 2px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); position: absolute; left: 6px; top: 2px; }
+.servicenow .section06 .form-wrap .on:after { width: 6px; height: 10px; border: solid #000; border-width: 0 2px 2px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); position: absolute; left: 6px; top: 5px; }
 
 .servicenow .section06 .form-wrap .btn-toggle {font-size: 16px; font-weight: 500; color: #fff;}
 .servicenow .section06 .form-wrap .submit-btn {margin-top: 30px; padding: 15px 50px; border-radius: 999px; border: 1px solid #fff; font-size: 18px; font-weight: 700; color: #fff;}
@@ -136,14 +136,59 @@
 }
 @media (max-width: 767px) {
     .servicenow .maintitle {font-size: 30px; line-height: 42px;}
+    .servicenow .maintitle-w {font-size: 30px; line-height: 42px;}
     .servicenow .section01 .servicenow-title {font-size: 42px;}
     .servicenow .section01 .servicenow-desc {font-size: 16px;}
 
     .servicenow .section03 {padding: 70px 0 54px;}
     .servicenow .section03 .main-img {margin: 40px 0; padding: 0;}
     .servicenow .section03 .subtext {font-size: 18px; line-height: 30px; margin-bottom: 32px;}
-    .servicenow .section03 .item-wrap {padding: 30px 6.37vw;}
+    .servicenow .section03 .item-wrap {padding: 30px 6.37vw; gap: 60px;}
     .servicenow .section03 .item-wrap img {width: 60px; height: 60px;}
     .servicenow .section03 .item-title {margin-top: 20px; font-size: 20px;}
     .servicenow .section03 .item-desc {font-size: 14px; line-height: 24px;}
+    .servicenow .section04 {padding: 70px 0;}
+    .servicenow .section04 .maintitle-wrap {background-size: contain;}
+    .servicenow .section04 .content-box img {width: 80px; height: 80px;}
+    .servicenow .section04 .content-wrap {margin-top: 60px; gap: 50px;}
+    .servicenow .section04 .content-box {margin-top: 0; padding: 40px 20px;}
+    .servicenow .section04 .content-box-02 {transform: translateY(0);}
+    .servicenow .section04 .content-title {font-size: 20px;}
+    .servicenow .section04 .content-desc f{font-size: 16px;}
+    .servicenow .section04 .count-value-wrap {margin-top: 60px; flex-direction: column;}
+    .servicenow .section04 .count-value-02 {border: none;}
+    .servicenow .section04 .count-value {padding: 35px 20px;}
+    .servicenow .section04 .count-value img {width: 80px; height: 80px;}
+    .servicenow .section04 .count-value-title {font-size: 20px;}
+    .servicenow .section04 .count-wrap .count {font-size: 60px;}
+    .servicenow .section04 .count-wrap .unit {font-size: 30px;}
+    .servicenow .section04 .count-wrap {margin-top: 10px;}
+    .servicenow .section05 {padding: 70px 6.67vw 100px;}
+    .servicenow .section05 .maintitle {text-align: left;}
+    .servicenow .section05 .main-desc {font-size: 18px; text-align: left;}
+    .servicenow .section05 .main-desc > br {display: none;}
+    .servicenow .section05 .content-wrap {margin-top: 40px;}
+    .servicenow .section05 .content-title-wrap .content-num {font-size: 60px; line-height: 60px;}
+    .servicenow .section05 .content-title-wrap .content-title {font-size: 24px; line-height: 24px; margin-left: -60px;}
+    .servicenow .section05 .content-desc-wrap {margin-top: 20px;}
+    .servicenow .section05 .content-desc-wrap .content-desc f{font-size: 16px;}
+    .servicenow .section05 .content-wrap .content-02 {margin-top: 100px;}
+    .servicenow .section06 {padding: 58px 0 40px;}
+    .servicenow .section06 .contact-title {font-size: 30px;}
+    .servicenow .section06 .contact-desc {font-size: 20px; margin-top: 30px;}
+    .servicenow .section06 .contact-form-wrap {flex-direction: column;}
+    .servicenow .section06 .form-wrap {width: 100%; margin-top: 64px; padding: 25px 20px;}
+    .servicenow .section06 .form-wrap .chk-box {font-size: 14px;}
+    .servicenow .section06 .form-wrap .btn-toggle {font-size: 14px;}
+    .servicenow .section06 .form-wrap .submit-btn {font-size: 16px;}
+}
+@media (max-width: 600px) {
+    .servicenow .section06 .form-wrap .form-group-wrap {flex-direction: column;}
+    .servicenow .section06 .form-wrap .privacy-wrap {flex-direction: row; gap: 0;}
+}
+@media (max-width: 550px) {
+    .servicenow .section05 .content-img-wrap img {width: 80%;}
+}
+@media (max-width: 450px) {
+    .servicenow .section01 .servicenow-desc > br {display: none;}
 }

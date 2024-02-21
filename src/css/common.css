@@ -31,7 +31,11 @@ body.noScroll { overflow: hidden;}
 
 @media (max-width: 1440px) {
     .inner {width: 100%; padding: 0 7vw;}
+    .footer .footer-inner {width: 100%; padding: 30px 7vw;}
 } 
 @media (max-width: 767px) {
     .inner {width: 100%; padding: 0 6.67vw;}
+    .footer .footer-inner {padding: 30px 6.67vw;}
+    .footer .family-site {display: none;}
+    .footer .footer-bottom .privacy-list {display: none;}
 } 
