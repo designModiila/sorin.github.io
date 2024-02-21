@@ -13,6 +13,29 @@
 .servicenow .section02 {padding: 180px 0 187px 10.42vw; background: url(../../images/sub/servicenow_02_bg_logo.png)no-repeat 0 75%;}
 .servicenow .section02 .content-wrap {display: flex; gap: 132px;}
 .servicenow .section02 .content-wrap .title-wrap {flex-shrink: 0;}
+.servicenow .section02 .navigation-group {position: relative; display: flex; gap: 30px; margin-top: 50px;}
+.servicenow .section02 .swiper-group {width: 60%; margin-top: 48px; overflow: hidden; position: relative;}
+.servicenow .section02 .swiper-group .swiper-slide {display: flex; gap: 60px; padding: 20px;}
+.servicenow .section02 .content-wrap .card-slide {height: 516px; padding: 80px 60px; flex-direction: column; align-items: flex-start; gap: 40px; flex-shrink: 0; border-radius: 20px; background: #FFF; box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.08);}
+
+.servicenow .section02 .title-navigation-wrap {display: flex; flex-direction: column;}
+.servicenow .section02 .slidetext01 {font-weight: 700; font-size: 20px; letter-spacing: -0.6px; margin: 40px 0 20px;}
+.servicenow .section02 .slidetext02 {font-weight: 500; font-size: 16px; word-break: break-all;}
+.servicenow .section02 .swiper-button-next,
+.servicenow .section02 .swiper-button-prev {cursor: pointer;}
+/* .servicenow .section02 .swiper-button-next {width: 24px; height: 24px;}
+.servicenow .section02 .swiper-button-prev {width: 24px; height: 24px;} */
+.servicenow .section02 .swiper-button-next {position: absolute; top: 0; left: 60px;}
+.servicenow .section02 .swiper-button-prev {position: absolute; top: 0; left: 0;}
+
+.servicenow .section02 .swiper-pagination {position: absolute; width: 200px; height: 2px; left: 112px;}
+.servicenow .section02 .swiper-button-prev::after,
+.servicenow .section02 .swiper-button-next::after {font-size:1.5rem;}
+.servicenow .section02 {--swiper-theme-color: #00BC26;}
+    
+/* .swiper-group .swiper-slide-active {filter: blur(0px) !important;transform: scale(1) !important;} */
+
+/* 
 .servicenow .section02 .slide-list {display: flex; gap: 60px; margin-top: 48px; padding: 20px; overflow: hidden;}
 .servicenow .section02 .slide-list .slide-wrap {width: 50% !important; height: 516px; padding: 80px 60px; flex-direction: column; align-items: flex-start; gap: 40px; flex-shrink: 0; border-radius: 20px; background: #FFF; box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.08);}
 .servicenow .section02 .slidetext01 {font-weight: 700; font-size: 20px; letter-spacing: -0.6px; margin: 40px 0 20px;}
@@ -26,9 +49,10 @@
 .servicenow .section02 .swiper-pagination {position: absolute; width: 200px; height: 2px; top: 250px; left: -500px;}
 .servicenow .section02 .swiper-button-prev::after,
 .servicenow .section02 .swiper-button-next::after {font-size:1.5rem;}
-.servicenow .section02 {--swiper-theme-color: #00BC26;}
+.servicenow .section02 {--swiper-theme-color: #00BC26;} */
 
-/* .servicenow .section02 .slide-wrap {overflow: hidden;} */
+
+
 
 
 .servicenow .section03 {width: 100%; background-color: #EFF9F1; padding: 120px 0 240px;}
@@ -59,7 +83,9 @@
 .servicenow .section04 .count-value-title {font-size: 24px; font-weight: 700; text-align: center; color: #E1E1E1;}
 .servicenow .section04 .count-wrap {display: flex; gap: 10px; align-items: flex-end; margin-top: 20px;}
 .servicenow .section04 .count-wrap-03 {align-items: center;}
-.servicenow .section04 .count-wrap .count {font-size: 78px; font-weight: 800; letter-spacing: -1.2px; color: #00DD2C; line-height: 78px;}
+.servicenow .section04 .count-wrap .count01,
+.servicenow .section04 .count-wrap .count02,
+.servicenow .section04 .count-wrap .count03 {font-size: 78px; font-weight: 800; letter-spacing: -1.2px; color: #00DD2C; line-height: 78px;}
 .servicenow .section04 .count-wrap .unit {font-size: 40px; font-weight: 800; color: #00DD2C;}
 
 .servicenow .section05 {padding: 167px 17.08vw 240px;}
@@ -87,6 +113,8 @@
 .servicenow .section06 .form-wrap .form-group .form-label label {font-size: 16px; font-weight: 700; color: #fff;}
 .servicenow .section06 .form-wrap .form-group input {width: 100%; height: 40px; border-bottom: 1px solid #C8C8C8;}
 .servicenow .section06 .form-wrap .form-group .form-detail {height: 120px;}
+.servicenow .section06 .form-wrap .form-group textarea {width: 100%; margin-top: 10px; background-color: #ffffff00; border: none;}
+.servicenow .section06 .form-wrap .form-group textarea {border-bottom: 1px solid #C8C8C8;}
 .servicenow .section06 .form-wrap .privacy-wrap {margin-top: 30px;}
 .servicenow .section06 .form-wrap .icheckbox {width: 20px; height: 20px; border-radius: 5px; border: 1px solid #DFE1E6; background-color: none;}
 .servicenow .section06 .form-wrap .chk-box {position: relative; display: block; font-size: 16px; font-weight: 500; color: #fff; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
