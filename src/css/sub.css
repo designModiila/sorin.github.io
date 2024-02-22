@@ -13,10 +13,12 @@
 .servicenow .section02 {padding: 180px 0 187px 10.42vw; background: url(../../images/sub/servicenow_02_bg_logo.png)no-repeat 0 75%;}
 .servicenow .section02 .content-wrap {display: flex; gap: 132px;}
 .servicenow .section02 .content-wrap .title-wrap {flex-shrink: 0;}
+.servicenow .section02 .content-wrap .title-wrap .maintitle {width: 510px;}
 .servicenow .section02 .navigation-group {position: relative; display: flex; gap: 30px; margin-top: 50px;}
-.servicenow .section02 .swiper-group {width: 60%; margin-top: 48px; overflow: hidden; position: relative;}
-.servicenow .section02 .swiper-group .swiper-slide {display: flex; gap: 60px; padding: 20px;}
-.servicenow .section02 .content-wrap .card-slide {height: 516px; padding: 80px 60px; flex-direction: column; align-items: flex-start; gap: 40px; flex-shrink: 0; border-radius: 20px; background: #FFF; box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.08);}
+.servicenow .section02 .swiper-group {margin-top: 48px; position: relative; overflow: hidden;  }
+.servicenow .section02 .swiper-group .swiper-wrapper { display: flex; gap: 60px; padding: 60px 0 60px 60px;}
+.servicenow .section02 .swiper-group .swiper-slide {max-width: 562px;}
+.servicenow .section02 .content-wrap .card-slide {height: 516px; ; padding: 80px 60px; flex-direction: column; align-items: flex-start; gap: 40px; flex-shrink: 0; border-radius: 20px; background: #FFF; box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.08);}
 
 .servicenow .section02 .title-navigation-wrap {display: flex; flex-direction: column;}
 .servicenow .section02 .slidetext01 {font-weight: 700; font-size: 20px; letter-spacing: -0.6px; margin: 40px 0 20px;}

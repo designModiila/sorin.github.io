@@ -1,6 +1,6 @@
 var swiper = new Swiper(".swiper-group", {
-  loop: true,
-  slidesPerView: 1.5,
+  //loop: true,
+  slidesPerView: 1.25,
   grabCursor: true,
   pagination: {
           el: ".swiper-pagination",
