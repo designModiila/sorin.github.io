@@ -17,6 +17,18 @@ var swiper = new Swiper(".swiper-group", {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
   },
+  breakpoints: {
+          // when window width is >= 640px
+          300: {
+              slidesPerView: 1,
+          },
+          767: {
+            slidesPerView: 1.5,
+        },
+          1550: {
+            slidesPerView: 1.7,
+        },
+      }
   });
 
 
