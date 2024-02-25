@@ -81,49 +81,119 @@ var swiper = new Swiper(".swiper-group", {
 
 
 
-let countBox1 = document.querySelector('.count01');
-let count1 = 0;
-let num1 = 85;
+// let countBox1 = document.querySelector('.count01');
+// let count1 = 0;
+// let num1 = 85;
 
-let counting1 = setInterval(function () {
-    if (count1 >= num1) {
-        count1 = num1;
-        clearInterval(counting1);
-    } else {
-        count1 += 1;
-    }
-    countBox1.innerHTML = new Intl.NumberFormat().format(count1);
-}, 10);
-
-
-let countBox2 = document.querySelector('.count02');
-let count2 = 0;
-let num2 = 97;
-
-let counting2 = setInterval(function () {
-    if (count2 >= num2) {
-        count2 = num2;
-        clearInterval(counting2);
-    } else {
-        count2 += 1;
-    }
-    countBox2.innerHTML = new Intl.NumberFormat().format(count2);
-}, 10);
+// let counting1 = setInterval(function () {
+//     if (count1 >= num1) {
+//         count1 = num1;
+//         clearInterval(counting1);
+//     } else {
+//         count1 += 1;
+//     }
+//     countBox1.innerHTML = new Intl.NumberFormat().format(count1);
+// }, 10);
 
 
-let countBox3 = document.querySelector('.count03');
-let count3 = 0;
-let num3 = 7000;
+// let countBox2 = document.querySelector('.count02');
+// let count2 = 0;
+// let num2 = 97;
 
-let counting3 = setInterval(function () {
-    if (count3 >= num3) {
-        count3 = num3;
-        clearInterval(counting3);
-    } else {
-        count3 += 53;
-    }
-    countBox3.innerHTML = new Intl.NumberFormat().format(count3);
-}, 10);
+// let counting2 = setInterval(function () {
+//     if (count2 >= num2) {
+//         count2 = num2;
+//         clearInterval(counting2);
+//     } else {
+//         count2 += 1;
+//     }
+//     countBox2.innerHTML = new Intl.NumberFormat().format(count2);
+// }, 10);
+
+
+// let countBox3 = document.querySelector('.count03');
+// let count3 = 0;
+// let num3 = 7000;
+
+// let counting3 = setInterval(function () {
+//     if (count3 >= num3) {
+//         count3 = num3;
+//         clearInterval(counting3);
+//     } else {
+//         count3 += 53;
+//     }
+//     countBox3.innerHTML = new Intl.NumberFormat().format(count3);
+// }, 10);
+
+
+
+
+function startCountingWhenVisible(element, countingFunction) {
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                countingFunction();
+                observer.unobserve(entry.target); 
+            }
+        });
+    });
+
+    observer.observe(element);
+}
+
+function startCounting1() {
+    let count1 = 0;
+    let num1 = 85;
+
+    let counting1 = setInterval(function () {
+        if (count1 >= num1) {
+            count1 = num1;
+            clearInterval(counting1);
+        } else {
+            count1 += 1;
+        }
+        countBox1.innerHTML = new Intl.NumberFormat().format(count1);
+    }, 10);
+}
+
+function startCounting2() {
+    let count2 = 0;
+    let num2 = 97;
+
+    let counting2 = setInterval(function () {
+        if (count2 >= num2) {
+            count2 = num2;
+            clearInterval(counting2);
+        } else {
+            count2 += 1;
+        }
+        countBox2.innerHTML = new Intl.NumberFormat().format(count2);
+    }, 10);
+}
+
+function startCounting3() {
+    let count3 = 0;
+    let num3 = 7000;
+
+    let counting3 = setInterval(function () {
+        if (count3 >= num3) {
+            count3 = num3;
+            clearInterval(counting3);
+        } else {
+            count3 += 53;
+        }
+        countBox3.innerHTML = new Intl.NumberFormat().format(count3);
+    }, 10);
+}
+
+const countBox1 = document.querySelector('.count01');
+const countBox2 = document.querySelector('.count02');
+const countBox3 = document.querySelector('.count03');
+
+startCountingWhenVisible(countBox1, startCounting1);
+startCountingWhenVisible(countBox2, startCounting2);
+startCountingWhenVisible(countBox3, startCounting3);
+
 
 
 AOS.init();
