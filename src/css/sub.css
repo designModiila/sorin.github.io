@@ -15,10 +15,9 @@
 .servicenow .section02 .content-wrap .title-wrap {flex-shrink: 0;}
 .servicenow .section02 .content-wrap .title-wrap .maintitle {width: 510px;}
 .servicenow .section02 .navigation-group {position: relative; display: flex; gap: 30px; margin-top: 50px;}
-.servicenow .section02 .swiper-group {margin-top: 48px; position: relative; overflow: hidden;  }
-.servicenow .section02 .swiper-group .swiper-wrapper { display: flex; gap: 60px; padding: 60px 0 60px 60px;}
-.servicenow .section02 .swiper-group .swiper-slide {max-width: 562px;}
-.servicenow .section02 .content-wrap .card-slide {height: 516px; ; padding: 80px 60px; flex-direction: column; align-items: flex-start; gap: 40px; flex-shrink: 0; border-radius: 20px; background: #FFF; box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.08);}
+.servicenow .section02 .swiper-group {margin-top: 48px; position: relative; overflow: hidden; padding: 20px 0;}
+/* .servicenow .section02 .swiper-group .swiper-wrapper { display: flex; padding: 60px 0 60px 60px;} */
+.servicenow .section02 .content-wrap .card-slide {height: 516px; max-width: 562px; padding: 80px 60px; flex-direction: column; align-items: flex-start; gap: 40px; flex-shrink: 0; border-radius: 20px; background: #FFF; box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.08);}
 
 .servicenow .section02 .title-navigation-wrap {display: flex; flex-direction: column;}
 .servicenow .section02 .slidetext01 {font-weight: 700; font-size: 20px; letter-spacing: -0.6px; margin: 40px 0 20px;}
@@ -34,8 +33,9 @@
 .servicenow .section02 .swiper-button-prev::after,
 .servicenow .section02 .swiper-button-next::after {font-size:1.5rem;}
 .servicenow .section02 {--swiper-theme-color: #00BC26;}
-    
-/* .swiper-group .swiper-slide-active {filter: blur(0px) !important;transform: scale(1) !important;} */
+
+.servicenow .section02 .swiper-group .swiper-slide {transform: scale(1) !important; filter: blur(3px) grayscale(0.5);}
+.swiper-group .swiper-slide-active {filter: blur(0px) !important;transform: scale(1) !important;}
 
 /* 
 .servicenow .section02 .slide-list {display: flex; gap: 60px; margin-top: 48px; padding: 20px; overflow: hidden;}

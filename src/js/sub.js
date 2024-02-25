@@ -1,6 +1,13 @@
 var swiper = new Swiper(".swiper-group", {
-  //loop: true,
-  slidesPerView: 1.25,
+  loop: true,
+  slidesPerView: 1.7,
+  /* swiper-slide에 각각 margin-right를 준다. */
+  spaceBetween: 70,
+  /* 전체적인 슬라이드의 왼쪽에 20px 공백을 준다. */
+	slidesOffsetBefore: 20,
+  /* 전체적인 슬라이드의 오른쪽에 20px 공백을 준다. */
+  slidesOffsetAfter: 20,
+  loopAdditionalSlides : 1,
   grabCursor: true,
   pagination: {
           el: ".swiper-pagination",
