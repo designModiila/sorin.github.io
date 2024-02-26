@@ -5,6 +5,8 @@
 .servicenow .maintitle {font-size: 48px; font-weight: 800; line-height: 68px; letter-spacing: -0.03em; color: #323232; }
 .servicenow .maintitle-w {font-size: 48px; font-weight: 800; line-height: 68px; letter-spacing: -0.03em; color: #fff; }
 .servicenow .maintitle-color {color: #00BC26;}
+
+.servicenow .section01 .logo-w {position: absolute; width: 112px; height: 50px; top: 10px; left: 10.42vw;}
 .servicenow .section01 {display: flex; flex-direction: column; justify-content: flex-end; width: 100%; height: 100vh; background:url(../../images/sub/servicenow_01_visual.png)  no-repeat center; background-size: cover;}
 .servicenow .section01 .servicenow-text {padding: 150px 0;}
 .servicenow .section01 .servicenow-title {font-family: 'Paybooc'; font-size: 80px; color: #00BC26; margin-bottom: 10px;}
@@ -36,7 +38,7 @@
 
 .servicenow .section02 .swiper-group .swiper-slide {transform: scale(1) !important; filter: blur(3px) grayscale(0.5);}
 .swiper-group .swiper-slide-active {filter: blur(0px) !important;transform: scale(1) !important;}
-.servicenow .section02 .swiper-group .swiper-slide:last-child {display: none;}
+.servicenow .section02 .swiper-slide:last-child.swiper-slide-active {filter: blur(0px) !important;transform: scale(1) !important;}
 
 
 .servicenow .section03 {width: 100%; background-color: #EFF9F1; padding: 120px 0 240px;}
@@ -125,6 +127,7 @@
     .servicenow .section04 .count-wrap {align-items: flex-end;}
 }
 @media (max-width: 1440px) {
+    .servicenow .section01 .logo-w {left: 7vw;}
     .servicenow .section01 {height: 100vh; background-position: 70% 0;}
     .servicenow .section02 {padding-left: 7vw;}
     .servicenow .section05 {padding: 167px 10vw 240px;}
@@ -164,6 +167,7 @@
     .servicenow .section04 .count-wrap .count {font-size: 70px;}
 }
 @media (max-width: 767px) {
+    .servicenow .section01 .logo-w {width: 80px; height: 36px; left: 6.67vw;}
     .servicenow .maintitle {font-size: 30px; line-height: 42px;}
     .servicenow .maintitle-w {font-size: 30px; line-height: 42px;}
     .servicenow .section01 .servicenow-title {font-size: 42px;}
