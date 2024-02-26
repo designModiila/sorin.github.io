@@ -8,6 +8,10 @@ var swiper = new Swiper(".swiper-group", {
 	slidesOffsetBefore: 20,
   /* 전체적인 슬라이드의 오른쪽에 20px 공백을 준다. */
   slidesOffsetAfter: 20,
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+},
   grabCursor: true,
   pagination: {
           el: ".swiper-pagination",
