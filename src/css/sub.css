@@ -41,7 +41,7 @@
 
 .servicenow .section03 {width: 100%; background-color: #EFF9F1; padding: 120px 0 240px;}
 .servicenow .section03 .main-img {display: block; margin: 104px auto 100px;}
-.servicenow .section03 .subtext {margin-bottom: 100px; text-align: center; font-size: 30px; font-style: normal; font-weight: 800; line-height: 42px; letter-spacing: 0.01em;}
+.servicenow .section03 .subtext {margin-bottom: 100px; text-align: center; font-size: 30px; font-style: normal; font-weight: 800; line-height: 42px; letter-spacing: -0.03em;}
 .servicenow .section03 .subtext-color {color: #00BC26;}
 .servicenow .section03 .item-wrap {display: flex; justify-content: space-between; gap: 60px; width: 100%; padding: 80px 70px; border-radius: 20px; background: #002E45; color: #E1E1E1;}
 .servicenow .section03 .item-wrap img {width: 100px; height: 100px;}
@@ -86,7 +86,7 @@
 .servicenow .section05 .content-desc-wrap svg {width: 70px;}
 .servicenow .section05 .content-desc-wrap .content-desc {font-size: 20px; font-weight: 500; line-height: 150%; letter-spacing: -0.6px; word-break: break-all;}
 
-.servicenow .section06 {background:url(../../images/sub/servicenow_06_bg.png) no-repeat center; background-size: cover; padding: 140px 0 70px;}
+.servicenow .section06 {background:url(../../images/sub/servicenow_06_bg.png)no-repeat center top; padding: 140px 0 70px;}
 .servicenow .section06 .contact-form-wrap {display: flex; justify-content: space-between;}
 .servicenow .section06 .contact-title {font-size: 48px; font-weight: 800; letter-spacing: -1.44px; color: #fff;}
 .servicenow .section06 .contact-desc {margin-top: 35px; padding-right: 30px; font-size: 24px; font-weight: 500; line-height: 141.667%; letter-spacing: -0.003em; color: #fff;}
@@ -211,7 +211,7 @@
     .servicenow .section05 .content-title-wrap .content-num {font-size: 60px; line-height: 60px;}
     .servicenow .section05 .content-title-wrap .content-title {font-size: 24px; line-height: 24px; margin-left: -60px;}
     .servicenow .section05 .content-desc-wrap {margin-top: 20px;}
-    .servicenow .section05 .content-desc-wrap .content-desc f{font-size: 16px;}
+    .servicenow .section05 .content-desc-wrap .content-desc {font-size: 16px; line-height: 26px;}
     .servicenow .section05 .content-wrap .content-02 {margin-top: 100px;}
     .servicenow .section06 {padding: 58px 0 40px;}
     .servicenow .section06 .contact-title {font-size: 30px;}
@@ -239,6 +239,9 @@
 }
 @media (max-width: 462px) {
     .servicenow .section02 .swiper-pagination {top: 450px;}
+}
+@media (max-width: 465px) {
+    .servicenow .section03 .subtext > br:last-child {display: none;}
 }
 @media (max-width: 450px) {
     .servicenow .section01 .servicenow-desc > br {display: none;}
