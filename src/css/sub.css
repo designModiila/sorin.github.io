@@ -36,10 +36,8 @@
 .servicenow .section02 .swiper-button-next::after {font-size:1.5rem;}
 .servicenow .section02 {--swiper-theme-color: #00BC26;}
 
-.servicenow .section02 .swiper-group .swiper-slide {transform: scale(1) !important; filter: blur(3px) grayscale(0.5);}
-.swiper-group .swiper-slide-active {filter: blur(0px) !important;transform: scale(1) !important;}
-.servicenow .section02 .swiper-slide:last-child.swiper-slide-active {filter: blur(0px) !important;transform: scale(1) !important;}
-
+/* .servicenow .section02 .swiper-group .swiper-slide {transform: scale(1) !important; filter: blur(1px) grayscale(0.5);}
+.swiper-group .swiper-slide-active {filter: blur(0px) !important;transform: scale(1) !important;} */
 
 .servicenow .section03 {width: 100%; background-color: #EFF9F1; padding: 120px 0 240px;}
 .servicenow .section03 .main-img {display: block; margin: 104px auto 100px;}
