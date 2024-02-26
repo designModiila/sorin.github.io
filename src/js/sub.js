@@ -1,5 +1,5 @@
 var swiper = new Swiper(".swiper-group", {
-  loop: true,
+//   loop: true,
   slidesPerView: 1.7,
   /* swiper-slide에 각각 margin-right를 준다. */
   spaceBetween: 70,
@@ -21,9 +21,18 @@ var swiper = new Swiper(".swiper-group", {
           // when window width is >= 640px
           300: {
               slidesPerView: 1,
+              spaceBetween: 50,
+              slidesOffsetBefore: 0,
+              slidesOffsetAfter: 0,
           },
+          550: {
+            slidesPerView: 1.5,
+            slidesOffsetBefore: 20,
+            slidesOffsetAfter: 20,
+            },
           767: {
             slidesPerView: 1.5,
+            spaceBetween: 70,
         },
           1550: {
             slidesPerView: 1.7,
@@ -194,6 +203,11 @@ startCountingWhenVisible(countBox1, startCounting1);
 startCountingWhenVisible(countBox2, startCounting2);
 startCountingWhenVisible(countBox3, startCounting3);
 
+
+$('.more-btn').click(function() {
+    $(this).toggleClass('active');
+    $('.view-fulltext').toggle();
+  });  
 
 
 AOS.init();
