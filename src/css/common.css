@@ -17,7 +17,7 @@ body.noScroll { overflow: hidden;}
 .inner {max-width: 1920px; padding: 0 10.42vw; width: 100%; margin: 0 auto; position: relative;}
 /* .inner { width: 100%; margin: 0 auto; position: relative;} */
 
-.footer {background-color: #fff;}
+.footer {background-color: #fff; position: relative;}
 .footer .footer-inner {padding: 30px 10.42vw; max-width: 1920px; margin: 0 auto;}
 .footer .footer-top {width: 100%; padding-bottom: 30px; border-bottom: 1px solid #C8C8C8;}
 .footer .footer-contact {display: flex; margin-top: 30px; justify-content: space-between;}
@@ -36,6 +36,14 @@ body.noScroll { overflow: hidden;}
 @media (max-width: 767px) {
     .inner {width: 100%; padding: 0 6.67vw;}
     .footer .footer-inner {padding: 30px 6.67vw;}
-    .footer .family-site {display: none;}
-    .footer .footer-bottom .privacy-list {display: none;}
+    .footer .footer-top {padding-bottom: 20px;}
+    .footer .footer-top > img {width: 80px; height: 36px;}
+    .footer .footer-contact .family-site {position: absolute; top: 33px; right: 6.67vw;}
+    .footer .footer-contact .family-select {padding: 6px 18px; font-size: 10px;}
+    .footer .footer-contact .family-select svg {margin-left: 3px;}
+    .footer .footer-bottom .privacy-list {position: absolute; font-size: 11px; top: 110px;}
+    .footer .footer-contact {margin-top: 50px;}
+    .footer .footer-contact .contact {font-size: 11px; line-height: 22px;}
+    .footer .footer-bottom .copy {font-size: 10px;}
+
 } 

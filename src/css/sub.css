@@ -228,7 +228,7 @@
 }
 @media (max-width: 600px) {
     .servicenow .section06 .form-wrap .form-group-wrap {flex-direction: column;}
-    .servicenow .section06 .form-wrap .privacy-wrap {flex-direction: row; gap: 0;}
+    .servicenow .section06 .form-wrap .privacy-wrap {gap: 10px;}
 }
 @media (max-width: 550px) {
     .servicenow .section02 {padding-right: 6.67vw; padding-bottom: 100px; background: none;}
