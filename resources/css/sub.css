@@ -7,12 +7,12 @@
 .servicenow .maintitle-color {color: #00BC26;}
 
 .servicenow .section01 .logo-w {position: absolute; width: 112px; height: 50px; top: 10px; left: 10.42vw;}
-.servicenow .section01 {display: flex; flex-direction: column; justify-content: flex-end; width: 100%; height: 100vh; background:url(/resources/images/sub/servicenow_01_visual.png)  no-repeat center; background-size: cover;}
+.servicenow .section01 {display: flex; flex-direction: column; justify-content: flex-end; width: 100%; height: 100vh; background:url(../../resources/images/sub/servicenow_01_visual.png)  no-repeat center; background-size: cover;}
 .servicenow .section01 .servicenow-text {padding: 150px 0;}
 .servicenow .section01 .servicenow-title {font-family: 'Paybooc'; font-size: 80px; color: #00BC26; margin-bottom: 10px;}
 .servicenow .section01 .servicenow-desc {font-weight: 400; font-size: 24px; line-height: auto; color: #fff;}
 
-.servicenow .section02 {padding: 180px 0 187px 10.42vw; background: url(/resources/images/sub/servicenow_02_bg_logo.png)no-repeat 0 75%;}
+.servicenow .section02 {padding: 180px 0 187px 10.42vw; background: url(../../resources/images/sub/servicenow_02_bg_logo.png)no-repeat 0 75%;}
 .servicenow .section02 .content-wrap {display: flex; gap: 132px;}
 .servicenow .section02 .content-wrap .title-wrap {flex-shrink: 0;}
 .servicenow .section02 .content-wrap .title-wrap .maintitle {width: 510px;}
@@ -50,7 +50,7 @@
 .servicenow .section03 .item-desc {margin-top: 15px; font-size: 16px; font-weight: 500; line-height: 150%; letter-spacing: -0.48px; word-break: break-all;}
 
 .servicenow .section04 {width: 100%; background: linear-gradient(180deg, #002E45 43.96%, #134453 93.52%); padding: 120px 0 134px;}
-.servicenow .section04 .maintitle-wrap {display: flex; flex-direction: column; height: 333px; background: url(/resources/images/sub/servicenow_04_bg_img.png) no-repeat center;}
+.servicenow .section04 .maintitle-wrap {display: flex; flex-direction: column; height: 333px; background: url(../../resources/images/sub/servicenow_04_bg_img.png) no-repeat center;}
 .servicenow .section04 .maintitle-w { text-align: center; padding-top: 94px;}
 .servicenow .section04 .btn-demo { margin: 0 auto; margin-top: 40px; padding: 15px 50px; width: 158px; height: 48px; border-radius: 999px; background-color: #00DD2C; font-size: 16px; font-weight: 800; color: #000; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out;}
 .servicenow .section04 .btn-demo:hover{background-color: #28fd53; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; transform: translateY(-3px);}
@@ -88,7 +88,7 @@
 .servicenow .section05 .content-desc-wrap svg {width: 70px;}
 .servicenow .section05 .content-desc-wrap .content-desc {font-size: 20px; font-weight: 500; line-height: 150%; letter-spacing: -0.6px; word-break: break-all;}
 
-.servicenow .section06 {background:url(/resources/images/sub/servicenow_06_bg.png)no-repeat center top / cover; padding: 140px 0 70px;}
+.servicenow .section06 {background:url(../../resources/images/sub/servicenow_06_bg.png)no-repeat center top / cover; padding: 140px 0 70px;}
 .servicenow .section06 .contact-form-wrap {display: flex; justify-content: space-between;}
 .servicenow .section06 .contact-title {font-size: 48px; font-weight: 800; letter-spacing: -1.44px; color: #fff;}
 .servicenow .section06 .contact-desc {margin-top: 35px; padding-right: 30px; font-size: 24px; font-weight: 500; line-height: 141.667%; letter-spacing: -0.003em; color: #fff;}

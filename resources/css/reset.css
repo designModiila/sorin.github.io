@@ -51,8 +51,8 @@ textarea, input, select {font-family: 'Pretendard';}
 .input-form input.error{border: 1px solid #ff3131}
 .input-form .fas{width: 24px; height: 24px; background-position: center; background-repeat: no-repeat; position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer}
 
-.input-form .fa-search{background-image: url(/resources/images/common/search_icon.png);}
-.input-form .fa-arrow{background-image: url(/resources/images/common/fe_arrow-botom.png);}
+.input-form .fa-search{background-image: url(../../resources/images/common/search_icon.png);}
+.input-form .fa-arrow{background-image: url(../../resources/images/common/fe_arrow-botom.png);}
 
 .textBold{font-weight: 700;}
 

@@ -4,9 +4,9 @@
 	font-display: block;
   font-style: normal;
 	src: local('Pretendard ExtraLight'), 
-  url('/resources/fonts/Pretendard-ExtraLight.woff2') format('woff2'), 
-  url('/resources/fonts/Pretendard-ExtraLight.woff') format('woff'),
-  url('/resources/fonts/Pretendard-ExtraLight.ttf') format("truetype");
+  url('../../resources/fonts/Pretendard-ExtraLight.woff2') format('woff2'), 
+  url('../../resources/fonts/Pretendard-ExtraLight.woff') format('woff'),
+  url('../../resources/fonts/Pretendard-ExtraLight.ttf') format("truetype");
 }
 
 @font-face {
@@ -15,9 +15,9 @@
 	font-display: block;
   font-style: normal;
 	src: local('Pretendard Light'), 
-  url('/resources/fonts/Pretendard-Light.woff2') format('woff2'), 
-  url('/resources/fonts/Pretendard-Light.woff') format('woff'),
-  url('/resources/fonts/Pretendard-Light.ttf') format("truetype");
+  url('../../resources/fonts/Pretendard-Light.woff2') format('woff2'), 
+  url('../../resources/fonts/Pretendard-Light.woff') format('woff'),
+  url('../../resources/fonts/Pretendard-Light.ttf') format("truetype");
 
 }
 
@@ -26,11 +26,11 @@
   font-weight: 400;
 	font-display: block;
   font-style: normal;
-  src: url('/resources/fonts/Pretendard-Regular.eot');
-  src: url('/resources/fonts/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
-    url('/resources/fonts/Pretendard-Regular.woff2') format('woff2'),
-    url('/resources/fonts/Pretendard-Regular.woff') format('woff'),
-    url('/resources/fonts/Pretendard-Regular.ttf') format("truetype");
+  src: url('../../resources/fonts/Pretendard-Regular.eot');
+  src: url('../../resources/fonts/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../../resources/fonts/Pretendard-Regular.woff2') format('woff2'),
+    url('../../resources/fonts/Pretendard-Regular.woff') format('woff'),
+    url('../../resources/fonts/Pretendard-Regular.ttf') format("truetype");
 }
 
 @font-face {
@@ -38,11 +38,11 @@
   font-weight: 500;
 	font-display: block;
   font-style: normal;
-  src: url('/resources/fonts/Pretendard-Medium.eot');
-  src: url('/resources/fonts/Pretendard-Medium.eot?#iefix') format('embedded-opentype'),
-    url('/resources/fonts/Pretendard-Medium.woff2') format('woff2'),
-    url('/resources/fonts/Pretendard-Medium.woff') format('woff'),
-    url('/resources/fonts/Pretendard-Medium.ttf') format("truetype");
+  src: url('../../resources/fonts/Pretendard-Medium.eot');
+  src: url('../../resources/fonts/Pretendard-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../../resources/fonts/Pretendard-Medium.woff2') format('woff2'),
+    url('../../resources/fonts/Pretendard-Medium.woff') format('woff'),
+    url('../../resources/fonts/Pretendard-Medium.ttf') format("truetype");
 }
 
 @font-face {
@@ -50,11 +50,11 @@
   font-weight: 600;
 	font-display: block;
   font-style: normal;
-  src: url('/resources/fonts/Pretendard-SemiBold.eot');
-  src: url('/resources/fonts/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
-    url('/resources/fonts/Pretendard-SemiBold.woff2') format('woff2'),
-    url('/resources/fonts/Pretendard-SemiBold.woff') format('woff'),
-    url('/resources/fonts/Pretendard-SemiBold.ttf') format("truetype");
+  src: url('../../resources/fonts/Pretendard-SemiBold.eot');
+  src: url('../../resources/fonts/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../../resources/fonts/Pretendard-SemiBold.woff2') format('woff2'),
+    url('../../resources/fonts/Pretendard-SemiBold.woff') format('woff'),
+    url('../../resources/fonts/Pretendard-SemiBold.ttf') format("truetype");
 }
 
 @font-face {
@@ -62,11 +62,11 @@
   font-weight: 700;
 	font-display: block;
   font-style: normal;
-  src: url('/resources/fonts/Pretendard-Bold.eot');
-  src: url('/resources/fonts/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
-    url('/resources/fonts/Pretendard-Bold.woff2') format('woff2'),
-    url('/resources/fonts/Pretendard-Bold.woff') format('woff'),
-    url('/resources/fonts/Pretendard-Bold.ttf') format("truetype");
+  src: url('../../resources/fonts/Pretendard-Bold.eot');
+  src: url('../../resources/fonts/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../../resources/fonts/Pretendard-Bold.woff2') format('woff2'),
+    url('../../resources/fonts/Pretendard-Bold.woff') format('woff'),
+    url('../../resources/fonts/Pretendard-Bold.ttf') format("truetype");
 }
 
 @font-face {
@@ -74,11 +74,11 @@
   font-weight: 800;
 	font-display: block;
   font-style: normal;
-  src: url('/resources/fonts/Pretendard-ExtraBold.eot');
-  src: url('/resources/fonts/Pretendard-ExtraBold.eot?#iefix') format('embedded-opentype'),
-    url('/resources/fonts/Pretendard-ExtraBold.woff2') format('woff2'),
-    url('/resources/fonts/Pretendard-ExtraBold.woff') format('woff'),
-    url('/resources/fonts/Pretendard-ExtraBold.ttf') format("truetype");
+  src: url('../../resources/fonts/Pretendard-ExtraBold.eot');
+  src: url('../../resources/fonts/Pretendard-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('../../resources/fonts/Pretendard-ExtraBold.woff2') format('woff2'),
+    url('../../resources/fonts/Pretendard-ExtraBold.woff') format('woff'),
+    url('../../resources/fonts/Pretendard-ExtraBold.ttf') format("truetype");
 }
 
 @font-face {
@@ -86,10 +86,10 @@
   font-weight: 800;
   font-display: block;
   font-style: normal;
-  src: url('/resources/fonts/PayboocExtraBold.eot');
-  src: url('/resources/fonts/PayboocExtraBold.eot?#iefix') format('embedded-opentype'),
-      url('/resources/fonts/PayboocExtraBold.woff2') format('woff2'),
-      url('/resources/fonts/PayboocExtraBold.woff') format('woff'),
-      url('/resources/fonts/PayboocExtraBold.ttf') format("truetype");
+  src: url('../../resources/fonts/PayboocExtraBold.eot');
+  src: url('../../resources/fonts/PayboocExtraBold.eot?#iefix') format('embedded-opentype'),
+      url('../../resources/fonts/PayboocExtraBold.woff2') format('woff2'),
+      url('../../resources/fonts/PayboocExtraBold.woff') format('woff'),
+      url('../../resources/fonts/PayboocExtraBold.ttf') format("truetype");
   font-display: swap;
 }
