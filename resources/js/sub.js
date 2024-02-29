@@ -1,5 +1,11 @@
 
-document.addEventListener("DOMContentLoaded", function() {
+
+
+
+
+
+$(document).ready(function(){
+
   // a 태그와 img 태그의 src 또는 href 속성 수정
   document.querySelectorAll('a[href^="/resources/"], img[src^="/resources/"]').forEach(function(el) {
     const attr = el.tagName === 'IMG' ? 'src' : 'href';
@@ -12,11 +18,9 @@ document.addEventListener("DOMContentLoaded", function() {
     style = style.replace(/url\((\/resources\/[^)]+)\)/g, 'url(https://designmodiila.github.io/sorin.github.io$1)');
     el.setAttribute('style', style);
   });
-});
 
+  
 
-
-$(document).ready(function(){
   var swiper = new Swiper(".swiper-group", {
     //   loop: true,
     //   loopAdditionalSlides : 1,
