@@ -52,7 +52,9 @@
 .servicenow .section04 {width: 100%; background: linear-gradient(180deg, #002E45 43.96%, #134453 93.52%); padding: 120px 0 134px;}
 .servicenow .section04 .maintitle-wrap {display: flex; flex-direction: column; height: 333px; background: url(/resources/images/sub/servicenow_04_bg_img.png) no-repeat center;}
 .servicenow .section04 .maintitle-w { text-align: center; padding-top: 94px;}
-.servicenow .section04 .btn-demo { margin: 0 auto; margin-top: 40px; padding: 15px 50px; width: 158px; height: 48px; border-radius: 999px; background-color: #00DD2C; font-size: 16px; font-weight: 800; color: #000;}
+.servicenow .section04 .btn-demo { margin: 0 auto; margin-top: 40px; padding: 15px 50px; width: 158px; height: 48px; border-radius: 999px; background-color: #00DD2C; font-size: 16px; font-weight: 800; color: #000; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out;}
+.servicenow .section04 .btn-demo:hover{background-color: #28fd53; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; transform: translateY(-3px);}
+
 .servicenow .section04 .content-wrap {display: flex; margin-top: 85px; gap: 38px;}
 .servicenow .section04 .content-box {padding: 80px 40px; border-radius: 20px; margin-top: 85px;}
 .servicenow .section04 .content-box-01 {background: linear-gradient(180deg, #002E45 0%, #04548E 100%);}
@@ -86,7 +88,7 @@
 .servicenow .section05 .content-desc-wrap svg {width: 70px;}
 .servicenow .section05 .content-desc-wrap .content-desc {font-size: 20px; font-weight: 500; line-height: 150%; letter-spacing: -0.6px; word-break: break-all;}
 
-.servicenow .section06 {background:url(/resources/images/sub/servicenow_06_bg.png)no-repeat center top; padding: 140px 0 70px;}
+.servicenow .section06 {background:url(/resources/images/sub/servicenow_06_bg.png)no-repeat center top / cover; padding: 140px 0 70px;}
 .servicenow .section06 .contact-form-wrap {display: flex; justify-content: space-between;}
 .servicenow .section06 .contact-title {font-size: 48px; font-weight: 800; letter-spacing: -1.44px; color: #fff;}
 .servicenow .section06 .contact-desc {margin-top: 35px; padding-right: 30px; font-size: 24px; font-weight: 500; line-height: 141.667%; letter-spacing: -0.003em; color: #fff;}
@@ -95,9 +97,9 @@
 .servicenow .section06 .form-wrap .form-group {flex: 1; margin-top: 30px;}
 .servicenow .section06 .form-wrap .form-name {margin-top: 0;}
 .servicenow .section06 .form-wrap .form-group .form-label label {font-size: 16px; font-weight: 700; color: #fff;}
-.servicenow .section06 .form-wrap .form-group input {width: 100%; height: 40px; border-bottom: 1px solid #C8C8C8; border-radius: 0;}
+.servicenow .section06 .form-wrap .form-group input {width: 100%; height: 40px; border-bottom: 1px solid #C8C8C8; border-radius: 0; font-size: 16px; color: #fff;}
 .servicenow .section06 .form-wrap .form-group .form-detail {height: 120px;}
-.servicenow .section06 .form-wrap .form-group textarea {width: 100%; margin-top: 10px; background-color: #ffffff00; border: none;}
+.servicenow .section06 .form-wrap .form-group textarea {width: 100%; margin-top: 10px; background-color: #ffffff00; border: none; font-size: 16px; color: #fff;}
 .servicenow .section06 .form-wrap .form-group textarea {border-bottom: 1px solid #C8C8C8;}
 .servicenow .section06 .form-wrap .privacy-wrap {margin-top: 30px;}
 .servicenow .section06 .form-wrap .icheckbox {width: 20px; height: 20px; border-radius: 5px; border: 1px solid #DFE1E6; background-color: none;}
@@ -113,11 +115,14 @@
 
 .servicenow .section06 .form-wrap .btn-toggle {font-size: 16px; font-weight: 500; color: #fff;}
 .servicenow .section06 .form-wrap .more-btn.active svg {transform: rotate(180deg);}
-.servicenow .section06 .form-wrap .submit-btn {margin-top: 30px; padding: 15px 50px; border-radius: 999px; border: 1px solid #fff; font-size: 18px; font-weight: 700; color: #fff;}
+.servicenow .section06 .form-wrap .submit-btn {margin-top: 30px; padding: 15px 50px; border-radius: 999px; border: 1px solid #fff; font-size: 18px; font-weight: 700; color: #fff; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out;}
+.servicenow .section06 .form-wrap .submit-btn:hover {background-color: #ffffff52;}
 .servicenow .section06 .view-fulltext {width: 100%; margin-top: 15px; padding: 15px; font-size: 14px; font-weight: 400; line-height: 20px; border: 1px solid #fff; color: #fff;}
 .servicenow .section06 .view-fulltext p {word-break: break-all;}
 
-
+@media (min-width: 1920px) {
+    .servicenow .section02 .content-wrap .card-slide {max-width: none;}
+}
 @media (max-width: 1660px) {
     .servicenow .section02 .content-wrap .card-slide {height: auto;}
     .servicenow .section02 .slidetext01 > br {display: none;}
