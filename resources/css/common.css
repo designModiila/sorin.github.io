@@ -17,6 +17,7 @@ body.noScroll { overflow: hidden;}
 .inner {max-width: 1920px; padding: 0 10.42vw; width: 100%; margin: 0 auto; position: relative;}
 /* .inner { width: 100%; margin: 0 auto; position: relative;} */
 
+/* footer */
 .footer {background-color: #fff; position: relative;}
 .footer .footer-inner {padding: 30px 10.42vw; max-width: 1920px; margin: 0 auto;}
 .footer .footer-top {width: 100%; padding-bottom: 30px; border-bottom: 1px solid #C8C8C8;}
@@ -43,5 +44,17 @@ body.noScroll { overflow: hidden;}
     .footer .footer-contact {margin-top: 50px;}
     .footer .footer-contact .contact {font-size: 11px; line-height: 22px;}
     .footer .footer-bottom .copy {font-size: 10px;}
-
 } 
+
+/* footer_v2 */
+.footer-v2 {background-color: #fff; position: relative;}
+.footer-v2 .footer-inner {padding: 30px 10.42vw; max-width: 1920px; margin: 0 auto;}
+.footer-v2 .footer-v2-top {width: 100%; display: flex; justify-content: space-between;}
+.footer-v2 .privacy-list {display: flex; gap: 20px; font-size: 13px; font-weight: 500; letter-spacing: -0.39px; color: #4B4B4B;}
+.footer-v2 .family-site {display: flex; gap: 20px; font-size: 13px; font-weight: 500; letter-spacing: -0.39px; color: #4B4B4B;}
+.footer-v2 .footer-contact .contact {font-size: 14px; font-weight: 500; line-height: 185.7%; letter-spacing: -0.42px; color: #969696;}
+.footer-v2 .footer-contact .contact p > span {color: #4B4B4B;}
+.footer-v2 .family-select {padding: 12px 30px; border: 1px solid var(--Gray-500, #969696);}
+.footer-v2 .footer-v2-bottom {margin-top: 50px; display: flex; gap: 73px;}
+.footer-v2 .footer-v2-bottom .contact p > br {display: none;}
+.footer-v2 .footer-v2-bottom .copy {font-size: 13px; font-weight: 500; letter-spacing: -0.39px; color: #AFAFAF;}

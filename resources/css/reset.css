@@ -24,6 +24,8 @@ button, input{border: none; background: none; box-sizing: border-box; }
 button:focus, input:focus{outline: none;}
 button, a, input, label{cursor: pointer; text-decoration: none; outline: 0; padding: 0;}
 a {text-decoration: none; color: inherit;}
+menu {padding: 0; margin: 0;}
+li {list-style: none}
 
 input::-ms-clear{display: none;}/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
 textarea:focus {

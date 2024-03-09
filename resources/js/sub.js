@@ -138,11 +138,14 @@ $(document).ready(function(){
 
 var swiper = new Swiper("#js-swiper-consulting", {
     loop: true,
-    slidesPerView: 1.5,
-    spaceBetween: 140,
+    initialSlide: 1,
+    slidesPerView: 1.8,
+    // spaceBetween: 140,
     centeredSlides: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
   });
+
+
