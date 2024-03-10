@@ -139,13 +139,33 @@ $(document).ready(function(){
 var swiper = new Swiper("#js-swiper-consulting", {
     loop: true,
     initialSlide: 1,
-    slidesPerView: 1.8,
+    slidesPerView: 1.9,
+    autoplay: true,
     // spaceBetween: 140,
     centeredSlides: true,
+    autoplay: {
+        delay: 4500,
+        disableOnInteraction: false,
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
+    breakpoints: {
+        // when window width is >= 640px
+        300: {
+            slidesPerView: 1.4,
+            // spaceBetween: 20,
+        },
+        600: {
+            slidesPerView: 1.9,
+            spaceBetween: 50,
+        },
+        1550: {
+            slidesPerView: 1.9,
+            // spaceBetween: 50,
+        },
+    }
   });
 
 
