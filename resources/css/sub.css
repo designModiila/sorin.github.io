@@ -321,6 +321,7 @@
 .consulting .section06 .item-desc > br {display: none;}
 .consulting .section06 .btn-more {margin-top: 120px; padding: 34px 0; display: flex; justify-content: center; align-items: center; width: 100%; gap: 10px; border-radius: 20px; background-color: #1D1D1D;}
 .consulting .section06 .btn-more > p {font-size: 24px; font-weight: 600; letter-spacing: -0.03em; color: #E1E1E1;}
+.consulting .section06 .btn-more > p > br {display: none;}
 
 .consulting .section02 .main-heading-1 > br:nth-child(3) {display: none;}
 .consulting .section05 .main-heading-1 > br:nth-child(2) {display: none;}
@@ -380,30 +381,65 @@
     .consulting .section05 .main-heading-sub > br {display: none;}
 }
 @media (max-width: 767px) {
-    .consulting .main-heading-1 {font-size: 30px; line-height: 42px;}
+    .consulting .main-heading-1 {font-size: 24px; line-height: 40px;}
     .consulting .main-heading-sub {font-size: 16px; line-height: 30px;}
-    .consulting .section-title {font-size: 30px;}
+    .consulting .section-title {font-size: 24px;}
 
     .consulting .section01 {justify-content: flex-end;}
     .consulting .section01 .main-title {font-size: 42px; line-height: 54px;}
     .consulting .section01 .main-desc {font-size: 16px; line-height: 24px;}
 
-    .consulting .section03 {padding: 70px 0 200px;}
-    .consulting .section03 .swiper {height: 270px;}
+    .consulting .section03 {padding: 70px 0 115px;}
+    .consulting .section03 .section-title {text-align: center; font-size: 24px;}
+    .consulting .section03 .swiper {height: 350px;}
     .consulting .section03 .swiper-slide {height: 270px;}
-    .consulting .section03 .swiper-pagination {display: none;}
+    /* .consulting .section03 .swiper-pagination {display: none;} */
     .consulting .section03 .c-swiper__image-container {width: 290px; height: 150px;}
     .consulting .section03 .c-swiper__text .c-swiper__title {font-size: 32px;}
 
+    .consulting .section04 {height: 100vh;}
     .consulting .section04 .consulting-item {width: 166px; height: 207px;}
     .consulting .section04 .consulting-item-title {font-size: 18px;}
 
+    .consulting .section05 .text-container {display: block;}
+    .consulting .section05 .section-title {text-align: center;}
+    .consulting .section05 .main-heading-1 {font-size: 20px; line-height: 32px;}
+    .consulting .section05 .main-heading-sub {font-size: 16px; line-height: 28px;}
+
     .consulting .section06 {padding: 110px 0 150px;}
     .consulting .section06 .section-title {margin-bottom: 36px;}
+    .consulting .section06 .sec06-category {font-size: 14px; gap: 20px;}
     .consulting .section06 .category01-item > img {width: 40%;}
-    .consulting .section06 .btn-more > p {font-size: 16px;}
+    .consulting .section06 .btn-more {margin-top: 60px; padding: 20px 30px; justify-content: space-between;}
+    .consulting .section06 .btn-more > p {text-align: left; font-size: 14px; line-height: 22px;}
 }
 @media (max-width: 735px) {
+    /* .consulting .section06 .category01-item {width: 100%;} */
+    /* .consulting .section06 .category01-item > img {width: 20%;} */
+}
+@media (max-width: 610px) {
+    .consulting .section02 .main-heading-1 {text-align: left;}
+    .consulting .section02 .main-heading-1 > br {display: none;}
+    .consulting .section02 .main-heading-sub > br {display: none;}
+    .consulting .section04 .main-heading-sub > br {display: none;}
+    .consulting .section05 .main-heading-1 > br {display: none;}
+    .consulting .section05 .main-heading-sub > br {display: none;}
+    
+    .consulting .section02 .main-heading-1 > br:nth-child(3) {display: none;}
+    .consulting .section05 .main-heading-1 > br:nth-child(2) {display: none;}
+    
+    .consulting .section06 .category01-item {width: 47%;}
+    .consulting .section06 .category01-item > img {width: 60%;}
+    .consulting .section06 .btn-more > p br {display: block;}
+    
+}
+@media (max-width: 471px) {
+    .consulting .section03 .swiper {height: 290px;}
+    .consulting .section03 .swiper-slide {height: 290px;}
+    .consulting .section06 .item-desc {font-size: 10px; line-height: 16px;}
+    .consulting .section06 .item-desc > br {display: block;}
+    .consulting .section06 .btn-more {padding: 20px 15px;}
+}
+@media (max-width: 385px) {
     .consulting .section06 .category01-item {width: 100%;}
-    .consulting .section06 .category01-item > img {width: 20%;}
 }

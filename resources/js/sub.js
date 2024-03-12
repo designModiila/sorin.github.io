@@ -154,11 +154,11 @@ var swiper = new Swiper("#js-swiper-consulting", {
     breakpoints: {
         // when window width is >= 640px
         300: {
-            slidesPerView: 1.4,
-            // spaceBetween: 20,
+            slidesPerView: 1.3,
+            spaceBetween: 10,
         },
         600: {
-            slidesPerView: 1.9,
+            slidesPerView: 1.8,
             spaceBetween: 50,
         },
         1550: {
