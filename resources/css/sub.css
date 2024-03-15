@@ -276,6 +276,13 @@
 .consulting .section01 .main-title {font-family: 'Paybooc'; font-size: 80px; color: #fff; margin-bottom: 10px;}
 .consulting .section01 .main-desc {font-weight: 400; font-size: 24px; line-height: auto; color: #fff;}
 
+.consulting .section01 .main-title-wrap {display: flex; gap: 20px; }
+.consulting .section01 .main-title {overflow: hidden;}
+.consulting .section01 .main-title .text-ani {transform: translateY(100%);}
+.consulting .section01 .main-desc {overflow: hidden;}
+.consulting .section01 .main-desc .text-ani {transform: translateY(100%);}
+
+
 .consulting .section02 {display: flex; flex-direction: column; justify-content: center; height: 90vh; background-color: #fff;}
 
 .consulting .section03 {position: relative; background-color: #2C2C2C; padding: 150px 0 90px; z-index: 1;}
@@ -303,9 +310,9 @@
 .consulting .section04 .main-heading-sub {margin-top: 30px;}
 .consulting .section04 .consulting-item {position: absolute; display: flex; flex-direction: column; justify-content: center; top: 0; width: 400px; height: 500px; border-radius: 20px;  background-color: #ddd;}
 .consulting .section04 .consulting-item-title {text-align: center; font-size: 30px; font-weight: 600; letter-spacing: -0.03em; color: #fff;}
-.consulting .section04 .consulting-item-1 {background: url(../../resources/images/sub/consulting_04_img01.png) center /cover; position: absolute; left: 10.42vw;; top: -12%;}
-.consulting .section04 .consulting-item-2 {background: url(../../resources/images/sub/consulting_04_img02.png) center /cover; position: absolute; right: 10.42vw; top: 45%;}
-.consulting .section04 .consulting-item-3 {background: url(../../resources/images/sub/consulting_04_img03.png) center /cover; position: absolute; left: 20vw; top: 70%;}
+.consulting .section04 .consulting-item-1 {background: url(../../resources/images/sub/consulting_04_img01.png) center /cover; position: absolute; left: 10.42vw;; top: -510px;}
+.consulting .section04 .consulting-item-2 {background: url(../../resources/images/sub/consulting_04_img02.png) center /cover; position: absolute; right: 10.42vw; top: -510px;}
+.consulting .section04 .consulting-item-3 {background: url(../../resources/images/sub/consulting_04_img03.png) center /cover; position: absolute; left: 20vw; top: -510px;}
 
 .consulting .section05 {position: relative; padding: 117px 0 272px; background:url(../../resources/images/sub/consulting_05_bg.png)  no-repeat center; background-size: cover; z-index: 1;}
 .consulting .section05 .section-title {color: #fff;}

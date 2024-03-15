@@ -222,3 +222,26 @@ var swiper = new Swiper("#js-swiper-consulting", {
     acceleration: 1,
     deceleration: 0.9,
   });
+
+
+
+let tl = gsap.timeline({delay: 0.7});
+tl.to('.text-ani', {duration:0.5, y:0, stagger: 0.3});
+
+
+const cardmoving = gsap.timeline();
+cardmoving.from(".consulting-item-1", {y: innerHeight + 510})
+          .from(".consulting-item-2", {y: innerHeight + 510},"-=0.3")
+          .from(".consulting-item-3", {y: innerHeight + 510},"-=0.3")
+
+ScrollTrigger.create({
+  animation: cardmoving,
+  trigger: ".consulting .section04",
+  start: "top top",
+  end: "+=2000",
+  // duration: 300,
+  scrub: 1,
+  pin: true,
+  anticipatePin: 1,
+  toggleActions: "play none none none",
+});
