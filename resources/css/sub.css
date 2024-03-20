@@ -340,7 +340,7 @@
 .consulting .section06 {padding: 160px 0 30px;}
 .consulting .section06 .section-title {margin-bottom: 60px; text-align: center;}
 .consulting .section06 .sec06-category {cursor: pointer; display: flex; justify-content: center; gap: 37px; font-size: 20px; font-weight: 500; letter-spacing: -0.03em; color: #AFAFAF;}
-.consulting .section06 .sec06-category > li.active {color: #000; text-decoration: underline;}
+.consulting .section06 .sec06-category > li.active {color: #4B4B4B; text-decoration: underline; text-underline-offset : 10px;}
 .consulting .section06 .category01-wrap {display: flex; justify-content: space-between; margin-top: 60px; gap: 20px;}
 .consulting .section06 .category01-item {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; gap: 25px; padding: 33px 20px; border-radius: 20px; box-shadow: 2px 2px 20px rgba(0, 0, 0, .1);}
 .consulting .section06 .item-desc {text-align: center; font-size: 16px; font-weight: 500; line-height: 22px; letter-spacing: -0.03em; color: var(--color-black);}
