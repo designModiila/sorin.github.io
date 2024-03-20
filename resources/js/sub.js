@@ -141,7 +141,10 @@ var swiper = new Swiper("#js-swiper-consulting", {
     initialSlide: 1,
     slidesPerView: 1.9,
     autoplay: true,
+    speed: 800,
+    // duration: 1000,
     // spaceBetween: 140,
+    roundLengths: true,
     centeredSlides: true,
     autoplay: {
         delay: 3500,
@@ -241,13 +244,21 @@ ScrollTrigger.create({
 })
 
 
+const textAni04 = gsap.timeline({delay: 0.7});
+textAni04.to('.text-ani-04', {duration:0.5, y:0, stagger: 0.3});
+ScrollTrigger.create({
+  animation: textAni04,
+  trigger: ".section04",
+  start: "top 80%",
+  toggleActions: "play none none none",
+  markers: false,
+})
 
-
-const cardmoving = gsap.timeline();
+const cardmoving = gsap.timeline({delay: 1});
 cardmoving.from(".consulting-item-1", {y: innerHeight + 510})
           .from(".consulting-item-2", {y: innerHeight + 510},"-=0.3")
           .from(".consulting-item-3", {y: innerHeight + 510},"-=0.3")
-          // .to('.text-ani-04', {duration:0.3, y:0, stagger: 0.3});
+          
 
 ScrollTrigger.create({
   animation: cardmoving,
@@ -261,15 +272,7 @@ ScrollTrigger.create({
   
 });
 
-const textAni04 = gsap.timeline({delay: 1.5});
-textAni04.to('.text-ani-04', {duration:0.5, y:0, stagger: 0.3});
-ScrollTrigger.create({
-  animation: textAni04,
-  trigger: ".consulting .section04 .consulting-item-3",
-  start: "bottom top",
-  toggleActions: "play none none none",
-  markers: false,
-})
+
 
 const textAni05 = gsap.timeline({delay: 0.7});
 textAni05.to('.text-ani-05', {duration:0.5, y:0, stagger: 0.3});
