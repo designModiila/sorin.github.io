@@ -118,7 +118,7 @@ body.noScroll { overflow: hidden;}
 .footer-main .contact .location {font-weight: 500;}
 .footer-main .contact .location-detail {font-weight: 400;}
 .footer-main .footer-contact-link .link-wrap {display: flex; flex-direction: column; gap: 10px; padding-right: 44px;}
-.footer-main .footer-contact-link .link {display: flex; gap: 5px; cursor: pointer;}
+.footer-main .footer-contact-link .link a {display: flex; gap: 5px; cursor: pointer;}
 .footer-main .footer-contact-link .link-title {font-size: 16px;}
 .footer-main .footer-contact-link .link img {width: 16px; object-fit: contain;}
 .footer-main .footer-bottom {margin-top: 60px; display: flex; justify-content: space-between;}
