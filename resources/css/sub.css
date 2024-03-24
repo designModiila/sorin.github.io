@@ -467,3 +467,111 @@
 @media (max-width: 385px) {
     .consulting .section06 .category01-item {width: 100%;}
 }
+
+
+/* Infra business */
+
+.infrabusiness .main-heading-1 {text-align: center; font-weight: 800; font-size: 48px; line-height: 68px; letter-spacing: -0.02em; color: var(--color-black);}
+.infrabusiness .main-heading-sub {margin-top: 0; text-align: center; font-weight: 400; font-size: 20px; line-height: 32px; letter-spacing: -0.02em; color: var(--color-black);}
+.infrabusiness .section-title {margin-bottom: 80px; font-size: 48px; font-weight: 800; letter-spacing: -0.03em;}
+.infrabusiness .section01 {display: flex; flex-direction: column; justify-content: center; width: 100%; height: 100vh; background:url(../../resources/images/sub/infrabusiness_01_visual.png)  no-repeat center bottom; background-size: cover;}
+.infrabusiness .section01 .main-text {padding: 150px 0;}
+.infrabusiness .section01 .main-title {font-family: 'Paybooc'; font-size: 80px; color: #fff; margin-bottom: 10px;}
+.infrabusiness .section01 .main-desc {font-weight: 400; font-size: 24px; line-height: auto; color: #fff;}
+
+.infrabusiness .section01 .main-title-wrap {display: flex; gap: 20px; }
+.infrabusiness .section01 .main-title {overflow: hidden;}
+.infrabusiness .section01 .main-title .text-ani {transform: translateY(100%);}
+.infrabusiness .section01 .main-desc {overflow: hidden;}
+.infrabusiness .section01 .main-desc .text-ani {transform: translateY(100%);}
+
+.infrabusiness .section02 {padding: 200px 0 235px 10.42vw;}
+/* .infrabusiness .section02 .inner {padding-right: 0;} */
+.infrabusiness .section02 .content-wrap {position: relative; display: flex; gap: 130px; background: url(../../resources/images/sub/infrabusiness_02_bg.png)no-repeat 5% 90%;}
+.infrabusiness .section02 .content-wrap::before {position: absolute; content: ''; width: 479px; height: 720px; background-color: #F6F6F6; border-radius: 2rem 0 0 2rem; top: -50px; right: 0;}
+.infrabusiness .section02 .content-wrap .heading-wrap {flex-shrink: 0;}
+.infrabusiness .section02 .main-heading-1,
+.infrabusiness .section02 .main-heading-sub {text-align: left;}
+.infrabusiness .section02 .main-heading-sub-wrap {margin-top: 30px;}
+.infrabusiness .section02 .heading-wrap img {margin-top: 60px;}
+.infrabusiness .section02 .swiper-wrapper {padding: 70px 0 0; overflow: visible;}
+/* .infrabusiness .section02 .swiper-wrapper */
+.infrabusiness .section02 .swiper-slide {display: inline-block; background-color: #fff; zoom: 1; padding: 0 0 42px 30px;  display: flex; flex-direction: column; justify-content: flex-end; height: 432px; border-radius: 20px; box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.08);}
+.infrabusiness .section02 .i-swiper__image-container {align-self: flex-end; padding-bottom: 50px;}
+.infrabusiness .section02 .i-swiper__title {font-size: 24px; font-weight: 700; color: #2A5FAF;}
+.infrabusiness .section02 .i-swiper__desc {margin-top: 15px; font-size: 16px; font-weight: 400; color: #969696;}
+
+.infrabusiness .section02 .swiper-slide-active {zoom: 1.2; transform: translateY(-12%); background: linear-gradient(-30deg, #1856B2 0%, #4E89E2 100%);}
+.infrabusiness .section02 .swiper-slide-active .i-swiper__title {color: #fff;}
+.infrabusiness .section02 .swiper-slide-active .i-swiper__desc {color: #fff;}
+
+.infrabusiness .section03 {padding: 150px 0 0; width: 100%; height: 837px; background-color: #2A5FAF;}
+.infrabusiness .section03 .main-heading-1 {text-align: left; color: #fff;}
+.infrabusiness .section03 .tabmenu{width:100%; margin: -30px auto 0; position:relative;}
+.infrabusiness .section03 .tabmenu ul {float: right; margin-right: 10.42vw;}
+.infrabusiness .section03 .tabmenu ul li{display:inline-block; text-align:center;}
+.infrabusiness .section03 .tabmenu ul li a{display:block; font-size: 24px; font-weight: 500; margin-left: 20px; color: #78A0DB;}
+.infrabusiness .section03 .tabCon{display:none; text-align:center; position:absolute; left:0; top:40px; box-sizing: border-box;}
+.infrabusiness .section03 .btnCon:target a {color : #fff;}
+.infrabusiness .section03 .btnCon:target .tabCon {display: block;}
+.infrabusiness .section03 .swiper {position: relative;margin-top: 75px; width: 100%; overflow: hidden;}
+.infrabusiness .section03 .swiper-wrapper {display: flex;}
+.infrabusiness .section03 .swiper-slide {width: 25%; opacity: 0.5; transition: all .3s ease-in-out;}
+.infrabusiness .section03 .swiper-image {display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 40px; width: 740px; height: 340px; border-radius: 20px; background-color: #fff;}
+.infrabusiness .section03 .swiper-image .img-logo {width: 30%;}
+.infrabusiness .section03 .slide-label {margin-top: 33px; font-size: 24px; font-weight: 400; color: #fff; opacity: 0;}
+.infrabusiness .section03 .swiper-slide.swiper-slide-active {opacity: 1;}
+.infrabusiness .section03 .swiper-slide.swiper-slide-active .slide-label {opacity: 1;}
+
+.infrabusiness .section03 .swiper-button-next {width: 60px; height: 60px; background: url(../images/sub/infrabusiness_03_btn_r.png) no-repeat; background-size: cover; background-position: center;}
+.infrabusiness .section03 .swiper-button-prev {width: 60px; height: 60px; background: url(../images/sub/infrabusiness_03_btn_l.png) no-repeat; background-size: cover; background-position: center;}
+.infrabusiness .section03 .swiper-button-next::after,
+.infrabusiness .section03 .swiper-button-prev::after {display: none;}
+
+.infrabusiness .section04 {padding: 170px 0 0;}
+.infrabusiness .section04 .content-wrap {margin: 80px 0 60px;}
+.infrabusiness .section04 .logo-box-wrap { display: flex; gap: 20px;}
+.infrabusiness .section04 .logo-box {display: flex; gap: 20px; animation: bannermove 15s linear infinite;}
+.infrabusiness .section04 .logo-box div { display: flex; justify-content: center; align-items: center; width: 280px; height: 105px; border-radius: 20px; box-shadow: 2px 2px 20px rgba(0, 0, 0, .1);}
+
+@keyframes bannermove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-101%, 0);
+    }
+}
+
+.infrabusiness .section05 {padding-bottom: 100px; background: url(../images/sub/infrabusiness_05_bg.png)no-repeat center 180px;}
+
+.infrabusiness .section05 .content-wrap {display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.infrabusiness .section05 .address {display: inline-block; padding: 10px 50px; text-align: center; font-size: 16px; font-weight: 400; color:#2A5FAF; border-radius: 50px; background-color: #fff; box-shadow: 2px 2px 20px rgba(0, 0, 0, .1);}
+.infrabusiness .section05 .form-wrap {margin: 179px auto 0; width: 604px; padding: 40px 50px;}
+.infrabusiness .section05 .form-wrap .form-group-wrap {display: flex; justify-content: space-between; gap: 24px;}
+.infrabusiness .section05 .form-wrap .form-group {flex: 1; margin-top: 30px;}
+.infrabusiness .section05 .form-wrap .form-name {margin-top: 0;}
+.infrabusiness .section05 .form-wrap .form-group .form-label label {font-size: 16px; font-weight: 700;}
+.infrabusiness .section05 .form-wrap .form-group input {width: 100%; height: 40px; border-bottom: 1px solid #000; border-radius: 0; font-size: 16px;}
+.infrabusiness .section05 .form-wrap .form-group .form-detail {height: 120px;}
+.infrabusiness .section05 .form-wrap .form-group textarea {width: 100%; margin-top: 10px; background-color: #ffffff00; border: none; font-size: 16px;}
+.infrabusiness .section05 .form-wrap .form-group textarea {border-bottom: 1px solid #000;}
+.infrabusiness .section05 .form-wrap .privacy-wrap {margin-top: 30px;}
+.infrabusiness .section05 .form-wrap .icheckbox {width: 20px; height: 20px; border-radius: 5px; border: 1px solid #000; background-color: none;}
+.infrabusiness .section05 .form-wrap .chk-box {position: relative; display: block; font-size: 16px; font-weight: 500; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+.infrabusiness .section05 .form-wrap .on {display: inline-block; vertical-align: middle; margin-right: 10px; width: 20px; height: 20px; border-radius: 5px; border: 1px solid #DFE1E6;}
+.infrabusiness .section05 .form-wrap .chk-box input[type="checkbox"] {display: none;}
+
+
+.infrabusiness .section05 .form-wrap .chk-box input[type="checkbox"]:checked + .on { background: #fff; }
+.infrabusiness .section05 .form-wrap .on:after { content: ""; position: absolute; display: none; }
+.infrabusiness .section05 .form-wrap .chk-box input[type="checkbox"]:checked + .on:after { display: block; }
+.infrabusiness .section05 .form-wrap .on:after { width: 6px; height: 10px; border: solid #000; border-width: 0 2px 2px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); position: absolute; left: 6px; top: 5px; }
+
+.infrabusiness .section05 .form-wrap .btn-toggle {font-size: 16px; font-weight: 500;}
+.infrabusiness .section05 .form-wrap .infra-more-btn.active svg {transform: rotate(180deg);}
+.infrabusiness .section05 .form-wrap .submit-btn {margin-top: 30px; padding: 15px 50px; border-radius: 999px; border: 1px solid #fff; font-size: 18px; font-weight: 700; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out;}
+.infrabusiness .section05 .form-wrap .submit-btn:hover {background-color: #ffffff52;}
+.infrabusiness .section05 .infra-view-fulltext {width: 100%; margin-top: 15px; padding: 15px; font-size: 14px; font-weight: 400; line-height: 20px; border: 1px solid #fff;}
+.infrabusiness .section05 .infra-view-fulltext p {word-break: break-all;}
+

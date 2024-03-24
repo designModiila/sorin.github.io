@@ -283,3 +283,64 @@ ScrollTrigger.create({
   end: "bottom bottom",
   markers: false,
 })
+
+
+
+// infra business
+
+var swiper1 = new Swiper("#js-swiper-infra", {
+  slidesPerView: 3,
+  preventInteractionOnTransition: true,
+  loopAddBlankSlides: true,
+      spaceBetween: 60,
+      centeredSlides: false,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+
+  // effect: "coverflow",
+  // grabCursor: true,
+  // centeredSlides: true,
+  // slidesPerView: 3,
+  // coverflowEffect: {
+  //   rotate: 20,
+  //   stretch: 0,
+  //   depth: 350,
+  //   modifier: 1,
+  //   slideShadows: true
+  // },
+  // pagination: {
+  //         el: ".swiper-pagination",
+  //         clickable: true,
+  //       },
+});
+
+
+const swiper2 = new Swiper('#js-swiper-hardware', {
+  loop: true,
+  slidesPerView: 1,
+  // spaceBetween: 230,
+  centeredSlides: true,
+  autoplay: {
+    delay: 5000,
+    // disableOnInteraction: true
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  observer: true,
+  observeParents: true,
+});
+
+// tabmenu
+location.href = "#tab1";
+
+
+$('.infra-more-btn').click(function() {
+  $(this).toggleClass('active');
+  $('.infra-view-fulltext').toggle();
+});
+
+
