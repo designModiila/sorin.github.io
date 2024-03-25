@@ -292,8 +292,10 @@ var swiper1 = new Swiper("#js-swiper-infra", {
   slidesPerView: 3,
   preventInteractionOnTransition: true,
   loopAddBlankSlides: true,
+  speed: 300,
       spaceBetween: 60,
       centeredSlides: false,
+      mousewheel:true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,

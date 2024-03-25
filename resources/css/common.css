@@ -13,11 +13,15 @@ body.noScroll { overflow: hidden;}
 #header.down { transform: translateY(0);} */
 #header .logo-wrap { min-width: 200px;}
 #header h1 { background: url(../../resources/images/common/sorin_logo_w.png) no-repeat center; width: 112px; height: 50px;}
+/* #header h1.active { background: url(../../resources/images/common/sorin_logo.png)} */
 #header h1 span { display: none;}
 #header .header-wrap { display: flex; width: 100%; justify-content: space-between; padding: 10px 10.42%; align-items: center;}
+/* #header .header-wrap.active {background-color: #fff;} */
 #header .gnb-wrap .gnb {display: flex; justify-content: space-between; align-items: center; gap: 70px;}
 #header .gnb-wrap .gnb > li .depth1 { display: block; font-size: 18px; font-weight: 700; color: #C8C8C8; position: relative;}
 #header .gnb-wrap .gnb > li .depth1:hover {color: #fff;}
+
+
 
 @media (max-width: 1440px) {
     #header .header-wrap {padding: 10px 7vw; }
