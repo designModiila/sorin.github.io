@@ -2,6 +2,7 @@ $(document).ready(function(){
   $('#header').load('../include/header.html')
   $('#footer').load('../include/footer.html')
   $('#footerV2').load('../include/footer_v2.html')
+  $('#footerV3').load('../include/footer_v3.html')
   $('#footerMain').load('../include/footer_main.html')
 
   // $(".js-select2").select2({minimumResultsForSearch: -1});

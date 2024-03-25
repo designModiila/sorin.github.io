@@ -319,7 +319,7 @@ var swiper1 = new Swiper("#js-swiper-infra", {
 
 const swiper2 = new Swiper('#js-swiper-hardware', {
   loop: true,
-  slidesPerView: 1,
+  slidesPerView: 2,
   // spaceBetween: 230,
   centeredSlides: true,
   autoplay: {

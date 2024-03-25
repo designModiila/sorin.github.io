@@ -507,7 +507,7 @@
 
 .infrabusiness .section03 {padding: 150px 0 0; width: 100%; height: 837px; background-color: #2A5FAF;}
 .infrabusiness .section03 .main-heading-1 {text-align: left; color: #fff;}
-.infrabusiness .section03 .tabmenu{width:100%; margin: -30px auto 0; position:relative;}
+/* .infrabusiness .section03 .tabmenu{width:100%; margin: -30px auto 0; position:relative;}
 .infrabusiness .section03 .tabmenu ul {float: right; margin-right: 10.42vw;}
 .infrabusiness .section03 .tabmenu ul li{display:inline-block; text-align:center;}
 .infrabusiness .section03 .tabmenu ul li a{display:block; font-size: 24px; font-weight: 500; margin-left: 20px; color: #78A0DB;}
@@ -521,17 +521,31 @@
 .infrabusiness .section03 .swiper-image .img-logo {width: 30%;}
 .infrabusiness .section03 .slide-label {margin-top: 33px; font-size: 24px; font-weight: 400; color: #fff; opacity: 0;}
 .infrabusiness .section03 .swiper-slide.swiper-slide-active {opacity: 1;}
+.infrabusiness .section03 .swiper-slide.swiper-slide-active .slide-label {opacity: 1;} */
+
+.infrabusiness .section03 .tabs {display: flex; justify-content: flex-end; gap: 20px; margin-top: -40px;}
+.infrabusiness .section03 .tab {font-size: 24px; font-weight: 500; color: #78A0DB; cursor: pointer;}
+.infrabusiness .section03 .tab.active {color: #fff;}
+
+.infrabusiness .section03 .swiper {position: relative; margin-top: 75px; width: 100%; overflow: hidden;}
+.infrabusiness .section03 .swiper-wrapper {position: relative; width: 100%;}
+.infrabusiness .section03 .swiper-slide {display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0.5; transition: all .3s ease-in-out;}
+.infrabusiness .section03 .swiper-image {display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 40px; padding: 0 200px; max-width: 740px; height: 340px; border-radius: 20px; background-color: #fff;}
+.infrabusiness .section03 .swiper-image .img-logo {width: 60%;}
+.infrabusiness .section03 .slide-label {margin-top: 33px; text-align: center; font-size: 24px; font-weight: 400; color: #fff; opacity: 0;}
+.infrabusiness .section03 .swiper-slide.swiper-slide-active {opacity: 1;}
 .infrabusiness .section03 .swiper-slide.swiper-slide-active .slide-label {opacity: 1;}
 
-.infrabusiness .section03 .swiper-button-next {width: 60px; height: 60px; background: url(../images/sub/infrabusiness_03_btn_r.png) no-repeat; background-size: cover; background-position: center;}
-.infrabusiness .section03 .swiper-button-prev {width: 60px; height: 60px; background: url(../images/sub/infrabusiness_03_btn_l.png) no-repeat; background-size: cover; background-position: center;}
+.infrabusiness .section03 .swiper-button-wrap {position: absolute; top: 0; left: 0; right: 0; margin: 0 auto; width: 52%; height: 85%; display: flex; justify-content: space-between; z-index: 1;}
+.infrabusiness .section03 .swiper-button-next {position: absolute; right: 0; width: 60px; height: 60px; background: url(../images/sub/infrabusiness_03_btn_r.png) no-repeat; background-size: cover; background-position: center;}
+.infrabusiness .section03 .swiper-button-prev {position: absolute; left: 0; width: 60px; height: 60px; background: url(../images/sub/infrabusiness_03_btn_l.png) no-repeat; background-size: cover; background-position: center;}
 .infrabusiness .section03 .swiper-button-next::after,
 .infrabusiness .section03 .swiper-button-prev::after {display: none;}
 
 .infrabusiness .section04 {padding: 170px 0 0;}
 .infrabusiness .section04 .content-wrap {margin: 80px 0 60px;}
 .infrabusiness .section04 .logo-box-wrap { display: flex; gap: 20px;}
-.infrabusiness .section04 .logo-box {display: flex; gap: 20px; animation: bannermove 15s linear infinite;}
+.infrabusiness .section04 .logo-box {display: flex; gap: 20px; animation: bannermove 20s linear infinite;}
 .infrabusiness .section04 .logo-box div { display: flex; justify-content: center; align-items: center; width: 280px; height: 105px; border-radius: 20px; box-shadow: 2px 2px 20px rgba(0, 0, 0, .1);}
 
 @keyframes bannermove {
@@ -562,6 +576,10 @@
 .infrabusiness .section05 .form-wrap .on {display: inline-block; vertical-align: middle; margin-right: 10px; width: 20px; height: 20px; border-radius: 5px; border: 1px solid #DFE1E6;}
 .infrabusiness .section05 .form-wrap .chk-box input[type="checkbox"] {display: none;}
 
+.infrabusiness .section05 .select-label {display: flex; flex-direction: column; gap: 10px; margin-top: 0; border-bottom: 1px solid #000;}
+.infrabusiness .section05 .select-label > label {font-size: 16px; font-weight: 700;}
+.infrabusiness .section05 .select-label > select {padding: 8px 10px; font-size: 14px; font-weight: 400; border: 1px solid #fff; color: #323232; -webkit-appearance: none; -moz-appearance: none; background:#fff url(../images/sub/infrabusiness_05_arr_gr.png)no-repeat 95% 50% / 8%;}
+.infrabusiness .section05 .select-label > select::-ms-expand {display: none;}
 
 .infrabusiness .section05 .form-wrap .chk-box input[type="checkbox"]:checked + .on { background: #fff; }
 .infrabusiness .section05 .form-wrap .on:after { content: ""; position: absolute; display: none; }
@@ -570,8 +588,8 @@
 
 .infrabusiness .section05 .form-wrap .btn-toggle {font-size: 16px; font-weight: 500;}
 .infrabusiness .section05 .form-wrap .infra-more-btn.active svg {transform: rotate(180deg);}
-.infrabusiness .section05 .form-wrap .submit-btn {margin-top: 30px; padding: 15px 50px; border-radius: 999px; border: 1px solid #fff; font-size: 18px; font-weight: 700; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out;}
-.infrabusiness .section05 .form-wrap .submit-btn:hover {background-color: #ffffff52;}
-.infrabusiness .section05 .infra-view-fulltext {width: 100%; margin-top: 15px; padding: 15px; font-size: 14px; font-weight: 400; line-height: 20px; border: 1px solid #fff;}
+.infrabusiness .section05 .form-wrap .submit-btn {margin-top: 30px; padding: 15px 50px; border-radius: 999px; border: 1px solid #6F98E8; font-size: 18px; font-weight: 700; color: #6F98E8; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out;}
+.infrabusiness .section05 .form-wrap .submit-btn:hover {background-color: #6f97e830;}
+.infrabusiness .section05 .infra-view-fulltext {width: 100%; margin-top: 15px; padding: 15px; font-size: 14px; font-weight: 400; line-height: 20px; border: 1px solid #ddd;}
 .infrabusiness .section05 .infra-view-fulltext p {word-break: break-all;}
 

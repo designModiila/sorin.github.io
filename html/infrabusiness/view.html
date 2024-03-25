@@ -122,80 +122,49 @@
 
         <div class="section03">
           <div class="main-heading-1 inner"><div class="text-ani-02">하드웨어 솔루션</div></div>
-          <div class="content-wrap">
-
-            <div class="tabmenu">
-              <ul>
-                <li id="tab1" class="btnCon"><a class="btn first" href="#tab1">Servers</a>
-                  <div class="tabCon container">
-                    <div class="swiper" id="js-swiper-hardware">
-                      <!-- Additional required wrapper -->
-                      <div class="swiper-wrapper">
-                        <!-- Slide 1 -->
-                        <div class="swiper-slide">  
-                          <div class="swiper-image">
-                            <img class="img-logo" src="../../resources/images/sub/infrabusiness_03_logo01.png" alt="">
-                            <img class="img-product" src="../../resources/images/sub/infrabusiness_03_prod01.png" alt="">
-                          </div>
-                          <div class="slide-label">DELL Poweredge 시리즈</div>
-                        </div>
-                        <!-- Slide 2 -->
-                        <div class="swiper-slide">  
-                          <div class="swiper-image">
-                            <img class="img-logo" src="../../resources/images/sub/infrabusiness_03_logo02.png" alt="">
-                            <img class="img-product" src="../../resources/images/sub/infrabusiness_03_prod02.png" alt="">
-                          </div>
-                          <div class="slide-label">DELL Poweredge 시리즈</div>
-                        </div>
-                        <!-- Slide 3 -->
-                        <div class="swiper-slide">  
-                          <div class="swiper-image">
-                            <img class="img-logo" src="../../resources/images/sub/infrabusiness_03_logo03.png" alt="">
-                            <img class="img-product" src="../../resources/images/sub/infrabusiness_03_prod03.png" alt="">
-                          </div>
-                          <div class="slide-label">DELL Poweredge 시리즈</div>
-                        </div>                    
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li id="tab2" class="btnCon"><a class="btn" href="#tab2">Storage</a>
-                  <div class="tabCon">
-                    <!-- <div class="swiper" id="js-swiper-hardware">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">  
-                          <div class="swiper-image">
-                            <img class="img-logo" src="../../resources/images/sub/infrabusiness_03_logo01.png" alt="">
-                            <img class="img-product" src="../../resources/images/sub/infrabusiness_03_prod01.png" alt="">
-                          </div>
-                          <div class="slide-label">DELL Poweredge 시리즈</div>
-                        </div>
-                        <div class="swiper-slide">  
-                          <div class="swiper-image">
-                            <img class="img-logo" src="../../resources/images/sub/infrabusiness_03_logo02.png" alt="">
-                            <img class="img-product" src="../../resources/images/sub/infrabusiness_03_prod02.png" alt="">
-                          </div>
-                          <div class="slide-label">DELL Poweredge 시리즈</div>
-                        </div>
-                        <div class="swiper-slide">  
-                          <div class="swiper-image">
-                            <img class="img-logo" src="../../resources/images/sub/infrabusiness_03_logo03.png" alt="">
-                            <img class="img-product" src="../../resources/images/sub/infrabusiness_03_prod03.png" alt="">
-                          </div>
-                          <div class="slide-label">DELL Poweredge 시리즈</div>
-                        </div>                    
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                      </div>
-                    </div> -->
-                  </div>
-                </li>    
-              </ul>
+          <div class="tabs-wrap inner">
+            <div class="tabs">
+              <div class="tab active" data-tab-target="#Servers">Servers</div>
+                <div class="tab" data-tab-target="#Storage">Storage</div>
             </div>
+          </div>
+          <div class="tab-content-wrap">
 
+            <div id="Servers" class="content-wrap">
+              <div class="swiper" id="js-swiper-hardware">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slide 1 -->
+                  <div class="swiper-slide">  
+                    <div class="swiper-image">
+                      <img class="img-logo" src="../../resources/images/sub/infrabusiness_03_logo01.png" alt="">
+                      <img class="img-product" src="../../resources/images/sub/infrabusiness_03_prod01.png" alt="">
+                    </div>
+                    <div class="slide-label">DELL Poweredge 시리즈</div>
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="swiper-slide">  
+                    <div class="swiper-image">
+                      <img class="img-logo" src="../../resources/images/sub/infrabusiness_03_logo02.png" alt="">
+                      <img class="img-product" src="../../resources/images/sub/infrabusiness_03_prod02.png" alt="">
+                    </div>
+                    <div class="slide-label">DELL Poweredge 시리즈</div>
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="swiper-slide">  
+                    <div class="swiper-image">
+                      <img class="img-logo" src="../../resources/images/sub/infrabusiness_03_logo03.png" alt="">
+                      <img class="img-product" src="../../resources/images/sub/infrabusiness_03_prod03.png" alt="">
+                    </div>
+                    <div class="slide-label">DELL Poweredge 시리즈</div>
+                  </div>
+                </div>
+                <div class="swiper-button-wrap">                    
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>
@@ -259,18 +228,24 @@
               </div>
               <div class="form-group-wrap">
                 <div class="form-group">
-                  <div class="form-label">
-                    <label>제품군
-                    </label>
+                  <div class="select-label">
+                      <label for="product">제품군</label>
+                      <select name="product" id="product">
+                          <option>Infra Solution</option>
+                          <option>Infra Solution1</option>
+                          <option>Infra Solution2</option>
+                      </select>
                   </div>
-                  <input type="text" name="company">
                 </div>
                 <div class="form-group">
-                  <div class="form-label">
-                    <label>제품유형
-                    </label>
-                  </div>
-                  <input type="text" name="position">
+                  <div class="select-label">
+                    <label for="type">제품유형</label>
+                    <select name="type" id="type">
+                        <option>클라우드 플랫폼</option>
+                        <option>클라우드 플랫폼1</option>
+                        <option>클라우드 플랫폼2</option>
+                    </select>
+                </div>
                 </div>
               </div>
               <div class="form-group">
@@ -310,6 +285,6 @@
 
       </div>
     </div>
-    <footer id="footerV2" class="footer-v2"></footer>
+    <footer id="footerV3" class="footer-v3"></footer>
   </body>
 </html>
