@@ -115,6 +115,10 @@ ScrollTrigger.create({
 //   }
 // });
 
+
+
+
+
 function startCountingWhenVisible(element, countingFunction) {
   const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
@@ -172,6 +176,9 @@ function startCounting3() {
       countBox3.innerHTML = new Intl.NumberFormat().format(count3);
   }, 10);
 }
+
+
+
 
 const countBox1 = document.querySelector('.count01');
 const countBox2 = document.querySelector('.count02');
