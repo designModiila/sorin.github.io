@@ -52,10 +52,29 @@
 .main .section-business .business-item-02 {position: absolute; top: 0; left: 0; transform: translateY(100%);}
 .main .section-business .business-item-03 {position: absolute; top: 0; left: 0;}
  */
-
+/* 
 .main .section-business .main-heading-wrap {margin-bottom: 100px;}
 .main .section-business .business-item {display: flex; flex-direction: column; justify-content: end; padding: 0 0 120px 170px; height: calc(100vh - 4.8rem); margin: 2rem auto 3rem; overflow: hidden; border-radius: 1.5rem;}
 .main .section-business .business-item-01-wrap {margin-top: 1.2rem;}
+.main .section-business .business-item-01 {background: url(../images/main/main_business_01.png)no-repeat center center; background-size: cover;}
+.main .section-business .business-item-02 {background: url(../images/main/main_business_02.png)no-repeat center center; background-size: cover;}
+.main .section-business .business-item-03 {background: url(../images/main/main_business_03.png)no-repeat center center; background-size: cover;}
+.main .section-business .business-item-01 .item-text-wrap {opacity: 0;}
+.main .section-business .business-item-01 .item-icon-wrap {opacity: 0;}
+.main .section-business .item-title {font-family: 'Paybooc'; font-size: 60px; letter-spacing: -0.02em; color: #fff;}
+.main .section-business .item-desc-wrap {margin-top: 20px;}
+.main .section-business .item-desc {font-size: 24px; font-weight: 400; letter-spacing: -0.03em; color: #fff;}
+.main .section-business .item-icon-wrap {margin-top: 50px; display: flex; justify-content: space-between; align-items: center; width: 40%;}
+.main .section-business .item-icon {display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.main .section-business .item-icon-title {margin-top: 10px; font-size: 18px; font-weight: 400; letter-spacing: -0.03em; text-align: center; color: #fff;} */
+
+css에서 
+.main .section-business {padding: 350px 1.5rem 0;}
+.main .section-business .main-heading-1 {text-align: center;}
+
+.main .section-business-box {position: relative; overflow: hidden;  height: 100vh;  width: 100%;  top: 0; margin: 0; z-index: 1;}
+.main .section-business .business-item {display: flex; flex-direction: column; justify-content: end; padding: 0 0 120px 170px; height: calc(100vh - 4.8rem); margin: 2rem auto 3rem; overflow: hidden; border-radius: 1.5rem; }
+
 .main .section-business .business-item-01 {background: url(../images/main/main_business_01.png)no-repeat center center; background-size: cover;}
 .main .section-business .business-item-02 {background: url(../images/main/main_business_02.png)no-repeat center center; background-size: cover;}
 .main .section-business .business-item-03 {background: url(../images/main/main_business_03.png)no-repeat center center; background-size: cover;}

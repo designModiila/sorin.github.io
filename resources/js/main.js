@@ -1,34 +1,89 @@
   
   
+// const show = "show";
+// const on = 'on';
+// const firstSlide = document.querySelector(".slide-wrapper> :nth-child(1)");
+// const firstpagination = document.querySelector('.indicator ul li:first-child');
+
+// function slide() {
+//   const currentSlide = document.querySelector(`.${show}`);
+//   const currentpgaination = document.querySelector(`.indicator ul li.${on}`);
+//   if (currentSlide || currentpgaination) {
+//     currentSlide.classList.remove(show);
+//     currentpgaination.classList.remove(on);
+//     const nextSlide = currentSlide.nextElementSibling;
+//     const nextpagination = currentpgaination.nextElementSibling;
+//     if (nextSlide || nextpagination) {
+//       nextSlide.classList.add(show);
+//       nextpagination.classList.add(on);
+//     } else {
+//       firstpagination.classList.add(on);
+//       firstSlide.classList.add(show);
+//     }
+//   } else {
+//     firstpagination.classList.add(on);
+//     firstSlide.classList.add(show);
+//   }
+// }
+// setInterval(slide, 6000);
+
+// const li = document.querySelectorAll('.indicator ul li');
+
+// let main_img = document.querySelectorAll('.slide');
+
+// li.forEach((item, i) => {
+//   item.addEventListener('click', (e) => {
+//     let event = e.currentTarget;
+//     for (let k = 0; k < main_img.length; k++) {
+//       main_img[k].classList.remove('show');
+//     }
+//     main_img[i].classList.add('show');
+//     for (let i = 0; i < li.length; i++) {
+//       li[i].classList.remove('on');
+//     }
+//     event.classList.add('on');
+//   })
+// })
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  // 초기 로드 시 첫 번째 슬라이드와 페이지네이션에 클래스 추가
+  firstSlide.classList.add('show');
+  firstpagination.classList.add('on');
+  startSlideShow();
+});
+
 const show = "show";
 const on = 'on';
-const firstSlide = document.querySelector(".slide-wrapper> :nth-child(1)");
+const firstSlide = document.querySelector(".slide-wrapper > :nth-child(1)");
 const firstpagination = document.querySelector('.indicator ul li:first-child');
+let slideInterval;
 
 function slide() {
   const currentSlide = document.querySelector(`.${show}`);
-  const currentpgaination = document.querySelector(`.indicator ul li.${on}`);
-  if (currentSlide || currentpgaination) {
+  const currentpagination = document.querySelector(`.indicator ul li.${on}`);
+  if (currentSlide && currentpagination) {
     currentSlide.classList.remove(show);
-    currentpgaination.classList.remove(on);
+    currentpagination.classList.remove(on);
     const nextSlide = currentSlide.nextElementSibling;
-    const nextpagination = currentpgaination.nextElementSibling;
-    if (nextSlide || nextpagination) {
+    const nextpagination = currentpagination.nextElementSibling;
+    if (nextSlide && nextpagination) {
       nextSlide.classList.add(show);
       nextpagination.classList.add(on);
     } else {
-      firstpagination.classList.add(on);
       firstSlide.classList.add(show);
+      firstpagination.classList.add(on);
     }
-  } else {
-    firstpagination.classList.add(on);
-    firstSlide.classList.add(show);
   }
 }
-setInterval(slide, 6000);
+
+function startSlideShow() {
+  // 기존의 슬라이드 쇼 타이머를 클리어하고 새로 시작
+  clearInterval(slideInterval);
+  slideInterval = setInterval(slide, 6000);
+}
 
 const li = document.querySelectorAll('.indicator ul li');
-
 let main_img = document.querySelectorAll('.slide');
 
 li.forEach((item, i) => {
@@ -38,12 +93,17 @@ li.forEach((item, i) => {
       main_img[k].classList.remove('show');
     }
     main_img[i].classList.add('show');
-    for (let i = 0; i < li.length; i++) {
-      li[i].classList.remove('on');
+    for (let j = 0; j < li.length; j++) {
+      li[j].classList.remove('on');
     }
     event.classList.add('on');
-  })
-})
+    startSlideShow();
+  });
+});
+
+
+
+
   
 
 const textAni = gsap.timeline({delay: 0.7});
@@ -264,27 +324,82 @@ setTimeout(function () {
 // });
 
 
+// const businessItem = gsap.timeline();
+// businessItem.from(".business-item-01", { scale: 0.3, y:-200})
+//   .to(".business-item-01 .item-text-wrap", { opacity: 1 })
+//   .to(".business-item-01 .item-icon-wrap", { opacity: 1 })
+//     // .to(".business-item-02", {y: "-100vh"})
+//     // .to(".business-item-03", {y: "-200vh"});
+
+ 
+
+// ScrollTrigger.create({
+//   animation: businessItem,
+//   trigger: ".business-item-01-wrap",
+//   start: "top top",
+//       // end: "bottom bottom",
+//   end: "+=2000",
+//       // scrub: true,
+//   pin: true,
+//   anticipatePin: 1,
+//   toggleActions: "play none none none",
+//       // markers: true
+// });
+
+
 const businessItem = gsap.timeline();
 businessItem.from(".business-item-01", { scale: 0.3, y:-200})
   .to(".business-item-01 .item-text-wrap", { opacity: 1 })
   .to(".business-item-01 .item-icon-wrap", { opacity: 1 })
-  // .to(".business-item-02", {y: "-100vh"})
-  // .to(".business-item-03", {y: "-200vh"});
-
  
+const businessItemHeight = document.querySelector('.business-item').offsetHeight;
 
 ScrollTrigger.create({
   animation: businessItem,
   trigger: ".business-item-01-wrap",
   start: "top top",
   // end: "bottom bottom",
-  end: "+=2000",
+  end: () => `+=${businessItemHeight}`,
   // scrub: true,
   pin: true,
   anticipatePin: 1,
   toggleActions: "play none none none",
   // markers: true
 });
+
+ScrollTrigger.create({
+  trigger: ".business-item-02-wrap",
+  start: "top top",
+  end: () => `+=${businessItemHeight}`,
+ // end: "+=2000",
+  // scrub: true,
+  pin: true,
+  anticipatePin: 1,
+  toggleActions: "play none none none",
+  // markers: true
+});
+
+ScrollTrigger.create({
+  trigger: ".business-item-03-wrap",
+  start: "top top",
+  end: () => `+=${businessItemHeight}`,
+ // end: "+=2000",
+  // scrub: true,
+  anticipatePin: 1,
+  toggleActions: "play none none none",
+  // markers: true
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 // businessItem.eventCallback("onComplete", () => {
