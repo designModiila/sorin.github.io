@@ -105,16 +105,27 @@ li.forEach((item, i) => {
 
 
   
-
-const textAni = gsap.timeline({delay: 0.7});
-textAni.to('.text-ani', {duration:0.5, y:0, stagger: 0.3});
+const textAniCount = gsap.timeline({delay: 0.7});
+textAniCount.to('.text-ani', {duration:0.5, y:0, stagger: 0.3});
 ScrollTrigger.create({
-  animation: textAni,
+  animation: textAniCount,
   trigger: ".section-count",
   start: "top 80%",
   end: "bottom bottom",
   markers: false,
 })
+
+
+const textAniBusiness = gsap.timeline({delay: 0});
+textAniBusiness.to('.text-ani', {duration:0.5, y:0, stagger: 0.2});
+ScrollTrigger.create({
+  animation: textAniBusiness,
+  trigger: ".section-business",
+  start: "top 80%",
+  end: "bottom bottom",
+  markers: false,
+})
+
 
 
 // setTimeout(function(){

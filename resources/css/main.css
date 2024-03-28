@@ -43,11 +43,11 @@
 .main .count-wrap .count-num span {margin-left: 10px; font-size: 50px; font-weight: 800; letter-spacing: -0.04em; line-height: 30px; vertical-align: top;}
 .main .count-wrap .count-unit {font-size: 24px; font-weight: 700; letter-spacing: -0.03em; line-height: 20px;}
 .main .count-wrap .count-desc {margin-top: 30px; text-align: center; font-size: 24px; font-weight: 400;}
-
+/* 
 .main .section-business {padding: 350px 1.5rem 0;}
 .main .section-business .main-heading-1 {text-align: center;}
 
-/* .main .section-business .business-item-wrap {position: relative; width: 100%; overflow: hidden;}
+.main .section-business .business-item-wrap {position: relative; width: 100%; overflow: hidden;}
 .main .section-business .business-item-01-wrap {position: absolute; top: 0; left: 0;}
 .main .section-business .business-item-02 {position: absolute; top: 0; left: 0; transform: translateY(100%);}
 .main .section-business .business-item-03 {position: absolute; top: 0; left: 0;}
@@ -68,7 +68,7 @@
 .main .section-business .item-icon {display: flex; flex-direction: column; justify-content: center; align-items: center;}
 .main .section-business .item-icon-title {margin-top: 10px; font-size: 18px; font-weight: 400; letter-spacing: -0.03em; text-align: center; color: #fff;} */
 
-css에서 
+ 
 .main .section-business {padding: 350px 1.5rem 0;}
 .main .section-business .main-heading-1 {text-align: center;}
 
