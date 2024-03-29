@@ -359,7 +359,7 @@ setTimeout(function () {
 
 
 const businessItem = gsap.timeline();
-businessItem.from(".business-item-01", { scale: 0.3, y:-200})
+businessItem.from(".business-item-01", { scale: 0.3, y:-100})
   .to(".business-item-01 .item-text-wrap", { opacity: 1 })
   .to(".business-item-01 .item-icon-wrap", { opacity: 1 })
  
