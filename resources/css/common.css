@@ -167,8 +167,8 @@ body.noScroll { overflow: hidden;}
 .footer-main .footer-contact-link {margin-top: 50px; display: flex; justify-content: space-between; align-items: flex-start;}
 .footer-main .contact-wrap {display: flex; gap: 60px;}
 .footer-main .contact {font-size: 13px; letter-spacing: -0.03em; color: #4B4B4B;}
-.footer-main .contact .location {font-weight: 500;}
-.footer-main .contact .location-detail {font-weight: 400;}
+.footer-main .contact .location {font-weight: 700;}
+.footer-main .contact .location-detail {font-weight: 500;}
 .footer-main .footer-contact-link .link-wrap {display: flex; flex-direction: column; gap: 10px; padding-right: 44px;}
 .footer-main .footer-contact-link .link a {display: flex; gap: 5px; cursor: pointer;}
 .footer-main .footer-contact-link .link-title {font-size: 16px;}
@@ -177,3 +177,27 @@ body.noScroll { overflow: hidden;}
 .footer-main .footer-bottom .privacy-list {display: flex; gap: 20px; font-size: 13px; font-weight: 500; letter-spacing: -0.39px; color: #4B4B4B;}
 .footer-main .footer-bottom .copy {font-size: 13px; font-weight: 500; letter-spacing: -0.39px; color: #AFAFAF;}
 
+@media (max-width: 1440px) {
+    .inner {width: 100%; padding: 0 7vw;}
+    .footer-main .footer-inner {width: 100%; padding: 30px 7vw;}
+} 
+@media (max-width: 1024px) {
+    .footer-main .contact-wrap {flex-direction: column; gap: 16px;}
+    .footer-main .contact .location-detail {display: flex; gap: 10px;}
+    .footer-main .footer-contact-link {margin-top: 30px;}
+    .footer-main .footer-bottom .privacy-list {font-size: 11px;}
+    .footer-main .footer-bottom .copy {font-size: 10px;}
+}
+@media (max-width: 767px) {
+    .inner {width: 100%; padding: 0 6.67vw;}
+    .footer-main .footer-inner {padding: 30px 6.67vw;}
+    .footer-main .contact {font-size: 12px;}
+    .footer-main .footer-contact-link {flex-direction: column;}
+    .footer-main .footer-contact-link .link-wrap {margin-top: 40px; flex-direction: row; gap: 15px;}
+    .footer-main .footer-main-top > img {width: 80px; height: 36px;}
+    .footer-main .family-site {position: absolute; top: 38px; right: 6.67vw;}
+    .footer-main .family-select {padding: 6px 18px; font-size: 10px;}
+    .footer-main .footer-contact-link .link-title {font-size: 13px;}
+    .footer-main .footer-contact-link .link img {width: 12px;}
+    .footer-main .footer-bottom {margin-top: 20px; flex-direction: column; gap: 20px;}
+}
