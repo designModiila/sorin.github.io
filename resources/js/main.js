@@ -112,19 +112,21 @@ ScrollTrigger.create({
   trigger: ".section-count",
   start: "top 80%",
   end: "bottom bottom",
+  toggleActions: "play none none none",
   markers: false,
 })
 
 
-const textAniBusiness = gsap.timeline({delay: 0});
-textAniBusiness.to('.text-ani', {duration:0.5, y:0, stagger: 0.2});
-ScrollTrigger.create({
-  animation: textAniBusiness,
-  trigger: ".section-business",
-  start: "top 80%",
-  end: "bottom bottom",
-  markers: false,
-})
+// const textAniBusiness = gsap.timeline({delay: 0});
+// textAniBusiness.to('.text-ani', {duration:0.5, y:0, stagger: 0.2});
+// ScrollTrigger.create({
+//   animation: textAniBusiness,
+//   trigger: ".section-business",
+//   start: "top 80%",
+//   end: "bottom bottom",
+//   toggleActions: "play none none none",
+//   markers: false,
+// })
 
 
 
@@ -363,7 +365,7 @@ businessItem.from(".business-item-01", { scale: 0.3, y:-100})
   .to(".business-item-01 .item-text-wrap", { opacity: 1 })
   .to(".business-item-01 .item-icon-wrap", { opacity: 1 })
  
-const businessItemHeight = document.querySelector('.business-item').offsetHeight;
+const businessItemHeight = document.querySelector('.business-item-wrap').offsetHeight;
 
 ScrollTrigger.create({
   animation: businessItem,
@@ -403,12 +405,30 @@ ScrollTrigger.create({
 
 
 
+// snap
+// const panel = document.querySelector(".business-item-wrap");
+// let panels = gsap.utils.toArray(".business-item-wrap");
+// let tops = panels.map(panel => ScrollTrigger.create({trigger: panel, start: "top top"}));
 
+// panels.forEach((panel, i) => {
+//     ScrollTrigger.create({
+//         trigger: panel,
+//         start: () => panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom",
+//         pin: true, 
+//         pinSpacing: false 
+//     });
+// });
 
-
-
-
-
+// ScrollTrigger.create({
+//     snap: {
+//         snapTo: (progress, self) => {
+//             let panelStarts = tops.map(st => st.start), 
+//             snapScroll = gsap.utils.snap(panelStarts, self.scroll()); 
+//             return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll); 
+//         },
+//         duration: 0.5
+//     }
+// });
 
 
 
@@ -435,4 +455,7 @@ ScrollTrigger.create({
 //       markers: true
 //     });
 // });
+
+
+
 

@@ -660,6 +660,8 @@
 }
 
 @media (max-width: 590px) {
+    .infrabusiness .section03 .swiper-slide {height: 200px;}
+    .infrabusiness .section03 .swiper-button-wrap {width: 85%;}
     .infrabusiness .section05 .form-wrap .form-group-wrap {flex-direction: column;}
     .infrabusiness .section05 .select-label > select {background: #fff url(../images/sub/infrabusiness_05_arr_gr.png)no-repeat 95% 50% / 5%;}
 }
