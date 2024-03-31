@@ -43,7 +43,9 @@
 .main .count-wrap .count-num span {margin-left: 10px; font-size: 50px; font-weight: 800; letter-spacing: -0.04em; line-height: 30px; vertical-align: top;}
 .main .count-wrap .count-unit {font-size: 24px; font-weight: 700; letter-spacing: -0.03em; line-height: 20px;}
 .main .count-wrap .count-desc {margin-top: 30px; text-align: center; font-size: 24px; font-weight: 400;}
- 
+.main .section-count .main-heading-wrap-mo {display: none;} 
+.main .section-count .main-heading-sub-wrap-mo {display: none;}
+
 .main .section-business {padding: 350px 1.5rem 0;}
 .main .section-business .main-heading-wrap {margin-bottom: 150px;}
 .main .section-business .main-heading-1 {text-align: center;}
@@ -140,7 +142,7 @@
     .main .main-heading-sub {font-size: 14px; line-height: 24px;}
     .main .section-count {padding: 100px 0; background: url(../../resources/images/main/main_count_bg.png)no-repeat -30% 85%; background-size: 70%;}
     .main .heading-sub-count-wrap {flex-direction: column; margin-top: 30px;}
-    .main .count-wrap {margin-top: 30px; flex-direction: column; align-items: center; gap: 40px; width: 30%; align-self: center; float: right;}
+    .main .count-wrap {margin-top: 40px; margin-right: 30px; flex-direction: column; align-items: center; gap: 40px; width: 30%; align-self: center; float: right;}
     .main .count-wrap .count-num {font-size: 40px;}
     .main .count-wrap .count-unit {line-height: 45px;}
     .main .count-wrap .count-desc {margin-top: 0;}
@@ -159,6 +161,12 @@
     .main .section-client .more-button {margin-top: 67px;}
 
     .main .section-recruit a {padding: 8px 20px; font-size: 10px; font-weight: 700;}
+}
+@media (max-width: 630px) {
+    .main .section-count .main-heading-wrap {display: none;} 
+    .main .section-count .main-heading-wrap-mo {display: block;}
+    .main .section-count .main-heading-sub-wrap {display: none;} 
+    .main .section-count .main-heading-sub-wrap-mo {display: block;} 
 }
 
 @media (max-width: 590px) {

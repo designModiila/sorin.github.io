@@ -288,17 +288,37 @@ ScrollTrigger.create({
 
 // infra business
 
+// 인프라비즈니스 슬라이드
 var swiper1 = new Swiper("#js-swiper-infra", {
-  slidesPerView: 3,
+  slidesPerView: 4,
   preventInteractionOnTransition: true,
-  loopAddBlankSlides: true,
-  speed: 300,
+  loopAddBlankSlides: false,
+  speed: 1000,
+  duration: 1000,
+  spaceBetween: 60,
+  centeredSlides: true,
+  mousewheel:true,
+  breakpoints: {
+    300: {
+        slidesPerView: 3,
+        spaceBetween: 60,
+    },
+    768: {
+      slidesPerView: 3,
       spaceBetween: 60,
-      centeredSlides: false,
-      mousewheel:true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+  },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    1280: {
+        slidesPerView: 4,
+        spaceBetween: 60,
+    },
+},
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
       },
 
   // effect: "coverflow",
@@ -318,11 +338,11 @@ var swiper1 = new Swiper("#js-swiper-infra", {
   //       },
 });
 
-
+// 하드웨어 제품 슬라이드
 const swiper2 = new Swiper('#js-swiper-hardware', {
   loop: true,
   slidesPerView: 2,
-  // spaceBetween: 230,
+  spaceBetween: 230,
   centeredSlides: true,
   autoplay: {
     delay: 5000,
@@ -334,6 +354,16 @@ const swiper2 = new Swiper('#js-swiper-hardware', {
   },
   observer: true,
   observeParents: true,
+  breakpoints: {
+    300: {
+        slidesPerView: 1.5,
+        spaceBetween: 80,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 230,
+  },
+},
 });
 
 // tabmenu

@@ -487,23 +487,28 @@
 
 .infrabusiness .section02 {padding: 200px 0 235px 10.42vw;}
 /* .infrabusiness .section02 .inner {padding-right: 0;} */
-.infrabusiness .section02 .content-wrap {position: relative; display: flex; gap: 130px; background: url(../../resources/images/sub/infrabusiness_02_bg.png)no-repeat 5% 90%;}
+.infrabusiness .section02 .content-wrap {position: relative; width: 100%; background: url(../../resources/images/sub/infrabusiness_02_bg.png)no-repeat 5% 90%;}
 .infrabusiness .section02 .content-wrap::before {position: absolute; content: ''; width: 479px; height: 720px; background-color: #F6F6F6; border-radius: 2rem 0 0 2rem; top: -50px; right: 0;}
 .infrabusiness .section02 .content-wrap .heading-wrap {flex-shrink: 0;}
 .infrabusiness .section02 .main-heading-1,
 .infrabusiness .section02 .main-heading-sub {text-align: left;}
 .infrabusiness .section02 .main-heading-sub-wrap {margin-top: 30px;}
+.infrabusiness .section02 .heading-wrap {position: absolute;}
 .infrabusiness .section02 .heading-wrap img {margin-top: 60px;}
-.infrabusiness .section02 .swiper-wrapper {padding: 70px 0 0; overflow: visible;}
-/* .infrabusiness .section02 .swiper-wrapper */
-.infrabusiness .section02 .swiper-slide {display: inline-block; background-color: #fff; zoom: 1; padding: 0 0 42px 30px;  display: flex; flex-direction: column; justify-content: flex-end; height: 432px; border-radius: 20px; box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.08);}
-.infrabusiness .section02 .i-swiper__image-container {align-self: flex-end; padding-bottom: 50px;}
+
+
+.infrabusiness .section02 .swiper-wrapper {padding: 70px 0 0; overflow: visible; align-items: center;}
+.infrabusiness .section02 .swiper-slide {display: inline-block; background-color: #fff; min-width: 326px; zoom: 1; padding: 0 0 42px 30px;  display: flex; flex-direction: column; justify-content: flex-end; height: 432px; border-radius: 20px; box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.08); transition: all 0.5s ease-in-out;}
+.infrabusiness .section02 .i-swiper__image-container {align-self: flex-end; padding-bottom: 50px; transition: all 0.5s ease-in-out;}
 .infrabusiness .section02 .i-swiper__title {font-size: 24px; font-weight: 700; color: #2A5FAF;}
 .infrabusiness .section02 .i-swiper__desc {margin-top: 15px; font-size: 16px; font-weight: 400; color: #969696;}
 
-.infrabusiness .section02 .swiper-slide-active {zoom: 1.2; transform: translateY(-12%); background: linear-gradient(-30deg, #1856B2 0%, #4E89E2 100%);}
+.infrabusiness .section02 .swiper-slide-active {zoom: 1.2; background: linear-gradient(-30deg, #1856B2 0%, #4E89E2 100%); transition: all 0.5s ease-in-out;}
 .infrabusiness .section02 .swiper-slide-active .i-swiper__title {color: #fff;}
 .infrabusiness .section02 .swiper-slide-active .i-swiper__desc {color: #fff;}
+.infrabusiness .section02 .swiper-slide-prev {opacity: 0;}
+.infrabusiness .section02 .swiper-slide-next {opacity: 0.8;}
+.infrabusiness .section02 .swiper-pagination {bottom: -50px;}
 
 .infrabusiness .section03 {padding: 150px 0 0; width: 100%; height: 837px; background-color: #2A5FAF;}
 .infrabusiness .section03 .main-heading-1 {text-align: left; color: #fff;}
@@ -515,13 +520,14 @@
 .infrabusiness .section03 .swiper {position: relative; margin-top: 75px; width: 100%; overflow: hidden;}
 .infrabusiness .section03 .swiper-wrapper {position: relative; width: 100%;}
 .infrabusiness .section03 .swiper-slide {display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0.5; transition: all .3s ease-in-out;}
-.infrabusiness .section03 .swiper-image {display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 40px; padding: 0 200px; max-width: 740px; height: 340px; border-radius: 20px; background-color: #fff;}
-.infrabusiness .section03 .swiper-image .img-logo {width: 60%;}
+.infrabusiness .section03 .swiper-image {display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 40px; padding: 0 20%; max-width: 740px; height: 340px; border-radius: 20px; background-color: #fff;}
+.infrabusiness .section03 .swiper-image .img-logo {width: 80%;}
+.infrabusiness .section03 .swiper-image .img-product {width: 100%;}
 .infrabusiness .section03 .slide-label {margin-top: 33px; text-align: center; font-size: 24px; font-weight: 400; color: #fff; opacity: 0;}
 .infrabusiness .section03 .swiper-slide.swiper-slide-active {opacity: 1;}
 .infrabusiness .section03 .swiper-slide.swiper-slide-active .slide-label {opacity: 1;}
 
-.infrabusiness .section03 .swiper-button-wrap {position: absolute; top: 0; left: 0; right: 0; margin: 0 auto; width: 52%; height: 85%; display: flex; justify-content: space-between; z-index: 1;}
+.infrabusiness .section03 .swiper-button-wrap {position: absolute; top: 0; left: 0; right: 0; margin: 0 auto; width: 60%; height: 85%; display: flex; justify-content: space-between; z-index: 1;}
 .infrabusiness .section03 .swiper-button-next {position: absolute; right: 0; width: 60px; height: 60px; background: url(../images/sub/infrabusiness_03_btn_r.png) no-repeat; background-size: cover; background-position: center;}
 .infrabusiness .section03 .swiper-button-prev {position: absolute; left: 0; width: 60px; height: 60px; background: url(../images/sub/infrabusiness_03_btn_l.png) no-repeat; background-size: cover; background-position: center;}
 .infrabusiness .section03 .swiper-button-next::after,
@@ -542,10 +548,12 @@
     }
 }
 
+.infrabusiness .section05 .address-mo {display: none;}
 .infrabusiness .section05 {padding-bottom: 100px; background: url(../images/sub/infrabusiness_05_bg.png)no-repeat center 180px;}
 
 .infrabusiness .section05 .content-wrap {display: flex; flex-direction: column; justify-content: center; align-items: center;}
 .infrabusiness .section05 .address {display: inline-block; padding: 10px 50px; text-align: center; font-size: 16px; font-weight: 400; color:#2A5FAF; border-radius: 50px; background-color: #fff; box-shadow: 2px 2px 20px rgba(0, 0, 0, .1);}
+.infrabusiness .section05 .address br {display: none;}
 .infrabusiness .section05 .form-wrap {margin: 179px auto 0; width: 604px; padding: 40px 50px;}
 .infrabusiness .section05 .form-wrap .form-group-wrap {display: flex; justify-content: space-between; gap: 24px;}
 .infrabusiness .section05 .form-wrap .form-group {flex: 1; margin-top: 30px;}
@@ -571,10 +579,87 @@
 .infrabusiness .section05 .form-wrap .chk-box input[type="checkbox"]:checked + .on:after { display: block; }
 .infrabusiness .section05 .form-wrap .on:after { width: 6px; height: 10px; border: solid #000; border-width: 0 2px 2px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); position: absolute; left: 6px; top: 5px; }
 
-.infrabusiness .section05 .form-wrap .btn-toggle {font-size: 16px; font-weight: 500;}
+.infrabusiness .section05 .form-wrap .btn-toggle {font-size: 16px; font-weight: 500; display: flex; gap: 5px;}
 .infrabusiness .section05 .form-wrap .infra-more-btn.active svg {transform: rotate(180deg);}
 .infrabusiness .section05 .form-wrap .submit-btn {margin-top: 30px; padding: 15px 50px; border-radius: 999px; border: 1px solid #6F98E8; font-size: 18px; font-weight: 700; color: #6F98E8; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out;}
 .infrabusiness .section05 .form-wrap .submit-btn:hover {background-color: #6f97e830;}
 .infrabusiness .section05 .infra-view-fulltext {width: 100%; margin-top: 15px; padding: 15px; font-size: 14px; font-weight: 400; line-height: 20px; border: 1px solid #ddd;}
 .infrabusiness .section05 .infra-view-fulltext p {word-break: break-all;}
 
+
+@media (max-width: 1440px) {
+    .infrabusiness .main-heading-1 {font-size: 36px; line-height: 54px;}
+    .infrabusiness .main-heading-sub {font-size: 18px; line-height: 30px;}
+    .infrabusiness .section-title {font-size: 38px;}
+
+    .infrabusiness .section01 .main-title {font-size: 60px;}
+    .infrabusiness .section01 .main-desc {font-size: 20px;}
+
+}
+
+@media (max-width: 1279px) {
+    .infrabusiness .section02 .heading-wrap {position: relative;}
+    .infrabusiness .section02 .content-wrap::before {position: absolute; content: ''; width: 479px; height: 720px; background-color: #F6F6F6; border-radius: 2rem 0 0 2rem; top: 230px; right: 0;}
+    .infrabusiness .section03 .tab {font-size: 20px;}
+    .infrabusiness .section03 .slide-label {font-size: 20px;}
+}
+@media (max-width: 1160px) {
+    .infrabusiness .section05 {background: url(../images/sub/infrabusiness_05_bg.png)no-repeat center 20%; background-size: 90%;}
+    .infrabusiness .section05 .address br {display: block;}
+}
+@media (max-width: 1024px) {
+    .infrabusiness .section02 .swiper-slide-active {min-width: 300px; height: 400px;}
+    .infrabusiness .section03 .swiper-image {height: 250px;}
+}
+
+@media (max-width: 767px) {
+    .infrabusiness .main-heading-1 {font-size: 28px; line-height: 40px;}
+    .infrabusiness .main-heading-sub {font-size: 16px; line-height: 30px;}
+    .infrabusiness .section-title {font-size: 24px;}
+
+    .infrabusiness .section01 {justify-content: flex-end;}
+    .infrabusiness .section01 .main-title {font-size: 42px; line-height: 54px;}
+    .infrabusiness .section01 .main-desc {font-size: 16px; line-height: 24px;}
+
+    .infrabusiness .section02 {padding: 100px 0 150px 24px;}
+    .infrabusiness .section02 .content-wrap::before {display: none;}
+    .infrabusiness .section02 .heading-wrap img {margin-top: 0; position: absolute; top: 0; right: 24px; width: 34px;}
+    .infrabusiness .section02 .swiper-slide {padding: 0 0 30px 20px; min-width: 200px; height: 264px; border-radius: 10px;}
+    .infrabusiness .section02 .i-swiper__image-container {align-self: flex-end; padding-bottom: 20px;}
+    .infrabusiness .section02 .i-swiper__title {font-size: 18px;}
+    .infrabusiness .section02 .i-swiper__desc {margin-top: 3px; font-size: 12px;}
+
+    .infrabusiness .section03 {padding: 94px 0 126px; height: auto;}
+    .infrabusiness .section03 .section-title {text-align: center; font-size: 24px;}
+    .infrabusiness .section03 .tabs {margin-top: 40px; justify-content: center;}
+    .infrabusiness .section03 .swiper {margin-top: 60px;}
+    .infrabusiness .section03 .swiper-button-wrap {width: 80%;}
+    .infrabusiness .section03 .swiper-button-prev {width: 36px; height: 36px;}
+    .infrabusiness .section03 .swiper-button-next {width: 36px; height: 36px;}
+    .infrabusiness .section03 .swiper-image .img-logo {width: 70%;}
+    .infrabusiness .section03 .slide-label {margin-top: 20px; font-size: 18px;}
+
+    .infrabusiness .section04 {padding: 117px 0 0;}
+    .infrabusiness .section04 .logo-box {gap: 11px;}
+    .infrabusiness .section04 .logo-box div {width: 154px; height: 58px; border-radius: 6px; box-shadow: 1px 1px 10px rgba(0, 0, 0, .1);}
+    .infrabusiness .section04 .logo-box div img {width: 60%;}
+    .infrabusiness .section04 .content-wrap {margin: 60px 80px;}
+
+    .infrabusiness .section05 .address {display: none;}
+    .infrabusiness .section05 .address-mo {display: block; width: 100%; padding: 20px; text-align: left; font-size: 13px; line-height: 22px; font-weight: 400; color:#2A5FAF; border-radius: 20px; background-color: #fff; box-shadow: 1px 1px 10px rgba(0, 0, 0, .1);}
+    .infrabusiness .section05 .address-mo .location {font-weight: 700; margin-bottom: 5px;}
+    .infrabusiness .section05 .address-mo .location2 {margin-top: 12px;}
+
+    .infrabusiness .section05 .form-wrap {margin:150 auto 0; padding: 15px; width: 100%;}
+    .infrabusiness .section05 {background: url(../images/sub/infrabusiness_05_bg.png)no-repeat center 30%; background-size: 90%;}
+    .infrabusiness .section05 .form-wrap .form-group .form-label label {font-size: 14px;}
+    .infrabusiness .section05 .select-label > label {font-size: 14px;}
+    .infrabusiness .section05 .form-wrap .chk-box {font-size: 14px;}
+    .infrabusiness .section05 .form-wrap .btn-toggle {font-size: 14px;}
+    .infrabusiness .section05 .form-wrap .submit-btn {margin-top: 38px; padding: 8px 40px; font-size: 14px;}
+}
+
+@media (max-width: 590px) {
+    .infrabusiness .section05 .form-wrap .form-group-wrap {flex-direction: column;}
+    .infrabusiness .section05 .select-label > select {background: #fff url(../images/sub/infrabusiness_05_arr_gr.png)no-repeat 95% 50% / 5%;}
+}
