@@ -49,6 +49,11 @@
 .backup .section06 .img-wrap {margin-top: 100px; display: flex; justify-content: center; gap: 30px;}
 .backup .section06 .img-wrap div {display: flex; justify-content: center; align-items: center; width: 306px; height: 115px; border-radius: 10px; background-color: #fff; box-shadow: 2px 2px 20px rgba(0, 0, 0, .1);}
 
+.data .section02 {padding: 300px 0 140px;}
+.data .heading-1 {margin-bottom: 40px;}
+.data .section02 .main-desc-title {margin-top: 80px;}
+.data .section02 .img-wrap {margin: 0 auto; width: 544px; height: 360px; border-radius: 20px; overflow: hidden;}
+
 .hardware .section02 {margin-top: 118px; padding: 123px 0 343px;}
 .hardware .section02 .hardware-menu {margin-top: 80px; display: flex; justify-content: center; gap: 70px; font-size: 20px; font-weight: 700; color: #AAAAAA;;}
 .hardware .section02 .hardware-menu a.on {color: #1E66D2;}
@@ -61,3 +66,4 @@
 .hardware .section03 .con-title {text-align: center;}
 .hardware .section03 .logo-wrap {margin-top: 100px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;}
 .hardware .section03 .logo-wrap div {width: 100%; display: flex; justify-content: center; align-self: center;}
+
