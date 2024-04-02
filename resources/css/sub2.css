@@ -68,13 +68,16 @@
 .mainsub .section01 {padding-top: 280px; position: relative; z-index: 1;}
 .mainsub .main-category {font-family: 'Paybooc'; font-size: 20px; letter-spacing: -0.03em; color: #323232;}
 .mainsub .category-heading {margin: 30px 0 216px; font-size: 54px; font-weight: 500; letter-spacing: -0.03em; line-height: 70px;}
-.mainsub .main-visual {margin: 0 30px; height: 646px; border-radius: 20px; overflow: hidden;}
-.mainsub .main-visual img {width: 100%;}
+.mainsub .main-visual {margin: 0 30px; height: 646px; border-radius: 20px; object-fit: contain; overflow: hidden;}
+.mainsub .main-visual img {width: 100%; object-fit: contain;}
 /* .mainsub .main-title-wrap {z-index: 10;} */
 .mainsub .heading-1 {margin-top: 120px; font-size: 48px; font-weight: 700; letter-spacing: -0.03em; line-height: 68px; color: #323232;}
 .mainsub .heading-2 {margin-top: 80px; font-size: 24px; font-weight: 500; letter-spacing: -0.03em; line-height: 36px; color: #323232;}
 .mainsub .btn-top {text-align: right;}
 .mainsub .btn-top img {margin: 0 120px 116px 0; width: 60px; height: 60px;}
+
+/* .sub01 .category-heading {overflow: hidden;}
+.sub01 p .text-ani {transform: translateY(100%);} */
 
 .sub01 .company-info-wrap {display: flex; justify-content: right;}
 .sub01 .company-info {margin-top: 100px; display: grid; grid-template-columns: 1fr 1fr; column-gap: 60px;}
@@ -88,3 +91,38 @@
 .sub01 .section04 .content-wrap .content-title-desc:nth-child(1) {margin-top: 0;}
 .sub01 .section04 .content-wrap .content-title {font-size: 60px; font-weight: 800; letter-spacing: -0.03em;}
 .sub01 .section04 .content-wrap .content-desc {margin-top: 20px; font-size: 24px; font-weight: 500; letter-spacing: -0.03em; line-height: 34px;}
+
+.sub02 .section02 {padding-bottom: 140px; background: url(../../resources/images/sub2/sub02_bg.png)no-repeat 0 115%;}
+.sub02 .section02 .content-wrap {display: flex; flex-direction: column; gap: 50px;}
+.sub02 .section02 .content-wrap .greeting-wrap {width: 67%; align-self: flex-end;}
+.sub02 .section02 .content-wrap .greeting p {margin-top: 30px; font-size: 24px; font-weight: 500; line-height: 36px; letter-spacing: -0.03em; color: #323232;}
+.sub02 .section02 .content-wrap .greeting p:nth-child(1) {margin-top: 0;}
+.sub02 .section02 .content-wrap .signature-wrap {margin-top: 75px; display: flex; gap: 30px;}
+.sub02 .section02 .content-wrap .signature-wrap p {font-size: 24px; font-weight: 600; letter-spacing: -0.03em; color: #323232;}
+
+.sub03 .section02 {text-align: center;}
+.sub03 .section03 {margin-top: 280px; text-align: center;}
+.sub03 .mission-wrap {margin-top: 100px; display: flex; justify-content: center;}
+.sub03 .mission-wrap .detail {display: flex; align-items: center; height: 100vh;}
+.sub03 .mission-wrap .mission-left {width: 55%;}
+.sub03 .mission-wrap .mission-head {width: 50%; font-size: 42px; font-weight: 700; letter-spacing: -0.03em; color: #323232;}
+.sub03 .mission-wrap .desc-text {font-size: 20px; font-weight: 600; line-height: 46px; letter-spacing: -0.03em; color: #4B4B4B;}
+.sub03 .mission-right {display: flex; align-items: center; height: 100vh;}
+.sub03 .photos {position: relative; width: 365px; height: 421px; border-radius: 20px; overflow: hidden;}
+.sub03 .photos img {position: absolute; top: 0; left: 0; width: 100%;}
+
+.sub04 .section02 {padding: 80px 0 200px; display: flex; flex-direction: column; align-items: center;}
+.sub04 .section02 .menu-wrap {padding: 15px; margin: 0 auto; display: flex; text-align: center; gap: 20px; border-radius: 10px; border: 1px solid #E3E3E3;}
+.sub04 .section02 .menu-wrap .menu-btn {padding: 15px; font-size: 20px; font-weight: 600; letter-spacing: -0.03em; border-radius: 10px; color: #303030;}
+.sub04 .section02 .menu-wrap .menu-btn.on {background-color: #323232; color: #fff;}
+.sub04 .content-wrap {padding: 137px 16% 0;}
+.sub04 .content-wrap .content-01 {position: relative; width: 100%;}
+.sub04 .content-wrap img {width: 100%;}
+.sub04 .content-wrap .marker {position: absolute; width: 60px; height: 60px; text-align: center; font-size: 24px; line-height: 60px; font-weight: 700; letter-spacing: -0.03em; border-radius: 50%; background-color: #424242; color: #fff;}
+.sub04 .content-wrap .marker1 {top: 27%; left: 9%;}
+.sub04 .content-wrap .marker2 {top: 39%; left: 20%;}
+.sub04 .content-wrap .marker3 {top: 70%; left: 25%;}
+.sub04 .content-wrap .marker4 {width: 80px; height: 80px; line-height: 80px; top: 31%; left: 80%;}
+.sub04 .content-wrap .marker5 {top: 43%; left: 72%; background-color: #329BFA;}
+.sub04 .content-wrap .marker6 {top: 61%; left: 75%;}
+.sub04 .content-wrap .marker7 {width: 70px; height: 70px; line-height: 70px; top: 73%; left: 83%;}
