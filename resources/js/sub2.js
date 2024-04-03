@@ -52,11 +52,17 @@
 // tl.to('.text-ani', {duration:0.5, y:0, stagger: 0.3});
 
 
-ScrollTrigger.create ({
-  trigger:".mission-wrap",
-  start:"top top",
-  end:"bottom bottom",
-  pin:".mission-right",
-  scrub:2,
-  // markers:true,
-})
+// ScrollTrigger.create ({
+//   trigger:".mission-wrap",
+//   start:"top top",
+//   end:"bottom bottom",
+//   pin:".mission-right",
+//   scrub:2,
+//   // markers:true,
+// })
+
+
+$('.more-btn').click(function() {
+    $(this).toggleClass('active');
+    $('.view-fulltext').toggle();
+  });
