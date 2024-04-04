@@ -66,3 +66,44 @@ $('.more-btn').click(function() {
     $(this).toggleClass('active');
     $('.view-fulltext').toggle();
   });
+
+
+
+//   function modalView(){
+//     $('.tablinks').click(function(){
+//       $('.layer-dimm').addClass('open');
+//       $('.board-view').show().addClass('open');
+//       $('body').addClass('noScroll');
+//     })
+//   }
+//   modalView();
+
+
+  //레이어팝업 open 상태 function 만들기
+  function layer_open(no){
+    $(".world-layer[layer="+no+"]").addClass("open");
+    $(".layer-dimm").addClass("open");
+    $('body').addClass('noScroll');
+    $('.modal_background').addClass('active');
+
+  };
+  //레이어팝업 close 상태 function 만들기
+  function layer_close(){
+    $(".world-layer, .layer-dimm").removeClass("open");
+    $('body').removeClass('noScroll');
+    $('.modal_background').removeClass('active');
+  };
+  //링크 클릭시 해당 레이어팝업 호출
+  $(".sub04 .btn_layer,.sub04 .article").click(function () {
+    var no = $(this).attr("layer");
+    layer_open(no);
+    $('.article').removeClass('active');
+    $('.' + $(this).data('rel')).addClass('active');
+  });
+  //닫기 버튼 클릭시 레이어 닫기
+  $(".close-btn").click(function () {
+    layer_close();
+  });
+  $(".modal_background").click(function () {
+    layer_close();
+  });
