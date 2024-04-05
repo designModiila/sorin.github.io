@@ -288,6 +288,18 @@ ScrollTrigger.create({
 
 // infra business
 
+function swiperInit(swiper) {
+  const total = swiper.slides.length - swiper.loopedSlides * 2;
+  const contentIndex = (swiper.activeIndex - swiper.loopedSlides) % total;
+
+  const content = contentFullsizeEls[contentIndex];
+  if (!content) return;
+
+  content.classList.remove("hero__content--hidden");
+  content.classList.add("hero__content--top");
+  state.topContent = content;
+}
+
 // 인프라비즈니스 슬라이드
 var swiper1 = new Swiper("#js-swiper-infra", {
   slidesPerView: 4,
@@ -320,6 +332,9 @@ var swiper1 = new Swiper("#js-swiper-infra", {
       el: ".swiper-pagination",
       clickable: true,
       },
+
+
+      
 
   // effect: "coverflow",
   // grabCursor: true,

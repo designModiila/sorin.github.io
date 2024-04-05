@@ -190,7 +190,7 @@ body.noScroll { overflow: hidden;}
     .footer-main .footer-bottom .copy {font-size: 10px;}
 }
 @media (max-width: 767px) {
-    .inner {width: 100%; padding: 0 6.67vw;}
+    .inner {width: 100%; padding: 0 24px;}
     .footer-main .footer-inner {padding: 30px 6.67vw;}
     .footer-main .contact {font-size: 12px;}
     .footer-main .footer-contact-link {flex-direction: column;}
