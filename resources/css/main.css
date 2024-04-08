@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 #header .header-wrap {top: 1.5rem;}
+#header .header-wrap.active {top: 0;}
 
 .main .only-mo {display: none;}
 .main .maintitle {font-size: 48px; font-weight: 800; line-height: 68px; letter-spacing: -0.03em; color: var(--color-black);}

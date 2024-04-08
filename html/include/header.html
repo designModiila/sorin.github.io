@@ -7,8 +7,8 @@
   </div>
   <div class="gnb-wrap">
     <ul class="gnb">
-      <li><a href="#none" class="depth1">기업소개</a>
-        <div class="depth2">
+      <li class="company"><a href="#none" class="depth1">기업소개</a>
+        <div class="depth2 company-con">
           <ul>
             <li><a href="#">개요</a></li>
             <li><a href="#">인사말</a></li>
@@ -21,8 +21,8 @@
       </li>
       <li><a href="#none" class="depth1">Servicenow</a>
       </li>
-      <li><a href="#none" class="depth1">Infra Business</a>
-        <div class="depth2">
+      <li class="infra"><a href="#none" class="depth1">Infra Business</a>
+        <div class="depth2 infra-con">
           <ul>
             <li><a href="#">인프라</a></li>
             <li><a href="#">하드웨어</a></li>
@@ -31,8 +31,8 @@
       </li>
       <li><a href="#none" class="depth1">Consulting Business</a>
       </li>
-      <li><a href="#none" class="depth1">인재채용</a>
-        <div class="depth2">
+      <li class="recruit"><a href="#none" class="depth1">인재채용</a>
+        <div class="depth2 recruit-con">
           <ul>
             <li><a href="#">인재상</a></li>
             <li><a href="#">복리후생</a></li>
@@ -44,19 +44,12 @@
       
     </ul>
   </div>
-  <!-- <div class="lang-select">
-    <a href="#none" class="current"></a>
-    <ul class="lang-list">
-      <li class="kor active"><a href="#none">KOR</a></li>
-      <li class="eng"><a href="#none">ENG</a></li>
-    </ul>
-  </div> -->
   <div class="only-mo btn-mo-menu-wrapper">
     <a href="#none" class="btn-mo-menu-open"></a>
   </div>
 </div>
 
-<!-- <script>
+<script>
 
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
@@ -66,8 +59,15 @@ window.onscroll = function() {
     $(".header-wrap").addClass("active");
     $(".header-wrap h1").addClass("active");
   } else {
-    document.getElementById("header").style.top = "-70px";
+    document.getElementById("header").style.top = "-82px";
   }
   prevScrollpos = currentScrollPos;
 }
-</script> -->
+
+$(window).scroll(function() {
+  if ($(this).scrollTop() === 0) {
+    $(".header-wrap, .header-wrap h1").removeClass("active").css("transition", "all 0.5s ease");
+  }
+});
+
+</script>
