@@ -44,11 +44,66 @@
       
     </ul>
   </div>
-  <div class="only-mo btn-mo-menu-wrapper">
-    <a href="#none" class="btn-mo-menu-open"></a>
-  </div>
 </div>
 
+<div class="only-mo mo-menu-wrapper">
+  <div class="mobile-top">
+    <a href="#">
+      <div class="mo-logo"><span class="hidden">sorin</span></div>
+    </a>
+    <button class="mo-nav">
+      <h1><span class="hidden">sorin</span></h1>
+    </button>
+  </div>
+  <div class="mo-menu-container">
+    <button class="mo-close"><img src="../../resources/images/common/btn_close.png" alt=""></button>
+    <ul id="mobileMenu" class="mo-menu">
+      <li>
+        <div class="menu-depth1">
+          <p>기업소개</p>
+          <img src="../../resources/images/common/arrow_black.png" alt="">
+        </div>
+        <ul class="submenu">
+          <li><a href="#">개요</a></li>
+          <li><a href="#">인사말</a></li>
+          <li><a href="#">비젼</a></li>
+          <li><a href="#">계열사 소개</a></li>
+          <li><a href="#">사업장</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="menu-depth1"><a href="#">Servicenow</a></div>
+      </li>
+      <li>
+        <div class="menu-depth1">
+          <p>Infra Business</p>
+          <img src="../../resources/images/common/arrow_black.png" alt="">
+        </div>
+        <ul class="submenu">
+          <li><a href="#">인프라</a></li>
+          <li><a href="#">하드웨어</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="menu-depth1"><a href="#">Consulting Business</a></div>
+      </li>
+      <li>
+        <div class="menu-depth1">
+          <p>인재채용</p>
+          <img src="../../resources/images/common/arrow_black.png" alt="">
+        </div>
+        <ul class="submenu">
+          <li><a href="#">인재상</a></li>
+          <li><a href="#">복리후생</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="menu-depth1"><a href="#">고객문의</a></div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="background-b"></div>
 <script>
 
 var prevScrollpos = window.pageYOffset;
@@ -69,5 +124,45 @@ $(window).scroll(function() {
     $(".header-wrap, .header-wrap h1").removeClass("active").css("transition", "all 0.5s ease");
   }
 });
+
+
+
+
+$(function() {
+	var Accordion = function(el, multiple) {
+		this.el = el || {};
+		this.multiple = multiple || false;
+
+		// Variables privadas
+		var links = this.el.find('.menu-depth1');
+		// Evento
+		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+	}
+
+	Accordion.prototype.dropdown = function(e) {
+		var $el = e.data.el;
+			$this = $(this),
+			$next = $this.next();
+
+		$next.slideToggle();
+		$this.parent().toggleClass('open');
+
+		if (!e.data.multiple) {
+			$el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+		};
+	}	
+
+	var accordion = new Accordion($('#mobileMenu'), false);
+});
+
+
+$(".mo-nav").click(function () {
+  $('.mo-menu-container').addClass('active');
+  $('.background-b').addClass('active');
+});
+$(".mo-close, ").click(function () {
+  $('.mo-menu-container').removeClass('active');
+  $('.background-b').removeClass('active');
+  });
 
 </script>
