@@ -34,8 +34,8 @@ body.noScroll { overflow: hidden;}
 #header .gnb-wrap .gnb .depth2 ul li:hover {background-color: #F1F6FF;}
 #header .gnb-wrap .gnb .depth2 ul li:hover a {color: #323232;}
 
-#header .gnb-wrap .gnb .company-con {display: none; transition: 0.5s;}
-#header .gnb-wrap .gnb .company:hover .company-con {display: block;}
+#header .gnb-wrap .gnb .company-con {height: 0; opacity: 0; transition: 0.5s;}
+#header .gnb-wrap .gnb .company:hover .company-con {height: auto; opacity: 1;}
 #header .gnb-wrap .gnb .infra-con {height: 0; opacity: 0; transition: 0.5s;}
 #header .gnb-wrap .gnb .infra:hover .infra-con {height: auto; opacity: 1;}
 #header .gnb-wrap .gnb .recruit-con {height: 0; opacity: 0; transition: 0.5s;}

@@ -493,7 +493,7 @@
 .infrabusiness .section02 .main-heading-1,
 .infrabusiness .section02 .main-heading-sub {text-align: left;}
 .infrabusiness .section02 .main-heading-sub-wrap {margin-top: 30px;}
-.infrabusiness .section02 .heading-wrap {position: absolute;}
+.infrabusiness .section02 .heading-wrap {position: absolute; z-index: 2;}
 .infrabusiness .section02 .heading-wrap img {margin-top: 60px;}
 
 
