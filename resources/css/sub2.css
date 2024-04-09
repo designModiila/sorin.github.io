@@ -4,6 +4,7 @@
 #header .gnb-wrap .gnb > li .depth1 {color: #969696;}
 #header .gnb-wrap .gnb > li .depth1:hover {color: #323232;}
 
+
 .infrasub {padding-top: 130px}
 .infrasub .infra-menu {margin-bottom: 130px; display: flex; justify-content: center; gap: 80px; font-size: 20px; font-weight: 600; letter-spacing: -0.03em; color: #AAAAAA;}
 .infrasub .infra-menu .active {color: #393939;}
@@ -517,6 +518,9 @@
 
 }
 @media (max-width: 767px) {
+  #header .mobile-top .mo-logo {background: url(../../resources/images/common/sorin_logo.png) no-repeat center; width: 80px; height: 36px; background-size: contain;}
+  #header .mobile-top button {background: url(../../resources/images/common/mobile_btn.png) no-repeat center; width: 25px; height: 25px;}
+  
   .mainsub .section01 {padding-top: 196px;}
   .mainsub .main-category {font-size: 16px;}
   .mainsub .category-heading {margin: 30px 0 60px; font-size: 30px; line-height: 44px;}

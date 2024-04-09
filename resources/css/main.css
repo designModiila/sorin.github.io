@@ -133,7 +133,9 @@
 }
 
 @media (max-width: 767px) {
+    #header .mobile-top {padding: 30px 20px 10px 25px;}
     .main .main-img {padding-bottom: 24.4vw; justify-content: flex-end;}
+    .main .visual-wrapper {margin: 1.5rem 10px;}
     .main .visual-wrapper .visual-sub-01 {font-size: 16px;}
     .main .visual-wrapper .visual-title {margin-top: 20px; font-size: 28px;}
     .main .visual-wrapper .visual-sub-02 {margin-top: 20px; font-size: 14px; line-height: 22px;}
