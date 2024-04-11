@@ -174,26 +174,30 @@
 
 /****** 메인서브 ******/
 
-.mainsub .section01 {padding: 280px 0 10vh; position: relative; display: flex; flex-direction: column; justify-content: space-between; height: 100vh;}
+/* .mainsub .section01 {padding: 280px 0 10vh; position: relative; display: flex; flex-direction: column; justify-content: space-between; height: 100vh;} */
+.mainsub .section01 {position: relative; height: 100vh; overflow: hidden;}
+.mainsub .section01 .inner {position: absolute; display: flex; flex-direction: column; justify-content: center; height: 100vh;}
 .mainsub .main-title-wrap {position: relative; z-index: 2;}
 .mainsub .main-category {font-family: 'Paybooc'; font-size: 20px; letter-spacing: -0.03em; color: #3D7DFF;}
 .mainsub .category-heading {margin: 30px 0 0; font-size: 54px; font-weight: 500; letter-spacing: -0.03em; line-height: 70px;}
+.mainsub .main-visual-wrap {display: flex; flex-direction: column; justify-content: center; height: 100vh;}
 .mainsub .main-visual {position: relative; margin: 0 30px; height: 40vh; border-radius: 20px; z-index: 1;}
+/* .mainsub .main-visual {position: relative; margin: 0 30px; height: 40vh; border-radius: 20px; z-index: 1;} */
 /* .mainsub .main-visual img {width: 100%; object-fit: cover;} */
-.mainsub .heading-1 {margin-top: 150px; font-size: 48px; font-weight: 700; letter-spacing: -0.03em; line-height: 68px; color: #323232;}
+.mainsub .heading-1 {/*margin-top: 150px;*/ font-size: 48px; font-weight: 700; letter-spacing: -0.03em; line-height: 68px; color: #323232;}
 .mainsub .heading-2 {margin-top: 80px; font-size: 24px; font-weight: 500; letter-spacing: -0.03em; line-height: 36px; color: #323232;}
 .mainsub .btn-top {margin-top: 100px; text-align: right;}
 .mainsub .btn-top img {margin: 0 120px 116px 0; width: 60px; height: 60px;}
 .mainsub .inner1860 {margin: 0 auto; max-width: 1860px; border-radius: 20px; width: 100%;}
 /* .sub01 .category-heading {overflow: hidden;}
 .sub01 p .text-ani {transform: translateY(100%);} */
-.sub01 .main-visual {background: url(../../resources/images/sub2/sub01_img_main.png)no-repeat 50% 50%; background-size: cover;}
+.sub01 .main-visual {background: url(../../resources/images/sub2/sub01_img_main.png)no-repeat 50% 15%; background-size: cover;}
 .sub02 .main-visual {background: url(../../resources/images/sub2/sub02_img_main.png)no-repeat 50% 50%; background-size: cover;}
 .sub03 .main-visual {background: url(../../resources/images/sub2/sub03_img_main.png)no-repeat 50% 50%; background-size: cover;}
-.sub04 .main-visual {background: url(../../resources/images/sub2/sub04_img_main.png)no-repeat 50% 50%; background-size: cover;}
+.sub04 .main-visual {background: url(../../resources/images/sub2/sub04_img_main.png)no-repeat 50% 10%; background-size: cover;}
 .sub05 .main-visual {background: url(../../resources/images/sub2/sub05_img_main.png)no-repeat 50% 50%; background-size: cover;}
 .sub06 .main-visual {background: url(../../resources/images/sub2/sub06_img_main.png)no-repeat 50% 50%; background-size: cover;}
-.sub07 .main-visual {background: url(../../resources/images/sub2/sub07_img_main.png)no-repeat 50% 50%; background-size: cover;}
+.sub07 .main-visual {background: url(../../resources/images/sub2/sub07_img_main.png)no-repeat 50% 40%; background-size: cover;}
 .sub08 .main-visual {background: url(../../resources/images/sub2/sub08_img_main.png)no-repeat 50% 50%; background-size: cover;}
 
 
@@ -231,7 +235,7 @@
 
 
 /*기업소개 - 계열사 소개*/
-.sub04 .section02{padding: 120px 0 300px;}
+.sub04 .section02{padding: 0 0 200px;}
 .sub04 .section02 .inner {display: flex; flex-direction: column; align-items: center;}
 .sub04 .section02 .top-menu{margin-bottom: 70px; display: inline-block; padding: 15px; margin: 0 auto; border-radius: 10px; border: 1px solid #E3E3E3;}
 .sub04 .section02 .top-menu ul{display: flex; gap: 20px; justify-content: center;}
@@ -334,7 +338,7 @@
 .world-layer-wrap .close-btn {width: 30px; height: 30px; background-color: #000;}
 .sub04 .btn-top {margin-top: 0;}
 
-.sub05 .section02 {padding: 80px 0 120px; text-align: center;}
+.sub05 .section02 {padding: 0 0 120px; text-align: center;}
 .sub05 .section02 .top-menu{display: inline-block; padding: 15px; margin: 0 auto; border-radius: 10px; border: 1px solid #E3E3E3;}
 .sub05 .section02 .top-menu ul{display: flex; gap: 20px; justify-content: center;}
 .sub05 .section02 .top-menu ul li{background: #fff; border-radius: 10px; transition: background 0.3s ease-in;}
@@ -390,7 +394,7 @@
 .sub07 .section02 .item-card img {align-self: end;}
 .sub07 .section02 .item-card .item-title {font-size: 24px; font-weight: 600; line-height: 36px; letter-spacing: -0.03em; color: #4B4B4B;}
 
-.sub08 .heading-1 {margin-top: 70px; text-align: center;}
+.sub08 .heading-1 {text-align: center;}
 .sub08 .section02 .form-wrap {margin: 70px auto 0; width: 760px; padding: 40px 50px;}
 .sub08 .section02 .form-wrap .form-group-wrap {display: flex; justify-content: space-between; gap: 24px;}
 .sub08 .section02 .form-wrap .form-group {flex: 1; margin-top: 30px;}
@@ -446,6 +450,7 @@
 @media (max-width: 1440px) {
   .mainsub .category-heading {font-size: 40px; line-height: 54px;}
   .mainsub .heading-1 {font-size: 36px; line-height: 52px;}
+  /* .mainsub .section01 {padding: 200px 0 5vh;} */
   .sub01 .section02 .content-wrap.inner {padding: 0 140px;}
   .sub01 .section03 {margin-bottom: 230px; padding: 0 50px;}
   .sub01 .section04 {height: calc(100vh - 60px); margin-top: 30px; background: url(../../resources/images/sub2/sub01_img_sub.png)no-repeat 80% 0; background-size: cover;}
@@ -515,13 +520,12 @@
   .sub03 .mission-wrap .mission-head {font-size: 24px; line-height: 32px;}
   .sub03 .mission-wrap .mission-head {width: 27%;}
   .sub03 .mission-wrap .detail {gap: 20px;}
-
 }
 @media (max-width: 767px) {
   #header .mobile-top .mo-logo {background: url(../../resources/images/common/sorin_logo.png) no-repeat center; width: 80px; height: 36px; background-size: contain;}
   #header .mobile-top button {background: url(../../resources/images/common/mobile_btn.png) no-repeat center; width: 25px; height: 25px;}
   
-  .mainsub .section01 {padding-top: 196px;}
+  /* .mainsub .section01 {padding-top: 196px;} */
   .mainsub .main-category {font-size: 16px;}
   .mainsub .category-heading {margin: 30px 0 60px; font-size: 30px; line-height: 44px;}
   .mainsub .main-visual {margin: 0 24px; border-radius: 15px;}

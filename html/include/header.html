@@ -159,10 +159,12 @@ $(function() {
 $(".mo-nav").click(function () {
   $('.mo-menu-container').addClass('active');
   $('.background-b').addClass('active');
+  $('body').addClass('noScroll');
 });
-$(".mo-close, ").click(function () {
+$(".mo-close").click(function () {
   $('.mo-menu-container').removeClass('active');
   $('.background-b').removeClass('active');
+  $('body').removeClass('noScroll');
   });
 
 </script>

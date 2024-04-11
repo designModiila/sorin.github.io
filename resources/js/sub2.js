@@ -62,6 +62,34 @@
 // })
 
 
+//메인 서브 비주얼
+
+const mainVisualHeight = document.querySelector('.main-visual').offsetHeight;
+const visualValue = mainVisualHeight / 2;
+
+gsap.fromTo(".main-visual", {opacity: 0}, {opacity:1, duration: 1, ease: "power4.out", delay: 0.5});
+const mainVisual = gsap.timeline();
+mainVisual.from(".main-visual", {width: "40vw", x: "50vw"})
+          .from(".main-visual", {y: visualValue})
+          .from(".main-title-wrap", {y: -visualValue},"<")
+          .to(".main-title-wrap", {color: "#fff"},"<");
+          // .to(".main-title-wrap", {y: visualValue, color: "#fff"});
+
+ScrollTrigger.create({
+    animation: mainVisual,
+    trigger: ".section01",
+    start: "top top",
+    stagger: 10,
+    ease: "power3.in",
+    scrub: 1,
+    pin: true,
+    anticipatePin: 1,
+    markers: false
+});
+
+
+
+
 $('.more-btn').click(function() {
     $(this).toggleClass('active');
     $('.view-fulltext').toggle();
@@ -136,3 +164,20 @@ $('.more-btn').click(function() {
   // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
+
+
+const cont = gsap.utils.toArray('.cont')
+gsap.set(cont,{y: '25%', opacity: 0})
+cont.forEach(cont => {
+  gsap.to(cont,{
+    y: 0,
+    autoAlpha: 1,
+    duration: 0.5,
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: cont,
+      start: 'top 70%',
+      toggleActions:"restart none none reverse"
+    }
+  })
+})
