@@ -184,7 +184,7 @@
 .mainsub .main-visual {position: relative; margin: 0 30px; height: 40vh; border-radius: 20px; z-index: 1;}
 /* .mainsub .main-visual {position: relative; margin: 0 30px; height: 40vh; border-radius: 20px; z-index: 1;} */
 /* .mainsub .main-visual img {width: 100%; object-fit: cover;} */
-.mainsub .heading-1 {/*margin-top: 150px;*/ font-size: 48px; font-weight: 700; letter-spacing: -0.03em; line-height: 68px; color: #323232;}
+.mainsub .heading-1 {font-size: 48px; font-weight: 700; letter-spacing: -0.03em; line-height: 68px; color: #323232;}
 .mainsub .heading-2 {margin-top: 80px; font-size: 24px; font-weight: 500; letter-spacing: -0.03em; line-height: 36px; color: #323232;}
 .mainsub .btn-top {margin-top: 100px; text-align: right;}
 .mainsub .btn-top img {margin: 0 120px 116px 0; width: 60px; height: 60px;}
@@ -207,14 +207,18 @@
 .sub01 .company-info .info-title {font-size: 20px; font-weight: 500; letter-spacing: -0.03em; color: #4B4B4B;}
 .sub01 .company-info .info-content {margin-top: 20px; font-size: 24px; font-weight: 600; letter-spacing: -0.03em; color: #323232;}
 .sub01 .section03 {margin-top: 276px; text-align: center;}
-.sub01 .section04 {margin: 230px 30px 150px; padding-right: 11%; display: flex; justify-content: right; height: 911px; border-radius: 20px; overflow: hidden; background: url(../../resources/images/sub2/sub01_img_sub.png)no-repeat; background-size: cover;}
-.sub01 .section04 .content-wrap {width: 700px;}
-.sub01 .section04 .content-wrap .content-title-desc {margin-top: 165px; color: #fff;}
+.sub01 .section04 {margin: 0 30px; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;}
+.sub01 .section-container {position: relative; width: 100%; height: 70vh; border-radius: 20px; overflow: hidden;}
+.sub01 .section-container .img-wrap {position: relative; width: 100%; height: 100%;}
+.sub01 .section-container .img-wrap img {position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;}
+.sub01 .section04 .content-wrap {position: absolute; padding-right: 10%; width: 700px; height: 70vh; top: 0; right: 0;}
+.sub01 .section04 .content-wrap .content-title-desc {margin-top: 200px; color: #fff;}
 .sub01 .section04 .content-wrap .content-title-desc:nth-child(1) {margin-top: 0;}
+.sub01 .section04 .content-wrap .content-title-desc:nth-child(5) {padding-bottom: 20vh;}
 .sub01 .section04 .content-wrap .content-title {font-size: 60px; font-weight: 800; letter-spacing: -0.03em;}
 .sub01 .section04 .content-wrap .content-desc {margin-top: 20px; font-size: 24px; font-weight: 500; letter-spacing: -0.03em; line-height: 34px;}
 
-.sub02 .section02 {padding-bottom: 140px; background: url(../../resources/images/sub2/sub02_bg.png)no-repeat 0 115%;}
+.sub02 .section02 {padding-bottom: 140px; background: url(../../resources/images/sub2/sub02_bg.png)no-repeat 0 120%;}
 .sub02 .section02 .content-wrap {display: flex; flex-direction: column; gap: 50px;}
 .sub02 .section02 .content-wrap .greeting-wrap {width: 67%; align-self: flex-end;}
 .sub02 .section02 .content-wrap .greeting p {margin-top: 30px; font-size: 24px; font-weight: 500; line-height: 36px; letter-spacing: -0.03em; color: #323232;}
@@ -223,6 +227,7 @@
 .sub02 .section02 .content-wrap .signature-wrap p {font-size: 24px; font-weight: 600; letter-spacing: -0.03em; color: #323232;}
 
 .sub03 .section02 {text-align: center;}
+.sub03 .section02 .heading-1:nth-child(2) {margin-top: 60px;}
 .sub03 .section03 {margin-top: 280px; text-align: center;}
 .sub03 .mission-wrap {margin-top: 100px; display: flex; justify-content: center;}
 .sub03 .mission-wrap .detail {display: flex; align-items: center; height: 33.3333vh; border-bottom: 1px solid #4B4B4B;}
