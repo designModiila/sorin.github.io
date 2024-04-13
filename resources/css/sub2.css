@@ -5,9 +5,11 @@
 #header .gnb-wrap .gnb > li .depth1:hover {color: #323232;}
 
 
-.infrasub {padding-top: 130px}
-.infrasub .infra-menu {margin-bottom: 130px; display: flex; justify-content: center; gap: 80px; font-size: 20px; font-weight: 600; letter-spacing: -0.03em; color: #AAAAAA;}
+.infrasub {padding-top: 285px;}
+.infrasub .infra-menu {position: fixed; top: 90px; padding: 18px 0; width: 100%; display: flex; justify-content: center; gap: 80px; font-size: 20px; font-weight: 600; letter-spacing: -0.03em; background-color: #FBFBFB; color: #AAAAAA; z-index: 2;}
 .infrasub .infra-menu .active {color: #393939;}
+.infrasub .infra-menu a {transition: color .3s ease;}
+.infrasub .infra-menu a:hover {color: #393939;}
 .infrasub .title-sub {text-align: center; font-size: 36px; font-weight: 700; letter-spacing: -0.03em; text-transform: uppercase; color: #D6D6D6;}
 .infrasub .main-title {margin-top: 26px; font-family: 'Paybooc'; font-size: 80px; font-weight: 800; text-align: center; letter-spacing: -0.01em;}
 .infrasub .main-img {display: flex; justify-content: center; margin-top: 155px;}

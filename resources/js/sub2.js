@@ -103,19 +103,21 @@ document.getElementById("defaultOpen").click();
 
 
 
-// const cont = gsap.utils.toArray('.cont');
-// gsap.set(cont,{y: '25%', opacity: 0})
-// cont.forEach(cont => {
-//   gsap.to(cont,{
-//     y: 0,
-//     autoAlpha: 1,
-//     duration: 0.5,
-//     stagger: 0.3,
-//     scrollTrigger: {
-//       trigger: cont,
-//       start: 'top 70%',
-//       toggleActions:"restart none none reverse",
-//     }
-//   })
-// });
+const cont = gsap.utils.toArray('.cont');
+gsap.set(cont,{y: '25%', opacity: 0})
+cont.forEach(cont => {
+  gsap.to(cont,{
+    y: 0,
+    autoAlpha: 1,
+    duration: 0.5,
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: cont,
+      start: 'top 70%',
+      toggleActions:"restart none none reverse",
+    }
+  })
+});
+
+
 

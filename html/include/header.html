@@ -21,10 +21,10 @@
       </li>
       <li><a href="../servicenow/view.html" class="depth1">Servicenow</a>
       </li>
-      <li class="infra"><a href="#none" class="depth1">Infra Business</a>
+      <li class="infra"><a href="../infrabusiness/view.html" class="depth1">Infra Business</a>
         <div class="depth2 infra-con">
           <ul>
-            <li><a href="../infrabusiness/view.html">인프라</a></li>
+            <li><a href="../infrabusiness/infrabusiness_sub01.html">인프라</a></li>
             <li><a href="../infrabusiness/infrabusiness_sub04.html">하드웨어</a></li>
           </ul>
         </div>
@@ -113,8 +113,10 @@ window.onscroll = function() {
     document.getElementById("header").style.top = "0";
     $(".header-wrap").addClass("active");
     $(".header-wrap h1").addClass("active");
+    document.querySelector(".infra-menu").style.top = "70px";
   } else {
     document.getElementById("header").style.top = "-82px";
+    document.querySelector(".infra-menu").style.top = "0";
   }
   prevScrollpos = currentScrollPos;
 }
@@ -122,6 +124,7 @@ window.onscroll = function() {
 $(window).scroll(function() {
   if ($(this).scrollTop() === 0) {
     $(".header-wrap, .header-wrap h1").removeClass("active").css("transition", "all 0.5s ease");
+    $(".infra-menu").css("transition", "all 0.5s ease");
   }
 });
 
