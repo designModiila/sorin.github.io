@@ -65,7 +65,8 @@ body.noScroll { overflow: hidden;}
     #header h1 {display: none;}
     #header .gnb-wrap {display: none;}
     #header .only-mo {display: block;}
-    .logo-w {display: block; position: absolute; width: 112px; height: 50px; top: 10px; left: 6.67vw;}
+    /* .logo-w {display: block; position: absolute; width: 112px; height: 50px; top: 10px; left: 6.67vw;} */
+    .logo-w {display: none;}
     #header .header-wrap {display: none;}
     #header .mobile-top {position: relative; padding: 30px 16px 10px 24px; display: flex; justify-content: space-between; align-items: center; height: 70px;}
     #header .mobile-top {top: 1.3rem;}
@@ -188,13 +189,14 @@ body.noScroll { overflow: hidden;}
 } 
 @media (max-width: 767px) {
     .inner {width: 100%; padding: 0 6.67vw;}
-    .footer-v3 .footer-inner {padding: 30px 6.67vw;}
+    .footer-v3 .footer-inner {padding: 70px 6.67vw;}
+    .footer-v3 {border-top: none;}
     /* .footer-v3 .footer-v3-top {padding-bottom: 20px;} */
     .footer-v3 .footer-v3-top > img {width: 80px; height: 36px;}
     .footer-v3 .family-site {position: absolute; top: 38px; right: 6.67vw;}
     .footer-v3 .family-select {padding: 6px 18px; font-size: 10px;}
     .footer-v3 .family-select svg {margin-left: 3px;}
-    .footer-v3 .privacy-list {position: absolute; font-size: 11px; top: 0;}
+    .footer-v3 .privacy-list {position: absolute; font-size: 11px; top: 35px;}
     .footer-v3 .footer-contact {margin-top: 0;}
     .footer-v3 .footer-contact .contact {flex-direction: column; font-size: 11px; line-height: 22px;}
     .footer-v3 .footer-v3-bottom {flex-direction: column; gap: 10px; margin-top: 0;}

@@ -643,6 +643,7 @@
     .infrabusiness .section01 .main-desc {font-size: 16px; line-height: 24px;}
 
     .infrabusiness .section02 {padding: 100px 0 150px 24px;}
+    .infrabusiness .section02 .content-wrap .heading-wrap {margin-bottom: 50px;}
     .infrabusiness .section02 .content-wrap::before {display: none;}
     .infrabusiness .section02 .heading-wrap img {margin-top: 0; position: absolute; top: 0; right: 24px; width: 34px;}
     .infrabusiness .section02 .swiper-slide {padding: 0 0 30px 20px; min-width: 200px; height: 264px; border-radius: 10px;}

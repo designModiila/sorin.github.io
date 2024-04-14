@@ -103,6 +103,9 @@ document.getElementById("defaultOpen").click();
 
 
 
+
+
+
 const cont = gsap.utils.toArray('.cont');
 gsap.set(cont,{y: '25%', opacity: 0})
 cont.forEach(cont => {
