@@ -44,22 +44,61 @@ cont.forEach(cont => {
   })
 });
 
-$('.more-btn').click(function() {
-    $(this).toggleClass('active');
-    $('.view-fulltext').toggle();
-  });
+
+});
+
+$(document).ready(function(){
+
+//개요
+const containerHeight = document.querySelector('.section-container').offsetHeight;
+
+const sub01con = gsap.timeline();
+sub01con.from(".section-container", {width: "40vw", height: "30vh", y: "-10vh", delay: 1})
+        .to(".subimg1", {opacity: 0, delay: 2.5})
+        .to(".subimg2", {opacity: 0, duration:1, delay: .5})
+        .to(".subimg3", {opacity: 0, duration:1, delay: .5})
+        .to(".subimg4", {opacity: 0, duration:1, delay: .5})
+        // .from(desc, {opacity: 0, y: containerHeight})
+        // .to(desc, {y: -containerHeight *2});
+
+ScrollTrigger.create({
+    animation: sub01con,
+    trigger: ".section04",
+    start: "top top",
+    // ease: "power3.in",
+    end: "+=270%",
+    scrub: 1,
+    pin: true,
+    anticipatePin: 1,
+    markers: true
+});
 
 
 
 
-//   function modalView(){
-//     $('.tablinks').click(function(){
-//       $('.layer-dimm').addClass('open');
-//       $('.board-view').show().addClass('open');
-//       $('body').addClass('noScroll');
-//     })
-//   }
-//   modalView();
+const contentWrap = gsap.utils.toArray('.section04 .content-wrap');
+
+contentWrap.forEach((content, index) => {
+  gsap.set(content, { y: containerHeight * (index + 1) }); // 각 요소의 초기 y 위치 설정
+});
+
+ScrollTrigger.create({
+  trigger: ".section04",
+  start: "top top", // 요소의 초기 위치를 시작 지점으로 설정
+  end: "+=300%", // 스크롤되는 범위
+  scrub: true, // 스크롤에 따라 부드럽게 이동하도록 설정
+  markers: false,
+  onUpdate: self => {
+    const progress = self.progress;
+    contentWrap.forEach((content, index) => {
+      const yPos = -containerHeight * 2 * progress + containerHeight * (index + 1);
+      gsap.to(content, { y: yPos *2, duration: 1 });
+    });
+  }
+});  
+});
+
+$(document).ready(function(){
 
 
 // vision
@@ -109,11 +148,7 @@ details.forEach((detail, index) => {
 });
 
 
-
-
-
-
-// recruit
+// sub06 인재상
 gsap.to(".sub06 .section02", {
   scrollTrigger: {
       trigger: ".sub06 .section02",
@@ -139,8 +174,11 @@ gsap.to(cardWrap, {
 
 
 
+});
 
-
+$('.more-btn').click(function() {
+  $(this).toggleClass('active');
+  $('.view-fulltext').toggle();
 });
 
 
