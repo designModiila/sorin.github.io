@@ -25,12 +25,74 @@ ScrollTrigger.create({
 });
 
 
-
+const cont = gsap.utils.toArray('.cont');
+gsap.set(cont,{y: '25%', opacity: 0})
+cont.forEach(cont => {
+  gsap.to(cont,{
+    y: 0,
+    autoAlpha: 1,
+    duration: 0.5,
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: cont,
+      start: 'top 70%',
+      toggleActions:"restart none none reverse",
+    }
+  })
+});
 
 $('.more-btn').click(function() {
     $(this).toggleClass('active');
     $('.view-fulltext').toggle();
   });
+
+
+// vision
+
+const mission = gsap.timeline();
+mission.to(".photo2", {opacity: 1, delay:.5})
+       .to(".photo3", {opacity: 1})
+
+
+ScrollTrigger.create({
+    animation: mission,
+    trigger: ".mission-wrap",
+    start: "top top",
+    // ease: "power3.in",
+    end: "+=150%",
+    scrub: 1,
+    pin: true,
+    anticipatePin: 1,
+    pinSpace: 0,
+    markers: false
+});
+
+gsap.set(".detail-wrap",{y: '100%'});
+gsap.to(".detail-wrap", {
+  y: "-100%",
+  scrollTrigger: {
+    trigger: ".mission-wrap",
+    start: "top top",
+    end: "+=300%",
+    markers: false,
+    scrub: 1,
+  }
+});
+
+const details = document.querySelectorAll('.detail');
+details.forEach((detail, index) => {
+  ScrollTrigger.create({
+    trigger: detail,
+    id: index + 1,
+    start: 'top 55%',
+    end: () => `+=${detail.clientHeight + 100}`,
+    toggleActions: 'play reverse none reverse',
+    toggleClass: {targets: detail, className: "is-active"},
+    ease: "power1.inOut",
+    markers: false
+  });
+});
+
 
 
 
@@ -106,21 +168,7 @@ document.getElementById("defaultOpen").click();
 
 
 
-const cont = gsap.utils.toArray('.cont');
-gsap.set(cont,{y: '25%', opacity: 0})
-cont.forEach(cont => {
-  gsap.to(cont,{
-    y: 0,
-    autoAlpha: 1,
-    duration: 0.5,
-    stagger: 0.3,
-    scrollTrigger: {
-      trigger: cont,
-      start: 'top 70%',
-      toggleActions:"restart none none reverse",
-    }
-  })
-});
+
 
 
 
