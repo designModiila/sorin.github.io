@@ -1,5 +1,39 @@
 
 
+// ScrollTrigger.matchMedia({
+
+// "(min-width: 768px)": function () {
+
+// //메인 서브 비주얼
+
+// const mainVisualHeight = document.querySelector('.main-visual').offsetHeight;
+// const visualValue = mainVisualHeight / 2;
+
+// gsap.fromTo(".main-visual", {opacity: 0}, {opacity:1, duration: 1, ease: "power4.out", delay: 0.5});
+// const mainVisual = gsap.timeline();
+// mainVisual.from(".main-visual", {width: "40vw", x: "50vw"})
+//           .from(".main-visual", {y: visualValue})
+//           .from(".main-title-wrap", {y: -visualValue},"<")
+//           .to(".main-title-wrap", {color: "#fff"},"<");
+
+// ScrollTrigger.create({
+//     animation: mainVisual,
+//     trigger: ".section01",
+//     start: "top top",
+//     stagger: 0.3,
+//     ease: "power3.in",
+//     scrub: 1,
+//     pin: true,
+//     anticipatePin: 1,
+//     markers: false
+// });
+
+
+// }
+// });
+
+
+
 //메인 서브 비주얼
 
 const mainVisualHeight = document.querySelector('.main-visual').offsetHeight;
@@ -23,6 +57,7 @@ ScrollTrigger.create({
     anticipatePin: 1,
     markers: false
 });
+
 
 
 const cont = gsap.utils.toArray('.cont');
@@ -92,6 +127,36 @@ details.forEach((detail, index) => {
     markers: false
   });
 });
+
+
+
+
+
+
+// recruit
+gsap.to(".section02", {
+  scrollTrigger: {
+      trigger: ".section02",
+      pin: true,
+      start: "top top",
+      end: "+=250%",
+      scrub: true,
+      markers: false
+  }
+});
+const cardWrap = document.querySelector('.content-card-wrap');
+const cardwrapHeight = cardWrap.clientHeight;
+gsap.to(cardWrap, {
+    y: () => -cardwrapHeight /3 *2,
+    scrollTrigger: {
+        trigger: cardWrap,
+        start: "top top",
+        end: `+=${cardwrapHeight}`,
+        scrub: 1,
+        markers: true
+    }
+});
+
 
 
 
