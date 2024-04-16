@@ -7,24 +7,27 @@ $(document).ready(function(){
 const mainVisualHeight = document.querySelector('.main-visual').offsetHeight;
 const visualValue = mainVisualHeight / 2;
 
-gsap.fromTo(".main-visual", {opacity: 0}, {opacity:1, duration: 1, ease: "power4.out", delay: 0.5});
-const mainVisual = gsap.timeline();
-mainVisual.from(".main-visual", {width: "40vw", x: "50vw"})
-          .from(".main-visual", {y: visualValue})
-          .from(".main-title-wrap", {y: -visualValue},"<")
-          .to(".main-title-wrap", {color: "#fff"},"<");
+if (window.matchMedia("(min-width: 768px)").matches) {
+    gsap.fromTo(".main-visual", {opacity: 0}, {opacity:1, duration: 1, ease: "power4.out"});
+    const mainVisual = gsap.timeline();
+    mainVisual.from(".main-visual", {width: "40vw", height: "40vh", x: "50vw" ,yPercent: -10, ease: "power1.inOut"})
+              .from(".main-visual", {height: "40vh", ease: "power1.inOut"})
+              .to(".main-visual", {height: "100%", ease: "power1.inOut"})
+              .from(".main-title-wrap", {y: "-40vh", ease: "power1.inOut"},"<")
+              .to(".main-title-wrap", {color: "#fff", ease: "power1.inOut"},"<");
 
-ScrollTrigger.create({
-    animation: mainVisual,
-    trigger: ".section01",
-    start: "top top",
-    stagger: 0.3,
-    ease: "power3.in",
-    scrub: 1,
-    pin: true,
-    anticipatePin: 1,
-    markers: false
-});
+    ScrollTrigger.create({
+        animation: mainVisual,
+        trigger: ".section01",
+        start: "top top",
+        stagger: 0,
+        ease: "power1.in",
+        scrub: 2,
+        pin: true,
+        anticipatePin: 1,
+        markers: false
+    });
+}
 
 
 
@@ -70,7 +73,7 @@ ScrollTrigger.create({
     scrub: 1,
     pin: true,
     anticipatePin: 1,
-    markers: true
+    markers: false
 });
 
 
@@ -103,75 +106,62 @@ $(document).ready(function(){
 
 // vision
 
-const mission = gsap.timeline();
-mission.to(".photo2", {opacity: 1, delay:.5})
-       .to(".photo3", {opacity: 1})
-
-
-ScrollTrigger.create({
-    animation: mission,
-    trigger: ".mission-wrap",
-    start: "top top",
-    // ease: "power3.in",
-    end: "+=150%",
-    scrub: 1,
-    pin: true,
-    anticipatePin: 1,
-    pinSpace: 0,
-    markers: false
-});
-
-gsap.set(".detail-wrap",{y: '100%'});
-gsap.to(".detail-wrap", {
-  y: "-100%",
-  scrollTrigger: {
-    trigger: ".mission-wrap",
-    start: "top top",
-    end: "+=300%",
-    markers: false,
-    scrub: 1,
-  }
-});
-
-const details = document.querySelectorAll('.detail');
-details.forEach((detail, index) => {
-  ScrollTrigger.create({
-    trigger: detail,
-    id: index + 1,
-    start: 'top 55%',
-    end: () => `+=${detail.clientHeight + 100}`,
-    toggleActions: 'play reverse none reverse',
-    toggleClass: {targets: detail, className: "is-active"},
-    ease: "power1.inOut",
-    markers: false
+if (window.innerWidth >= 768) {
+  const details = document.querySelectorAll('.detail');
+  details.forEach((detail, index) => {
+    ScrollTrigger.create({
+      trigger: detail,
+      id: index + 1,
+      start: 'top 55%',
+      end: () => `+=${detail.clientHeight + 100}`,
+      toggleActions: 'play reverse none reverse',
+      toggleClass: {targets: detail, className: "is-active"},
+      ease: "power1.inOut",
+      markers: false
+    });
   });
-});
+
+  const photos = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".photos",
+      start : "top 50%",
+      pin: true,
+      scrub: 1,
+      ease: "power1.inOut",
+      end : "+=570 20%",
+      markers: false, //{startColor: "red", endColor: "blue", fontSize: "20px"},
+      toggleActions : "play reverse none reverse"
+    }
+  });
+
+  const mission = gsap.timeline();
+  mission.to(".photo2", {opacity: 1, delay:.5})
+         .to(".photo3", {opacity: 1});
+
+  ScrollTrigger.create({
+      animation: mission,
+      trigger: ".photos",
+      start: "top 50%",
+      end: "+=450 20%",
+      scrub: 1,
+      anticipatePin: 1,
+      pinSpace: 0,
+      markers: false
+  });
+}
+
 
 
 // sub06 인재상
-gsap.to(".sub06 .section02", {
-  scrollTrigger: {
-      trigger: ".sub06 .section02",
-      pin: true,
-      start: "top top",
-      end: "+=250%",
-      scrub: true,
-      markers: false
-  }
-});
-const cardWrap = document.querySelector('.content-card-wrap');
-const cardwrapHeight = cardWrap.clientHeight;
-gsap.to(cardWrap, {
-    y: () => -cardwrapHeight /3 *2,
-    scrollTrigger: {
-        trigger: cardWrap,
-        start: "top top",
-        end: `+=${cardwrapHeight}`,
-        scrub: 1,
-        markers: true
-    }
-});
-
+// const recruit = document.querySelector(".recruit");
+// ScrollTrigger.create({
+//     trigger: recruit,
+//     start: "top top",
+//     end: "+=100%",
+//     pin: true,
+//     pinSpacing: false,
+//     markers: true
+// });
 
 
 });
