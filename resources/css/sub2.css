@@ -571,7 +571,8 @@
   /* .mainsub .section01 {padding-top: 196px;} */
   .mainsub .main-category {font-size: 16px;}
   .mainsub .category-heading {margin: 30px 0 60px; font-size: 30px; line-height: 44px;}
-  .mainsub .main-visual {margin: 0 24px; border-radius: 15px;}
+  .mainsub .main-title-wrap {padding-bottom: 35vh;} /*** 모션 넣을경우 삭제 ***/
+  .mainsub .main-visual {margin: 24px 10px; border-radius: 15px; height: 30vh;}
   .mainsub .heading-1 {margin-top: 80px; font-size: 28px; line-height: 42px;}
   .mainsub .btn-top {display: none;}
 

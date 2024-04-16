@@ -27,7 +27,24 @@ if (window.matchMedia("(min-width: 768px)").matches) {
         anticipatePin: 1,
         markers: false
     });
-}
+}; //else {
+//   const mainVisual = gsap.timeline(); // 새로운 mainVisual 정의
+//     mainVisual.from(".main-visual", {height: "30vh", ease: "power1.inOut"})
+//               .to(".main-visual", {height: "100%", ease: "power1.inOut"})
+//               .from(".main-title-wrap", {y: "-10vh", ease: "power1.inOut"},"<")
+//               .to(".main-title-wrap", {color: "#fff", ease: "power1.inOut"},"<");
+//     ScrollTrigger.create({
+//       animation: mainVisual,
+//       trigger: ".section01",
+//       start: "top top",
+//       stagger: 0,
+//       ease: "power1.in",
+//       scrub: 2,
+//       pin: true,
+//       anticipatePin: 1,
+//       markers: false
+//   });
+// }
 
 
 
