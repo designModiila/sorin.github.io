@@ -14,7 +14,8 @@ if (window.matchMedia("(min-width: 768px)").matches) {
               .from(".main-visual", {height: "40vh", ease: "power1.inOut"})
               .to(".main-visual", {height: "100%", ease: "power1.inOut"})
               .from(".main-title-wrap", {y: "-40vh", ease: "power1.inOut"},"<")
-              .to(".main-title-wrap", {color: "#fff", ease: "power1.inOut"},"<");
+              .to(".main-title-wrap", {color: "#fff", ease: "power1.inOut"},"<")
+              .to(".main-category", {color: "#fff", ease: "power1.inOut"},"<");
 
     ScrollTrigger.create({
         animation: mainVisual,
@@ -170,15 +171,36 @@ if (window.innerWidth >= 768) {
 
 
 // sub06 인재상
-// const recruit = document.querySelector(".recruit");
+// const recruit = document.querySelector(".sub06 .recruit");
 // ScrollTrigger.create({
 //     trigger: recruit,
-//     start: "top top",
+//     start: "top -30%",
 //     end: "+=100%",
 //     pin: true,
 //     pinSpacing: false,
 //     markers: true
 // });
+
+const targets = gsap.utils.toArray(".split");
+
+targets.forEach((target) => {
+    let SplitClient = new SplitType(target, { type: "chars" });
+    let chars = SplitClient.chars;
+
+    chars.forEach((char, index) => {
+        ScrollTrigger.create({
+            trigger: target,
+            start: "top 50%",
+            end: "+=400",
+            markers: true,
+            onUpdate: (self) => {
+                const progress = self.progress;
+                const color = progress < (index + 1) / chars.length ? "#ffffff" : "#329BFA"; // 해당 글자의 위치에 따라 색상 결정
+                gsap.to(char, { color: color, duration: 0.5 }); // 색상 전환 속도를 조정합니다.
+            }
+        });
+    });
+});
 
 
 });
