@@ -86,6 +86,7 @@
 .hardware .section02 .hardware-menu .tablinks.active button {color: #1E66D2;}
 .hardware .section02 .tabcontent {display: none; animation: fadeEffect 1s;}
 .hardware .section02 .product-wrap {display: flex; justify-content: space-between; gap: 40px;}
+.hardware .section02 .product-less {justify-content: flex-start;}
 .hardware .section02 .product-wrap .img-wrap {margin-top: 100px; padding: 25px 35px; display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr 9fr; width: 350px; height: 350px; border-radius: 20px; background-color: #fff; box-shadow: 2px 2px 20px rgba(0, 0, 0, .1);}
 .hardware .section02 .product-wrap .img-wrap img:nth-child(2) {align-self: center; justify-self: center;}
 .hardware .section02 .product-wrap .product-label {margin-top: 35px; font-size: 24px; font-weight: 500; line-height: 34px; letter-spacing: -0.03em; text-align: center; color: #282828;}
@@ -433,15 +434,16 @@
 .sub07 .section02 {text-align: center;}
 .sub07 .section02 .top-menu{margin-top: 100px; display: inline-block; padding: 15px; border-radius: 10px; border: 1px solid #E3E3E3;}
 .sub07 .section02 .top-menu ul{display: flex; gap: 20px; justify-content: center;}
-.sub07 .section02 .top-menu ul li{background: #fff; border-radius: 10px; transition: background 0.3s ease-in;}
-.sub07 .section02 .top-menu ul li:hover{background: #323232;}
-.sub07 .section02 .top-menu ul li a{display: block; padding: 15px; font-size: 20px; font-weight: 600; transition: color 0.3s ease-in;}
-.sub07 .section02 .top-menu ul li:hover a{color: #ffffff;}
-.sub07 .section02 .top-menu ul li.on {background-color: #323232; color: #fff;}
+.sub07 .section02 .top-menu ul .tablinks{background: #fff; border-radius: 10px; transition: background 0.3s ease-in;}
+.sub07 .section02 .top-menu ul .tablinks:hover{background: #323232;}
+.sub07 .section02 .top-menu ul .tablinks button {display: block; padding: 15px; font-size: 20px; font-weight: 600; transition: color 0.3s ease-in;}
+.sub07 .section02 .top-menu ul .tablinks:hover button{color: #ffffff;}
+.sub07 .section02 .top-menu ul .tablinks.active button{background-color: #323232; border-radius: 10px; color: #fff;}
 .sub07 .section02 .item-wrap {margin-top: 80px; display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 330px; column-gap: 40px; row-gap: 50px;}
 .sub07 .section02 .item-card {padding: 0 20px 20px; display: grid;  grid-template-columns: 1fr; grid-template-rows: 5fr 5fr; justify-items: center; align-items: center; row-gap: 0; border-radius: 20px; border: 1px solid #E1E1E1;}
 .sub07 .section02 .item-card img {align-self: end;}
 .sub07 .section02 .item-card .item-title {font-size: 24px; font-weight: 600; line-height: 36px; letter-spacing: -0.03em; color: #4B4B4B;}
+.sub07 .section02 .tabcontent {display: none; animation: fadeEffect 1.3s;}
 
 .sub08 .heading-1 {text-align: center;}
 .sub08 .section02 .form-wrap {margin: 70px auto 0; width: 760px; padding: 40px 50px;}
@@ -688,6 +690,7 @@
   .sub07 .section02 .item-card .item-title {font-size: 13px; line-height: 20px;}
   .sub07 .section02 .top-menu {padding: 15px 25px; margin-top: 37px;}
   .sub07 .section02 .top-menu ul {flex-wrap: wrap;}
+  .sub07 .section02 .top-menu ul .tablinks button {font-size: 14px; padding: 10px 15px;}
   .sub08 .section02 .form-wrap {margin: 0; padding: 40px 24px; width: 100%;}
   .sub08 .section02 .form-wrap .form-group-wrap {flex-direction: column; gap: 0;}
   .sub08 .section02 .form-wrap .form-group {width: 100%;}

@@ -285,3 +285,26 @@ function openLocation(evt, cityName) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
+
+
+
+//복리후생
+
+function openBenefit(evt, benefit) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(benefit).style.display = "grid";
+  evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
