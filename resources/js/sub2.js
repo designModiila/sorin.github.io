@@ -213,35 +213,58 @@ $('.more-btn').click(function() {
 
 
 //계열사
-function layer_open(no){
-  $(".world-layer[layer="+no+"]").addClass("open");
-  $(".layer-dimm").addClass("open");
-  $('body').addClass('noScroll');
-  $('.modal_background').addClass('active');
 
-};
+  function layer_open(no) {
+    $('.world-layer').not('[layer="' + no + '"]').removeClass('open').hide();
 
-function layer_close(){
-  $(".world-layer, .layer-dimm").removeClass("open");
-  $('body').removeClass('noScroll');
-  $('.modal_background').removeClass('active');
-};
+    var layer = $(".world-layer[layer=" + no + "]");
+    if (!layer.hasClass("open")) {
+      layer.addClass("open").show();
+      $(".layer-dimm").addClass("open");
+      $('body').addClass('noScroll');
+    }
+  };
+  
+  function triggerLayerEvent(layerNo) {
+    $(".world-layer").removeClass("open").hide();
+    var layerElement = $(".sub04 .btn_layer[layer='" + layerNo + "'], .sub04 .article[layer='" + layerNo + "']").first();
+    layerElement.trigger('click');
+  }
+  
+  
+  $(".sub04 .btn_layer, .sub04 .article").hover(
+    function() { 
+      var layerNo = $(this).attr("layer");  
+     
+      $(".sub04 .btn_layer[layer='" + layerNo + "']").closest('.tablinks').addClass('hover');      
+      $(".sub04 .article[layer='" + layerNo + "']").addClass('hover');
+    }, 
+    function() { 
+      var layerNo = $(this).attr("layer");
+      $(".sub04 .btn_layer[layer='" + layerNo + "']").closest('.tablinks').removeClass('hover');
+      $(".sub04 .article[layer='" + layerNo + "']").removeClass('hover');
+    }
+  );
 
-$(".sub04 .btn_layer,.sub04 .article").click(function () {
-  var no = $(this).attr("layer");
-  layer_open(no);
-  $('.article').removeClass('active');
-  $('.' + $(this).data('rel')).addClass('active');
-});
-
-$(".close-btn").click(function () {
-  layer_close();
-});
-$(".modal_background").click(function () {
-  layer_close();
-});
-
-
+  
+  $(".sub04 .btn_layer, .sub04 .article").click(function() {
+    var no = $(this).attr("layer");
+    layer_open(no);
+  
+    $('.tablinks, .article').removeClass('active');
+    $(".btn_layer[layer='" + no + "']").closest('.tablinks').addClass('active');
+    $(".article[layer='" + no + "']").addClass('active');
+  });
+  
+  $(".world-layer-close").click(function() {
+    var layerNo = $(this).closest(".world-layer").attr("layer");
+    $(".world-layer[layer='" + layerNo + "']").removeClass('open').hide();
+    $('body').removeClass('noScroll');
+    $(".layer-dimm").removeClass("open");
+  });
+  
+ 
+  
 
 
 //사업장
@@ -268,4 +291,6 @@ function openLocation(evt, cityName) {
 }
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+
 

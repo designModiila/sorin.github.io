@@ -273,14 +273,17 @@
 
 
 /*기업소개 - 계열사 소개*/
+
 .sub04 .section02{padding: 0 0 200px;}
 .sub04 .section02 .inner {display: flex; flex-direction: column; align-items: center;}
 .sub04 .section02 .top-menu{margin-bottom: 70px; display: inline-block; padding: 15px; margin: 0 auto; border-radius: 10px; border: 1px solid #E3E3E3;}
 .sub04 .section02 .top-menu ul{display: flex; gap: 20px; justify-content: center;}
 .sub04 .section02 .top-menu ul li{background: #fff; border-radius: 10px; transition: background 0.3s ease-in;}
-.sub04 .section02 .top-menu ul li:hover{background: #323232;}
+.sub04 .section02 .top-menu ul li:hover,
+.sub04 .section02 .top-menu ul li.hover{background: #323232;}
 .sub04 .section02 .top-menu ul li a{display: block; padding: 15px; font-size: 20px; font-weight: 600; transition: color 0.3s ease-in;}
-.sub04 .section02 .top-menu ul li:hover a{color: #ffffff;}
+.sub04 .section02 .top-menu ul li:hover a,
+.sub04 .section02 .top-menu ul li.hover a{color: #ffffff;}
 .sub04 .section02 .top-menu ul li.active {background: #323232;}
 .sub04 .section02 .top-menu ul li.active a{color: #ffffff;}
 .sub04 .section02 .world-map{margin-top: 80px; position: relative;}
@@ -292,9 +295,12 @@
 .sub04 .section02 .article05{margin-left: -39%; margin-top: -12%;}
 .sub04 .section02 .article06{margin-left: -29%; margin-top: -6%;}
 .sub04 .section02 .article07{margin-left: -25%; margin-top: 10%;}
-.sub04 .section02 .article.active{background: #329BFA; border: 2px solid #329BFA; color: #fff;}
-.sub04 .section02 .article.active:before{content: "";position: absolute; box-sizing: border-box; width: 120%; height: 120%; border: 2px solid #329BFA; border-radius: 50%; top: -10%; left:-10%; z-index: 1;}
-.sub04 .section02 .article.active:before{
+.sub04 .section02 .article.active,
+.sub04 .section02 .article.hover{background: #329BFA; border: 2px solid #329BFA; color: #fff;}
+.sub04 .section02 .article.active:before,
+.sub04 .section02 .article.hover:before{content: "";position: absolute; box-sizing: border-box; width: 120%; height: 120%; border: 2px solid #329BFA; border-radius: 50%; top: -10%; left:-10%; z-index: 1;}
+.sub04 .section02 .article.active:before,
+.sub04 .section02 .article.hover:before{
   -webkit-animation: blip1 1s infinite cubic-bezier(0, 0.3, 1, 0.3);
   animation: blip1 1s infinite cubic-bezier(0, 0.3, 1, 0.3);
 }
@@ -327,10 +333,11 @@
 /* body {background-color: rgba(0, 0, 0, .3);} */
 /*계열사소개 모달창*/
 .world-layer{position: fixed; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 10; overflow: hidden;  z-index: 10000; transform: translateY(100%); transition: transform 0.5s ease-out;}
-.world-layer.layer01 .layer-content{max-height: 1320px;}
+/* .world-layer.layer01 .layer-content{max-height: 1320px;}
 .world-layer.layer02 .layer-content{max-height: 890px;}
 .world-layer.layer03 .layer-content{max-height: 1300px;}
-.world-layer.layer04 .layer-content{max-height: 890px;}
+.world-layer.layer04 .layer-content{max-height: 890px;} */
+
 
 .world-layer.open{transform: translateY(0);}
 .world-layer-wrap{width: 100%; height: calc(100vh - 10vh); position: absolute; top: 10vh; left: 0; background: #fff; overflow: hidden; overflow-y: scroll;}
@@ -341,13 +348,13 @@
 .world-layer-wrap .layer-top .top-menu ul{display: flex; gap: 20px; justify-content: center;}
 .world-layer-wrap .layer-top .top-menu ul li{background: #fff; border-radius: 10px; transition: background 0.3s ease-in;}
 .world-layer-wrap .layer-top .top-menu ul li:hover{background: #323232;}
-.world-layer-wrap .layer-top .top-menu ul li button{display: block; padding: 15px; font-size: 20px; font-weight: 600; transition: color 0.3s ease-in;}
-.world-layer-wrap .layer-top .top-menu ul li:hover button{color: #ffffff;}
-.world-layer-wrap .layer-top .top-menu ul li.active button{background-color: #323232; color: #fff; border-radius: 10px;}
+.world-layer-wrap .layer-top .top-menu ul li a{display: block; padding: 15px; font-size: 20px; font-weight: 600; transition: color 0.3s ease-in;}
+.world-layer-wrap .layer-top .top-menu ul li:hover a{color: #ffffff;}
+.world-layer-wrap .layer-top .top-menu ul li.active a{background-color: #323232; color: #fff; border-radius: 10px;}
 
 
 /* .world-layer-wrap .layer-content{display: flex; flex-wrap: wrap; gap: 28px 40px; padding: 70px 0 300px} */
-.world-layer-wrap .layer-content{position: relative; padding: 70px 0 300px; height: 1860px; box-sizing: border-box;}
+.world-layer-wrap .layer-content{position: relative; padding: 70px 0 70px; /*height: 1860px;*/ box-sizing: border-box;}
 .world-layer-wrap .layer-content .modal-title {position: absolute; top: -105px; font-weight: 700; font-size: 36px; line-height: 44px; color: #323232;}
 .world-layer-wrap .layer-content .box{margin-top: 40px; width: 100%; box-sizing: border-box; border-radius: 20px; border: 1px solid #f1f1f1; padding: 45px 60px 40px; box-shadow: 2px 2px 20px rgba(0, 0, 0, .1); transition: all 0.3s ease-in; cursor: default;}
 .world-layer-wrap .layer-content .box:nth-child(1) {margin-top: 0;}
@@ -373,7 +380,7 @@
 .world-layer-wrap .layer-content .icon-wrap-mo > a img {width: 30px; height: 30px;}
 .world-layer-wrap .layer-content .icon-wrap-mo .noitem{display: none;}
 .world-layer-wrap .layer-content .icon-wrap-mo {display: none;}
-.world-layer-wrap .close-btn {width: 30px; height: 30px; background-color: #000;}
+.world-layer .close-btn {width: 100%; height: 100px; position: fixed; top:0; left:0;z-index: 1000;}
 .sub04 .btn-top {margin-top: 0;}
 
 .sub05 .section02 {padding: 0 0 120px; text-align: center;}
@@ -733,3 +740,17 @@
 
 
 
+.layer-dimm.open {
+  display: block;
+}
+
+.layer-dimm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: none;
+}
