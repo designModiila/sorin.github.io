@@ -1,50 +1,4 @@
   
-  
-// const show = "show";
-// const on = 'on';
-// const firstSlide = document.querySelector(".slide-wrapper> :nth-child(1)");
-// const firstpagination = document.querySelector('.indicator ul li:first-child');
-
-// function slide() {
-//   const currentSlide = document.querySelector(`.${show}`);
-//   const currentpgaination = document.querySelector(`.indicator ul li.${on}`);
-//   if (currentSlide || currentpgaination) {
-//     currentSlide.classList.remove(show);
-//     currentpgaination.classList.remove(on);
-//     const nextSlide = currentSlide.nextElementSibling;
-//     const nextpagination = currentpgaination.nextElementSibling;
-//     if (nextSlide || nextpagination) {
-//       nextSlide.classList.add(show);
-//       nextpagination.classList.add(on);
-//     } else {
-//       firstpagination.classList.add(on);
-//       firstSlide.classList.add(show);
-//     }
-//   } else {
-//     firstpagination.classList.add(on);
-//     firstSlide.classList.add(show);
-//   }
-// }
-// setInterval(slide, 6000);
-
-// const li = document.querySelectorAll('.indicator ul li');
-
-// let main_img = document.querySelectorAll('.slide');
-
-// li.forEach((item, i) => {
-//   item.addEventListener('click', (e) => {
-//     let event = e.currentTarget;
-//     for (let k = 0; k < main_img.length; k++) {
-//       main_img[k].classList.remove('show');
-//     }
-//     main_img[i].classList.add('show');
-//     for (let i = 0; i < li.length; i++) {
-//       li[i].classList.remove('on');
-//     }
-//     event.classList.add('on');
-//   })
-// })
-
 
 document.addEventListener('DOMContentLoaded', () => {
   // 초기 로드 시 첫 번째 슬라이드와 페이지네이션에 클래스 추가
@@ -303,61 +257,6 @@ setTimeout(function () {
 //   },
 // });
 
-
-
-// businessItem 타임라인 생성
-// const businessItem = gsap.timeline();
-// businessItem
-//   .from(".business-item-01", { scale: 0.3, y: -200 })
-//   .to(".business-item-01 .item-text-wrap", { opacity: 1 })
-//   .to(".business-item-01 .item-icon-wrap", { opacity: 1 });
-
-// // businessItem을 사용하여 ScrollTrigger를 생성
-// ScrollTrigger.create({
-//   animation: businessItem,
-//   trigger: ".business-item-01-wrap",
-//   start: "top top",
-//   end: "+=1000",
-//   scrub: 1,
-//   pin: true,
-//   anticipatePin: 1,
-// });
-
-// // businessItem 타임라인이 완료된 후 각 .business-item 요소에 대한 ScrollTrigger 생성
-// businessItem.eventCallback("onComplete", () => {
-//   gsap.utils.toArray(".business-item").forEach((panel, i) => {
-//     ScrollTrigger.create({
-//       trigger: panel,
-//       start: "top top",
-//       pin: true,
-//       pinSpacing: false,
-//       markers: true
-//     });
-//   });
-// });
-
-
-// const businessItem = gsap.timeline();
-// businessItem.from(".business-item-01", { scale: 0.3, y:-200})
-//   .to(".business-item-01 .item-text-wrap", { opacity: 1 })
-//   .to(".business-item-01 .item-icon-wrap", { opacity: 1 })
-//     // .to(".business-item-02", {y: "-100vh"})
-//     // .to(".business-item-03", {y: "-200vh"});
-
- 
-
-// ScrollTrigger.create({
-//   animation: businessItem,
-//   trigger: ".business-item-01-wrap",
-//   start: "top top",
-//       // end: "bottom bottom",
-//   end: "+=2000",
-//       // scrub: true,
-//   pin: true,
-//   anticipatePin: 1,
-//   toggleActions: "play none none none",
-//       // markers: true
-// });
 
 
 const businessItem = gsap.timeline();

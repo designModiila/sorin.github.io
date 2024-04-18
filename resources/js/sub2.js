@@ -74,7 +74,7 @@ $(document).ready(function(){
 const containerHeight = document.querySelector('.section-container').offsetHeight;
 
 const sub01con = gsap.timeline();
-sub01con.from(".section-container", {width: "40vw", height: "30vh", y: "-10vh", delay: 1})
+sub01con.from(".section-container", {width: "40vw", height: "30vh", y: "-10vh", delay: 1,ease: "power1.in", scrub: 2})
         .to(".subimg1", {opacity: 0, delay: 2.5})
         .to(".subimg2", {opacity: 0, duration:1, delay: .5})
         .to(".subimg3", {opacity: 0, duration:1, delay: .5})
@@ -88,7 +88,8 @@ ScrollTrigger.create({
     start: "top top",
     // ease: "power3.in",
     end: "+=270%",
-    scrub: 1,
+    scrub: 2,
+    ease: "power1.in",
     pin: true,
     anticipatePin: 1,
     markers: false
@@ -171,36 +172,51 @@ if (window.innerWidth >= 768) {
 
 
 // sub06 인재상
-// const recruit = document.querySelector(".sub06 .recruit");
-// ScrollTrigger.create({
-//     trigger: recruit,
-//     start: "top -30%",
-//     end: "+=100%",
-//     pin: true,
-//     pinSpacing: false,
-//     markers: true
-// });
+const section02 = document.querySelector(".section02");
+const cards = document.querySelectorAll(".content-card");
+const cardHeight = document.querySelector('.content-card').offsetHeight;
+
+// section02를 고정
+ScrollTrigger.create({
+  trigger: section02,
+  start: "top top",
+  endTrigger: cards[cards.length - 1],
+  end: "bottom top",
+  pin: section02,
+  pinSpacing: true
+});
+
+// 각 카드의 y값 설정
+gsap.set(cards[0], { y: 0 });
+gsap.set(cards[1], { y: cardHeight });
+gsap.set(cards[2], { y: cardHeight });
+
 
 const targets = gsap.utils.toArray(".split");
 
 targets.forEach((target) => {
-    let SplitClient = new SplitType(target, { type: "chars" });
-    let chars = SplitClient.chars;
+  let SplitClient = new SplitType(target, { type: "chars" });
+  let chars = SplitClient.chars;
 
-    chars.forEach((char, index) => {
-        ScrollTrigger.create({
-            trigger: target,
-            start: "top 50%",
-            end: "+=400",
-            markers: true,
-            onUpdate: (self) => {
-                const progress = self.progress;
-                const color = progress < (index + 1) / chars.length ? "#ffffff" : "#329BFA"; // 해당 글자의 위치에 따라 색상 결정
-                gsap.to(char, { color: color, duration: 0.5 }); // 색상 전환 속도를 조정합니다.
-            }
-        });
+  chars.forEach((char, index) => {
+    ScrollTrigger.create({
+      trigger: target,
+      start: "top ",
+      end: "+=400",
+      markers: false,
+      onUpdate: (self) => {
+        const progress = self.progress;
+        const color = progress < (index + 1) / chars.length ? "#ffffff" : "#329BFA"; // 해당 글자의 위치에 따라 색상 결정
+        gsap.to(char, { color: color, duration: 0.5 }); // 색상 전환 속도를 조정합니다.
+      }
     });
+  });
 });
+
+
+
+
+
 
 
 });
@@ -213,58 +229,35 @@ $('.more-btn').click(function() {
 
 
 //계열사
+function layer_open(no){
+  $(".world-layer[layer="+no+"]").addClass("open");
+  $(".layer-dimm").addClass("open");
+  $('body').addClass('noScroll');
+  $('.modal_background').addClass('active');
 
-  function layer_open(no) {
-    $('.world-layer').not('[layer="' + no + '"]').removeClass('open').hide();
+};
 
-    var layer = $(".world-layer[layer=" + no + "]");
-    if (!layer.hasClass("open")) {
-      layer.addClass("open").show();
-      $(".layer-dimm").addClass("open");
-      $('body').addClass('noScroll');
-    }
-  };
-  
-  function triggerLayerEvent(layerNo) {
-    $(".world-layer").removeClass("open").hide();
-    var layerElement = $(".sub04 .btn_layer[layer='" + layerNo + "'], .sub04 .article[layer='" + layerNo + "']").first();
-    layerElement.trigger('click');
-  }
-  
-  
-  $(".sub04 .btn_layer, .sub04 .article").hover(
-    function() { 
-      var layerNo = $(this).attr("layer");  
-     
-      $(".sub04 .btn_layer[layer='" + layerNo + "']").closest('.tablinks').addClass('hover');      
-      $(".sub04 .article[layer='" + layerNo + "']").addClass('hover');
-    }, 
-    function() { 
-      var layerNo = $(this).attr("layer");
-      $(".sub04 .btn_layer[layer='" + layerNo + "']").closest('.tablinks').removeClass('hover');
-      $(".sub04 .article[layer='" + layerNo + "']").removeClass('hover');
-    }
-  );
+function layer_close(){
+  $(".world-layer, .layer-dimm").removeClass("open");
+  $('body').removeClass('noScroll');
+  $('.modal_background').removeClass('active');
+};
 
-  
-  $(".sub04 .btn_layer, .sub04 .article").click(function() {
-    var no = $(this).attr("layer");
-    layer_open(no);
-  
-    $('.tablinks, .article').removeClass('active');
-    $(".btn_layer[layer='" + no + "']").closest('.tablinks').addClass('active');
-    $(".article[layer='" + no + "']").addClass('active');
-  });
-  
-  $(".world-layer-close").click(function() {
-    var layerNo = $(this).closest(".world-layer").attr("layer");
-    $(".world-layer[layer='" + layerNo + "']").removeClass('open').hide();
-    $('body').removeClass('noScroll');
-    $(".layer-dimm").removeClass("open");
-  });
-  
- 
-  
+$(".sub04 .btn_layer,.sub04 .article").click(function () {
+  var no = $(this).attr("layer");
+  layer_open(no);
+  $('.article').removeClass('active');
+  $('.' + $(this).data('rel')).addClass('active');
+});
+
+$(".close-btn").click(function () {
+  layer_close();
+});
+$(".modal_background").click(function () {
+  layer_close();
+});
+
+
 
 
 //사업장
@@ -291,6 +284,4 @@ function openLocation(evt, cityName) {
 }
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
-
-
 

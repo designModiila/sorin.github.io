@@ -8,7 +8,7 @@ body.noScroll { overflow: hidden;}
 .logo-w {display: none;}
 
 #wrap { width: 100%; overflow: hidden; position: relative;}
-#header {position: fixed; top: 0; left: 0; width: 100%; height: 70px; z-index: 999; box-sizing: border-box; display: block;
+#header {position: fixed; top: 0; left: 0; width: 100%; height: 80px; z-index: 999; box-sizing: border-box; display: block;
     transition: top 0.3s;}
 /* #header.up { transform: translateY(-100%);}
 #header.down { transform: translateY(0);} */
@@ -18,20 +18,21 @@ body.noScroll { overflow: hidden;}
 #header h1.active { background: url(../../resources/images/common/sorin_logo.png)}
 #header h1 span { display: none;}
 #header .header-wrap {display: flex; width: 100%; height: 70px; justify-content: space-between; padding: 10px 10.42% 0; align-items: center;}
-#header.active {background-color: #fff; /*border-bottom: 1px solid #C8C8C8;*/}
-#header.active a:hover {color: #323232;}
+#header.active {background-color: #fff; border-bottom: 1px solid #dddddd;}
+#header.active li:hover a {color: #323232;}
 
 #header .gnb-wrap .gnb {width: 100%; display: flex; height: 100%; justify-content: space-between; align-items: center; gap: 70px;}
-#header .gnb-wrap .gnb > li .depth1 {display: block; height: 100%; font-size: 18px; font-weight: 600; color: #C8C8C8; position: relative; transition: all 0.3s;}
+#header .gnb-wrap .gnb > li {display: flex; align-items: center; height: 80px;}
+#header .gnb-wrap .gnb > li .depth1 {display: block; font-size: 18px; font-weight: 600; color: #969696; position: relative; transition: all 0.3s;}
 #header .gnb-wrap .gnb > li:hover {color: #fff;}
 
 #header .gnb-wrap .gnb > li ul {position: relative; width: 100%;}
 
 #header .gnb-wrap .gnb > li {position: relative; }
-#header .gnb-wrap .gnb .depth2 {position: absolute; overflow: hidden; top: 48px; left: -5px; padding: 10px; width: 190px; background-color: #fff; border-radius: 10px; box-shadow: 2px 2px 20px rgba(0, 0, 0, .1);}
+#header .gnb-wrap .gnb .depth2 {position: absolute; overflow: hidden; top: 80px; left: -5px; padding: 10px; width: 190px; background-color: #fff; border-radius: 10px; box-shadow: 2px 2px 20px rgba(0, 0, 0, .1);}
 #header .gnb-wrap .gnb .depth2 ul {display: flex; flex-direction: column; gap: 10px;}
 #header .gnb-wrap .gnb .depth2 ul li {padding: 6px 15px; border-radius: 5px;}
-#header .gnb-wrap .gnb .depth2 ul li a {font-size: 18px; font-weight: 600; letter-spacing: -0.03em; color: #969696; transition: all 0.2s;}
+#header .gnb-wrap .gnb .depth2 ul li a {font-size: 16px; font-weight: 600; letter-spacing: -0.03em; color: #969696; transition: all 0.2s;}
 #header .gnb-wrap .gnb .depth2 ul li:hover {background-color: #F1F6FF;}
 #header .gnb-wrap .gnb .depth2 ul li:hover a {color: #323232;}
 

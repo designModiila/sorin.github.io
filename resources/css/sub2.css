@@ -404,19 +404,19 @@
 }
 
 /* recruit */
-/* .sub06 .section02 {height: 100vh;} */
+.sub06 .section02 {height: 100vh; overflow: hidden;}
 .sub06 .section02 .heading-1 {padding-top: 15vh; height: 30vh; text-align: center;}
 .sub06 .section02 .heading-1 br {display: none;}
 /* .sub06 .section02 .content-wrap {height: 60vh; overflow: hidden;} */
-.sub06 .section02 .content-wrap {display: flex; flex-direction: column; align-items: center;}
-.sub06 .section02 .content-card {display: flex; margin-bottom: 5vh; padding-left: 16%; align-items: center; width: 100%; height: 65vh; overflow: hidden;}
+.sub06 .section02 .content-wrap {position: relative; display: flex; justify-content: center; flex-direction: column; align-items: center;}
+.sub06 .section02 .content-card {position: absolute; margin-bottom: 5vh; top: 0; left: 0; right: 0; margin: 0 auto; display: flex;  padding-left: 16%; align-items: center; width: 100%; height: 65vh; overflow: hidden;}
 .sub06 .section02 .content-card p {font-size: 60px; font-weight: 600; line-height: 86px; letter-spacing: -0.03em; color: #fff;}
 .sub06 .section02 .content-card p span {font-weight: 700;}
 .sub06 .section02 .content-card p.active {color: #329BFA;}
 .sub06 .section02 .content-card-01 {background: url(../../resources/images/sub2/sub06_img_sub01.png)no-repeat 50%; background-size: cover;}
 .sub06 .section02 .content-card-02 {background: url(../../resources/images/sub2/sub06_img_sub02.png)no-repeat 50%; background-size: cover;}
 .sub06 .section02 .content-card-03 {background: url(../../resources/images/sub2/sub06_img_sub03.png)no-repeat 50%; background-size: cover;}
-.sub06 .section03 {padding-bottom: 166px;}
+.sub06 .section03 {padding-bottom: 166px; padding-top: 100px;}
 .sub06 .section03 .heading-1 {text-align: center;}
 .sub06 .section03 .content {margin-top: 120px; display: flex; flex-direction: column; align-items: center; gap: 50px; text-align: center;}
 .sub06 .section03 .flowchart-wrap {display: grid; grid-template-columns: repeat(5, 293px); grid-auto-rows: auto; height: 343px; column-gap: 0;}

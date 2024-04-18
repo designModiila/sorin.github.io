@@ -1,5 +1,5 @@
 
-<div class="header-wrap inner">
+<div class="header-wrap main-header inner">
   <div class="logo-wrap">
     <a href="../main/main.html">
       <h1><span class="hidden">sorin</span></h1>
@@ -124,6 +124,7 @@ window.onscroll = function() {
 $(window).scroll(function() {
   if ($(this).scrollTop() === 0) {
     $(".header-wrap, .header-wrap h1").removeClass("active").css("transition", "all 0.5s ease");
+    $("#header").removeClass("active");
     // $(".infra-menu").css("transition", "all 0.5s ease");
   }
 });
