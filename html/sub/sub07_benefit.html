@@ -65,15 +65,14 @@
 
             <div class="top-menu cont">
                 <ul>
-                  <li class="tablinks on"><a href="#">전체</a></li>
-                  <li class="tablinks"><a href="#">건강</a></li>
-                  <li class="tablinks"><a href="">교육</a></li>
-                  <li class="tablinks"><a href="">휴가/경조/포상</a></li>
-                  <li class="tablinks"><a href="">업무환경 및 사내문화</a></li>
+                  <li class="tablinks" onclick="openBenefit(event, 'all')" id="defaultOpen"><button>전체</button></li>
+                  <li class="tablinks" onclick="openBenefit(event, 'health')"><button>건강</button></li>
+                  <li class="tablinks" onclick="openBenefit(event, 'edu')"><button>교육</button></li>
+                  <li class="tablinks" onclick="openBenefit(event, 'reward')"><button>휴가/경조/포상</button></li>
+                  <li class="tablinks" onclick="openBenefit(event, 'work')"><button>업무환경 및 사내문화</button></li>
                 </ul>
-              </div>
-
-            <div class="item-wrap item-wrap-01">
+            </div>
+            <div class="item-wrap tabcontent item-wrap-01" id="all">
                 <div class="item-card">
                     <img src="../../resources/images/sub2/sub07_ic01.png" alt="">
                     <p class="item-title">임직원 및 가족 의료비 지원</p>
@@ -139,7 +138,83 @@
                     <p class="item-title">업무용 최신 노트북 <br>및 주변기기 제공</p>
                 </div>
             </div>
+            <div class="item-wrap tabcontent item-wrap-01" id="health">
+                <div class="item-card">
+                    <img src="../../resources/images/sub2/sub07_ic01.png" alt="">
+                    <p class="item-title">임직원 및 가족 의료비 지원</p>
+                </div>
+                <div class="item-card">
+                    <img src="../../resources/images/sub2/sub07_ic02.png" alt="">
+                    <p class="item-title">임직원 및 배우자 건강검진 지원</p>
+                </div>
+                <div class="item-card">
+                    <img src="../../resources/images/sub2/sub07_ic03.png" alt="">
+                    <p class="item-title">개인 단체보험 가입</p>
+                </div>
+            </div>
+            <div class="item-wrap tabcontent item-wrap-01" id="edu">
+                <div class="item-card">
+                    <img src="../../resources/images/sub2/sub07_ic04.png" alt="">
+                    <p class="item-title">영어 및 직무개발 교육비 지원</p>
+                </div>
+                <div class="item-card">
+                    <img src="../../resources/images/sub2/sub07_ic05.png" alt="">
+                    <p class="item-title">임직원 및 자녀 학자금 지원</p>
+                </div>
+                <div class="item-card">
+                    <img src="../../resources/images/sub2/sub07_ic06.png" alt="">
+                    <p class="item-title">자녀 유아 교육비, <br>중고교 입학축하금 지원</p>
+                </div>
+            </div>
+            <div class="item-wrap tabcontent item-wrap-01" id="reward">
+                <div class="item-card">
+                    <img src="../../resources/images/sub2/sub07_ic07.png" alt="">
+                    <p class="item-title">자유로운 연차 사용, <br>장기 / 공동 연차사용 장려</p>
+                </div>
+                <div class="item-card">
+                    <img src="../../resources/images/sub2/sub07_ic08.png" alt="">
+                    <p class="item-title">경조휴가 및 경조금, <br>경조용품 지원</p>
+                </div>
+                <div class="item-card">
+                    <img src="../../resources/images/sub2/sub07_ic09.png" alt="">
+                    <p class="item-title">복지포인트 지급 및 장기근속 포상</p>
+                </div>
+                <div class="item-card">
+                    <img src="../../resources/images/sub2/sub07_ic10.png" alt="">
+                    <p class="item-title">점심, 야근 식대 제공</p>
+                </div>
+                <div class="item-card">
+                    <img src="../../resources/images/sub2/sub07_ic11.png" alt="">
+                    <p class="item-title">상조회 가입 및 대출지원</p>
+                </div>
+            </div>
+            <div class="item-wrap tabcontent item-wrap-01" id="work">
+                <div class="item-card">
+                    <img src="../../resources/images/sub2/sub07_ic12.png" alt="">
+                    <p class="item-title">시차 출퇴근 제도 운영</p>
+                </div>
+                <div class="item-card">
+                    <img src="../../resources/images/sub2/sub07_ic13.png" alt="">
+                    <p class="item-title">멘토링 제도 운영 및 활동비 지원</p>
+                </div>
+                <div class="item-card">
+                    <img src="../../resources/images/sub2/sub07_ic14.png" alt="">
+                    <p class="item-title">사내 동호회 활동비 지원</p>
+                </div>
+                <div class="item-card">
+                    <img src="../../resources/images/sub2/sub07_ic15.png" alt="">
+                    <p class="item-title">휴게실 내 먹거리 제공</p>
+                </div>
+                <div class="item-card">
+                    <img src="../../resources/images/sub2/sub07_ic16.png" alt="">
+                    <p class="item-title">업무용 최신 노트북 <br>및 주변기기 제공</p>
+                </div>
+            </div>
+
+
         </div>
+
+        
 
     
  
