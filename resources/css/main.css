@@ -1,12 +1,14 @@
 @charset "utf-8";
 
-#header {transition: top 0.3s;}
-#header .main-header {top: 1.5rem;}
-#header .main-header.active {top: 0;}
-#header.active {top: 0; background-color: #fff; border-bottom: 1px solid #dddddd; color: #969696;}
-#header.active li:hover a {color: #323232;}
-#header .gnb-wrap .gnb > li .depth1:hover {color: #fff;}
-#header.active .gnb > li .depth1:hover {color: #323232;}
+
+.main #header .main-header {top: 1.5rem;}
+.main #header .main-header.active {top: 0;}
+.main #header.active {top: 0; background-color: #fff; border-bottom: 1px solid #dddddd; color: #969696;}
+.main #header.active li:hover a {color: #323232;}
+.main #header .gnb-wrap .gnb > li .depth1 {color: #969696;}
+.main #header .gnb-wrap .gnb > li .depth1:hover {color: #fff;}
+.main #header .gnb-wrap .gnb > li.servicenow .depth1:hover {color: #00BC26;}
+.main #header.active .gnb > li .depth1:hover {color: #323232;}
 
 .main .only-mo {display: none;}
 .main .maintitle {font-size: 48px; font-weight: 800; line-height: 68px; letter-spacing: -0.03em; color: var(--color-black);}

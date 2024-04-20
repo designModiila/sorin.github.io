@@ -8,8 +8,11 @@ body.noScroll { overflow: hidden;}
 .logo-w {display: none;}
 
 #wrap { width: 100%; overflow: hidden; position: relative;}
-#header {position: fixed; top: 0; left: 0; width: 100%; height: 80px; z-index: 999; box-sizing: border-box; display: block;
-    transition: top 0.3s;}
+
+#header {
+    transition: top 0.3s ease-in-out;
+}
+#header {position: fixed; top: 0; left: 0; width: 100%; height:calc(70px + 1.5rem); z-index: 999; box-sizing: border-box; display: block;}
 /* #header.up { transform: translateY(-100%);}
 #header.down { transform: translateY(0);} */
 #header .only-mo {display: none;}
@@ -25,6 +28,8 @@ body.noScroll { overflow: hidden;}
 #header .gnb-wrap .gnb {width: 100%; display: flex; height: 100%; justify-content: space-between; align-items: center; gap: 70px;}
 #header .gnb-wrap .gnb > li {display: flex; align-items: center; height: 80px;}
 #header .gnb-wrap .gnb > li .depth1 {display: block; font-size: 18px; font-weight: 600; color: #969696; position: relative; transition: all 0.3s;}
+
+
 #header .gnb-wrap .gnb > li:hover {color: #fff;}
 
 #header .gnb-wrap .gnb > li ul {position: relative; width: 100%;}
@@ -37,14 +42,36 @@ body.noScroll { overflow: hidden;}
 #header .gnb-wrap .gnb .depth2 ul li:hover {background-color: #F1F6FF;}
 #header .gnb-wrap .gnb .depth2 ul li:hover a {color: #323232;}
 
-#header .gnb-wrap .gnb .company-con {height: 0; opacity: 0; transition: 0.5s;}
-#header .gnb-wrap .gnb .company:hover .company-con {height: auto; opacity: 1;}
-#header .gnb-wrap .gnb .infra-con {height: 0; opacity: 0; transition: 0.5s;}
-#header .gnb-wrap .gnb .infra:hover .infra-con {height: auto; opacity: 1;}
-#header .gnb-wrap .gnb .recruit-con {height: 0; opacity: 0; transition: 0.5s;}
-#header .gnb-wrap .gnb .recruit:hover .recruit-con {height: auto; opacity: 1;}
+#header .gnb-wrap .gnb .company-con {display: none; height: 0; opacity: 0; transition: 0.5s;}
+#header .gnb-wrap .gnb .company:hover .company-con {display: block; height: auto; opacity: 1;}
+#header .gnb-wrap .gnb .infra-con {display: none; height: 0; opacity: 0; transition: 0.5s;}
+#header .gnb-wrap .gnb .infra:hover .infra-con {display: block; height: auto; opacity: 1;}
+#header .gnb-wrap .gnb .recruit-con {display: none; height: 0; opacity: 0; transition: 0.5s;}
+#header .gnb-wrap .gnb .recruit:hover .recruit-con {display: block; height: auto; opacity: 1;}
 
 #header.hide .depth2 {display: none;}
+
+#header .gnb-wrap .gnb > li.servicenow:hover .depth1 {color: #00f031;}
+
+
+.sub-compnay #header .gnb-wrap .gnb > li .depth1,
+.sub-infrabusiness #header .gnb-wrap .gnb > li .depth1 {color: #969696;}
+.sub-servicenow #header .gnb-wrap .gnb > li .depth1,
+.sub-consulting #header .gnb-wrap .gnb > li .depth1 {color: #C8C8C8;}
+
+.sub-compnay #header .gnb-wrap .gnb > li:hover .depth1 {color: #323232;}
+.sub-infrabusiness #header .gnb-wrap .gnb > li.servicenow:hover .depth1,
+.sub-compnay #header .gnb-wrap .gnb > li.servicenow:hover .depth1 {color: #00f031;}
+
+
+.sub-servicenow #header .gnb-wrap .gnb > li:hover .depth1 {color: #fff;}
+.sub-infrabusiness #header .gnb-wrap .gnb > li:hover .depth1 {color: #fff;}
+.sub-servicenow #header .gnb-wrap .gnb > li.servicenow:hover .depth1 {color: #00f031;}
+
+.sub-compnay #header .gnb-wrap .gnb > li.active .depth1 {color: #323232;}
+.sub-infrabusiness #header .gnb-wrap .gnb > li.active .depth1 {color: #fff;}
+.sub-consulting #header .gnb-wrap .gnb > li.active .depth1 {color: #fff;}
+.sub-servicenow #header .gnb-wrap .gnb > li.active .depth1 {color: #00f031;}
 
 @media (max-width: 1440px) {
     #header .header-wrap {padding: 10px 7vw; }
