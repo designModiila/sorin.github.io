@@ -10,6 +10,9 @@
 .infrasub .infra-menu .active {color: #393939;}
 .infrasub .infra-menu a {transition: color .3s ease;}
 .infrasub .infra-menu a:hover {color: #393939;}
+
+.infrasub .infra-menu.fixed {position: fixed; top: 0;  transition: top 0.3s;}
+.infrasub .infra-menu.hide {position: absolute; top: 90px;  transition: bottom 0.3s;}
 .infrasub .title-sub {text-align: center; font-size: 36px; font-weight: 700; letter-spacing: -0.03em; text-transform: uppercase; color: #D6D6D6;}
 .infrasub .main-title {margin-top: 26px; font-family: 'Paybooc'; font-size: 80px; font-weight: 800; text-align: center; letter-spacing: -0.01em;}
 .infrasub .main-img {display: flex; justify-content: center; margin-top: 155px;}
@@ -81,9 +84,9 @@
 
 .hardware .section02 {margin-top: 118px; padding: 123px 0 343px;}
 .hardware .section02 .hardware-menu {margin-top: 80px; display: flex; justify-content: center; gap: 70px;}
-.hardware .section02 .hardware-menu .tablinks button {font-size: 20px; font-weight: 700; color: #AAAAAA; transition: 0.3s;}
-.hardware .section02 .hardware-menu .tablinks:hover button {color: #1E66D2;}
-.hardware .section02 .hardware-menu .tablinks.active button {color: #1E66D2;}
+.hardware .section02 .hardware-menu .tablinks a {font-size: 20px; font-weight: 700; color: #AAAAAA; transition: 0.3s;}
+.hardware .section02 .hardware-menu .tablinks:hover a {color: #1E66D2;}
+.hardware .section02 .hardware-menu .tablinks.active a {color: #1E66D2;}
 .hardware .section02 .tabcontent {display: none; animation: fadeEffect 1s;}
 .hardware .section02 .product-wrap {display: flex; justify-content: space-between; gap: 40px;}
 .hardware .section02 .product-less {justify-content: flex-start;}
@@ -305,6 +308,7 @@
   -webkit-animation: blip1 1s infinite cubic-bezier(0, 0.3, 1, 0.3);
   animation: blip1 1s infinite cubic-bezier(0, 0.3, 1, 0.3);
 }
+
 @-webkit-keyframes blip1 {
   to {
     transform: scale(2);
@@ -318,7 +322,7 @@
   }
 }
 
-.modal_background {
+/* .modal_background {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -329,7 +333,7 @@
   display : none;
   pointer-events: auto;
 }
-.modal_background.active {display: block;}
+.modal_background.active {display: block;} */
 
 /* body {background-color: rgba(0, 0, 0, .3);} */
 /*계열사소개 모달창*/
@@ -389,9 +393,9 @@
 .sub05 .section02 .top-menu ul{display: flex; gap: 20px; justify-content: center;}
 .sub05 .section02 .top-menu ul li{background: #fff; border-radius: 10px; transition: background 0.3s ease-in;}
 .sub05 .section02 .top-menu ul li:hover{background: #323232;}
-.sub05 .section02 .top-menu ul li button {display: block; padding: 15px; font-size: 20px; font-weight: 600; border-radius: 10px; transition: color 0.3s ease-in;}
-.sub05 .section02 .top-menu ul li:hover button {color: #ffffff;}
-.sub05 .section02 .top-menu ul li.active button{background-color: #323232; color: #fff;}
+.sub05 .section02 .top-menu ul li a {display: block; padding: 15px; font-size: 20px; font-weight: 600; border-radius: 10px; transition: color 0.3s ease-in;}
+.sub05 .section02 .top-menu ul li:hover a {color: #ffffff;}
+.sub05 .section02 .top-menu ul li.active a{background-color: #323232; color: #fff;}
 .sub05 .section02 .location-map-wrap {margin-top: 120px; text-align: left;}
 .sub05 .section02 .location-title {font-size: 42px; font-weight: 800; letter-spacing: -0.03em; color: #000;}
 .sub05 .section02 .location-detail {margin-top: 40px; font-size: 20px; font-weight: 500; line-height: 40px; letter-spacing: -0.03em; color: #323232;}
@@ -399,6 +403,7 @@
 .sub05 .section02 .location-contact  {display: flex; gap: 20px;}
 .sub05 .section02 .location-map-wrap .map {margin-top: 60px;}
 .sub05 .section02 .tabcontent {display: none; animation: fadeEffect 1.3s;}
+.sub05 .section02 .tabcontent.active {display: block;}
 @keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
@@ -436,9 +441,11 @@
 .sub07 .section02 .top-menu ul{display: flex; gap: 20px; justify-content: center;}
 .sub07 .section02 .top-menu ul .tablinks{background: #fff; border-radius: 10px; transition: background 0.3s ease-in;}
 .sub07 .section02 .top-menu ul .tablinks:hover{background: #323232;}
-.sub07 .section02 .top-menu ul .tablinks button {display: block; padding: 15px; font-size: 20px; font-weight: 600; transition: color 0.3s ease-in;}
-.sub07 .section02 .top-menu ul .tablinks:hover button{color: #ffffff;}
-.sub07 .section02 .top-menu ul .tablinks.active button{background-color: #323232; border-radius: 10px; color: #fff;}
+.sub07 .section02 .top-menu ul .tablinks a {display: block; padding: 15px; font-size: 20px; font-weight: 600; transition: color 0.3s ease-in;}
+.sub07 .section02 .top-menu ul .tablinks:hover a{color: #ffffff;}
+.sub07 .section02 .top-menu ul .tablinks.active a{background-color: #323232; border-radius: 10px; color: #fff;}
+.sub07 .section02 .item-wrap.hide {display: npne;}
+.sub07 .section02 .item-wrap.active {display: grid;}
 .sub07 .section02 .item-wrap {margin-top: 80px; display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 330px; column-gap: 40px; row-gap: 50px;}
 .sub07 .section02 .item-card {padding: 0 20px 20px; display: grid;  grid-template-columns: 1fr; grid-template-rows: 5fr 5fr; justify-items: center; align-items: center; row-gap: 0; border-radius: 20px; border: 1px solid #E1E1E1;}
 .sub07 .section02 .item-card img {align-self: end;}
@@ -753,7 +760,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   z-index: 9999;
   display: none;
 }

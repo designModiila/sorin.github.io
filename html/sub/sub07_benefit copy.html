@@ -64,16 +64,15 @@
             </div>
 
             <div class="top-menu cont">
-                <ul class="tabs">
-                    <li class="tablinks active"><a href="#all">전체</a></li>
-                    <li class="tablinks"><a href="#health">건강</a></li>
-                    <li class="tablinks"><a href="#edu">교육</a></li>
-                    <li class="tablinks"><a href="#reward">휴가/경조/포상</a></li>
-                    <li class="tablinks"><a href="#work">업무환경 및 사내문화</a></li>
-                  </ul>
+                <ul>
+                  <li class="tablinks active" onclick="openBenefit(event, 'all')"><button>전체</button></li>
+                  <li class="tablinks" onclick="openBenefit(event, 'health')"><button>건강</button></li>
+                  <li class="tablinks" onclick="openBenefit(event, 'edu')"><button>교육</button></li>
+                  <li class="tablinks" onclick="openBenefit(event, 'reward')"><button>휴가/경조/포상</button></li>
+                  <li class="tablinks" onclick="openBenefit(event, 'work')"><button>업무환경 및 사내문화</button></li>
+                </ul>
             </div>
-            <div class="tabContainer">
-            <div class="item-wrap tabcontent item-wrap-01" id="all">
+            <div class="item-wrap tabcontent item-wrap-01" id="all" style="display: grid;">
                 <div class="item-card">
                     <img src="../../resources/images/sub2/sub07_ic01.png" alt="">
                     <p class="item-title">임직원 및 가족 의료비 지원</p>
@@ -211,7 +210,7 @@
                     <p class="item-title">업무용 최신 노트북 <br>및 주변기기 제공</p>
                 </div>
             </div>
-        </div>
+
 
         </div>
 

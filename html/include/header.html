@@ -111,11 +111,15 @@ window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("header").style.top = "0";
-    $("#header").addClass("active");
+    $("#header").removeClass("hide").addClass("active");
     $(".header-wrap h1").addClass("active");
+
+    $(".infra-menu").addClass("hide").addClass("hide");
     // document.querySelector(".infra-menu").style.top = "70px";
   } else {
     document.getElementById("header").style.top = "-82px";
+    $("#header").removeClass("active").addClass("hide");
+    $(".infra-menu").removeClass("hide").addClass("fixed");
     // document.querySelector(".infra-menu").style.top = "0";
   }
   prevScrollpos = currentScrollPos;

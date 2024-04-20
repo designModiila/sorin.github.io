@@ -1,6 +1,21 @@
 
 $(document).ready(function(){
 
+
+  $(".tabcontent").hide();
+  $("ul.tabs li:first").addClass("active").show();
+  $(".tabcontent:first").show();
+
+  $("ul.tabs li").click(function() {
+      $("ul.tabs li").removeClass("active");
+      $(this).addClass("active");
+      $(".tabcontent").hide();
+
+      var activeTab = $(this).find("a").attr("href");
+      $(activeTab).fadeIn();
+      return false;
+  });
+
   var swiper = new Swiper(".swiper-group", {
     //   loop: true,
     //   loopAdditionalSlides : 1,
@@ -48,71 +63,112 @@ $(document).ready(function(){
       });
 
 
-    function startCountingWhenVisible(element, countingFunction) {
+      function startCountingWhenVisible(element, targetNumber, duration) {
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    countingFunction();
+                    let count = 0;
+                    const intervalTime = 10; // milliseconds
+                    const totalIntervals = duration / intervalTime;
+                    const increment = Math.ceil(targetNumber / totalIntervals);
+                    
+                    let counting = setInterval(function () {
+                        count += increment;
+                        if (count >= targetNumber) {
+                            count = targetNumber;
+                            clearInterval(counting);
+                        }
+                        element.innerHTML = new Intl.NumberFormat().format(count);
+                    }, intervalTime);
+                    
                     observer.unobserve(entry.target);
                 }
             });
         });
-
+    
         observer.observe(element);
     }
-
-    function startCounting1() {
-        let count1 = 0;
-        let num1 = 85;
-
-        let counting1 = setInterval(function () {
-            if (count1 >= num1) {
-                count1 = num1;
-                clearInterval(counting1);
-            } else {
-                count1 += 1;
-            }
-            countBox1.innerHTML = new Intl.NumberFormat().format(count1);
-        }, 10);
-    }
-
-    function startCounting2() {
-        let count2 = 0;
-        let num2 = 97;
-
-        let counting2 = setInterval(function () {
-            if (count2 >= num2) {
-                count2 = num2;
-                clearInterval(counting2);
-            } else {
-                count2 += 1;
-            }
-            countBox2.innerHTML = new Intl.NumberFormat().format(count2);
-        }, 10);
-    }
-
-    function startCounting3() {
-        let count3 = 0;
-        let num3 = 7000;
-
-        let counting3 = setInterval(function () {
-            if (count3 >= num3) {
-                count3 = num3;
-                clearInterval(counting3);
-            } else {
-                count3 += 53;
-            }
-            countBox3.innerHTML = new Intl.NumberFormat().format(count3);
-        }, 10);
-    }
-
+    
+    const duration = 2000; // duration in milliseconds for counting
     const countBox1 = document.querySelector('.count01');
     const countBox2 = document.querySelector('.count02');
     const countBox3 = document.querySelector('.count03');
+    
+    if (countBox1 && countBox2 && countBox3) {
+        startCountingWhenVisible(countBox1, 85, duration);
+        startCountingWhenVisible(countBox2, 97, duration);
+        startCountingWhenVisible(countBox3, 7000, duration);
+    } else {
+        //console.error('One of the counting boxes is not found in the DOM');
+    }
+    
+    
 
-    startCountingWhenVisible(countBox1, startCounting1);
-    startCountingWhenVisible(countBox2, startCounting2);
-    startCountingWhenVisible(countBox3, startCounting3);
+    // function startCountingWhenVisible(element, countingFunction) {
+    //     const observer = new IntersectionObserver((entries, observer) => {
+    //         entries.forEach(entry => {
+    //             if (entry.isIntersecting) {
+    //                 countingFunction();
+    //                 observer.unobserve(entry.target);
+    //             }
+    //         });
+    //     });
+
+    //     observer.observe(element);
+    // }
+
+    // function startCounting1() {
+    //     let count1 = 0;
+    //     let num1 = 85;
+
+    //     let counting1 = setInterval(function () {
+    //         if (count1 >= num1) {
+    //             count1 = num1;
+    //             clearInterval(counting1);
+    //         } else {
+    //             count1 += 1;
+    //         }
+    //         countBox1.innerHTML = new Intl.NumberFormat().format(count1);
+    //     }, 10);
+    // }
+
+    // function startCounting2() {
+    //     let count2 = 0;
+    //     let num2 = 97;
+
+    //     let counting2 = setInterval(function () {
+    //         if (count2 >= num2) {
+    //             count2 = num2;
+    //             clearInterval(counting2);
+    //         } else {
+    //             count2 += 1;
+    //         }
+    //         countBox2.innerHTML = new Intl.NumberFormat().format(count2);
+    //     }, 10);
+    // }
+
+    // function startCounting3() {
+    //     let count3 = 0;
+    //     let num3 = 7000;
+
+    //     let counting3 = setInterval(function () {
+    //         if (count3 >= num3) {
+    //             count3 = num3;
+    //             clearInterval(counting3);
+    //         } else {
+    //             count3 += 53;
+    //         }
+    //         countBox3.innerHTML = new Intl.NumberFormat().format(count3);
+    //     }, 10);
+    // }
+
+    // const countBox1 = document.querySelector('.count01');
+    // const countBox2 = document.querySelector('.count02');
+    // const countBox3 = document.querySelector('.count03');
+
+    // startCountingWhenVisible(countBox1, startCounting1);
+    // startCountingWhenVisible(countBox2, startCounting2);
+    // startCountingWhenVisible(countBox3, startCounting3);
 
 
     $('.more-btn').click(function() {
@@ -227,9 +283,8 @@ var swiper = new Swiper("#js-swiper-consulting", {
   // });
 
 
-
-let tl = gsap.timeline({delay: 0.7});
-tl.to('.text-ani', {duration:0.5, y:0, stagger: 0.3});
+  const tl = gsap.timeline({delay: 0.7});
+  tl.to('.text-ani', {duration:0.5, y:0, stagger: 0.3});
 
 
 
@@ -382,7 +437,7 @@ const swiper2 = new Swiper('#js-swiper-hardware', {
 });
 
 // tabmenu
-location.href = "#tab1";
+//location.href = "#tab1";
 
 
 $('.infra-more-btn').click(function() {
@@ -447,5 +502,5 @@ var swiper = new Swiper(".backup-slide", {
     evt.currentTarget.className += " active";
   }
   // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+ //document.getElementById("defaultOpen").click();
 
