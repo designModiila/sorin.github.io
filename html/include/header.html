@@ -17,9 +17,8 @@
             <li><a href="../sub/sub05_location.html">사업장</a></li>
           </ul>
         </div>
-
       </li>
-      <li><a href="../servicenow/view.html" class="depth1">Servicenow</a>
+      <li class="servicenow"><a href="../servicenow/view.html" class="depth1">Servicenow</a>
       </li>
       <li class="infra"><a href="../infrabusiness/view.html" class="depth1">Infra Business</a>
         <div class="depth2 infra-con">
@@ -103,19 +102,56 @@
     </ul>
   </div>
 </div>
-<div class="background-b"></div>
+<!-- <div class="background-b"></div> -->
 <script>
+
+$(document).ready(function() {
+    // Restore active state from storage
+    var activePath = localStorage.getItem('activePath');
+    if (activePath) {
+        $('.gnb a[href="' + activePath + '"]').addClass('active').closest('li').addClass('active');
+    }
+
+    // Event handler for main links
+    $('.gnb > li > a.depth1').click(function(e) {
+        $('.gnb > li').removeClass('active'); // Remove active from all main links
+        $(this).parent('li').addClass('active'); // Add active to current main item
+        localStorage.setItem('activePath', $(this).attr('href')); // Save path
+        window.location.href = $(this).attr('href'); 
+    });
+
+    // Event handler for sub-menu links
+    $('.gnb > li .depth2 ul li a').click(function(e) {
+        e.preventDefault(); // Prevent default link behavior
+        $('.gnb li, .gnb li a').removeClass('active'); // Remove active from all items
+        $(this).addClass('active').closest('.gnb > li').addClass('active'); // Add active to current sub-menu item and its parent
+        localStorage.setItem('activePath', $(this).attr('href')); // Save path
+        window.location.href = $(this).attr('href'); // Navigate to the link
+    });
+    $('.gnb .depth2 ul li.active').each(function() {
+        // If a submenu item is active, add 'active' class to its parent '.gnb > li'
+        $(this).closest('.gnb > li').addClass('active');
+    });
+
+});
+
+
 
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
+
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("header").style.top = "0";
-    $("#header").addClass("active");
+    $("#header").removeClass("hide").addClass("active");
     $(".header-wrap h1").addClass("active");
+
+    $(".infra-menu").addClass("hide").addClass("hide");
     // document.querySelector(".infra-menu").style.top = "70px";
   } else {
-    document.getElementById("header").style.top = "-82px";
+    document.getElementById("header").style.top = "-94px";
+    $("#header").removeClass("active").addClass("hide");
+    $(".infra-menu").removeClass("hide").addClass("fixed");
     // document.querySelector(".infra-menu").style.top = "0";
   }
   prevScrollpos = currentScrollPos;
@@ -123,7 +159,7 @@ window.onscroll = function() {
 
 $(window).scroll(function() {
   if ($(this).scrollTop() === 0) {
-    $(".header-wrap, .header-wrap h1").removeClass("active").css("transition", "all 0.5s ease");
+    $(".header-wrap, .header-wrap h1").removeClass("active");
     $("#header").removeClass("active");
     // $(".infra-menu").css("transition", "all 0.5s ease");
   }

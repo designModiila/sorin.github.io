@@ -33,7 +33,7 @@
     <script defer src="../../resources/js/sub2.js"></script>
   </head>
   
-  <body>
+  <body class="sub-compnay">
     <header id="header" class="header"></header>
 
     <div id="wrap" class="wrap lastSec">
@@ -59,59 +59,63 @@
         <div class="section02">
             <div class="inner">
             <div class="top-menu">
-                <ul>
-                  <li class="tablinks" onclick="openLocation(event, 'seoul')" id="defaultOpen"><button>서울 본사</button></li>
-                  <li class="tablinks" onclick="openLocation(event, 'ulsan')"><button>울산 사무소</button></li>
-                  <li class="tablinks" onclick="openLocation(event, 'busan')"><button>부산 지사</button></li>
+                <ul class="tabs">
+                  <li class="tablinks active"><a href="#seoul">서울 본사</a></li>
+                  <li class="tablinks"><a href="#ulsan">울산 사무소</a></li>
+                  <li class="tablinks"><a href="#busan">부산 지사</a></li>
                 </ul>
               </div>
-              <div class="location-map-wrap tabcontent" id="seoul">
-                <div class="location">
-                    <div class="location-title">서울본사</div>
-                    <div class="location-detail">
-                        <p><span>주소</span> 서울특별시 강남구 강남대로 542 영풍빌딩</p>
-                        <div class="location-contact">
-                            <p><span>전화</span> 02-519-3600</p>
-                            <p><span>Fax</span> 02-549-5069</p>
-                            <p><span>문의</span> contact@sorin.co.kr</p>
-                        </div>
-                    </div>
+              <div class="tabContainer">
+                <div class="location-map-wrap tabcontent" id="seoul">
+                  <div class="location">
+                      <div class="location-title">서울본사</div>
+                      <div class="location-detail">
+                          <p><span>주소</span> 서울특별시 강남구 강남대로 542 영풍빌딩</p>
+                          <div class="location-contact">
+                              <p><span>전화</span> 02-519-3600</p>
+                              <p><span>Fax</span> 02-549-5069</p>
+                              <p><span>문의</span> contact@sorin.co.kr</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="map">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.1430902887205!2d127.02100297732841!3d37.504543172054724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3e21e2567e5%3A0xd1adbb77dc1712d1!2z7JiB7ZKN67mM65Sp!5e0!3m2!1sko!2skr!4v1712131518582!5m2!1sko!2skr" width="100%" height="520" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
                 </div>
-                <div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.1430902887205!2d127.02100297732841!3d37.504543172054724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3e21e2567e5%3A0xd1adbb77dc1712d1!2z7JiB7ZKN67mM65Sp!5e0!3m2!1sko!2skr!4v1712131518582!5m2!1sko!2skr" width="100%" height="520" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-              </div>
 
-              <div class="location-map-wrap tabcontent" id="ulsan">
-                <div class="location">
-                    <div class="location-title">울산사무소</div>
-                    <div class="location-detail">
-                        <p><span>주소</span> 울산광역시 울주군 온산읍 이진로 139</p>
-                        <div class="location-contact">
-                            <p><span>전화</span> 052-231-6440</p>
-                            <p><span>Fax</span> 052-231-6449</p>
-                            <p><span>문의</span> contact@sorin.co.kr</p>
-                        </div>
-                    </div>
+                <div class="location-map-wrap tabcontent" id="ulsan">
+                  <div class="location">
+                      <div class="location-title">울산사무소</div>
+                      <div class="location-detail">
+                          <p><span>주소</span> 울산광역시 울주군 온산읍 이진로 139</p>
+                          <div class="location-contact">
+                              <p><span>전화</span> 052-231-6440</p>
+                              <p><span>Fax</span> 052-231-6449</p>
+                              <p><span>문의</span> contact@sorin.co.kr</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3250.9848393047337!2d129.34360741284274!3d35.43040557255539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3567d4bfb9e91169%3A0xda72f58890ccb84b!2z7Jq47IKw6rSR7Jet7IucIOyauOyjvOq1sCDsmKjsgrDsnY0g7J207KeE66GcIDEzOQ!5e0!3m2!1sko!2skr!4v1712540768424!5m2!1sko!2skr" width="100%" height="520" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
                 </div>
-                <div class="map">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3250.9848393047337!2d129.34360741284274!3d35.43040557255539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3567d4bfb9e91169%3A0xda72f58890ccb84b!2z7Jq47IKw6rSR7Jet7IucIOyauOyjvOq1sCDsmKjsgrDsnY0g7J207KeE66GcIDEzOQ!5e0!3m2!1sko!2skr!4v1712540768424!5m2!1sko!2skr" width="100%" height="520" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
-              </div>
 
-              <div class="location-map-wrap tabcontent" id="busan">
-                <div class="location">
-                    <div class="location-title">부산지사</div>
-                    <div class="location-detail">
-                        <p><span>주소</span> 부산광역시 해운대구 APEC로 17, 4101호 (우동, 센텀리더스마크)</p>
-                        <div class="location-contact">
-                            <p><span>전화</span> 051-755-4970</p>
-                            <p><span>Fax</span> 051-745-8969</p>
-                            <p><span>문의</span> contact@sorin.co.kr</p>
-                        </div>
-                    </div>
+                <div class="location-map-wrap tabcontent" id="busan">
+                  <div class="location">
+                      <div class="location-title">부산지사</div>
+                      <div class="location-detail">
+                          <p><span>주소</span> 부산광역시 해운대구 APEC로 17, 4101호 (우동, 센텀리더스마크)</p>
+                          <div class="location-contact">
+                              <p><span>전화</span> 051-755-4970</p>
+                              <p><span>Fax</span> 051-745-8969</p>
+                              <p><span>문의</span> contact@sorin.co.kr</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.6266165265565!2d129.12984361283588!3d35.165931672644355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568937233f688d5%3A0xde077fb8752c899!2z7IS87YWA66as642U7Iqk66eI7YGsIENlbnR1bSBMZWFkZXJzIE1hcms!5e0!3m2!1sko!2skr!4v1712540894482!5m2!1sko!2skr" width="100%" height="520" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
                 </div>
-                <div class="map">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.6266165265565!2d129.12984361283588!3d35.165931672644355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568937233f688d5%3A0xde077fb8752c899!2z7IS87YWA66as642U7Iqk66eI7YGsIENlbnR1bSBMZWFkZXJzIE1hcms!5e0!3m2!1sko!2skr!4v1712540894482!5m2!1sko!2skr" width="100%" height="520" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
+
+
               </div>
             </div>
         </div>
