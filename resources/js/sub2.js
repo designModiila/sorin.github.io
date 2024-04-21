@@ -244,6 +244,12 @@ $(document).ready(function() {
 
 
 
+    $('.more-btn').click(function() {
+        $(this).toggleClass('active');
+        $('.view-fulltext').toggle();
+      });
+    
+
 });
 
 

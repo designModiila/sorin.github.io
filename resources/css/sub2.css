@@ -483,7 +483,7 @@
 .sub08 .section02 .form-wrap .btn-toggle {font-size: 16px; font-weight: 700; display: flex; gap: 5px; border-bottom: 1px solid #323232;}
 .sub08 .section02 .form-wrap .submit-btn {margin-top: 30px; padding: 14px 50px; border-radius: 999px; border: 1px solid #323232; font-size: 18px; font-weight: 700; color: #323232; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out;}
 .sub08 .section02 .form-wrap .submit-btn:hover {background-color: #6f97e8; border: 1px solid #fff; color: #fff;}
-.sub08 .section02 .view-fulltext {width: 100%; margin-top: 30px; padding: 20px; font-size: 15px; font-weight: 400; line-height: 20px; border-radius: 10px; background-color: #F7F7F7;}
+.sub08 .section02 .view-fulltext {display: none; width: 100%; margin-top: 30px; padding: 20px; font-size: 15px; font-weight: 400; line-height: 20px; border-radius: 10px; background-color: #F7F7F7;}
 .sub08 .section02 .view-fulltext p {word-break: break-all;}
 .sub08 .section02 .view-fulltext p .em {font-weight: 600;}
 
