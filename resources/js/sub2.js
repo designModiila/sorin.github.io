@@ -9,7 +9,6 @@ $(document).ready(function() {
                   .to(".main-title-wrap", {color: "#fff", ease: "power1.inOut"}, "<")
                   .to(".main-category", {color: "#fff", ease: "power1.inOut"}, "<");
 
-<<<<<<< HEAD
 //글자 애니메이션
 
 const targets = gsap.utils.toArray(".splitani");
@@ -35,7 +34,6 @@ targets.forEach((target) => {
         }
     });
 });
-=======
         ScrollTrigger.create({
             animation: mainVisual,
             trigger: ".section01",
@@ -45,7 +43,6 @@ targets.forEach((target) => {
             anticipatePin: 1,
             markers: false
         });
->>>>>>> 77dc049ce7db1311b7e1513b5c644597abec1483
 
         // Detailed element animations
         const details = document.querySelectorAll('.detail');
@@ -247,7 +244,6 @@ function layer_open(no) {
     $('body').addClass('noScroll');
 };
 
-<<<<<<< HEAD
 function layer_close(){
   $(".world-layer, .layer-dimm").removeClass("open");
   $('body').removeClass('noScroll');
@@ -320,10 +316,8 @@ function openBenefit(evt, benefit) {
 
 document.getElementById("defaultOpen").click();
 
-=======
 // Layer closing function
 function layer_close() {
     $(".world-layer, .layer-dimm").removeClass("open");
     $('body').removeClass('noScroll');
 };
->>>>>>> 77dc049ce7db1311b7e1513b5c644597abec1483

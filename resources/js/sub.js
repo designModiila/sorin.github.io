@@ -21,7 +21,7 @@ $(document).ready(function(){
              trigger: target,
              start: "top 80%",
              end: "bottom bottom",
-             markers: true,
+             markers: false,
          }
      });
  });
@@ -292,13 +292,10 @@ var swiper = new Swiper("#js-swiper-consulting", {
   document.getElementById("defaultOpen").click();
 
 
-<<<<<<< HEAD
 
  
-=======
   const tl = gsap.timeline({delay: 0.7});
   tl.to('.text-ani', {duration:0.5, y:0, stagger: 0.3});
->>>>>>> 77dc049ce7db1311b7e1513b5c644597abec1483
 
 
 
