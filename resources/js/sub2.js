@@ -17,7 +17,52 @@ $(document).ready(function() {
         pin: true,
         anticipatePin: 1,
         //markers: false
+        onLeave: () => section02Pin()
+
     });
+
+    function section02Pin() {
+    ScrollTrigger.create({
+        trigger: ".sub06 .section02",
+        start: "top top",
+        end: "+=300%",  // Continue the pin for 300% of the viewport height
+        trigger: ".sub06 .section02",
+        pin: true, // Pin the .section02 element
+        animation: imageChange,
+        scrub: true
+        //onEnter: () => animateCards(gsap.utils.toArray('.content-wrap .content-card'))
+    });
+}
+
+gsap.set('.content-wrap .content-card', { zIndex: (i, target, targets) => targets.length - i });
+
+const imageChange = gsap.timeline({ paused: true });
+
+imageChange
+  .to('body', { duration: 3.0 }, 0)
+  .to('.content-card.content-card-01', { duration: 0.25, autoAlpha: 0 }, 1.0)
+  .to('.content-card.content-card-02', { duration: 0.25, autoAlpha: 1 }, 1.0)
+  .to('.content-card.content-card-02', { duration: 0.25, autoAlpha: 0 }, 2.0)
+  .to('.content-card.content-card-03', { duration: 0.25, autoAlpha: 1 }, 2.0);
+
+
+gsap.utils.toArray(".sub06 .section02 .split").forEach(target => {
+    let SplitClient = new SplitType(target, { type: "chars" });
+    let chars = SplitClient.chars;
+
+    chars.forEach((char, index) => {
+      ScrollTrigger.create({
+        trigger: char,
+        start: "top center",
+        end: "+=400",
+        onUpdate: self => {
+          const progress = self.progress;
+          const color = progress < (index + 1) / chars.length ? "#ffffff" : "#329BFA";
+          gsap.to(char, { color: color, duration: 0.5});
+        }
+      });
+    });
+  });
 
 
     //글자 애니메이션
@@ -266,6 +311,8 @@ function layer_close() {
     $(".world-layer, .layer-dimm").removeClass("open");
     $('body').removeClass('noScroll');
 };
+
+
 
 
 // $(document).ready(function() {
