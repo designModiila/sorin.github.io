@@ -30,7 +30,7 @@ targets.forEach((target) => {
             trigger: target,
             start: "top 80%",
             end: "bottom bottom",
-            markers: true,
+            markers: false,
         }
     });
 });
@@ -44,49 +44,54 @@ targets.forEach((target) => {
             markers: false
         });
 
-        // Detailed element animations
-        const details = document.querySelectorAll('.detail');
-        details.forEach((detail, index) => {
-            ScrollTrigger.create({
-                trigger: detail,
-                id: index + 1,
-                start: 'top 55%',
-                end: () => `+=${detail.clientHeight + 100}`,
-                toggleActions: 'play reverse none reverse',
-                toggleClass: {targets: detail, className: "is-active"},
-                ease: "power1.inOut",
-                markers: false
+
+        const isMobile = window.innerWidth < 768;
+
+        if (!isMobile) {
+
+            const details = document.querySelectorAll('.detail');
+            details.forEach((detail, index) => {
+                ScrollTrigger.create({
+                    trigger: detail,
+                    id: index + 1,
+                    start: 'top 70%',
+                    end: () => `+=${detail.clientHeight + 100}`,
+                    toggleActions: 'play reverse none reverse',
+                    toggleClass: {targets: detail, className: "is-active"},
+                    ease: "power1.inOut",
+                    markers: false
+                });
             });
-        });
-
-        // Photos section animation
-        const photos = gsap.timeline({
-            scrollTrigger: {
+        
+            // Photos section animation
+            const photos = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".photos",
+                    start: "top 50%",
+                    pin: true,
+                    scrub: 1,
+                    ease: "power1.inOut",
+                    end: "+=870 10%",
+                    markers: false,
+                    toggleActions: "play reverse none reverse"
+                }
+            });
+        
+            const mission = gsap.timeline();
+            mission.to(".photo2", {opacity: 1, delay: 1.5})
+                   .to(".photo3", {opacity: 1, delay: 0.3});
+        
+            ScrollTrigger.create({
+                animation: mission,
                 trigger: ".photos",
-                start: "top 50%",
-                pin: true,
+                start: "top 70%",
+                end: "+=760 top",
                 scrub: 1,
-                ease: "power1.inOut",
-                end: "+=570 20%",
-                markers: false,
-                toggleActions: "play reverse none reverse"
-            }
-        });
-
-        const mission = gsap.timeline();
-        mission.to(".photo2", {opacity: 1, delay: .5})
-               .to(".photo3", {opacity: 1});
-
-        ScrollTrigger.create({
-            animation: mission,
-            trigger: ".photos",
-            start: "top 50%",
-            end: "+=450 20%",
-            scrub: 1,
-            anticipatePin: 1,
-            pinSpace: 0,
-            markers: false
-        });
+                anticipatePin: 1,
+                pinSpace: 0,
+                markers: true
+            });
+        }
     
 
     // General content animations
