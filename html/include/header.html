@@ -7,7 +7,7 @@
   </div>
   <div class="gnb-wrap">
     <ul class="gnb">
-      <li class="company"><a href="#none" class="depth1">기업소개</a>
+      <li class="company"><a href="../sub/sub01_company.html" class="depth1">기업소개</a>
         <div class="depth2 company-con">
           <ul>
             <li><a href="../sub/sub01_company.html">개요</a></li>
@@ -30,7 +30,7 @@
       </li>
       <li><a href="../consulting/view.html" class="depth1">Consulting Business</a>
       </li>
-      <li class="recruit"><a href="#none" class="depth1">인재채용</a>
+      <li class="recruit"><a href="../sub/sub06_recruit.html" class="depth1">인재채용</a>
         <div class="depth2 recruit-con">
           <ul>
             <li><a href="../sub/sub06_recruit.html">인재상</a></li>
@@ -105,35 +105,68 @@
 <!-- <div class="background-b"></div> -->
 <script>
 
+// $(document).ready(function() {
+//     // Restore active state from storage
+//     var activePath = localStorage.getItem('activePath');
+//     if (activePath) {
+//         $('.gnb a[href="' + activePath + '"]').addClass('active').closest('li').addClass('active');
+//     }
+    
+//     $('.gnb > li > a.depth1').click(function(e) {
+//         $('.gnb > li').removeClass('active'); 
+//         $(this).parent('li').addClass('active'); 
+//         localStorage.setItem('activePath', $(this).attr('href')); 
+//         window.location.href = $(this).attr('href'); 
+//     });
+  
+//     $('.gnb > li .depth2 ul li a').click(function(e) {
+//         e.preventDefault(); 
+//         $('.gnb li, .gnb li a').removeClass('active'); 
+//         $(this).addClass('active').closest('.gnb > li').addClass('active');
+//         localStorage.setItem('activePath', $(this).attr('href')); 
+//         window.location.href = $(this).attr('href'); 
+//     });
+//     $('.gnb .depth2 ul li.active').each(function() {
+//         $(this).closest('.gnb > li').addClass('active');
+//     });
+
+// });
 $(document).ready(function() {
     // Restore active state from storage
     var activePath = localStorage.getItem('activePath');
     if (activePath) {
         $('.gnb a[href="' + activePath + '"]').addClass('active').closest('li').addClass('active');
     }
+    
+    // Check if 'main' class is present on the body
+    if ($('body').hasClass('main')) {
+        $('.gnb .active').removeClass('active');
+    }
 
-    // Event handler for main links
+    // Click event for depth1 links
     $('.gnb > li > a.depth1').click(function(e) {
-        $('.gnb > li').removeClass('active'); // Remove active from all main links
-        $(this).parent('li').addClass('active'); // Add active to current main item
-        localStorage.setItem('activePath', $(this).attr('href')); // Save path
+        $('.gnb > li').removeClass('active'); 
+        $(this).parent('li').addClass('active'); 
+        localStorage.setItem('activePath', $(this).attr('href')); 
+        window.location.href = $(this).attr('href'); 
+    });
+  
+    // Click event for depth2 links
+    $('.gnb > li .depth2 ul li a').click(function(e) {
+        e.preventDefault(); 
+        $('.gnb li, .gnb li a').removeClass('active'); 
+        $(this).addClass('active').closest('.gnb > li').addClass('active');
+        localStorage.setItem('activePath', $(this).attr('href')); 
         window.location.href = $(this).attr('href'); 
     });
 
-    // Event handler for sub-menu links
-    $('.gnb > li .depth2 ul li a').click(function(e) {
-        e.preventDefault(); // Prevent default link behavior
-        $('.gnb li, .gnb li a').removeClass('active'); // Remove active from all items
-        $(this).addClass('active').closest('.gnb > li').addClass('active'); // Add active to current sub-menu item and its parent
-        localStorage.setItem('activePath', $(this).attr('href')); // Save path
-        window.location.href = $(this).attr('href'); // Navigate to the link
-    });
+    // Maintain active state on page reload for nested items
     $('.gnb .depth2 ul li.active').each(function() {
-        // If a submenu item is active, add 'active' class to its parent '.gnb > li'
         $(this).closest('.gnb > li').addClass('active');
     });
 
 });
+
 
 
 

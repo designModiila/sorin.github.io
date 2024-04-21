@@ -1,7 +1,73 @@
 
 $(document).ready(function(){
- //글자 애니메이션
 
+
+    // 탭컨텐츠 관련
+    $(".tabcontent").hide();
+    $("ul.tabs li:first").addClass("active").show();
+    $(".tabcontent:first").show();
+   
+    $("ul.tabs li").click(function() {
+        $("ul.tabs li").removeClass("active");
+        $(this).addClass("active");
+        $(".tabcontent").hide();
+   
+        var activeTab = $(this).find("a").attr("href");
+        $(activeTab).fadeIn();
+        return false;
+    });
+
+
+    
+const cont = gsap.utils.toArray('.cont');
+gsap.set(cont,{y: '25%', opacity: 0})
+cont.forEach(cont => {
+  gsap.to(cont,{
+    y: 0,
+    autoAlpha: 1,
+    duration: 0.5,
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: cont,
+      start: 'top 70%',
+      toggleActions:"restart none none reverse",
+    }
+  })
+});
+
+    //   if ($(".content.consulting").length > 0) {
+  //     $(".consulting .tabcontent").hide();
+  //     $(".consulting ul.tabs li:first").addClass("active").show();
+  //     $(".consulting .tabcontent:first").css('display', 'flex').show();
+
+  //     $(".consulting ul.tabs li").click(function() {
+  //         $(".consulting ul.tabs li").removeClass("active");
+  //         $(this).addClass("active");
+  //         $(".consulting .tabcontent").hide();
+
+  //         var activeTab = $(this).find("a").attr("href");
+  //         $(activeTab).css('display', 'flex').hide().fadeIn();
+  //         return false;
+  //     });
+  // } else {
+  //     $(".tabcontent").hide();
+  //     $("ul.tabs li:first").addClass("active").show();
+  //     $(".tabcontent:first").show();
+     
+  //     $("ul.tabs li").click(function() {
+  //         $("ul.tabs li").removeClass("active");
+  //         $(this).addClass("active");
+  //         $(".tabcontent").hide();
+     
+  //         var activeTab = $(this).find("a").attr("href");
+  //         $(activeTab).fadeIn();
+  //         return false;
+  //     });
+
+  // }
+
+
+ //글자 애니메이션
  const targets = gsap.utils.toArray(".splitani");
 
  targets.forEach((target) => {
@@ -26,37 +92,24 @@ $(document).ready(function(){
      });
  });
 
- const cont = gsap.utils.toArray('.cont');
-gsap.set(cont,{y: '25%', opacity: 0})
-cont.forEach(cont => {
-  gsap.to(cont,{
-    y: 0,
-    autoAlpha: 1,
-    duration: 0.5,
-    stagger: 0.3,
-    scrollTrigger: {
-      trigger: cont,
-      start: 'top 70%',
-      toggleActions:"restart none none reverse",
-    }
-  })
-});
+//  const cont = gsap.utils.toArray('.cont');
+// gsap.set(cont,{y: '25%', opacity: 0})
+// cont.forEach(cont => {
+//   gsap.to(cont,{
+//     y: 0,
+//     autoAlpha: 1,
+//     duration: 0.5,
+//     stagger: 0.3,
+//     scrollTrigger: {
+//       trigger: cont,
+//       start: 'top 70%',
+//       toggleActions:"restart none none reverse",
+//     }
+//   })
+// });
 
 
 
-  $(".tabcontent").hide();
-  $("ul.tabs li:first").addClass("active").show();
-  $(".tabcontent:first").show();
-
-  $("ul.tabs li").click(function() {
-      $("ul.tabs li").removeClass("active");
-      $(this).addClass("active");
-      $(".tabcontent").hide();
-
-      var activeTab = $(this).find("a").attr("href");
-      $(activeTab).fadeIn();
-      return false;
-  });
 
   var swiper = new Swiper(".swiper-group", {
     //   loop: true,
@@ -272,24 +325,24 @@ var swiper = new Swiper("#js-swiper-consulting", {
 
   // 컨설팅 포트폴리오
 
-  function openPortfolio(evt, portfolio) {
-    var i, tabcontent, tablinks;
+  // function openPortfolio(evt, portfolio) {
+  //   var i, tabcontent, tablinks;
   
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
+  //   tabcontent = document.getElementsByClassName("tabcontent");
+  //   for (i = 0; i < tabcontent.length; i++) {
+  //     tabcontent[i].style.display = "none";
+  //   }
   
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
+  //   tablinks = document.getElementsByClassName("tablinks");
+  //   for (i = 0; i < tablinks.length; i++) {
+  //     tablinks[i].className = tablinks[i].className.replace(" active", "");
+  //   }
   
-    document.getElementById(portfolio).style.display = "flex";
-    evt.currentTarget.className += " active";
-  }
+  //   document.getElementById(portfolio).style.display = "flex";
+  //   evt.currentTarget.className += " active";
+  // }
   
-  document.getElementById("defaultOpen").click();
+  // document.getElementById("defaultOpen").click();
 
 
 
@@ -484,26 +537,177 @@ var swiper = new Swiper(".backup-slide", {
 
   // 하드웨어 지금 인기있는 제품 
 
-  function openProduct(evt, companyName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
+  // function openProduct(evt, companyName) {
+  //   // Declare all variables
+  //   var i, tabcontent, tablinks;
   
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
+  //   // Get all elements with class="tabcontent" and hide them
+  //   tabcontent = document.getElementsByClassName("tabcontent");
+  //   for (i = 0; i < tabcontent.length; i++) {
+  //     tabcontent[i].style.display = "none";
+  //   }
   
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
+  //   // Get all elements with class="tablinks" and remove the class "active"
+  //   tablinks = document.getElementsByClassName("tablinks");
+  //   for (i = 0; i < tablinks.length; i++) {
+  //     tablinks[i].className = tablinks[i].className.replace(" active", "");
+  //   }
   
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(companyName).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
+  //   // Show the current tab, and add an "active" class to the button that opened the tab
+  //   document.getElementById(companyName).style.display = "block";
+  //   evt.currentTarget.className += " active";
+  // }
   // Get the element with id="defaultOpen" and click on it
  //document.getElementById("defaultOpen").click();
+
+
+
+
+
+
+
+
+  //글자 애니메이션
+
+  // const targets = gsap.utils.toArray(".splitani");
+
+  // targets.forEach((target) => {
+  //     let SplitClient = new SplitType(target, { type: "lines, words, chars" });
+  //     let lines = SplitClient.lines;
+  //     let words = SplitClient.words;
+  //     let chars = SplitClient.chars;
+  
+  //     gsap.from(lines, {
+  //         delay: 0.7,
+  //         yPercent: 100,
+  //         opacity: 0,
+  //         duration: 0.5,
+  //         ease: "circ.out",
+  //         stagger: 0.3,
+  //         scrollTrigger: {
+  //             trigger: target,
+  //             start: "top 80%",
+  //             end: "bottom bottom",
+  //             markers: true,
+  //         }
+  //     });
+  // });
+
+
+  // infra business
+
+// function swiperInit(swiper) {
+//   const total = swiper.slides.length - swiper.loopedSlides * 2;
+//   const contentIndex = (swiper.activeIndex - swiper.loopedSlides) % total;
+
+//   const content = contentFullsizeEls[contentIndex];
+//   if (!content) return;
+
+//   content.classList.remove("hero__content--hidden");
+//   content.classList.add("hero__content--top");
+//   state.topContent = content;
+// }
+
+// // 인프라비즈니스 슬라이드
+// var swiper1 = new Swiper("#js-swiper-infra", {
+//   slidesPerView: 4,
+//   preventInteractionOnTransition: true,
+//   loopAddBlankSlides: false,
+//   speed: 1000,
+//   duration: 1000,
+//   spaceBetween: 60,
+//   centeredSlides: true,
+//   mousewheel:true,
+//   breakpoints: {
+//     300: {
+//         slidesPerView: 3,
+//         spaceBetween: 60,
+//     },
+//     768: {
+//       slidesPerView: 3,
+//       spaceBetween: 60,
+//   },
+//     1024: {
+//       slidesPerView: 3,
+//       spaceBetween: 40,
+//     },
+//     1280: {
+//         slidesPerView: 4,
+//         spaceBetween: 60,
+//     },
+// },
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true,
+//       },
+
+
+      
+
+  // effect: "coverflow",
+  // grabCursor: true,
+  // centeredSlides: true,
+  // slidesPerView: 3,
+  // coverflowEffect: {
+  //   rotate: 20,
+  //   stretch: 0,
+  //   depth: 350,
+  //   modifier: 1,
+  //   slideShadows: true
+  // },
+  // pagination: {
+  //         el: ".swiper-pagination",
+  //         clickable: true,
+  //       },
+// });
+
+// 하드웨어 제품 슬라이드
+// const swiper2 = new Swiper('#js-swiper-hardware', {
+//   loop: true,
+//   slidesPerView: 2,
+//   spaceBetween: 230,
+//   centeredSlides: true,
+//   autoplay: {
+//     delay: 5000,
+//     // disableOnInteraction: true
+//   },
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+//   observer: true,
+//   observeParents: true,
+//   breakpoints: {
+//     300: {
+//         slidesPerView: 1.5,
+//         spaceBetween: 80,
+//     },
+//     768: {
+//       slidesPerView: 2,
+//       spaceBetween: 230,
+//   },
+// },
+// });
+
+
+  // 하드웨어 솔루션
+
+//   function openHardware(evt, hardware) {
+//     var i, tabcontent, tablinks;
+  
+//     tabcontent = document.getElementsByClassName("tabcontent");
+//     for (i = 0; i < tabcontent.length; i++) {
+//       tabcontent[i].style.display = "none";
+//     }
+  
+//     tablinks = document.getElementsByClassName("tablinks");
+//     for (i = 0; i < tablinks.length; i++) {
+//       tablinks[i].className = tablinks[i].className.replace(" active", "");
+//     }
+  
+//     document.getElementById(hardware).style.display = "block";
+//     evt.currentTarget.className += " active";
+//   }
+// document.getElementById("defaultOpen").click();
+
 

@@ -276,7 +276,7 @@ ScrollTrigger.create({
   pin: true,
   anticipatePin: 1,
   toggleActions: "play none none none",
-  markers: true
+  //markers: true
 });
 
 ScrollTrigger.create({
@@ -325,7 +325,7 @@ ScrollTrigger.create({
               trigger: target,
               start: "top 80%",
               end: "bottom bottom",
-              markers: true,
+              //markers: true,
           }
       });
   });
