@@ -260,9 +260,9 @@ setTimeout(function () {
 
 
 const businessItem = gsap.timeline();
-businessItem.from(".business-item-01", { scale: 0.3, y:-100})
+businessItem.from(".business-item-01", { scale: 0.3, y:-100, duration:1, ease: "power1.inOut" })
   .to(".business-item-01 .item-text-wrap", { opacity: 1 })
-  .to(".business-item-01 .item-icon-wrap", { opacity: 1 })
+  .to(".business-item-01 .item-icon-wrap", { opacity: 1})
  
 const businessItemHeight = document.querySelector('.business-item-wrap').offsetHeight;
 
@@ -271,12 +271,12 @@ ScrollTrigger.create({
   trigger: ".business-item-01-wrap",
   start: "top top",
   // end: "bottom bottom",
-  end: () => `+=${businessItemHeight}`,
+  end: () => `+=${businessItemHeight} + 30`,
   // scrub: true,
   pin: true,
   anticipatePin: 1,
   toggleActions: "play none none none",
-  // markers: true
+  markers: true
 });
 
 ScrollTrigger.create({
@@ -304,57 +304,45 @@ ScrollTrigger.create({
 
 
 
-// snap
-// const panel = document.querySelector(".business-item-wrap");
-// let panels = gsap.utils.toArray(".business-item-wrap");
-// let tops = panels.map(panel => ScrollTrigger.create({trigger: panel, start: "top top"}));
+  //글자 애니메이션
 
-// panels.forEach((panel, i) => {
-//     ScrollTrigger.create({
-//         trigger: panel,
-//         start: () => panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom",
-//         pin: true, 
-//         pinSpacing: false 
-//     });
-// });
+  const targets = gsap.utils.toArray(".splitani");
 
-// ScrollTrigger.create({
-//     snap: {
-//         snapTo: (progress, self) => {
-//             let panelStarts = tops.map(st => st.start), 
-//             snapScroll = gsap.utils.snap(panelStarts, self.scroll()); 
-//             return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll); 
-//         },
-//         duration: 0.5
-//     }
-// });
-
-
-
-
-// businessItem.eventCallback("onComplete", () => {
-//   const panel1 = document.querySelector(".business-item-01")
-//     ScrollTrigger.create({
-//       yPercent: -100,
-//       trigger: ".business-item-02",
-//       start: "top top",
-//       pin: ".business-item-01-wrap",
-//       // pinSpacing: false,
-//       markers: true
-//     });
-// });
-
-// businessItem.eventCallback("onComplete", () => {
-//   const panel1 = document.querySelector(".business-item-01")
-//     ScrollTrigger.create({
-//       trigger: panel1,
-//       start: "top top",
-//       pin: ".business-item-01-wrap",
-//       // pinSpacing: false,
-//       markers: true
-//     });
-// });
+  targets.forEach((target) => {
+      let SplitClient = new SplitType(target, { type: "lines, words, chars" });
+      let lines = SplitClient.lines;
+      let words = SplitClient.words;
+      let chars = SplitClient.chars;
+  
+      gsap.from(lines, {
+          delay: 0.7,
+          yPercent: 100,
+          opacity: 0,
+          duration: 0.5,
+          ease: "circ.out",
+          stagger: 0.3,
+          scrollTrigger: {
+              trigger: target,
+              start: "top 80%",
+              end: "bottom bottom",
+              markers: true,
+          }
+      });
+  });
 
 
-
-
+const cont = gsap.utils.toArray('.cont');
+gsap.set(cont,{y: '25%', opacity: 0})
+cont.forEach(cont => {
+  gsap.to(cont,{
+    y: 0,
+    autoAlpha: 1,
+    duration: 0.5,
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: cont,
+      start: 'top 70%',
+      toggleActions:"restart none none reverse",
+    }
+  })
+});

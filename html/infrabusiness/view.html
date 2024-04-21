@@ -29,9 +29,10 @@
     <script src="../../resources/js/vendor/GSAP/scrollTrigger.min.js"></script>
     <script src="../../resources/js/vendor/odometer/odometer.min.js"></script>
     <script src="../../resources/js/vendor/odometer/odometer-theme-default.css"></script>
-    
+    <script src="https://unpkg.com/split-type"></script>
+
     <script src="../../resources/js/common.js"></script>
-    <script defer src="../../resources/js/sub.js"></script>
+    <!-- <script defer src="../../resources/js/sub.js"></script> -->
   </head>
   
   <body>
@@ -44,14 +45,10 @@
           <div class="inner">
             <div class="main-text">
               <div class="main-title-wrap">
-                <div class="main-title"><div class="text-ani">Infra </div></div>
-                <div class="main-title"><div class="text-ani">Business</div></div>
+                <div class="main-title"><p class="splitani">Infra Business</p></div>
               </div> 
               <div class="main-desc">
-                <div class="text-ani">IT 인프라 솔루션 및 하드웨어의 공급부터 설치까지</div>
-              </div>
-              <div class="main-desc">
-                <div class="text-ani">최적의 IT 환경을 구축해드립니다</div>   
+                <p class="splitani">IT 인프라 솔루션 및 하드웨어의 공급부터 설치까지 <br>최적의 IT 환경을 구축해드립니다</p>
               </div>
             </div>
           </div>
@@ -60,12 +57,11 @@
         <div class="section02">
           <div class="content-wrap">
             <div class="heading-wrap">
-              <div class="main-heading-1"><div class="text-ani-02">인프라 솔루션</div></div>
+              <div class="main-heading-1"><p class="splitani">인프라 솔루션</p></div>
               <div class="main-heading-sub-wrap">
-                <div class="main-heading-sub"><div class="text-ani-02">안정적인 비즈니스 서비스 보장을 위해</div></div>
-                <div class="main-heading-sub"><div class="text-ani-02">고객 환경과 요구사항에 적합한 IT인프라를 제공합니다.</div></div>
+                <div class="main-heading-sub"><p class="splitani">안정적인 비즈니스 서비스 보장을 위해 <br>고객 환경과 요구사항에 적합한 IT인프라를 제공합니다.</p></div>
               </div>
-              <a href="../infrabusiness/infrabusiness_sub01.html"><img src="../../resources/images/sub/infrabusiness_02_btn.png" alt=""></a>
+              <a class="cont" href="../infrabusiness/infrabusiness_sub01.html"><img src="../../resources/images/sub/infrabusiness_02_btn.png" alt=""></a>
             </div>
             <div class="swiper-hidden">
             <div class="swiper" id="js-swiper-infra">
@@ -123,18 +119,16 @@
         </div>
 
         <div class="section03">
-          <div class="main-heading-1 inner"><div class="text-ani-02">하드웨어 솔루션</div></div>
-          <div class="tabs-wrap inner">
-            <div class="tabs">
-              <div class="tab active" data-tab-target="#Servers">Servers</div>
-                <div class="tab" data-tab-target="#Storage">Storage</div>
-            </div>
+          <div class="main-heading-1 inner"><p class="splitani">하드웨어 솔루션</p></div>
+          <div class="tabs-wrap inner cont">
+            <ul class="tabs">
+              <li class="tab tablinks" onclick="openHardware(event, 'servers')" id="defaultOpen"><button>Servers</button></li>
+              <li class="tab tablinks" onclick="openHardware(event, 'storage')"><button>Storage</button></li>
+            </ul>
           </div>
-          <div class="tab-content-wrap">
-
-            <div id="Servers" class="content-wrap">
+          <div class="tab-content-wrap tabcontent cont" id="servers">
+            <div class="content-wrap">
               <div class="swiper" id="js-swiper-hardware">
-                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                   <!-- Slide 1 -->
                   <div class="swiper-slide">  
@@ -167,14 +161,49 @@
                 </div>
               </div>
             </div>
-
+          </div>
+          <div class="tab-content-wrap tabcontent" id="storage">
+            <div class="content-wrap">
+              <div class="swiper" id="js-swiper-hardware">
+                <div class="swiper-wrapper">
+                  <!-- Slide 1 -->
+                  <div class="swiper-slide">  
+                    <div class="swiper-image">
+                      <img class="img-logo" src="../../resources/images/sub/infrabusiness_03_logo01.png" alt="">
+                      <img class="img-product" src="../../resources/images/sub/infrabusiness_03_prod01.png" alt="">
+                    </div>
+                    <div class="slide-label">DELL Poweredge 시리즈</div>
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="swiper-slide">  
+                    <div class="swiper-image">
+                      <img class="img-logo" src="../../resources/images/sub/infrabusiness_03_logo02.png" alt="">
+                      <img class="img-product" src="../../resources/images/sub/infrabusiness_03_prod02.png" alt="">
+                    </div>
+                    <div class="slide-label">DELL Poweredge 시리즈</div>
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="swiper-slide">  
+                    <div class="swiper-image">
+                      <img class="img-logo" src="../../resources/images/sub/infrabusiness_03_logo03.png" alt="">
+                      <img class="img-product" src="../../resources/images/sub/infrabusiness_03_prod03.png" alt="">
+                    </div>
+                    <div class="slide-label">DELL Poweredge 시리즈</div>
+                  </div>
+                </div>
+                <div class="swiper-button-wrap">                    
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="section04">
-          <div class="main-heading-1 inner"><div class="text-ani-02">서린정보기술</div></div>
-          <div class="main-heading-1 inner"><div class="text-ani-02">Official Global Partners Of</div></div>
-          <div class="content-wrap">
+          <div class="main-heading-1 inner"><p class="splitani">서린정보기술</p></div>
+          <div class="main-heading-1 inner"><p class="splitani">Official Global Partners Of</p></div>
+          <div class="content-wrap cont">
             <div class="logo-box-wrap">
               <div class="logo-box">
                 <div><img src="../../resources/images/sub/infrabusiness_04_logo01.png" alt=""></div>
@@ -200,12 +229,12 @@
         
         <div class="section05">
           <div class="content-wrap inner">
-            <div class="address">서울 본사 : 서울특별시 강남대로 542, 8층(영풍빌딩) 02-519-3600  <br>/  부산 지사 : 부산광역시 해운대구 Apec로 17, 4101호 02-519-3600</div>
-            <div class="address-mo">
+            <div class="address cont">서울 본사 : 서울특별시 강남대로 542, 8층(영풍빌딩) 02-519-3600  <br>/  부산 지사 : 부산광역시 해운대구 Apec로 17, 4101호 02-519-3600</div>
+            <div class="address-mo cont">
               <div class="location">서울 본사</div><div>서울특별시 강남대로 542, 8층(영풍빌딩)</div><div>02-519-3600</div>
               <div class="location location2">부산 지사</div><div>부산광역시 해운대구 Apec로 17, 4101호</div><div>02-519-3600</div>
             </div>
-            <div class="form-wrap">
+            <div class="form-wrap cont">
               <div class="form-group form-name">
                 <div class="form-label">
                   <label>성명
@@ -294,3 +323,166 @@
     <footer id="footerV3" class="footer-v3"></footer>
   </body>
 </html>
+<script>
+
+  //글자 애니메이션
+
+  const targets = gsap.utils.toArray(".splitani");
+
+  targets.forEach((target) => {
+      let SplitClient = new SplitType(target, { type: "lines, words, chars" });
+      let lines = SplitClient.lines;
+      let words = SplitClient.words;
+      let chars = SplitClient.chars;
+  
+      gsap.from(lines, {
+          delay: 0.7,
+          yPercent: 100,
+          opacity: 0,
+          duration: 0.5,
+          ease: "circ.out",
+          stagger: 0.3,
+          scrollTrigger: {
+              trigger: target,
+              start: "top 80%",
+              end: "bottom bottom",
+              markers: true,
+          }
+      });
+  });
+
+
+  // infra business
+
+function swiperInit(swiper) {
+  const total = swiper.slides.length - swiper.loopedSlides * 2;
+  const contentIndex = (swiper.activeIndex - swiper.loopedSlides) % total;
+
+  const content = contentFullsizeEls[contentIndex];
+  if (!content) return;
+
+  content.classList.remove("hero__content--hidden");
+  content.classList.add("hero__content--top");
+  state.topContent = content;
+}
+
+// 인프라비즈니스 슬라이드
+var swiper1 = new Swiper("#js-swiper-infra", {
+  slidesPerView: 4,
+  preventInteractionOnTransition: true,
+  loopAddBlankSlides: false,
+  speed: 1000,
+  duration: 1000,
+  spaceBetween: 60,
+  centeredSlides: true,
+  mousewheel:true,
+  breakpoints: {
+    300: {
+        slidesPerView: 3,
+        spaceBetween: 60,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 60,
+  },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    1280: {
+        slidesPerView: 4,
+        spaceBetween: 60,
+    },
+},
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      },
+
+
+      
+
+  // effect: "coverflow",
+  // grabCursor: true,
+  // centeredSlides: true,
+  // slidesPerView: 3,
+  // coverflowEffect: {
+  //   rotate: 20,
+  //   stretch: 0,
+  //   depth: 350,
+  //   modifier: 1,
+  //   slideShadows: true
+  // },
+  // pagination: {
+  //         el: ".swiper-pagination",
+  //         clickable: true,
+  //       },
+});
+
+// 하드웨어 제품 슬라이드
+const swiper2 = new Swiper('#js-swiper-hardware', {
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 230,
+  centeredSlides: true,
+  autoplay: {
+    delay: 5000,
+    // disableOnInteraction: true
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  observer: true,
+  observeParents: true,
+  breakpoints: {
+    300: {
+        slidesPerView: 1.5,
+        spaceBetween: 80,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 230,
+  },
+},
+});
+
+
+  // 하드웨어 솔루션
+
+  function openHardware(evt, hardware) {
+    var i, tabcontent, tablinks;
+  
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+  
+    document.getElementById(hardware).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+document.getElementById("defaultOpen").click();
+
+
+const cont = gsap.utils.toArray('.cont');
+gsap.set(cont,{y: '25%', opacity: 0})
+cont.forEach(cont => {
+  gsap.to(cont,{
+    y: 0,
+    autoAlpha: 1,
+    duration: 0.5,
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: cont,
+      start: 'top 70%',
+      toggleActions:"restart none none reverse",
+    }
+  })
+});
+
+</script>

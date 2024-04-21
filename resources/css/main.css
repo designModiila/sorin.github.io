@@ -39,7 +39,6 @@
 
 .main .main-heading-1 {text-align: left; font-weight: 800; font-size: 48px; line-height: 68px; letter-spacing: -0.02em; color: var(--color-black); overflow: hidden;}
 .main .main-heading-sub {margin-top: 0; text-align: left; font-weight: 400; font-size: 24px; line-height: 32px; letter-spacing: -0.02em; color: var(--color-black); overflow: hidden;}
-.main .text-ani {transform: translateY(100%);}
 
 .main .section-count {padding: 160px 0 230px; max-width: 1920px; margin: 0 auto; background: url(../../resources/images/main/main_count_bg.png)no-repeat 0% 120%;}
 .main .heading-sub-count-wrap {display: flex; flex-direction: row-reverse; margin-top: 50px;}

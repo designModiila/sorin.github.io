@@ -1,6 +1,31 @@
 
 $(document).ready(function(){
 
+//글자 애니메이션
+
+const targets = gsap.utils.toArray(".splitani");
+
+targets.forEach((target) => {
+    let SplitClient = new SplitType(target, { type: "lines, words, chars" });
+    let lines = SplitClient.lines;
+    let words = SplitClient.words;
+    let chars = SplitClient.chars;
+
+    gsap.from(lines, {
+        delay: 0.7,
+        yPercent: 100,
+        opacity: 0,
+        duration: 0.5,
+        ease: "circ.out",
+        stagger: 0.3,
+        scrollTrigger: {
+            trigger: target,
+            start: "top 80%",
+            end: "bottom bottom",
+            markers: true,
+        }
+    });
+});
 
 //메인 서브 비주얼
 
@@ -308,3 +333,4 @@ function openBenefit(evt, benefit) {
 }
 
 document.getElementById("defaultOpen").click();
+

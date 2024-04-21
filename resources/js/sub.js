@@ -1,5 +1,47 @@
 
 $(document).ready(function(){
+ //글자 애니메이션
+
+ const targets = gsap.utils.toArray(".splitani");
+
+ targets.forEach((target) => {
+     let SplitClient = new SplitType(target, { type: "lines, words, chars" });
+     let lines = SplitClient.lines;
+     let words = SplitClient.words;
+     let chars = SplitClient.chars;
+ 
+     gsap.from(lines, {
+         delay: 0.7,
+         yPercent: 100,
+         opacity: 0,
+         duration: 0.5,
+         ease: "circ.out",
+         stagger: 0.3,
+         scrollTrigger: {
+             trigger: target,
+             start: "top 80%",
+             end: "bottom bottom",
+             markers: true,
+         }
+     });
+ });
+
+ const cont = gsap.utils.toArray('.cont');
+gsap.set(cont,{y: '25%', opacity: 0})
+cont.forEach(cont => {
+  gsap.to(cont,{
+    y: 0,
+    autoAlpha: 1,
+    duration: 0.5,
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: cont,
+      start: 'top 70%',
+      toggleActions:"restart none none reverse",
+    }
+  })
+});
+
 
   var swiper = new Swiper(".swiper-group", {
     //   loop: true,
@@ -134,7 +176,7 @@ $(document).ready(function(){
 });
 
 
-// consulting
+// 컨설팅 비즈니스
 
 var swiper = new Swiper("#js-swiper-consulting", {
     loop: true,
@@ -172,87 +214,60 @@ var swiper = new Swiper("#js-swiper-consulting", {
   });
 
 
+  // 컨설팅 포트폴리오
 
-
-
-
-
-  // class Scrooth {
-  //   constructor({element = window, strength=10, acceleration = 1.2,deceleration = 0.975}={}) {
-  //     this.element = element;
-  //     this.distance = strength;
-  //     this.acceleration = acceleration;
-  //     this.deceleration = deceleration;
-  //     this.running = false;
+  function openPortfolio(evt, portfolio) {
+    var i, tabcontent, tablinks;
   
-  //     this.element.addEventListener('wheel', this.scrollHandler.bind(this), {passive: false});
-  //     this.element.addEventListener('mousewheel', this.scrollHandler.bind(this), {passive: false});
-  //     this.scroll = this.scroll.bind(this);
-  //   }
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
   
-  //   scrollHandler(e) {
-  //     e.preventDefault();
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
   
-  //     if (!this.running) {
-  //       this.top = this.element.pageYOffset || this.element.scrollTop || 0;
-  //       this.running = true;
-  //       this.currentDistance = e.deltaY > 0 ? 0.1 : -0.1;
-  //       this.isDistanceAsc = true;
-  //       this.scroll();
-  //     } else {
-  //       this.isDistanceAsc = false;
-  //       this.currentDistance = e.deltaY > 0 ? this.distance : -this.distance;
-  //     }
-  //   }
+    document.getElementById(portfolio).style.display = "flex";
+    evt.currentTarget.className += " active";
+  }
   
-  //   scroll() {
-  //     if (this.running) {
-  //       this.currentDistance *= this.isDistanceAsc === true ? this.acceleration : this.deceleration;
-  //       Math.abs(this.currentDistance) < 0.1 && this.isDistanceAsc === false ? this.running = false : 1;
-  //       Math.abs(this.currentDistance) >= Math.abs(this.distance) ? this.isDistanceAsc = false : 1;
-  
-  //       this.top += this.currentDistance;
-  //       this.element.scrollTo(0, this.top);
-        
-  //       requestAnimationFrame(this.scroll);
-  //     }
-  //   }
-  // }
-  
-  // const scroll = new Scrooth({
-  //   element: window,
-  //   strength: 25,
-  //   acceleration: 1,
-  //   deceleration: 0.9,
-  // });
+  document.getElementById("defaultOpen").click();
 
 
 
-let tl = gsap.timeline({delay: 0.7});
-tl.to('.text-ani', {duration:0.5, y:0, stagger: 0.3});
+ 
 
 
 
-const textAni02 = gsap.timeline({delay: 0.7});
-textAni02.to('.text-ani-02', {duration:0.5, y:0, stagger: 0.3});
-ScrollTrigger.create({
-  animation: textAni02,
-  trigger: ".consulting .section02",
-  start: "top 80%",
-  end: "bottom bottom",
-  markers: false,
-})
+
+// let tl = gsap.timeline({delay: 0.7});
+// tl.to('.text-ani', {duration:0.5, y:0, stagger: 0.3});
 
 
-const textAni04 = gsap.timeline({delay: 0.7});
-textAni04.to('.text-ani-04', {duration:0.5, y:0, stagger: 0.3});
-ScrollTrigger.create({
-  animation: textAni04,
-  trigger: ".section04",
-  start: "top 80%",
-  toggleActions: "play none none none",
-  markers: false,
-})
+
+// const textAni02 = gsap.timeline({delay: 0.7});
+// textAni02.to('.text-ani-02', {duration:0.5, y:0, stagger: 0.3});
+// ScrollTrigger.create({
+//   animation: textAni02,
+//   trigger: ".consulting .section02",
+//   start: "top 80%",
+//   end: "bottom bottom",
+//   markers: false,
+// })
+
+
+// const textAni04 = gsap.timeline({delay: 0.7});
+// textAni04.to('.text-ani-04', {duration:0.5, y:0, stagger: 0.3});
+// ScrollTrigger.create({
+//   animation: textAni04,
+//   trigger: ".section04",
+//   start: "top 80%",
+//   toggleActions: "play none none none",
+//   markers: false,
+// })
+
 
 const cardmoving = gsap.timeline({delay: 1});
 cardmoving.from(".consulting-item-1", {y: innerHeight + 510})
@@ -274,15 +289,15 @@ ScrollTrigger.create({
 
 
 
-const textAni05 = gsap.timeline({delay: 0.7});
-textAni05.to('.text-ani-05', {duration:0.5, y:0, stagger: 0.3});
-ScrollTrigger.create({
-  animation: textAni05,
-  trigger: ".consulting .section05",
-  start: "top 80%",
-  end: "bottom bottom",
-  markers: false,
-})
+// const textAni05 = gsap.timeline({delay: 0.7});
+// textAni05.to('.text-ani-05', {duration:0.5, y:0, stagger: 0.3});
+// ScrollTrigger.create({
+//   animation: textAni05,
+//   trigger: ".consulting .section05",
+//   start: "top 80%",
+//   end: "bottom bottom",
+//   markers: false,
+// })
 
 
 
@@ -391,22 +406,6 @@ $('.infra-more-btn').click(function() {
 });
 
 
-const cont = gsap.utils.toArray('.cont');
-gsap.set(cont,{y: '25%', opacity: 0})
-cont.forEach(cont => {
-  gsap.to(cont,{
-    y: 0,
-    autoAlpha: 1,
-    duration: 0.5,
-    stagger: 0.3,
-    scrollTrigger: {
-      trigger: cont,
-      start: 'top 70%',
-      toggleActions:"restart none none reverse",
-    }
-  })
-});
-
 
 
 // backup 슬라이드
@@ -422,6 +421,7 @@ var swiper = new Swiper(".backup-slide", {
     el: ".swiper-pagination",
   },
 });
+
 
 
   // 하드웨어 지금 인기있는 제품 
