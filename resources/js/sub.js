@@ -25,6 +25,21 @@ function initializeTabs() {
   });
 }
 
+
+gsap.to(".section01", {
+    duration: 1,
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".section01",
+        start: "top top",
+        end: "bottom top",
+        pin: true,
+        pinSpacing: false,
+    }
+});
+
+
+
 function initializeSwipers() {
  
   new Swiper(".swiper-group", {
@@ -33,6 +48,7 @@ function initializeSwipers() {
       slidesOffsetBefore: 20,
       slidesOffsetAfter: 20,
       autoplay: { delay: 3500, disableOnInteraction: false },
+      loop: true,
       grabCursor: true,
       pagination: { el: ".swiper-pagination", type: "progressbar" },
       navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },

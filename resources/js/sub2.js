@@ -1,25 +1,26 @@
 
 $(document).ready(function() {
-    gsap.fromTo(".main-visual", {opacity: 0}, {opacity:1, duration: 1, ease: "power4.out"});
-    const mainVisual = gsap.timeline();
-    mainVisual.from(".main-visual", {width: "40vw", height: "40vh", x: "50vw", yPercent: -10, ease: "power1.inOut"})
-              .from(".main-visual", {height: "40vh", ease: "power1.inOut"})
-              .to(".main-visual", {height: "100%", ease: "power1.inOut"})
-              .from(".main-title-wrap", {y: "-40vh", ease: "power1.inOut"}, "<")
-              .to(".main-title-wrap", {color: "#fff", ease: "power1.inOut"}, "<")
-              .to(".main-category", {color: "#fff", ease: "power1.inOut"}, "<");
-
-    ScrollTrigger.create({
-        animation: mainVisual,
-        trigger: ".section01",
-        start: "top top",
-        scrub: 2,
-        pin: true,
-        anticipatePin: 1,
-        //markers: false
-        onLeave: () => section02Pin()
-
-    });
+    if (window.innerWidth >= 768) {
+        gsap.fromTo(".main-visual", {opacity: 0}, {opacity:1, duration: 1, ease: "power4.out"});
+        const mainVisual = gsap.timeline();
+        mainVisual.from(".main-visual", {width: "40vw", height: "40vh", x: "50vw", yPercent: -10, ease: "power1.inOut"})
+                  .from(".main-visual", {height: "40vh", ease: "power1.inOut"})
+                  .to(".main-visual", {height: "100%", ease: "power1.inOut"})
+                  .from(".main-title-wrap", {y: "-40vh", ease: "power1.inOut"}, "<")
+                  .to(".main-title-wrap", {color: "#fff", ease: "power1.inOut"}, "<")
+                  .to(".main-category", {color: "#fff", ease: "power1.inOut"}, "<");
+    
+        ScrollTrigger.create({
+            animation: mainVisual,
+            trigger: ".section01",
+            start: "top top",
+            scrub: 2,
+            pin: true,
+            anticipatePin: 1,
+            // markers: ture,
+            onLeave: () => section02Pin()
+        });
+    }
 
     function section02Pin() {
     ScrollTrigger.create({
@@ -176,7 +177,7 @@ gsap.utils.toArray(".sub06 .section02 .split").forEach(target => {
         
             // Photos section animation
             const photos = gsap.timeline({
-                scrollTrigger: {
+                scrollTrigger: {                                                           
                     trigger: ".photos",
                     start: "top 50%",
                     pin: true,
@@ -189,8 +190,8 @@ gsap.utils.toArray(".sub06 .section02 .split").forEach(target => {
             });
         
             const mission = gsap.timeline();
-            mission.to(".photo2", {opacity: 1, delay: 1.5})
-                   .to(".photo3", {opacity: 1, delay: 0.3});
+            mission.to(".photo2", {opacity: 1, delay: 0.5})
+                   .to(".photo3", {opacity: 1});
         
             ScrollTrigger.create({
                 animation: mission,

@@ -11,7 +11,7 @@
             <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1611 0.810919L5.99463 4.93545L1.82819 0.810919C1.62756 0.611865 1.35519 0.5 1.07114 0.5C0.787095 0.5 0.514718 0.611865 0.314094 0.810919C-0.104698 1.2255 -0.104698 1.8952 0.314094 2.30978L5.24295 7.18906C5.66175 7.60364 6.33825 7.60364 6.75705 7.18906L11.6859 2.30978C12.1047 1.8952 12.1047 1.2255 11.6859 0.810919C11.2671 0.40697 10.5799 0.39634 10.1611 0.810919Z" fill="#AFAFAF"/>
             </svg>
       </button>
-     <!-- <ul class="family-list">
+     <ul class="family-list">
         <li>
           <a href="https://www.koreazinc.co.kr" target="_blank">고려아연</a>
         </li>
@@ -57,7 +57,7 @@
         <li>
           <a href="https://www.igneo.com" target="_blank">IGNEO Holdings, LLC</a>
         </li>
-      </ul> -->
+      </ul>
     </div>
   </div>
   <div class="footer-v3-bottom">
@@ -72,4 +72,26 @@
     </div>
   </div>   
 </div>
+<script>
+  $(document).ready(function(){
+
   
+  function familySelectHide() {
+    $('.family-site').removeClass('active');
+  }
+  var familySelect = setTimeout(familySelectHide, 3000);
+  $('.family-select').on("click", function (e) {
+    e.preventDefault();
+    clearTimeout(familySelect);
+    if ($('.family-site').hasClass('active')) {
+        $('.family-site').removeClass('active');
+    } else {
+        $('.family-site').addClass('active');
+    }
+  });
+  $('.family-list').on("mouseleave", function (e) {
+    familySelect = setTimeout(familySelectHide, 2000);
+  });
+
+})
+</script>

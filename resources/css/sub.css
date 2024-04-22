@@ -20,7 +20,7 @@
 .servicenow .section01 .servicenow-title {font-family: 'Paybooc'; font-size: 80px; color: #00BC26; margin-bottom: 10px;}
 .servicenow .section01 .servicenow-desc {font-weight: 400; font-size: 24px; line-height: auto; color: #fff;}
 
-.servicenow .section02 {padding: 180px 0 187px 10.42vw; background: url(../../resources/images/sub/servicenow_02_bg_logo.png)no-repeat 0 75%;}
+.servicenow .section02 {position: relative; padding: 180px 0 187px 10.42vw; background: url(../../resources/images/sub/servicenow_02_bg_logo.png)no-repeat 0 75%; background-color: #fff; z-index: 1;}
 .servicenow .section02 .content-wrap {display: flex; gap: 132px;}
 .servicenow .section02 .content-wrap .title-wrap {flex-shrink: 0;}
 .servicenow .section02 .content-wrap .title-wrap .maintitle {width: 510px;}
@@ -47,7 +47,7 @@
 /* .servicenow .section02 .swiper-group .swiper-slide {transform: scale(1) !important; filter: blur(1px) grayscale(0.5);}
 .swiper-group .swiper-slide-active {filter: blur(0px) !important;transform: scale(1) !important;} */
 
-.servicenow .section03 {width: 100%; background-color: #EFF9F1; padding: 120px 0 240px;}
+.servicenow .section03 {position: relative; width: 100%; background-color: #EFF9F1; padding: 120px 0 240px; z-index: 1;}
 .servicenow .section03 .main-img {display: block; margin: 104px auto 100px;}
 .servicenow .section03 .subtext {margin-bottom: 100px; text-align: center; font-size: 30px; font-style: normal; font-weight: 800; line-height: 42px; letter-spacing: -0.03em;}
 .servicenow .section03 .subtext-color {color: #00BC26;}
@@ -86,7 +86,7 @@
 .servicenow .section05 .maintitle {text-align: center;}
 .servicenow .section05 .main-desc {text-align: center; margin-top: 40px; font-size: 24px; font-weight: 500; line-height: 150%; letter-spacing: -0.72px;}
 .servicenow .section05 .content-wrap {margin-top: 100px;}
-.servicenow .section05 .content-wrap .content-02 {margin-top: 80px; gap: 170px;}
+.servicenow .section05 .content-wrap .content-02 {margin-top: 80px; gap: 135px;}
 .servicenow .section05 .content-img-wrap {display: flex; justify-content: space-between; align-items: center; gap: 75px;}
 .servicenow .section05 .content-title-wrap {display: flex; align-items: flex-end;}
 .servicenow .section05 .content-02 .content-title-wrap {margin-left: -17px;}
@@ -281,7 +281,7 @@
 
 .consulting .section01 .main-title-wrap {display: flex; gap: 20px; }
 
-.consulting .section02 {display: flex; flex-direction: column; justify-content: center; height: 90vh; background-color: #fff;}
+.consulting .section02 {position: relative; display: flex; flex-direction: column; justify-content: center; height: 90vh; background-color: #fff; z-index: 1;}
 
 .consulting .section02 .main-heading-wrap {display: flex; justify-content: center; gap: 20px;}
 .consulting .section02 .main-heading-sub-wrap {margin-top: 60px;}
@@ -487,7 +487,7 @@
 .infrabusiness .section01 .main-desc {overflow: hidden;}
 .infrabusiness .section01 .main-desc .text-ani {transform: translateY(100%);} */
 
-.infrabusiness .section02 {padding: 200px 0 235px 10.42vw; border-top: 1px solid #ddd;}
+.infrabusiness .section02 {position: relative; padding: 200px 0 235px 10.42vw; border-top: 1px solid #ddd; background-color: #fff; z-index: 1;} 
 /* .infrabusiness .section02 .inner {padding-right: 0;} */
 .infrabusiness .section02 .content-wrap {position: relative; width: 100%; background: url(../../resources/images/sub/infrabusiness_02_bg.png)no-repeat 5% 90%;}
 .infrabusiness .section02 .content-wrap::before {position: absolute; content: ''; width: 479px; height: 720px; background-color: #F6F6F6; border-radius: 2rem 0 0 2rem; top: -50px; right: 0;}
@@ -533,7 +533,7 @@
     z-index: 2;
   } */
 
-.infrabusiness .section03 {padding: 150px 0 0; width: 100%; height: 837px; background-color: #2A5FAF;}
+.infrabusiness .section03 {position: relative; padding: 150px 0 0; width: 100%; height: 837px; background-color: #2A5FAF; z-index: 1;}
 .infrabusiness .section03 .main-heading-1 {text-align: left; color: #fff;}
 
 .infrabusiness .section03 .tabs {display: flex; justify-content: flex-end; gap: 20px; margin-top: -40px;}
