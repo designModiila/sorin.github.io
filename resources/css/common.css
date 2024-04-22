@@ -32,7 +32,7 @@ body.noScroll { overflow: hidden;}
 #header .gnb-wrap .gnb .depth2 {position: absolute; overflow: hidden; top: 80px; left: -5px; padding: 10px; width: 190px; background-color: #fff; border-radius: 10px; box-shadow: 2px 2px 20px rgba(0, 0, 0, .1);}
 #header .gnb-wrap .gnb .depth2 ul {display: flex; flex-direction: column; gap: 10px;}
 #header .gnb-wrap .gnb .depth2 ul li {padding: 6px 15px; border-radius: 5px;}
-#header .gnb-wrap .gnb .depth2 ul li a {font-size: 16px; font-weight: 600; letter-spacing: -0.03em; color: #969696; transition: all 0.2s;}
+#header .gnb-wrap .gnb .depth2 ul li a {font-size: 16px; display: block; font-weight: 600; letter-spacing: -0.03em; color: #969696; transition: all 0.2s;}
 #header .gnb-wrap .gnb .depth2 ul li:hover,
 #header .gnb-wrap .gnb .depth2 ul li.active {background-color: #F1F6FF;}
 #header .gnb-wrap .gnb .depth2 ul li:hover a,
@@ -49,9 +49,7 @@ body.noScroll { overflow: hidden;}
 
 #header .gnb-wrap .gnb > li.servicenow:hover .depth1 {color: #00f031;}
 
-.sub-consulting #header.active .gnb-wrap .gnb > li.active a{color: #323232;}
-.sub-consulting #header.active .gnb-wrap .gnb > li:hover  a{color: #323232;}
-.sub-consulting #header.active .gnb-wrap .gnb > li.servicenow:hover  a{color: #00f031;}
+
 
 .sub-compnay #header .gnb-wrap .gnb > li .depth1,
 .sub-infrabusiness #header .gnb-wrap .gnb > li .depth1 {color: #969696;}
@@ -63,8 +61,11 @@ body.noScroll { overflow: hidden;}
 .sub-compnay #header .gnb-wrap .gnb > li.servicenow:hover .depth1 {color: #00f031;}
 
 
-.sub-servicenow #header .gnb-wrap .gnb > li:hover .depth1 {color: #fff;}
-.sub-servicenow #header .gnb-wrap .gnb > li.servicenow:hover .depth1 {color: #00f031;}
+.sub-servicenow #header .gnb-wrap .gnb > li:hover .depth1,
+.sub-consulting #header .gnb-wrap .gnb > li:hover .depth1 {color: #fff;}
+.sub-servicenow #header .gnb-wrap .gnb > li.servicenow:hover .depth1,
+.sub-consulting #header .gnb-wrap .gnb > li.servicenow:hover .depth1 {color: #00f031;}
+
 .sub-infrabusiness #header .gnb-wrap .gnb > li:hover .depth1 {color: #fff;}
 .sub-infrabusiness.etc-sub #header .gnb-wrap .gnb > li:hover .depth1 {color: #323232;}
 .sub-infrabusiness #header .gnb-wrap .gnb > li.servicenow:hover .depth1 {color: #00f031;}
@@ -80,14 +81,19 @@ body.noScroll { overflow: hidden;}
 #header.active {background-color: #fff; border-bottom: 1px solid #dddddd;}
 #header.active .gnb-wrap .gnb li:hover a {color: #323232;}
 
-.sub-infrabusiness #header.active .gnb-wrap .gnb > li:hover .depth1,
-.sub-infrabusiness #header.active .gnb-wrap .gnb > li.active .depth1 {color: #323232;}
-.sub-infrabusiness #header.active .gnb-wrap .gnb > li.servicenow:hover .depth1 {color: #00f031;}
 
 .sub-servicenow #header.active .gnb-wrap .gnb > li:hover .depth1,
 .sub-servicenow #header.active .gnb-wrap .gnb > li.active .depth1 {color: #323232;}
 .sub-servicenow #header.active .gnb-wrap .gnb > li.servicenow.active .depth1 {color: #00f031;}
 
+.sub-infrabusiness #header.active .gnb-wrap .gnb > li:hover .depth1,
+.sub-infrabusiness #header.active .gnb-wrap .gnb > li.active .depth1 {color: #323232;}
+.sub-infrabusiness #header.active .gnb-wrap .gnb > li.servicenow:hover .depth1 {color: #00f031;}
+
+
+.sub-consulting #header.active .gnb-wrap .gnb > li.active a{color: #323232;}
+.sub-consulting #header.active .gnb-wrap .gnb > li:hover  a{color: #323232;}
+.sub-consulting #header.active .gnb-wrap .gnb > li.servicenow:hover  a{color: #00f031;}
 
 @media (max-width: 1440px) {
     #header .header-wrap {padding: 10px 7vw; }
