@@ -627,13 +627,7 @@
   #header .mobile-top .mo-logo {background: url(../../resources/images/common/sorin_logo.png) no-repeat center; width: 80px; height: 36px; background-size: contain;}
   #header .mobile-top button {background: url(../../resources/images/common/mobile_btn.png) no-repeat center; width: 25px; height: 25px;}
   
-  /* .mainsub .section01 {padding-top: 196px;} */
-  /*
-  .mainsub .category-heading {margin: 30px 0 60px; font-size: 30px; line-height: 44px;}
-  .mainsub .main-title-wrap {padding-bottom: 35vh;}
-  .mainsub .main-visual {margin: 24px 10px; border-radius: 15px; height: 30vh;}
-  .mainsub .heading-1 {margin-top: 80px; font-size: 28px; line-height: 42px;}
-  .mainsub .btn-top {display: none;} */
+
   .mainsub .main-visual-wrap {height: calc(100vh - 20px); margin: 10px;}
   .mainsub .main-visual {border-radius: 15px; width: 100%; height: 100%;}
   .mainsub .main-category {font-size: 16px;}
@@ -650,10 +644,10 @@
   .sub01 .section02 .content-wrap.inner {padding: 0 24px;}
 
   .sub01 .company-info-wrap {display: block; width: 100%;}
-  .sub01 .company-info {margin-top: 80px; grid-template-columns: 1fr;}
-  .sub01 .company-info .info-wrap {padding: 30px 0 40px; width: 100%; height: unset;}
+  .sub01 .company-info {margin-top: 80px; padding-bottom: 60px; padding-top: 30px; grid-template-columns: 1fr; border-top: 1px solid #969696;     border-bottom: 1px solid #969696;}
+  .sub01 .company-info .info-wrap {padding: 30px 0 0; width: 100%; height: unset; border-top: none;}
   .sub01 .company-info .info-title {font-size: 16px;}
-  .sub01 .company-info .info-content {margin-top: 14px; font-size: 20px; line-height: 32px;}
+  .sub01 .company-info .info-content {margin-top: 5px; font-size: 18px; line-height: 30px;}
   .sub01 .company-info .info-content br {display: none;}
   .sub01 .section03 {margin-top: 80px;}
 
