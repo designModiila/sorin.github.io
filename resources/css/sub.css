@@ -657,7 +657,7 @@
     .infrabusiness .section03 {padding: 94px 0 126px; height: auto;}
     .infrabusiness .section03 .section-title {text-align: center; font-size: 24px;}
     .infrabusiness .section03 .tabs {margin-top: 40px; justify-content: center;}
-    .infrabusiness .section03 .swiper {margin-top: 60px;}
+    .infrabusiness .section03 .swiper {margin-top: 60px; overflow: visible;}
     .infrabusiness .section03 .swiper-button-wrap {width: 80%;}
     .infrabusiness .section03 .swiper-button-prev {width: 36px; height: 36px;}
     .infrabusiness .section03 .swiper-button-next {width: 36px; height: 36px;}
