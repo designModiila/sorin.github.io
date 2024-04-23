@@ -622,6 +622,8 @@
   .sub03 .mission-wrap .detail {gap: 20px;}
 }
 @media (max-width: 767px) {
+  #header {height:70px}
+  #header .mobile-top {top:0}
   #header .mobile-top .mo-logo {background: url(../../resources/images/common/sorin_logo.png) no-repeat center; width: 80px; height: 36px; background-size: contain;}
   #header .mobile-top button {background: url(../../resources/images/common/mobile_btn.png) no-repeat center; width: 25px; height: 25px;}
   
@@ -633,14 +635,14 @@
   .mainsub .heading-1 {margin-top: 80px; font-size: 28px; line-height: 42px;}
   .mainsub .btn-top {display: none;} */
   .mainsub .main-visual-wrap {height: calc(100vh - 20px); margin: 10px;}
-  .mainsub .main-visual {border-radius: 15px;}
+  .mainsub .main-visual {border-radius: 15px; width: 100%; height: 100%;}
   .mainsub .main-category {font-size: 16px;}
   .mainsub .main-title-wrap {margin-top: 150px;}
-  .mainsub .category-heading {font-size: 28px;  line-height: 38px; font-weight: 600;;}
+  .mainsub .category-heading {font-size: 24px;  line-height: 34px; font-weight: 600;;}
   .mainsub .category-heading br {display: none;}
   
-  .mainsub .heading-1 {font-size: 28px;font-style: normal;font-weight: 800;line-height: 42px; letter-spacing: -0.84px;}
-  .mainsub .section02 {margin-top: 80px;}
+  .mainsub .heading-1 {font-size: 20px;font-style: normal;font-weight: 600;line-height: 32px; letter-spacing: -0.5px;}
+  .mainsub .section02 {margin-top: 60px;}
   .mainsub .btn-top {position: fixed; bottom: 40px; right: 24px; width: 40px; height: 40px; z-index: 100;}
 
 

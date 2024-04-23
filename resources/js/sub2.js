@@ -1,31 +1,63 @@
 $(document).ready(function() {
-    const mainVisual = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".section01",
-            start: "top top",
-            scrub: 2,
-            pin: true,
-            anticipatePin: 1,
-            onEnterBack: () => gsap.set(".section01", {pin: true})
-        }
-    });
+    if (window.innerWidth >= 768) {
+        const mainVisual = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".section01",
+                start: "top top",
+                scrub: 2,
+                pin: true,
+                anticipatePin: 1,
+                onEnterBack: () => gsap.set(".section01", {pin: true})
+            }
+        });
+    
+        mainVisual.from(".main-visual", { width: "40%", ease: "power1.inOut" })
+                  .to(".main-visual", { width: "100%", ease: "power1.inOut" })
+                  .to(".main-visual", { height: "100%", ease: "power1.inOut"}, "+=0.5")
+                  .to(".mainsub .section01 .inner", { bottom: "150px", ease: "power1.inOut"}, "<")
+                  .to(".main-title-wrap", { color: "#fff", ease: "power1.inOut"}, "<")
+                  .to(".main-category", { color: "#fff", ease: "power1.inOut"}, "<");
+    
+        // Optimize resize event handling
+        let resizeTimeout;
+        $(window).on('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                ScrollTrigger.refresh();
+            }, 250);
+        });
+    
 
-    mainVisual.from(".main-visual", { width: "40%", ease: "power1.inOut" })
-              .to(".main-visual", { width: "100%", ease: "power1.inOut" })
-              .to(".main-visual", { height: "100%", ease: "power1.inOut"}, "+=0.5")
-              .to(".mainsub .section01 .inner", { bottom: "150px", ease: "power1.inOut"}, "<")
-              .to(".main-title-wrap", { color: "#fff", ease: "power1.inOut"}, "<")
-              .to(".main-category", { color: "#fff", ease: "power1.inOut"}, "<");
+    } else {
 
-    // Optimize resize event handling
-    let resizeTimeout;
-    $(window).on('resize', function() {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(function() {
-            ScrollTrigger.refresh();
-        }, 250);
-    });
+        const mainVisual = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".section01",
+                start: "top top",
+                scrub: 2,
+                pin: true,
+                anticipatePin: 1,
+                onEnterBack: () => gsap.set(".section01", {pin: true})
+            }
+        });
+    
+        mainVisual.from(".main-visual", { width: "100%", height: "40%", ease: "power1.inOut" })
+                  .to(".main-visual", { width: "100%", height: "100%", ease: "power1.inOut" })
+                  .to(".mainsub .section01 .inner", { bottom: "50px", ease: "power1.inOut"}, "<")
+                  .to(".main-title-wrap", { color: "#fff", ease: "power1.inOut"}, "<")
+                  .to(".main-category", { color: "#fff", ease: "power1.inOut"}, "<");
+    
+        // Optimize resize event handling
+        let resizeTimeout;
+        $(window).on('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                ScrollTrigger.refresh();
+            }, 250);
+        });
 
+    }
+    
 
     const cont = gsap.utils.toArray('.cont');
     gsap.set(cont, {y: '30%', opacity: 0});
