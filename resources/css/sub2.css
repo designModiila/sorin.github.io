@@ -4,6 +4,25 @@
 #header .gnb-wrap .gnb > li .depth1 {color: #969696;}
 #header .gnb-wrap .gnb > li .depth1:hover {color: #323232;}
 
+.mainsub .section01 {position: relative; height: 100vh; overflow: hidden; border-radius: 20px;}
+.mainsub .section01 .inner {position: absolute; width:calc( 100%);}
+.mainsub .main-title-wrap {position: relative; z-index: 2; margin-top: 250px;}
+.mainsub .main-category {font-family: 'Paybooc'; font-size: 20px; letter-spacing: -0.03em; color: #3D7DFF;}
+.mainsub .category-heading {margin: 30px 0 0; font-size: 3.375rem; font-weight: 500; letter-spacing: -0.03em; line-height: 70px;}
+.mainsub .main-visual-wrap {position: relative; display: flex; flex-direction: column; justify-content: flex-end; height: calc(100vh - 60px); margin: 30px;}
+.mainsub .main-visual {position: absolute; right: 0; bottom:0; width: 40%; height: 40vh;  border-radius: 20px; z-index: 1;}
+
+.mainsub .heading-1 {font-size: 48px; font-weight: 700; letter-spacing: -0.03em; line-height: 68px; color: #323232;}
+.mainsub .heading-2 {margin-top: 80px; font-size: 24px; font-weight: 500; letter-spacing: -0.03em; line-height: 36px; color: #323232;}
+.mainsub .btn-top {position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; z-index: 100;}
+.mainsub .btn-top img {width: 100%;} 
+.mainsub .inner1860 {margin: 0 auto; max-width: 1860px; border-radius: 20px; width: 100%;}
+
+.mainsub .section02 {margin-top: 120px;}
+
+.sub01 .main-visual {background: url(../../resources/images/sub2/sub01_img_main.png)no-repeat 50% 50%; background-size: cover;}
+
+
 .infra-menu {
   transition: top 0.3s ease-in-out;
 }
@@ -211,7 +230,7 @@
 
 /****** 메인서브 ******/
 
-/* .mainsub .section01 {padding: 280px 0 10vh; position: relative; display: flex; flex-direction: column; justify-content: space-between; height: 100vh;} */
+/* 
 .mainsub .section01 {position: relative; height: 100vh; overflow: hidden;}
 .mainsub .section01 .inner {position: absolute; display: flex; flex-direction: column; justify-content: flex-end; height: 100vh;}
 .mainsub .main-title-wrap {position: relative; z-index: 2; padding-bottom: 20vh;}
@@ -219,16 +238,14 @@
 .mainsub .category-heading {margin: 30px 0 0; font-size: 54px; font-weight: 500; letter-spacing: -0.03em; line-height: 70px;}
 .mainsub .main-visual-wrap {display: flex; flex-direction: column; justify-content: flex-end; height: 100vh;}
 .mainsub .main-visual {position: relative; margin: 30px 30px; height: 40vh; border-radius: 20px; z-index: 1;}
-/* .mainsub .main-visual {position: relative; margin: 0 30px; height: 40vh; border-radius: 20px; z-index: 1;} */
-/* .mainsub .main-visual img {width: 100%; object-fit: cover;} */
+
 .mainsub .heading-1 {font-size: 48px; font-weight: 700; letter-spacing: -0.03em; line-height: 68px; color: #323232;}
 .mainsub .heading-2 {margin-top: 80px; font-size: 24px; font-weight: 500; letter-spacing: -0.03em; line-height: 36px; color: #323232;}
 .mainsub .btn-top {margin-top: 100px; text-align: right;}
 .mainsub .btn-top img {margin: 0 120px 116px 0; width: 60px; height: 60px;}
 .mainsub .inner1860 {margin: 0 auto; max-width: 1860px; border-radius: 20px; width: 100%;}
-/* .sub01 .category-heading {overflow: hidden;}
-.sub01 p .text-ani {transform: translateY(100%);} */
-.mainsub .section02 {margin-top: 120px;}
+
+.mainsub .section02 {margin-top: 120px;} */
 .sub01 .main-visual {background: url(../../resources/images/sub2/sub01_img_main.png)no-repeat 50% 15%; background-size: cover;}
 .sub02 .main-visual {background: url(../../resources/images/sub2/sub02_img_main.png)no-repeat 50% 50%; background-size: cover;}
 .sub03 .main-visual {background: url(../../resources/images/sub2/sub03_img_main.png)no-repeat 50% 50%; background-size: cover;}
@@ -246,9 +263,11 @@
 .sub01 .company-info .info-content {margin-top: 20px; font-size: 24px; font-weight: 600; letter-spacing: -0.03em; color: #323232;}
 .sub01 .section03 {margin-top: 276px; text-align: center;}
 .sub01 .section04 {margin: 0 30px; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;}
-.sub01 .section-container {position: relative; width: 100%; height: 70vh; border-radius: 20px; overflow: hidden;}
+.sub01 .section-container {position: relative; width: 100%; height: 82vh; border-radius: 20px; overflow: hidden;}
 .sub01 .section-container .img-wrap {position: relative; width: 100%; height: 100%;}
 .sub01 .section-container .img-wrap img {position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;}
+
+
 .sub01 .section04 .content-wrap {position: absolute; padding-right: 10%; /*max-width: 700px;*/ width:40%; height: 70vh; top: 0; right: 0;}
 .sub01 .section04 .content-wrap .content-title-desc {margin-top: 200px; color: #fff;}
 .sub01 .section04 .content-wrap .content-title-desc:nth-child(1) {margin-top: 0;}
@@ -507,21 +526,28 @@
 
 
 @media (max-width: 1919px) {
-  .sub01 .section04 {padding-right: 0;}
-  .mainsub .inner1860 {margin: 0 30px;}
+  /*.sub01 .section04 {padding-right: 0;}
+   .mainsub .inner1860 {margin: 0 30px;} */
   .sub06 .section02 {margin: 0 30px;}
   .sub08 .section03 {margin: 182px 30px 18px;}
 }
 @media (max-width: 1600px) {
+
+  .mainsub .main-title-wrap {margin-top: 180px;}
+
+  .mainsub .category-heading {font-size: 48px; line-height: 58px;}
+  .mainsub .heading-1 {font-size: 36px; line-height: 52px;}
+
   .sub06 .section03 .content {zoom: .9;}
 }
 @media (max-width: 1440px) {
-  .mainsub .category-heading {font-size: 40px; line-height: 54px;}
-  .mainsub .heading-1 {font-size: 36px; line-height: 52px;}
-  /* .mainsub .section01 {padding: 200px 0 5vh;} */
+
+  
   .sub01 .section02 .content-wrap.inner {padding: 0 140px;}
-  .sub01 .section03 {margin-bottom: 230px; padding: 0 50px;}
-  .sub01 .section04 {height: calc(100vh - 60px); margin-top: 30px; background: url(../../resources/images/sub2/sub01_img_sub.png)no-repeat 80% 0; background-size: cover;}
+  .sub01 .section04 .content-wrap {width: 50%;}
+  .sub01 .section04 .content-wrap .content-title {font-size: 38px;}
+  .sub01 .section04 .content-wrap .content-desc {font-size: 20px; line-height: 30px;}
+
   .sub02 .section02 {background: url(../../resources/images/sub2/sub02_bg.png)no-repeat 0 118%;}
   .sub02 .section02 .content-wrap .greeting p {font-size: 20px; line-height: 32px;}
   .sub02 .section02 .content-wrap .signature-wrap p {font-size: 22px;}
@@ -536,6 +562,11 @@
   .sub08 .section03 .contact-wrap .contact-detail {font-size: 18px;}
 }
 @media (max-width: 1280px) {
+
+  .mainsub .category-heading {font-size:36px; line-height: 54px;}
+  .mainsub .heading-1 {font-size: 32px; line-height: 52px;}
+
+
   .world-layer-wrap .layer-content .box-title {font-size: 28px;}
   .world-layer-wrap .layer-content .box-con {font-size: 16px;}
   .world-layer-wrap .layer-content .box-con .box-con-address {width: 360px;}
@@ -595,24 +626,44 @@
   #header .mobile-top button {background: url(../../resources/images/common/mobile_btn.png) no-repeat center; width: 25px; height: 25px;}
   
   /* .mainsub .section01 {padding-top: 196px;} */
-  .mainsub .main-category {font-size: 16px;}
+  /*
   .mainsub .category-heading {margin: 30px 0 60px; font-size: 30px; line-height: 44px;}
-  .mainsub .main-title-wrap {padding-bottom: 35vh;} /*** 모션 넣을경우 삭제 ***/
+  .mainsub .main-title-wrap {padding-bottom: 35vh;}
   .mainsub .main-visual {margin: 24px 10px; border-radius: 15px; height: 30vh;}
   .mainsub .heading-1 {margin-top: 80px; font-size: 28px; line-height: 42px;}
-  .mainsub .btn-top {display: none;}
+  .mainsub .btn-top {display: none;} */
+  .mainsub .main-visual-wrap {height: calc(100vh - 20px); margin: 10px;}
+  .mainsub .main-visual {border-radius: 15px;}
+  .mainsub .main-category {font-size: 16px;}
+  .mainsub .main-title-wrap {margin-top: 150px;}
+  .mainsub .category-heading {font-size: 28px;  line-height: 38px; font-weight: 600;;}
+  .mainsub .category-heading br {display: none;}
+  
+  .mainsub .heading-1 {font-size: 28px;font-style: normal;font-weight: 800;line-height: 42px; letter-spacing: -0.84px;}
+  .mainsub .section02 {margin-top: 80px;}
+  .mainsub .btn-top {position: fixed; bottom: 40px; right: 24px; width: 40px; height: 40px; z-index: 100;}
+
+
 
   .sub01 .section02 .content-wrap.inner {padding: 0 24px;}
+
   .sub01 .company-info-wrap {display: block; width: 100%;}
   .sub01 .company-info {margin-top: 80px; grid-template-columns: 1fr;}
   .sub01 .company-info .info-wrap {padding: 30px 0 40px; width: 100%; height: unset;}
   .sub01 .company-info .info-title {font-size: 16px;}
   .sub01 .company-info .info-content {margin-top: 14px; font-size: 20px; line-height: 32px;}
-  .sub01 .section03 {margin-top: 200px; margin-bottom: 296px; padding: 0;}
+  .sub01 .company-info .info-content br {display: none;}
+  .sub01 .section03 {margin-top: 80px;}
+
+
   .sub01 .heading-2 {display: none;}
-  .sub01 .section04 {margin: 0 24px 100px; padding: 0 14px; border-radius: 15px; background: url(../../resources/images/sub2/sub01_img_sub.png)no-repeat 72% 0;}
+  .sub01 .section04 {margin: 0 0 0; padding: 0 10px; border-radius: 15px; }
+  .sub01 .section04 .content-wrap {width: 100%; padding-right: 0; padding: 0 14px;}
+  .sub01 .section04 .content-wrap .content-title-desc {margin-top: 100px;}
   .sub01 .section04 .content-wrap .content-title {font-size: 24px;}
   .sub01 .section04 .content-wrap .content-desc {font-size: 16px; line-height: 28px;}
+  .sub01 .section04 .content-wrap .content-desc br {display: none;}
+  
   .sub02 {padding-bottom: 196px;}
   .sub02 .section02 {padding-bottom: 30px; background: url(../../resources/images/sub2/sub02_bg.png)no-repeat 0% 105%; background-size: 217px;}
   .sub02 .section02 .content-wrap {gap: 40px;}
@@ -632,9 +683,9 @@
   .sub03 .mission-wrap .mission-head {width: 100%; font-size: 20px;}
   .sub03 .mission-wrap .desc-text {font-size: 16px; line-height: 36px;}
 
-  .mainsub .top-menu {padding: 10px 15px;}
+  /* .mainsub .top-menu {padding: 10px 15px;}
   .mainsub .top-menu ul {gap: 10px;}
-  .mainsub .top-menu ul li a {padding: 10px 15px; font-size: 14px;}
+  .mainsub .top-menu ul li a {padding: 10px 15px; font-size: 14px;} */
 
   .sub04 .section02 {padding: 62px 0 152px;}
   .sub04 .section02 .article {width: 22px; height: 22px; font-size: 12px;}
@@ -748,6 +799,10 @@
 @media (max-width: 490px) {
   .sub03 .category-heading br {display: none;}
   .sub06 .section02 .content-card p > br {display: none;}
+}
+
+@media (max-width: 480px) {
+  .mainsub .heading-1 {font-size: 24px; font-weight: 600; line-height: 38px;}
 }
 @media (max-width: 400px) {
   .sub04 .section02 .top-menu {padding: 10px;}

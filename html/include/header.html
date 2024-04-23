@@ -176,6 +176,7 @@ window.onscroll = function() {
 
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("header").style.top = "0";
+    //$('body').css('padding-top', '0');
     $("#header").removeClass("hide").addClass("active");
     $(".header-wrap h1").addClass("active");
 
@@ -183,6 +184,7 @@ window.onscroll = function() {
     // document.querySelector(".infra-menu").style.top = "70px";
   } else {
     document.getElementById("header").style.top = "-94px";
+    //$('body').css('padding-top', '150px');
     $("#header").removeClass("active").addClass("hide");
     $(".infra-menu").removeClass("hide").addClass("fixed");
     // document.querySelector(".infra-menu").style.top = "0";
