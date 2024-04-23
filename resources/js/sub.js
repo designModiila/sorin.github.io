@@ -135,6 +135,7 @@ function initializeSwipers() {
 
   new Swiper(".backup-slide", {
     slidesPerView: 1,
+    spaceBetween: 80,
     loop: true,
     speed: 1000,
     autoplay: {
@@ -143,6 +144,12 @@ function initializeSwipers() {
     },
     pagination: {
         el: ".swiper-pagination",
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+        },
     },
   });
   
