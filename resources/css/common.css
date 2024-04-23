@@ -207,7 +207,7 @@ body.noScroll { overflow: hidden;}
 .footer-v2 .footer-v2-bottom .copy {font-size: 13px; font-weight: 500; letter-spacing: -0.39px; color: #AFAFAF;}
 
 .footer-v2 .family-site {position: relative;}
-.footer-v2 .family-site .family-list {display: none; position: absolute; left: 0; right: 0; top: auto; bottom: auto; background-color: #fff; text-align: left; padding: 10px 0px; height: 100%; overflow: auto; border: 1px solid #e2e2e2;}
+.footer-v2 .family-site .family-list {display: none; position: absolute; left: 0; right: 0; top: auto; bottom: auto; background-color: #fff; text-align: left; padding: 10px 0px; height: 300%; overflow: auto; border: 1px solid #e2e2e2;}
 .footer-v2 .family-site.active .family-list {display: block;}
 .footer-v2 .family-site .family-list li a { font-size: 12px; display: block; overflow: hidden; color: #969696; line-height: 20px; padding: 10px 15px;}
 .footer-v2 .family-site .family-list li a:hover {background: #F1F6FF; color: #323232;}
