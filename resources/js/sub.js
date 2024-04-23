@@ -272,9 +272,9 @@ function initializeTextAnimations() {
     function initializeCardAnimations() {
         const cardmoving = gsap.timeline({ delay: 1 });
       
-        cardmoving.from(".consulting-item-1", { y: window.innerHeight + 510 })
-                  .from(".consulting-item-2", { y: window.innerHeight + 510 }, "-=0.3")
-                  .from(".consulting-item-3", { y: window.innerHeight + 510 }, "-=0.3");
+        cardmoving.from(".consulting-item-1", { y: window.outerHeight + 510 })
+                  .from(".consulting-item-2", { y: window.outerHeight + 510 }, "-=0.3")
+                  .from(".consulting-item-3", { y: window.outerHeight + 510 }, "-=0.3");
       
         ScrollTrigger.create({
             animation: cardmoving,
