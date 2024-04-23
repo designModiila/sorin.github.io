@@ -108,7 +108,7 @@
 .servicenow .section06 .form-wrap .form-group input {width: 100%; height: 40px; border-bottom: 1px solid #C8C8C8; border-radius: 0; font-size: 16px; color: #fff;}
 .servicenow .section06 .form-wrap .form-group .form-detail {height: 120px;}
 .servicenow .section06 .form-wrap .form-group textarea {width: 100%; margin-top: 10px; background-color: #ffffff00; border: none; font-size: 16px; color: #fff;}
-.servicenow .section06 .form-wrap .form-group textarea {border-bottom: 1px solid #C8C8C8;}
+.servicenow .section06 .form-wrap .form-group textarea {border-bottom: 1px solid #C8C8C8; border-radius: 0;}
 .servicenow .section06 .form-wrap .privacy-wrap {margin-top: 30px;}
 .servicenow .section06 .form-wrap .icheckbox {width: 20px; height: 20px; border-radius: 5px; border: 1px solid #DFE1E6; background-color: none;}
 .servicenow .section06 .form-wrap .chk-box {position: relative; display: block; font-size: 16px; font-weight: 500; color: #fff; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
@@ -586,7 +586,7 @@
 .infrabusiness .section05 .form-wrap .form-group input {width: 100%; height: 40px; border-bottom: 1px solid #000; border-radius: 0; font-size: 16px;}
 .infrabusiness .section05 .form-wrap .form-group .form-detail {height: 120px;}
 .infrabusiness .section05 .form-wrap .form-group textarea {width: 100%; margin-top: 10px; background-color: #ffffff00; border: none; font-size: 16px;}
-.infrabusiness .section05 .form-wrap .form-group textarea {border-bottom: 1px solid #000;}
+.infrabusiness .section05 .form-wrap .form-group textarea {border-bottom: 1px solid #000; border-radius: 0;}
 .infrabusiness .section05 .form-wrap .privacy-wrap {margin-top: 30px;}
 .infrabusiness .section05 .form-wrap .icheckbox {width: 20px; height: 20px; border-radius: 5px; border: 1px solid #000; background-color: none;}
 .infrabusiness .section05 .form-wrap .chk-box {position: relative; display: block; font-size: 16px; font-weight: 500; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
