@@ -25,7 +25,7 @@ function initializeTabs() {
   });
 }
 
-const mainsection01Elements = document.querySelectorAll(".sub-consulting .section01, .sub-infrabusiness .section01, .sub-servicenow .section01");
+const mainsection01Elements = document.querySelector(".sub-consulting .section01, .sub-infrabusiness .section01, .sub-servicenow .section01");
 mainsection01Elements.forEach(mainsection01 => {
     gsap.to(mainsection01, {
         duration: 1,
