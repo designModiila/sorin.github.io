@@ -260,21 +260,24 @@ function initializeTextAnimations() {
   });
 }
 
-function initializeCardAnimations() {
-  const cardmoving = gsap.timeline({ delay: 1 });
 
-  cardmoving.from(".consulting-item-1", { y: window.innerHeight + 510 })
-            .from(".consulting-item-2", { y: window.innerHeight + 510 }, "-=0.3")
-            .from(".consulting-item-3", { y: window.innerHeight + 510 }, "-=0.3");
 
-  ScrollTrigger.create({
-      animation: cardmoving,
-      trigger: ".consulting .section04",
-      start: "top top",
-      end: "+=3000",
-      scrub: 1,
-      pin: true,
-      anticipatePin: 1
-  });
-}
+    function initializeCardAnimations() {
+        const cardmoving = gsap.timeline({ delay: 1 });
+      
+        cardmoving.from(".consulting-item-1", { y: window.innerHeight + 510 })
+                  .from(".consulting-item-2", { y: window.innerHeight + 510 }, "-=0.3")
+                  .from(".consulting-item-3", { y: window.innerHeight + 510 }, "-=0.3");
+      
+        ScrollTrigger.create({
+            animation: cardmoving,
+            trigger: ".consulting .section04",
+            start: "top top",
+            end: "+=3000",
+            scrub: 1,
+            pin: true,
+            anticipatePin: 1
+        });
+      }
+
 

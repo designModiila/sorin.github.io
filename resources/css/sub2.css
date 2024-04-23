@@ -649,7 +649,7 @@
   .sub07 .section02 .top-menu ul li a,
   .sub05 .section02 .top-menu ul li button,
   .sub04 .section02 .top-menu ul li a,
-  .world-layer-wrap .layer-top .top-menu ul li button {padding: 10px 15px; font-size: 14px;}
+  .world-layer-wrap .layer-top .top-menu ul li a {padding: 10px 15px; font-size: 14px;}
   .world-layer-wrap .layer-top .layer-title p {font-size: 28px;}
   .world-layer-wrap .layer-content .modal-title {font-size: 28px; text-align: center; top: 0; left: 0; right: 0; margin: 0 auto;}
   .world-layer.layer01 .layer-content {padding-top: 10px;}

@@ -286,7 +286,6 @@
 .consulting .section02 .main-heading-wrap {display: flex; justify-content: center; gap: 20px;}
 .consulting .section02 .main-heading-sub-wrap {margin-top: 60px;}
 
-
 .consulting .section03 {position: relative; background-color: #2C2C2C; padding: 150px 0 90px; z-index: 1;}
 .consulting .section03 .swiper {height: 540px}
 .consulting .section03 .swiper-wrapper {position: relative; height: 460px;}
@@ -431,7 +430,7 @@
     .consulting .section06 {padding: 110px 0 80px;}
     .consulting .section06 .section-title {margin-bottom: 36px;}
     .consulting .section06 .sec06-category {font-size: 14px; gap: 20px;}
-    .consulting .section06 .sec06-category > li button {font-size: 14px;}
+    .consulting .section06 .sec06-category > li a {font-size: 14px;}
     .consulting .section06 .category01-item > img {width: 40%;}
     .consulting .section06 .btn-more {margin-top: 60px; padding: 20px 30px; justify-content: space-between;}
     .consulting .section06 .btn-more > p {text-align: left; font-size: 14px; line-height: 22px;}
