@@ -228,6 +228,7 @@ function initializeGSAPAnimations() {
   gsap.set(cont, { y: '25%', opacity: 0 });
   cont.forEach(contItem => {
       gsap.to(contItem, {
+          delay: 0.5,
           y: 0,
           autoAlpha: 1,
           duration: 0.5,
@@ -251,7 +252,7 @@ function initializeTextAnimations() {
       let chars = SplitClient.chars;
 
       gsap.from(lines, {
-          delay: 0.7,
+          delay: 0,
           yPercent: 100,
           opacity: 0,
           duration: 0.5,
