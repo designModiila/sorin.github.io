@@ -6,7 +6,7 @@ $(document).ready(function() {
         mainVisual.from(".main-visual", {width: "40vw", height: "40vh", x: "50vw", yPercent: -10, ease: "power1.inOut"})
                   .from(".main-visual", {height: "40vh", ease: "power1.inOut"})
                   .to(".main-visual", {height: "100%", ease: "power1.inOut"})
-                  .from(".main-title-wrap", {y: "-40vh", ease: "power1.inOut"}, "<")
+                  .from(".main-title-wrap", {y: "-40vh", ease: "power1.inOut"},"<")
                   .to(".main-title-wrap", {color: "#fff", ease: "power1.inOut"}, "<")
                   .to(".main-category", {color: "#fff", ease: "power1.inOut"}, "<");
     
@@ -17,9 +17,10 @@ $(document).ready(function() {
             scrub: 2,
             pin: true,
             anticipatePin: 1,
-            // markers: ture,
+            markers: true,
             onLeave: () => section02Pin()
         });
+
     }
 
     function section02Pin() {

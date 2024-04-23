@@ -257,50 +257,102 @@ setTimeout(function () {
 //   },
 // });
 
+ScrollTrigger.matchMedia({
+
+  "(min-width: 768px)": function () {
+    const businessItem = gsap.timeline();
+    businessItem.from(".business-item-01", { scale: 0.3, y:-100, duration:1, ease: "power1.inOut" })
+      .to(".business-item-01 .item-text-wrap", { opacity: 1 })
+      .to(".business-item-01 .item-icon-wrap", { opacity: 1})
+     
+    const businessItemHeight = document.querySelector('.business-item-wrap').offsetHeight;
+    
+    ScrollTrigger.create({
+      animation: businessItem,
+      trigger: ".business-item-01-wrap",
+      start: "top top",
+      // end: "bottom bottom",
+      end: () => `+=${businessItemHeight} + 30`,
+      // scrub: true,
+      pin: true,
+      anticipatePin: 1,
+      toggleActions: "play none none none",
+      //markers: true
+    });
+    
+    ScrollTrigger.create({
+      trigger: ".business-item-02-wrap",
+      start: "top top",
+      end: () => `+=${businessItemHeight}`,
+     // end: "+=2000",
+      // scrub: true,
+      pin: true,
+      anticipatePin: 1,
+      toggleActions: "play none none none",
+      // markers: true
+    });
+    
+    ScrollTrigger.create({
+      trigger: ".business-item-03-wrap",
+      start: "top top",
+      end: () => `+=${businessItemHeight}`,
+     // end: "+=2000",
+      // scrub: true,
+      anticipatePin: 1,
+      toggleActions: "play none none none",
+      // markers: true
+    });
+  
+  },
+  "(max-width: 767px)": function () {
+  
+    const businessItem = gsap.timeline();
+    businessItem.from(".business-item-01", {width: "70vw", height: "40vw", duration:1, ease: "power1.inOut" })
+      .to(".business-item-01 .item-text-wrap", { opacity: 1 })
+      .to(".business-item-01 .item-icon-wrap", { opacity: 1})
+     
+    const businessItemHeight = document.querySelector('.business-item-wrap').offsetHeight;
+    
+    ScrollTrigger.create({
+      animation: businessItem,
+      trigger: ".business-item-01-wrap",
+      start: "top top",
+      // end: "bottom bottom",
+      end: () => `+=${businessItemHeight} + 30`,
+      // scrub: true,
+      pin: true,
+      anticipatePin: 1,
+      toggleActions: "play none none none",
+      //markers: true
+    });
+    
+    ScrollTrigger.create({
+      trigger: ".business-item-02-wrap",
+      start: "top top",
+      end: () => `+=${businessItemHeight}`,
+     // end: "+=2000",
+      // scrub: true,
+      pin: true,
+      anticipatePin: 1,
+      toggleActions: "play none none none",
+      // markers: true
+    });
+    
+    ScrollTrigger.create({
+      trigger: ".business-item-03-wrap",
+      start: "top top",
+      end: () => `+=${businessItemHeight}`,
+     // end: "+=2000",
+      // scrub: true,
+      anticipatePin: 1,
+      toggleActions: "play none none none",
+      // markers: true
+    });
+  
+   }
+  });
 
 
-const businessItem = gsap.timeline();
-businessItem.from(".business-item-01", { scale: 0.3, y:-100, duration:1, ease: "power1.inOut" })
-  .to(".business-item-01 .item-text-wrap", { opacity: 1 })
-  .to(".business-item-01 .item-icon-wrap", { opacity: 1})
- 
-const businessItemHeight = document.querySelector('.business-item-wrap').offsetHeight;
-
-ScrollTrigger.create({
-  animation: businessItem,
-  trigger: ".business-item-01-wrap",
-  start: "top top",
-  // end: "bottom bottom",
-  end: () => `+=${businessItemHeight} + 30`,
-  // scrub: true,
-  pin: true,
-  anticipatePin: 1,
-  toggleActions: "play none none none",
-  //markers: true
-});
-
-ScrollTrigger.create({
-  trigger: ".business-item-02-wrap",
-  start: "top top",
-  end: () => `+=${businessItemHeight}`,
- // end: "+=2000",
-  // scrub: true,
-  pin: true,
-  anticipatePin: 1,
-  toggleActions: "play none none none",
-  // markers: true
-});
-
-ScrollTrigger.create({
-  trigger: ".business-item-03-wrap",
-  start: "top top",
-  end: () => `+=${businessItemHeight}`,
- // end: "+=2000",
-  // scrub: true,
-  anticipatePin: 1,
-  toggleActions: "play none none none",
-  // markers: true
-});
 
 
 

@@ -25,17 +25,19 @@ function initializeTabs() {
   });
 }
 
-
-gsap.to(".section01", {
-    duration: 1,
-    ease: "none",
-    scrollTrigger: {
-        trigger: ".section01",
-        start: "top top",
-        end: "bottom top",
-        pin: true,
-        pinSpacing: false,
-    }
+const mainsection01Elements = document.querySelectorAll(".sub-consulting .section01, .sub-infrabusiness .section01, .sub-servicenow .section01");
+mainsection01Elements.forEach(mainsection01 => {
+    gsap.to(mainsection01, {
+        duration: 1,
+        ease: "none",
+        scrollTrigger: {
+            trigger: mainsection01,
+            start: "top top",
+            end: "bottom top",
+            pin: true,
+            pinSpacing: false,
+        }
+    });
 });
 
 
