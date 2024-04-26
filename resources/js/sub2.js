@@ -69,7 +69,7 @@ $(document).ready(function() {
             stagger: 0.3,
             scrollTrigger: {
                 trigger: contItem,
-                start: 'top 70%',
+                start: 'top 80%',
                 toggleActions: "restart none none reverse",
             }
         });
@@ -186,35 +186,118 @@ $(document).ready(function() {
     // });
 //}
 
-gsap.set('.content-wrap .content-card', { zIndex: (i, target, targets) => targets.length - i });
 
-const imageChange = gsap.timeline({ paused: true });
+//sub06 카드
+// gsap.set('.content-wrap .content-card', { zIndex: (i, target, targets) => targets.length - i });
 
-imageChange
-  .to('body', { duration: 3.0 }, 0)
-  .to('.content-card.content-card-01', { duration: 0.25, autoAlpha: 0 }, 1.0)
-  .to('.content-card.content-card-02', { duration: 0.25, autoAlpha: 1 }, 1.0)
-  .to('.content-card.content-card-02', { duration: 0.25, autoAlpha: 0 }, 2.0)
-  .to('.content-card.content-card-03', { duration: 0.25, autoAlpha: 1 }, 2.0);
+// const imageChange = gsap.timeline({ paused: true });
+
+// imageChange
+//   .to('body', { duration: 3.0 }, 0)
+//   .to('.content-card.content-card-01', { duration: 0.25, autoAlpha: 0 }, 1.0)
+//   .to('.content-card.content-card-02', { duration: 0.25, autoAlpha: 1 }, 1.0)
+//   .to('.content-card.content-card-02', { duration: 0.25, autoAlpha: 0 }, 2.0)
+//   .to('.content-card.content-card-03', { duration: 0.25, autoAlpha: 1 }, 2.0);
+
+const cardWrap = document.querySelectorAll(".content-card-wrap")
+const cardWrap1 = document.querySelector(".content-card1-wrap")
+const cardWrap2 = document.querySelector(".content-card2-wrap")
+const cardWrap3 = document.querySelector(".content-card3-wrap")
+
+// const contentCard01 = document.querySelector(".sub06 .section02 .content-card-01");
+// const contentCard02 = document.querySelector(".sub06 .section02 .content-card-02");
+// const contentCard03 = document.querySelector(".sub06 .section02 .content-card-03");
 
 
-gsap.utils.toArray(".sub06 .section02 .split").forEach(target => {
+function createScrollTrigger(target) {
     let SplitClient = new SplitType(target, { type: "chars" });
     let chars = SplitClient.chars;
 
     chars.forEach((char, index) => {
-      ScrollTrigger.create({
-        trigger: char,
-        start: "top center",
-        end: "+=400",
-        onUpdate: self => {
-          const progress = self.progress;
-          const color = progress < (index + 1) / chars.length ? "#ffffff" : "#329BFA";
-          gsap.to(char, { color: color, duration: 0.5});
-        }
-      });
+        ScrollTrigger.create({
+            trigger: target.parentElement.parentElement,
+            start: "top top",
+            end: "bottom 20%",
+            pinSpacing: true,
+            markers: true,
+            onUpdate: self => {
+                const progress = self.progress;
+                const color = progress < (index + 1) / chars.length ? "#ffffff" : "#329BFA";
+                gsap.to(char, { color: color, duration: 0.5 });
+            }
+        });
     });
-  });
+}
+
+const contentCardSplit01 = document.querySelector(".sub06 .section02 .split01");
+const contentCardSplit02 = document.querySelector(".sub06 .section02 .split02");
+const contentCardSplit03 = document.querySelector(".sub06 .section02 .split03");
+
+createScrollTrigger(contentCardSplit01);
+createScrollTrigger(contentCardSplit02);
+createScrollTrigger(contentCardSplit03);
+
+
+
+
+
+
+
+
+
+
+
+
+ScrollTrigger.create({
+    // animation: cardAnimation,
+    trigger: cardWrap1,
+    start: "top top",
+    end: () => "+=" + cardWrap1.offsetHeight,
+    pin: true,
+    pinSpacing: false,
+    markers: true
+});
+
+
+ScrollTrigger.create({
+    // animation: cardAnimation,
+    trigger: cardWrap2,
+    start: "top top",
+    end: () => "+=" + cardWrap2.offsetHeight,
+    pin: true,
+    pinSpacing: false,
+    markers: true
+});
+
+ScrollTrigger.create({
+    // animation: cardAnimation,
+    trigger: cardWrap3,
+    start: "top top",
+    end: () => "+=" + cardWrap3.offsetHeight,
+    pin: true,
+    pinSpacing: false,
+    markers: true
+});
+
+
+// 덮는 애니메이션
+
+// const panel = document.querySelector(".content-card1-wrap");
+
+// ScrollTrigger.create({
+//     trigger: panel,
+//     start: "top top",
+//     pin: true,
+//     pinSpacing: false
+// });
+
+
+
+
+
+
+
+
 
 
     //글자 애니메이션
