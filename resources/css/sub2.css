@@ -288,12 +288,12 @@
 .sub03 .section02 .heading-1:nth-child(2) {margin-top: 60px;}
 .sub03 .section03 {margin-top: 280px; text-align: center;}
 .sub03 .mission-wrap {margin-top: 96px; margin-bottom: 100px; display: flex; justify-content: center;}
-.sub03 .mission-wrap .detail {display: flex; align-items: center; margin-bottom: 20vh; height: 20vh; opacity: .3; transition: all .5s;}
+.sub03 .mission-wrap .detail {display: flex; align-items: center; margin-bottom: 350px; height: 20vh; opacity: .3; transition: all .5s;}
 .sub03 .mission-wrap .detail:nth-child(1) {margin-top: 20vh;}
 .sub03 .mission-wrap .detail:nth-child(3) {margin-bottom: 20vh;}
 .sub03 .mission-wrap .detail.is-active {opacity: 1; transition: all .5s;}
 
-.sub03 .mission-wrap .mission-left {width: 55%; margin-top: 100px;}
+.sub03 .mission-wrap .mission-left {width: 55%;}
 .sub03 .mission-wrap .mission-head {width: 50%; font-size: 42px; font-weight: 700; letter-spacing: -0.03em; color: #323232;}
 .sub03 .mission-wrap .desc-text {font-size: 20px; font-weight: 600; line-height: 46px; letter-spacing: -0.03em; color: #4B4B4B;}
 /* .sub03 .mission-right {display: flex; align-items: center;} */

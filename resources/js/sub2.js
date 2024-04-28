@@ -312,7 +312,7 @@ $(document).ready(function() {
             });
         
             const mission = gsap.timeline();
-            mission.to(".photo2", {opacity: 1, delay: 0.5})
+            mission.to(".photo2", {opacity: 1, delay: 0.4})
                    .to(".photo3", {opacity: 1});
         
             ScrollTrigger.create({
