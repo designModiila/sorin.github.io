@@ -199,14 +199,18 @@ $(document).ready(function() {
 //   .to('.content-card.content-card-02', { duration: 0.25, autoAlpha: 0 }, 2.0)
 //   .to('.content-card.content-card-03', { duration: 0.25, autoAlpha: 1 }, 2.0);
 
+
+
+// const contentCard01 = document.querySelector(".sub06 .section02 .content-card-01");
+// const contentCard02 = document.querySelector(".sub06 .section02 .content-card-02");
+// const contentCard03 = document.querySelector(".sub06 .section02 .content-card-03");
+
+
 const cardWrap = document.querySelectorAll(".content-card-wrap")
 const cardWrap1 = document.querySelector(".content-card1-wrap")
 const cardWrap2 = document.querySelector(".content-card2-wrap")
 const cardWrap3 = document.querySelector(".content-card3-wrap")
 
-// const contentCard01 = document.querySelector(".sub06 .section02 .content-card-01");
-// const contentCard02 = document.querySelector(".sub06 .section02 .content-card-02");
-// const contentCard03 = document.querySelector(".sub06 .section02 .content-card-03");
 
 
 function createScrollTrigger(target) {
@@ -237,22 +241,11 @@ createScrollTrigger(contentCardSplit01);
 createScrollTrigger(contentCardSplit02);
 createScrollTrigger(contentCardSplit03);
 
-
-
-
-
-
-
-
-
-
-
-
 ScrollTrigger.create({
     // animation: cardAnimation,
     trigger: cardWrap1,
     start: "top top",
-    end: () => "+=" + cardWrap1.offsetHeight,
+    end: () => "+=" + cardWrap1.offsetHeight * 5,
     pin: true,
     pinSpacing: false,
     markers: true
@@ -262,8 +255,9 @@ ScrollTrigger.create({
 ScrollTrigger.create({
     // animation: cardAnimation,
     trigger: cardWrap2,
+    opacity:1,
     start: "top top",
-    end: () => "+=" + cardWrap2.offsetHeight,
+    end: () => "+=" + cardWrap2.offsetHeight * 3,
     pin: true,
     pinSpacing: false,
     markers: true
@@ -280,16 +274,7 @@ ScrollTrigger.create({
 });
 
 
-// 덮는 애니메이션
 
-// const panel = document.querySelector(".content-card1-wrap");
-
-// ScrollTrigger.create({
-//     trigger: panel,
-//     start: "top top",
-//     pin: true,
-//     pinSpacing: false
-// });
 
 
 
