@@ -38,6 +38,19 @@ body.noScroll { overflow: hidden;}
 #header .gnb-wrap .gnb .depth2 ul li:hover a,
 #header .gnb-wrap .gnb .depth2 ul li.active a {color: #323232;}
 
+#header .gnb-wrap .gnb .infra-con .infra-solution {position: relative;}
+#header .gnb-wrap .gnb .infra-con .infra-solution img {position: absolute; top: 4px; right: 10px; opacity: 0.5; cursor: pointer; transition: all 0.2s;}
+#header .gnb-wrap .gnb .infra-con .infra-solution:hover img {opacity: 1;}
+
+/* #header .gnb-wrap .gnb .depth3 ul {display: flex; flex-direction: column; gap: 10px;} */
+#header .gnb-wrap .gnb .depth2 .depth3 {padding: 6px 5px 6px 20px; border-radius: 5px;}
+#header .gnb-wrap .gnb .depth2 .depth3 a {font-size: 16px; display: block; font-weight: 500; letter-spacing: -0.03em; color: #969696; transition: all 0.2s;}
+
+
+/* #header .gnb-wrap .gnb .infra-con .depth3 {display: none; height: 0; opacity: 0; transition: 0.5s;}
+#header .gnb-wrap .gnb .infra-con .infra-solution:hover ~ .depth3 {display: block; height: auto; opacity: 1;} */
+
+
 #header .gnb-wrap .gnb .company-con {display: none; height: 0; opacity: 0; transition: 0.5s;}
 #header .gnb-wrap .gnb .company:hover .company-con {display: block; height: auto; opacity: 1;}
 #header .gnb-wrap .gnb .infra-con {display: none; height: 0; opacity: 0; transition: 0.5s;}
@@ -325,7 +338,7 @@ body.noScroll { overflow: hidden;}
     .footer-main .footer-bottom {margin-top: 20px; flex-direction: column; gap: 20px;}
 }
 
-.footersub {padding-bottom: 334px;}
+.footersub .inner {padding-bottom: 334px;}
 .footersub .footersub-title {padding: 300px 0 200px;}
 .footersub .footersub-title p {text-align: center; font-size: 48px; font-weight: 700; line-height: 68px; color: #323232;}
 .footersub .footersub-article {margin-top: 80px;}
@@ -337,3 +350,13 @@ body.noScroll { overflow: hidden;}
 .footersub .detail-box .list-style li {margin-left: 30px; list-style-type: disc;}
 .footersub .detail-box .margin {margin-top: 30px;}
 .footersub .detail-box p span {padding-left: 20px;}
+
+@media (max-width: 767px) {
+    .footersub .inner {padding-bottom: 245px;}
+    .footersub .footersub-title {padding: 200px 0 80px;}
+    .footersub .footersub-title p {font-size: 28px;}
+    .footersub .footersub-article .heading {margin-bottom: 20px; font-size: 20px; line-height: 32px}
+    .footersub .footersub-article .detail {font-size: 14px; line-height: 26px;}
+    .footersub .detail-box {margin-top: 20px; padding: 20px; font-size: 14px; line-height: 26px;}
+    .footersub .footersub-article-first {margin-bottom: 80px;}
+}
