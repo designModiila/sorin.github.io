@@ -629,7 +629,7 @@
   #header .mobile-top .mo-logo {background: url(../../resources/images/common/sorin_logo.png) no-repeat center; width: 80px; height: 36px; background-size: contain;}
   #header .mobile-top button {background: url(../../resources/images/common/mobile_btn.png) no-repeat center; width: 25px; height: 25px;}
   
-
+  .mainsub .inner1860 {border-radius: 15px;}
   .mainsub .main-visual-wrap {height: calc(100vh - 20px); margin: 10px;}
   .mainsub .main-visual {border-radius: 15px; width: 100%; height: 100%;}
   .mainsub .main-category {font-size: 16px;}
@@ -730,8 +730,9 @@
   .sub05 .section02 .location-map-wrap .map {margin-top: 40px;}
   .sub05 .section02 .map iframe {height: 353px;}
 
+  .sub06 .section02 {margin: 0 10px;}
   .sub06 .section02 .heading-1 br {display: block;}
-  .sub06 .section02 .content-card {height: calc(100vh - 48px);}
+  .sub06 .section02 .content-card {height: calc(100vh - 20px); margin: 10px;}
   .sub06 .section02 .content-card-01 {background: url(../../resources/images/sub2/sub06_img_sub01.png)no-repeat 15% 0; background-size: cover;}
   .sub06 .section02 .content-card-02 {background: url(../../resources/images/sub2/sub06_img_sub02.png)no-repeat 50% 0; background-size: cover;}
   .sub06 .section02 .content-card-03 {background: url(../../resources/images/sub2/sub06_img_sub03.png)no-repeat 50% 0;; background-size: cover;}
