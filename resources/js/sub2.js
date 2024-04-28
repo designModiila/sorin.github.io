@@ -223,7 +223,7 @@ function createScrollTrigger(target) {
             start: "top top",
             end: "bottom 20%",
             pinSpacing: true,
-            markers: true,
+            markers: false,
             onUpdate: self => {
                 const progress = self.progress;
                 const color = progress < (index + 1) / chars.length ? "#ffffff" : "#329BFA";
@@ -242,35 +242,32 @@ createScrollTrigger(contentCardSplit02);
 createScrollTrigger(contentCardSplit03);
 
 ScrollTrigger.create({
-    // animation: cardAnimation,
     trigger: cardWrap1,
     start: "top top",
     end: () => "+=" + cardWrap1.offsetHeight * 5,
     pin: true,
     pinSpacing: false,
-    markers: true
+    markers: false
 });
 
 
 ScrollTrigger.create({
-    // animation: cardAnimation,
     trigger: cardWrap2,
     opacity:1,
     start: "top top",
     end: () => "+=" + cardWrap2.offsetHeight * 3,
     pin: true,
     pinSpacing: false,
-    markers: true
+    markers: false
 });
 
 ScrollTrigger.create({
-    // animation: cardAnimation,
     trigger: cardWrap3,
     start: "top top",
     end: () => "+=" + cardWrap3.offsetHeight,
     pin: true,
     pinSpacing: false,
-    markers: true
+    markers: false
 });
 
 
