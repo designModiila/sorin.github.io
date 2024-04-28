@@ -98,12 +98,8 @@
 }
 
 .main .section-client a:hover {
-    color: #404040 !important;
-    font-weight: 700 !important;
-    letter-spacing: 3px;
-    background: none;
-    -webkit-box-shadow: 0px 5px 20px -10px rgba(0,0,0,0.57);
-    -moz-box-shadow: 0px 5px 20px -10px rgba(0,0,0,0.57);
+    background: #323232;
+    color: #fff;
 }
 
 .main .section-recruit {padding: 0 1.5rem;}
@@ -113,12 +109,8 @@
 .main .section-recruit a {padding: 12px 40px; text-align: center; font-size: 16px; font-weight: 500; color: #fff; border: 1px solid #fff; transition: all 0.3s ease-in-out;}
 
 .main .section-recruit a:hover {
-    color: #fff !important;
-    font-weight: 700 !important;
-    letter-spacing: 3px;
-    background: none;
-    -webkit-box-shadow: 0px 5px 20px -10px rgba(255, 255, 255, 0.57);
-    -moz-box-shadow: 0px 5px 20px -10px rgba(255, 255, 255,0.57);
+    background: #fff;
+    color: #323232;
 }
 
 
