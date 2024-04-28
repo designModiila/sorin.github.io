@@ -19,7 +19,8 @@
 .main .visual-wrapper .visual-sub-01 {font-weight: 300; font-size: 30px; letter-spacing: -0.02em; color: #fff;}
 .main .visual-wrapper .visual-sub-02 {margin-top: 20px; font-weight: 400; font-size: 20px; letter-spacing: -0.02em; color: #fff;}
 .main .visual-wrapper .slide-wrapper {position: relative;}
-.main .visual-wrapper .slide-wrapper .slide {position: absolute; top: 0; left: 0; width: 100%; background-color: #000; z-index: 0;}
+.main .visual-wrapper .slide-wrapper .slide {position: absolute; top: 0; left: 0; width: 100%; background-color: #000; opacity: 0; z-index: 0;} 
+.main .visual-wrapper .slide-wrapper .slide.show {opacity: 1; z-index: 1; transition: all 1.5s ease-in-out;}
 .main .visual-wrapper .link-wrap {margin-top: 50px; display: flex; gap: 30px;}
 .main .visual-wrapper .link-wrap a {padding: 12px 40px; font-weight: 400; font-size: 14px; letter-spacing: -0.02em; color: #fff; border: 1px solid #AFAFAF; transition: all 0.3s ease-in-out;}
 .main .visual-wrapper .link-wrap a:hover {background-color: #fff; color: #323232;}
@@ -39,7 +40,6 @@
 .main .indicator ul li.on span {width: 100%; transition: width 6s linear; transform-origin: left;}
 .main .indicator ul li.on p {color: #3D7DFF;}
 /* .main .visual-wrapper .slide-wrapper .slide.show {z-index: 3;} */
-.main .visual-wrapper .slide-wrapper .slide.show {z-index: 1; transition: all 1.5s ease-in-out;}
 
 .main .main-heading-1 {text-align: left; font-weight: 800; font-size: 48px; line-height: 68px; letter-spacing: -0.02em; color: var(--color-black); overflow: hidden;}
 .main .main-heading-sub {margin-top: 0; text-align: left; font-weight: 400; font-size: 24px; line-height: 32px; letter-spacing: -0.02em; color: var(--color-black); overflow: hidden;}
