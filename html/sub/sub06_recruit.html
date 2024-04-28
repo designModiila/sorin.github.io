@@ -30,7 +30,7 @@
     <script src="https://unpkg.com/split-type"></script>
 
     <script src="../../resources/js/common.js"></script>
-    <script defer src="../../resources/js/sub2.js"></script>
+    <!-- <script defer src="../../resources/js/sub2.js"></script> -->
   </head>
   
   <body class="sub-compnay">
@@ -150,3 +150,176 @@
     <footer id="footerMain" class="footer-main"></footer>
   </body>
 </html>
+<script>
+    // 공통 애니메이션
+    $(document).ready(function() {
+    if (window.innerWidth >= 768) {
+        const mainVisual = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".section01",
+                start: "top top",
+                scrub: 2,
+                pin: true,
+                anticipatePin: 1,
+                onEnterBack: () => gsap.set(".section01", {pin: true})
+            }
+        });
+    
+        mainVisual.from(".main-visual", { width: "40%", ease: "power1.inOut" })
+                  .to(".main-visual", { width: "100%", ease: "power1.inOut" })
+                  .to(".main-visual", { height: "100%", ease: "power1.inOut"}, "+=0.5")
+                  .to(".mainsub .section01 .inner", { bottom: "150px", ease: "power1.inOut"}, "<")
+                  .to(".main-title-wrap", { color: "#fff", ease: "power1.inOut"}, "<")
+                  .to(".main-category", { color: "#fff", ease: "power1.inOut"}, "<");
+    
+        // Optimize resize event handling
+        let resizeTimeout;
+        $(window).on('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                ScrollTrigger.refresh();
+            }, 250);
+        });
+    
+
+    } else {
+
+        const mainVisual = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".section01",
+                start: "top top",
+                scrub: 2,
+                pin: true,
+                anticipatePin: 1,
+                onEnterBack: () => gsap.set(".section01", {pin: true})
+            }
+        });
+    
+        mainVisual.from(".main-visual", { width: "100%", height: "40%", ease: "power1.inOut" })
+                  .to(".main-visual", { width: "100%", height: "100%", ease: "power1.inOut" })
+                  .to(".mainsub .section01 .inner", { bottom: "50px", ease: "power1.inOut"}, "<")
+                  .to(".main-title-wrap", { color: "#fff", ease: "power1.inOut"}, "<")
+                  .to(".main-category", { color: "#fff", ease: "power1.inOut"}, "<");
+    
+        // Optimize resize event handling
+        let resizeTimeout;
+        $(window).on('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                ScrollTrigger.refresh();
+            }, 250);
+        });
+
+    }
+    
+
+    const cont = gsap.utils.toArray('.cont');
+    gsap.set(cont, {y: '30%', opacity: 0});
+    cont.forEach(contItem => {
+        gsap.to(contItem, {
+            y: 0,
+            autoAlpha: 1,
+            duration: 0.5,
+            stagger: 0.3,
+            scrollTrigger: {
+                trigger: contItem,
+                start: 'top 80%',
+                toggleActions: "restart none none reverse",
+            }
+        });
+    });
+
+    const targets = gsap.utils.toArray(".splitani");
+    targets.forEach((target) => {
+        let split = new SplitType(target, { type: "lines, words, chars" });
+        gsap.from(split.lines, {
+            delay: 0.7,
+            yPercent: 100,
+            opacity: 0,
+            duration: 0.5,
+            ease: "circ.out",
+            stagger: 0.3,
+            scrollTrigger: {
+                trigger: target,
+                start: "top 80%",
+                end: "bottom bottom",
+                markers: false,
+            }
+        });
+
+    });
+});
+
+
+// 인재상 애니메이션
+
+$(document).ready(function() {
+    
+    const cardWrap = document.querySelectorAll(".sub06 .section02 .content-card-wrap")
+    const cardWrap1 = document.querySelector(".sub06 .section02 .content-card1-wrap")
+    const cardWrap2 = document.querySelector(".sub06 .section02 .content-card2-wrap")
+    const cardWrap3 = document.querySelector(".sub06 .section02 .content-card3-wrap")
+
+
+
+    function createScrollTrigger(target) {
+        let SplitClient = new SplitType(target, { type: "chars" });
+        let chars = SplitClient.chars;
+
+        chars.forEach((char, index) => {
+            ScrollTrigger.create({
+                trigger: target.parentElement.parentElement,
+                start: "top top",
+                end: "bottom 20%",
+                pinSpacing: true,
+                markers: false,
+                onUpdate: self => {
+                    const progress = self.progress;
+                    const color = progress < (index + 1) / chars.length ? "#ffffff" : "#329BFA";
+                    gsap.to(char, { color: color, duration: 0.5 });
+                }
+            });
+        });
+    }
+
+    const contentCardSplit01 = document.querySelector(".sub06 .section02 .split01");
+    const contentCardSplit02 = document.querySelector(".sub06 .section02 .split02");
+    const contentCardSplit03 = document.querySelector(".sub06 .section02 .split03");
+
+    createScrollTrigger(contentCardSplit01);
+    createScrollTrigger(contentCardSplit02);
+    createScrollTrigger(contentCardSplit03);
+
+    ScrollTrigger.create({
+        trigger: cardWrap1,
+        start: "top top",
+        end: () => "+=" + cardWrap1.offsetHeight * 5,
+        pin: true,
+        pinSpacing: false,
+        markers: false
+    });
+
+
+    ScrollTrigger.create({
+        trigger: cardWrap2,
+        opacity:1,
+        start: "top top",
+        end: () => "+=" + cardWrap2.offsetHeight * 3,
+        pin: true,
+        pinSpacing: false,
+        markers: false
+    });
+
+    ScrollTrigger.create({
+        trigger: cardWrap3,
+        start: "top top",
+        end: () => "+=" + cardWrap3.offsetHeight,
+        pin: true,
+        pinSpacing: false,
+        markers: false
+    });
+   
+
+});
+
+</script>

@@ -187,100 +187,6 @@ $(document).ready(function() {
 //}
 
 
-//sub06 카드
-// gsap.set('.content-wrap .content-card', { zIndex: (i, target, targets) => targets.length - i });
-
-// const imageChange = gsap.timeline({ paused: true });
-
-// imageChange
-//   .to('body', { duration: 3.0 }, 0)
-//   .to('.content-card.content-card-01', { duration: 0.25, autoAlpha: 0 }, 1.0)
-//   .to('.content-card.content-card-02', { duration: 0.25, autoAlpha: 1 }, 1.0)
-//   .to('.content-card.content-card-02', { duration: 0.25, autoAlpha: 0 }, 2.0)
-//   .to('.content-card.content-card-03', { duration: 0.25, autoAlpha: 1 }, 2.0);
-
-
-
-// const contentCard01 = document.querySelector(".sub06 .section02 .content-card-01");
-// const contentCard02 = document.querySelector(".sub06 .section02 .content-card-02");
-// const contentCard03 = document.querySelector(".sub06 .section02 .content-card-03");
-
-
-const cardWrap = document.querySelectorAll(".content-card-wrap")
-const cardWrap1 = document.querySelector(".content-card1-wrap")
-const cardWrap2 = document.querySelector(".content-card2-wrap")
-const cardWrap3 = document.querySelector(".content-card3-wrap")
-
-
-
-function createScrollTrigger(target) {
-    let SplitClient = new SplitType(target, { type: "chars" });
-    let chars = SplitClient.chars;
-
-    chars.forEach((char, index) => {
-        ScrollTrigger.create({
-            trigger: target.parentElement.parentElement,
-            start: "top top",
-            end: "bottom 20%",
-            pinSpacing: true,
-            markers: false,
-            onUpdate: self => {
-                const progress = self.progress;
-                const color = progress < (index + 1) / chars.length ? "#ffffff" : "#329BFA";
-                gsap.to(char, { color: color, duration: 0.5 });
-            }
-        });
-    });
-}
-
-const contentCardSplit01 = document.querySelector(".sub06 .section02 .split01");
-const contentCardSplit02 = document.querySelector(".sub06 .section02 .split02");
-const contentCardSplit03 = document.querySelector(".sub06 .section02 .split03");
-
-createScrollTrigger(contentCardSplit01);
-createScrollTrigger(contentCardSplit02);
-createScrollTrigger(contentCardSplit03);
-
-ScrollTrigger.create({
-    trigger: cardWrap1,
-    start: "top top",
-    end: () => "+=" + cardWrap1.offsetHeight * 5,
-    pin: true,
-    pinSpacing: false,
-    markers: false
-});
-
-
-ScrollTrigger.create({
-    trigger: cardWrap2,
-    opacity:1,
-    start: "top top",
-    end: () => "+=" + cardWrap2.offsetHeight * 3,
-    pin: true,
-    pinSpacing: false,
-    markers: false
-});
-
-ScrollTrigger.create({
-    trigger: cardWrap3,
-    start: "top top",
-    end: () => "+=" + cardWrap3.offsetHeight,
-    pin: true,
-    pinSpacing: false,
-    markers: false
-});
-
-
-
-
-
-
-
-
-
-
-
-
 
     //글자 애니메이션
     // const targets = gsap.utils.toArray(".splitani");
@@ -528,5 +434,4 @@ function layer_close() {
     $(".world-layer, .layer-dimm").removeClass("open");
     $('body').removeClass('noScroll');
 };
-
 
