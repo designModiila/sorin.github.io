@@ -186,10 +186,13 @@
     .main .section-client .main-heading-wrap-mo {display: block;}
     .main .section-client a {padding: 10px 20px; font-size: 12px; font-weight: 700;}
     .main .section-client .more-button {margin-top: 67px;}
+    .main .client-wrap {gap: 20px;}
+    .main .client-wrap .logo-box div {padding: 20px; width: 190px; height: 75px; border-radius: 10px;}
 
     .main .section-recruit {padding: 0 10px;}
     .main .section-recruit a {padding: 8px 20px; font-size: 10px; font-weight: 700;}
     .main .section-recruit .recruit-container {border-radius: 20px;}
+    
 }
 @media (max-width: 630px) {
     .main .section-count .main-heading-wrap {display: none;} 

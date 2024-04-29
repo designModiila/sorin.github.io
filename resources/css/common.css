@@ -201,7 +201,7 @@ body.noScroll { overflow: hidden;}
     .footer .footer-top {padding-bottom: 20px;}
     .footer .footer-top > img {width: 80px; height: 36px;}
     .footer .footer-contact .family-site {position: absolute; top: 33px; right: 6.67vw;}
-    .footer .footer-contact .family-select {padding: 6px 18px; font-size: 10px;}
+    .footer .footer-contact .family-select {padding: 10px 38px; font-size: 13px;}
     .footer .footer-contact .family-select svg {margin-left: 3px;}
     .footer .footer-bottom .privacy-list {position: absolute; font-size: 11px; top: 110px;}
     .footer .footer-contact {margin-top: 50px;}
@@ -240,7 +240,7 @@ body.noScroll { overflow: hidden;}
     /* .footer-v2 .footer-v2-top {padding-bottom: 20px;} */
     .footer-v2 .footer-v2-top > img {width: 80px; height: 36px;}
     .footer-v2 .family-site {position: absolute; top: 38px; right: 6.67vw;}
-    .footer-v2 .family-select {padding: 6px 18px; font-size: 10px;}
+    .footer-v2 .family-select {padding: 10px 38px; font-size: 13px;}
     .footer-v2 .family-select svg {margin-left: 3px;}
     .footer-v2 .privacy-list {position: absolute; font-size: 11px; top: 0;}
     .footer-v2 .footer-contact {margin-top: 0;}
@@ -283,7 +283,7 @@ body.noScroll { overflow: hidden;}
     /* .footer-v3 .footer-v3-top {padding-bottom: 20px;} */
     .footer-v3 .footer-v3-top > img {width: 80px; height: 36px;}
     .footer-v3 .family-site {position: absolute; top: 38px; right: 6.67vw;}
-    .footer-v3 .family-select {padding: 6px 18px; font-size: 10px;}
+    .footer-v3 .family-select {padding: 10px 38px; font-size: 13px;}
     .footer-v3 .family-select svg {margin-left: 3px;}
     .footer-v3 .privacy-list {position: absolute; font-size: 11px; top: 35px;}
     .footer-v3 .footer-contact {margin-top: 0;}
@@ -337,7 +337,7 @@ body.noScroll { overflow: hidden;}
     .footer-main .footer-contact-link .link-wrap {margin-top: 40px; flex-direction: row; gap: 15px;}
     .footer-main .footer-main-top > img {width: 80px; height: 36px;}
     .footer-main .family-site {position: absolute; top: 38px; right: 6.67vw;}
-    .footer-main .family-select {padding: 6px 18px; font-size: 10px;}
+    .footer-main .family-select {padding: 10px 38px; font-size: 13px;}
     .footer-main .footer-contact-link .link-title {font-size: 13px;}
     .footer-main .footer-contact-link .link img {width: 12px;}
     .footer-main .footer-bottom {margin-top: 20px; flex-direction: column; gap: 20px;}
