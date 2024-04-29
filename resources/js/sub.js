@@ -88,50 +88,46 @@ function initializeSwipers() {
   });
 
 
-  new Swiper("#js-swiper-infra", {
-    slidesPerView: 4,
-    preventInteractionOnTransition: true,
-    loopAddBlankSlides: false,
-    speed: 1000,
-    spaceBetween: 60,
+  
+new Swiper("#js-swiper-infra", {
+    effect: "coverflow",
+    slidesPerView: "auto",
     centeredSlides: true,
     mousewheel: true,
-    breakpoints: {
-        300: { slidesPerView: 3, spaceBetween: 60 },
-        768: { slidesPerView: 3, spaceBetween: 60 },
-        1024: { slidesPerView: 3, spaceBetween: 40 },
-        1280: { slidesPerView: 4, spaceBetween: 60 }
+    pagination: { el: ".swiper-pagination", clickable: true },
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 50,
+        modifier: 3,
+        slideShadows: false
+      },
+    on: {
+      slideChangeTransitionStart: function () {
+        var slides = this.slides;
+        slides.forEach(function(slide, index) {
+          if (index < this.activeIndex) {
+            slide.style.opacity = '0'; // 왼쪽으로 이동할 때 이전 슬라이드들은 opacity를 0으로 설정
+          } else if (index === this.activeIndex) {
+            slide.style.opacity = '1'; // 활성화된 슬라이드는 opacity를 1로 설정
+          } else {
+            slide.style.opacity = '1'; // 활성화되지 않은 슬라이드들은 opacity를 1로 설정
+          }
+        }, this);
+      }
     },
-    pagination: { el: ".swiper-pagination", clickable: true }
+    // breakpoints: {
+    //             300: {
+    //                 slidesPerView: 1,
+    //             },
+    //             768: {
+    //                 slidesPerView: 2,
+    //             },
+    //         }
   });
 
-  new Swiper('#js-swiper-hardware', {
-    loop: true,
-    slidesPerView: 2,
-    spaceBetween: 230,
-    centeredSlides: true,
-    autoplay: {
-        delay: 5000,
-        // disableOnInteraction: true
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    observer: true,
-    observeParents: true,
-    breakpoints: {
-        300: {
-            slidesPerView: 1.5,
-            spaceBetween: 80,
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 230,
-        },
-    },
-  });
 
+  
 
   new Swiper(".backup-slide", {
     slidesPerView: 1,
