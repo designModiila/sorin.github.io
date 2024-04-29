@@ -147,25 +147,26 @@ new Swiper("#js-swiper-infra", {
   });
 
 
-  new Swiper(".backup-slide", {
-    slidesPerView: 1,
-    spaceBetween: 80,
-    loop: true,
-    speed: 1000,
-    autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-    },
-    breakpoints: {
-        768: {
-            slidesPerView: 1,
-            spaceBetween: 0,
-        },
-    },
-  });
+// 로고 받으면 슬라이드 활성
+//   new Swiper(".backup-slide", {
+//     slidesPerView: 1,
+//     spaceBetween: 80,
+//     loop: true,
+//     speed: 1000,
+//     autoplay: {
+//         delay: 3500,
+//         disableOnInteraction: false,
+//     },
+//     pagination: {
+//         el: ".swiper-pagination",
+//     },
+//     breakpoints: {
+//         768: {
+//             slidesPerView: 1,
+//             spaceBetween: 0,
+//         },
+//     },
+//   });
   
 
 }
