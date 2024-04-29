@@ -53,7 +53,7 @@
 
 <div class="only-mo mo-menu-wrapper">
   <div class="mobile-top">
-    <a href="#">
+    <a href="../../html/main/main.html">
       <div class="mo-logo"><span class="hidden">sorin</span></div>
     </a>
     <button class="mo-nav">
@@ -186,6 +186,12 @@ window.onscroll = function() {
     $("#header").removeClass("hide").addClass("active");
     $(".header-wrap h1").addClass("active");
 
+    $("#header").removeClass("hide").addClass("active");
+    $("#header .mobile-top .mo-logo").addClass("active");
+
+    $("#header").removeClass("hide").addClass("active");
+    $("#header .mobile-top button").addClass("active");
+
     $(".infra-menu").addClass("hide").addClass("hide");
     // document.querySelector(".infra-menu").style.top = "70px";
   } else {
@@ -203,6 +209,12 @@ $(window).scroll(function() {
     $(".header-wrap, .header-wrap h1").removeClass("active");
     $("#header").removeClass("active");
     // $(".infra-menu").css("transition", "all 0.5s ease");
+
+    $("#header .mobile-top .mo-logo").removeClass("active");
+    $("#header").removeClass("active");
+
+    $("#header .mobile-top button").removeClass("active");
+    $("#header").removeClass("active");
   }
 });
 
