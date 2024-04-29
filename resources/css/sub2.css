@@ -466,7 +466,7 @@
 .sub06 .section03 .result-desc {font-size: 16px; font-weight: 600; line-height: 30px; letter-spacing: -0.03em; color: #fff;}
 .sub06 .section03 .result-desc br:nth-child(1) {display: none;}
 
-.sub07 .section02 {text-align: center;}
+.sub07 .section02 {text-align: center; padding-bottom: 180px;}
 .sub07 .section02 .top-menu{margin-top: 100px; display: inline-block; padding: 15px; border-radius: 10px; border: 1px solid #E3E3E3;}
 .sub07 .section02 .top-menu ul{display: flex; gap: 20px; justify-content: center;}
 .sub07 .section02 .top-menu ul .tablinks{background: #fff; border-radius: 10px; transition: background 0.3s ease-in;}
