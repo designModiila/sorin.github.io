@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-
+.main #header {transition: all 0.3s ease-in-out;}
 .main #header .main-header {top: 1.5rem;}
-.main #header .main-header.active {top: 0;}
+.main #header .main-header.active {top: 0; transition: top 0.3s ease-in-out;}
 .main #header.active {top: 0; background-color: #fff; border-bottom: 1px solid #dddddd; color: #969696;}
 .main #header.active li:hover a {color: #323232;}
 .main #header .gnb-wrap .gnb > li .depth1 {color: #969696;}

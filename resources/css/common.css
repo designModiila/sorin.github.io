@@ -10,7 +10,7 @@ body.noScroll { overflow: hidden;}
 #wrap { width: 100%; overflow: hidden; position: relative;}
 
 #header {
-    transition: top 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 #header {position: fixed; top: 0; left: 0; width: 100%; height:calc(70px + 1.5rem); z-index: 999; box-sizing: border-box; display: block;}
 /* #header.up { transform: translateY(-100%);}
