@@ -615,7 +615,7 @@
 }
 
 .infrabusiness .section05 .address-mo {display: none;}
-.infrabusiness .section05 {padding-bottom: 100px; background: url(../images/sub/infrabusiness_05_bg.png)no-repeat center 180px;}
+.infrabusiness .section05 {padding-bottom: 100px; background: url(../images/sub/infrabusiness_05_bg.png)no-repeat center 180px; border-bottom: 1px solid #E1E1E1;}
 
 .infrabusiness .section05 .content-wrap {display: flex; flex-direction: column; justify-content: center; align-items: center;}
 .infrabusiness .section05 .address {display: inline-block; padding: 10px 50px; text-align: center; font-size: 16px; font-weight: 400; color:#2A5FAF; border-radius: 50px; background-color: #fff; box-shadow: 2px 2px 20px rgba(0, 0, 0, .1);}

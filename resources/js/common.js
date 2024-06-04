@@ -64,20 +64,25 @@ $(document).ready(function(){
       });
     }
 
+
   });
 
   $btnTop.on('click', function() {
-    $('html, body').animate({ scrollTop: 0 }, 'slow',function() {
+    $('html, body').animate({ scrollTop: 0 }, 'slow', function() {
+      setTimeout(function() {
       $("#header").removeClass("active");
       $(".header-wrap h1").removeClass("active");
-    });
+      $("#header .mobile-top .mo-logo").removeClass("active");
+      $("#header .mobile-top button").removeClass("active");
+      }, 30);
   });
+});
+
   $btnCustomer.on('click', function() {
     $('html, body').animate({
       scrollTop: $('#demo').offset().top
     }, 'slow');
   });
 
-   
 });
 

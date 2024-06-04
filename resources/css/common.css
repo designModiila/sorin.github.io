@@ -1,5 +1,5 @@
 @charset "utf-8";
-body { font-family: "Pretendard"; font-style: normal; font-size: 16px; overflow-x: hidden; position: relative; color: #323232; word-break: break-all;} 
+body { font-family: "Pretendard"; font-style: normal; font-size: 16px; overflow-x: hidden; position: relative; color: #323232; word-break: break-all; scroll-behavior: smooth;} 
 body.noScroll { overflow: hidden;}
 
 .inner {max-width: 1920px; padding: 0 10.42vw; width: 100%; margin: 0 auto; position: relative;}
@@ -318,9 +318,10 @@ body.noScroll { overflow: hidden;}
 
 .footer-main .family-site {position: relative;}
 .footer-main .family-site .family-list {display: none; position: absolute; left: 0; right: 0; top: auto; bottom: auto; background-color: #fff; text-align: left; padding: 10px 0px; height: 100%; overflow: auto; border: 1px solid #e2e2e2;}
-.footer-main .family-site.active .family-list {display: block;}
+.footer-main .family-site.active .family-list {display: block; height: 100px;}
 .footer-main .family-site .family-list li a { font-size: 12px; display: block; overflow: hidden; color: #969696; line-height: 20px; padding: 10px 15px;}
 .footer-main .family-site .family-list li a:hover {background: #F1F6FF; color: #323232;}
+.footer-main .family-site button svg {margin-left: 8px;}
 
 @media (max-width: 1440px) {
     .inner {width: 100%; padding: 0 7vw;}
@@ -346,6 +347,14 @@ body.noScroll { overflow: hidden;}
     .footer-main .footer-contact-link .link img {width: 12px;}
     .footer-main .footer-bottom {margin-top: 20px; flex-direction: column; gap: 20px;}
 }
+@media (max-width: 430px) {
+    .footer-main .footer-main-top {justify-content: center;}
+    .footer-main .footer-contact-link {margin-top: 80px;}
+    .footer-main .family-site {margin: 0; width: 184px; height: 36px; top: 75px; left: 50%; right: unset; transform: translateX(-50%);}
+}
+
+
+
 
 .footersub .inner {padding-bottom: 334px;}
 .footersub .footersub-title {padding: 300px 0 200px;}
