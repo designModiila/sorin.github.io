@@ -17,7 +17,7 @@ body.noScroll { overflow: hidden;}
 #header.down { transform: translateY(0);} */
 #header .only-mo {display: none;}
 #header .logo-wrap { min-width: 200px;}
-#header h1 { background: url(../../resources/images/common/sorin_logo_w.png) no-repeat center; width: 112px; height: 50px;}
+#header h1 { background: url(../../resources/images/common/sorin_logo_w.png) no-repeat center; width: 176px; height: 50px;}
 #header h1.active { background: url(../../resources/images/common/sorin_logo.png)}
 #header h1 span { display: none;}
 #header .header-wrap {display: flex; width: 100%; height: 70px; justify-content: space-between; padding: 10px 10.42% 0; align-items: center;}
@@ -110,7 +110,7 @@ body.noScroll { overflow: hidden;}
 
 @media (max-width: 1440px) {
     #header .header-wrap {padding: 10px 7vw; }
-    #header .gnb-wrap .gnb {gap: 40px;}
+    #header .gnb-wrap .gnb {gap: 35px;}
 }
 @media (max-width: 1240px) {
     #header .gnb-wrap .gnb > li .depth1 {font-size: 16px;}
@@ -136,8 +136,8 @@ body.noScroll { overflow: hidden;}
     #header .mobile-top {position: relative; padding: 30px 50px 10px 50px; display: flex; justify-content: space-between; align-items: center; height: 70px;}
     #header .mobile-top {top: 0.3rem;}
     #header .mobile-top.active {top: 0;}
-    #header .mobile-top .mo-logo {background: url(../../resources/images/common/sorin_logo_w.png) no-repeat center; width: 80px; height: 36px; background-size: contain;}
-    #header .mobile-top .mo-logo.active {background: url(../../resources/images/common/sorin_logo.png) no-repeat center; width: 80px; height: 36px; background-size: contain;}
+    #header .mobile-top .mo-logo {background: url(../../resources/images/common/sorin_logo_w.png) no-repeat center; width: 107px; height: 36px; background-size: contain;}
+    #header .mobile-top .mo-logo.active {background: url(../../resources/images/common/sorin_logo.png) no-repeat center; width: 107px; height: 36px; background-size: contain;}
     #header .mobile-top span {display: none;}
     #header .mobile-top button {background: url(../../resources/images/common/mobile_btn_w.png) no-repeat center; width: 25px; height: 25px;}
     #header .mobile-top button.active {background: url(../../resources/images/common/mobile_btn.png) no-repeat center; width: 25px; height: 25px;}
@@ -199,7 +199,7 @@ body.noScroll { overflow: hidden;}
     .inner {width: 100%; padding: 0 6.67vw;}
     .footer .footer-inner {padding: 30px 6.67vw;}
     .footer .footer-top {padding-bottom: 20px;}
-    .footer .footer-top > img {width: 80px; height: 36px;}
+    .footer .footer-top > img {width: 112px; height: 32px;}
     .footer .footer-contact .family-site {position: absolute; top: 33px; right: 6.67vw;}
     .footer .footer-contact .family-select {padding: 10px 38px; font-size: 13px;}
     .footer .footer-contact .family-select svg {margin-left: 3px;}
@@ -245,8 +245,8 @@ body.noScroll { overflow: hidden;}
     .footer-v2 .privacy-list {position: absolute; font-size: 11px; top: 0;}
     .footer-v2 .footer-contact {margin-top: 0;}
     .footer-v2 .footer-contact .contact {flex-direction: column; font-size: 11px; line-height: 22px;}
-    .footer-v2 .footer-v2-bottom {flex-direction: column; gap: 10px; margin-top: 0;}
-    .footer-v2 .footer-v2-bottom > img {width: 80px; height: 36px;}
+    .footer-v2 .footer-v2-bottom {flex-direction: column; gap: 20px; margin-top: 0;}
+    .footer-v2 .footer-v2-bottom > img {width: 112px; height: 32px;}
     .footer-v2 .footer-v2-bottom .copy {font-size: 10px; margin-top: 20px;}
 }
 
@@ -289,7 +289,7 @@ body.noScroll { overflow: hidden;}
     .footer-v3 .footer-contact {margin-top: 0;}
     .footer-v3 .footer-contact .contact {flex-direction: column; font-size: 11px; line-height: 22px;}
     .footer-v3 .footer-v3-bottom {flex-direction: column; gap: 10px; margin-top: 0;}
-    .footer-v3 .footer-v3-bottom > img {width: 80px; height: 36px;}
+    .footer-v3 .footer-v3-bottom > img {width: 112px; height: 32px;}
     .footer-v3 .footer-v3-bottom .copy {font-size: 10px; margin-top: 20px;}
 }
 
@@ -339,7 +339,7 @@ body.noScroll { overflow: hidden;}
     .footer-main .contact {font-size: 12px;}
     .footer-main .footer-contact-link {flex-direction: column;}
     .footer-main .footer-contact-link .link-wrap {margin-top: 40px; flex-direction: row; gap: 15px;}
-    .footer-main .footer-main-top > img {width: 80px; height: 36px;}
+    .footer-main .footer-main-top > img {width: 112px; height: 32px;}
     .footer-main .family-site {position: absolute; top: 38px; right: 6.67vw;}
     .footer-main .family-select {padding: 10px 38px; font-size: 13px;}
     .footer-main .footer-contact-link .link-title {font-size: 13px;}
@@ -368,4 +368,14 @@ body.noScroll { overflow: hidden;}
     .footersub .footersub-article .detail {font-size: 14px; line-height: 26px;}
     .footersub .detail-box {margin-top: 20px; padding: 20px; font-size: 14px; line-height: 26px;}
     .footersub .footersub-article-first {margin-bottom: 80px;}
+}
+
+
+.btn-top {position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; z-index: 100; transition: all 0.3s;}
+.btn-customer {position: fixed; bottom: 90px; right: 30px; width: 60px; height: 60px; z-index: 100; transition: all 0.3s;}
+.btn-customer:hover::before {position: absolute; content: "고객문의"; top: 50%; left: -55px; transform: translateY(-50%); font-size: 16px; font-weight: 500; color: #1E66D2;}
+
+@media (max-width: 767px) {
+    .btn-top {width: 50px; height: 50px; right: 20px;}
+    .btn-customer {width: 50px; height: 50px; bottom: 80px; right: 20px;}
 }

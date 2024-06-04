@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-#header h1 { background: url(../../resources/images/common/sorin_logo.png) no-repeat center; width: 112px; height: 50px;}
+#header h1 { background: url(../../resources/images/common/sorin_logo.png) no-repeat center; width: 176px; height: 50px;}
 #header .gnb-wrap .gnb > li .depth1 {color: #969696;}
 #header .gnb-wrap .gnb > li .depth1:hover {color: #323232;}
 
@@ -609,7 +609,7 @@
 @media (max-width: 1023px) {
   #header {height:70px}
   #header .mobile-top {top:0}
-  #header .mobile-top .mo-logo {background: url(../../resources/images/common/sorin_logo.png) no-repeat center; width: 80px; height: 36px; background-size: contain;}
+  #header .mobile-top .mo-logo {background: url(../../resources/images/common/sorin_logo.png) no-repeat center; width: 107px; height: 30px; background-size: contain;}
   #header .mobile-top button {background: url(../../resources/images/common/mobile_btn.png) no-repeat center; width: 25px; height: 25px;}
   
 }
@@ -780,7 +780,7 @@
   .sub08 .section02 .form-wrap .on {margin:0 7px 3px 0;}
   .sub08 .section02 .form-wrap .btn-toggle {margin-top: 20px; font-size: 14px;}
   .sub08 .section02 .view-fulltext {margin-top: 20px; font-size: 13px;}
-  .sub08 .section02 .form-wrap .submit-btn {margin-top: 20px; font-size: 14px;}
+  .sub08 .section02 .form-wrap .submit-btn {margin-top: 20px; padding: 10px 40px; font-size: 14px;}
   .sub08 .section03 {margin: 153px 24px 66px; padding: 80px 14px 87px;}
   .sub08 .section03 .heading-1 {font-size: 28px;}
   .sub08 .section03 .contact-wrap {margin-top: 50px; flex-direction: column; align-items: flex-start;}
@@ -824,7 +824,6 @@
   .world-layer-wrap .layer-top .top-menu ul {gap: 0; justify-content: space-around;}
   .sub07 .heading-1 br {display: none;}
   .sub07 .section02 .top-menu {padding: 15px 20px; width: 100%;}
-  .sub08 .section02 .form-wrap .submit-btn {width: 100%;}
 } 
 
 

@@ -88,6 +88,23 @@ function initializeSwipers() {
   });
 
 
+  new Swiper("#js-swiper-portfolio", {
+    loop: true,
+    initialSlide: 1,
+    slidesPerView: 1,
+    speed: 800,
+    spaceBetween: 20,
+    roundLengths: true,
+    centeredSlides: true,
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    }
+});
   
 new Swiper("#js-swiper-infra", {
     effect: "coverflow",
